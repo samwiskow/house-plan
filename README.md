@@ -5,6 +5,18 @@ Its four A3 sheets contain the 1:100 floor plan, room schedule and 1:60 family
 wing, 1:60 orangery/service/gym detail, and 1:200 illustrative site plan.
 Print at 100% to preserve scale. Concept 04 remains available in Git history.
 
+## Separate two-storey option
+
+`output/pdf/two-storey-linked-pavilion-option.pdf` records option C as two
+low-fidelity A3 sheets: ground floor and upper floor. A two-storey main house
+contains all bedrooms; a separate single-storey office/gym pavilion connects
+through an enclosed garden passage. No bedroom sits above or beside the office.
+
+This is an unmeasured alternative, not a replacement for concept 05. Room
+groups, stairs, areas and structure still need fitting and verification.
+Its independent renderer is `two_storey_option.py`; run it with the same
+Python runtime as the rebuild command below. It does not regenerate concept 05.
+
 ## Agreed brief
 
 - Predominantly single-storey U around a sheltered courtyard, with a larger
