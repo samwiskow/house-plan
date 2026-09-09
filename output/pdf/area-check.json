@@ -1,11 +1,13 @@
 {
-  "gia_m2": 279.81,
-  "external_footprint_m2": 317.11999999999995,
-  "outer_width_m": 22.8,
+  "gia_m2": 319.9099999999999,
+  "external_footprint_m2": 360.265,
+  "outer_width_m": 27.15,
   "outer_depth_m": 18.4,
-  "courtyard_recess_m2": 102.4,
-  "clear_room_area_m2": 267.1932000000001,
-  "partitions_and_thresholds_m2": 12.616799999999898,
+  "courtyard_original_recess_m2": 102.4,
+  "open_courtyard_m2": 88.4,
+  "orangery_external_allocation_m2": 14,
+  "clear_room_area_m2": 302.5575,
+  "partitions_and_thresholds_m2": 17.352499999999907,
   "rooms": [
     {
       "id": "P",
@@ -122,16 +124,16 @@
     {
       "id": "PA",
       "name": "Pantry",
-      "area": 7.0245,
-      "target": 7,
-      "dimensions": "2.23 x 3.15 m"
+      "area": 6.11,
+      "target": 6,
+      "dimensions": "2.35 x 2.60 m"
     },
     {
       "id": "L",
       "name": "Laundry",
-      "area": 7.0245,
-      "target": 7,
-      "dimensions": "2.23 x 3.15 m"
+      "area": 10.855,
+      "target": 10.5,
+      "dimensions": "L-shape: 4.58 x 3.15 m envelope"
     },
     {
       "id": "B",
@@ -143,24 +145,47 @@
     {
       "id": "H",
       "name": "Entrance hall",
-      "area": 8.996,
-      "target": 9,
-      "dimensions": "3.46 x 2.60 m"
+      "area": 6.656,
+      "target": 6.7,
+      "dimensions": "2.56 x 2.60 m"
     },
     {
       "id": "WC",
       "name": "Visitor WC",
-      "area": 3.0704,
+      "area": 3.122,
       "target": 3,
-      "dimensions": "1.52 x 2.02 m"
+      "dimensions": "2.23 x 1.40 m"
+    },
+    {
+      "id": "OR",
+      "name": "Corner orangery",
+      "area": 11.4975,
+      "target": 11.5,
+      "dimensions": "3.65 x 3.15 m"
+    },
+    {
+      "id": "GY",
+      "name": "Indoor gym",
+      "area": 24.0,
+      "target": 24,
+      "dimensions": "4.00 x 6.00 m"
     },
     {
       "id": "KL",
       "name": "Kitchen / dining / living",
-      "area": 75.4944,
+      "area": 74.7336,
       "target": 72,
       "dimensions": "Main clear depth 4.90 m; stepped kitchen / entrance edge"
     }
+  ],
+  "checked_routes": [
+    "Arrival to kitchen",
+    "Boot to pantry",
+    "Boot to laundry",
+    "Family to living",
+    "Guests to living",
+    "Hall through orangery to living",
+    "Boot to gym"
   ],
   "checks": []
 }

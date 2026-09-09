@@ -1,8 +1,9 @@
-# U-shaped family home - concept 04
+# U-shaped family home - concept 05
 
 The current dimensioned study is `output/pdf/u-home-dimensioned-concept.pdf`.
-It has three A3 pages: a 1:100 floor plan and area schedule, 1:60 enlarged
-details, and a 1:200 illustrative site plan. Print at 100% to preserve scale.
+Its four A3 sheets contain the 1:100 floor plan, room schedule and 1:60 family
+wing, 1:60 orangery/service/gym detail, and 1:200 illustrative site plan.
+Print at 100% to preserve scale. Concept 04 remains available in Git history.
 
 ## Agreed brief
 
@@ -15,56 +16,82 @@ details, and a 1:200 illustrative site plan. Print at 100% to preserve scale.
 - Large open kitchen/dining/living area and an enclosed reading/play snug at
   the guest-wing transition, with circulation beside it.
 - Dedicated office/gaming room for one person; no business visitors.
-- Boot room connects to the entrance hall, pantry and separate laundry.
-  Pantry also connects directly to the kitchen; entrance hall has its own
-  kitchen route.
-- Two household cars in a solar carport, an independent guest bay, and a
-  possible detached exercise studio.
+- Pantry beside the kitchen counter and fridge, also reached from the smaller
+  entrance hall. Boot room connects to the hall, enlarged separate laundry
+  and indoor gym. Hall retains its own kitchen route.
+- Visitor WC in the upper portion of the former pantry, off the guest hall.
+- Small orangery in the bottom-right courtyard corner, linking the guest-wing
+  hall and open-plan space. Direct hall/living and living/courtyard routes
+  remain. Sliding glazing opens the orangery towards the courtyard.
+- Indoor gym for a combined rack/cable station, barbell, bench, dumbbells and
+  possible treadmill. Equipment footprints are illustrative; actual machine
+  dimensions, use clearances and ceiling heights remain to be coordinated.
+- Two household cars in a solar carport and an independent guest bay.
 - Selected pocket doors are welcome where they improve circulation.
 
 ## Measured outcome
 
-- Internal area: 279.81 m² against the 280 m² schedule.
-- External footprint: 317.12 m²; outer dimensions 22.80 × 18.40 m.
-- External walls assumed 350 mm; internal partitions assumed 120 mm.
-- Shared kitchen/dining/living: 75.49 m².
+- Internal area (GIA): 319.91 m², up 40.10 m² from concept 04's 279.81 m².
+- External footprint: 360.26 m²; outer envelope 27.15 × 18.40 m.
+- External walls assumed 350 mm; internal partitions generally 120 mm.
+  The former external walls between the additions and house remain 350 mm.
+- Orangery: 4.00 × 3.50 m nominal external allocation; 3.65 × 3.15 m clear,
+  giving 11.50 m² inside. Its contribution to GIA is 14.00 m², including
+  retained dividing walls and thresholds.
+- Indoor gym: 4.00 × 6.00 m clear / 24.00 m². Its contribution to GIA is
+  26.10 m² including the retained wall between gym and service wing.
+- Shared kitchen/dining/living: 74.73 m², compared with 75.49 m² in concept 04.
+- Pantry: 6.11 m²; entrance hall: 6.66 m²; laundry: 10.86 m².
+  Moving the pantry 0.90 m towards the hall recovers 2.34 m² of kitchen
+  compared with the preceding exploratory pantry option, not concept 04.
+- Visitor WC: 3.12 m²; boot room: 8.58 m².
 - Children: 12.79 m² each, with clear internal dimensions 3.03 × 4.22 m.
 - Parents' sleeping room: 16.80 m²; guest room: 17.12 m² including wardrobe recess.
-- Entrance hall: 9.00 m². Other circulation: 26.80 m², above the 24 m² allowance.
-  The family corridor is 8.56 m long; the guest corridor is 11.16 m long.
-  Both are 1.20 m wide; an additional shower lobby is included in circulation.
-- Courtyard recess: 8.00 × 12.80 m / 102.40 m², with approximately 52 m² paved.
-- Illustrative plot: 35 × 45 m / 1,575 m². This is a test rectangle, not a
-  minimum plot specification or a finding that any real plot is buildable.
-- Carport clear allocation: 6.80 × 6.20 m. A provisional 7.20 × 6.60 m roof
-  envelope keeps columns outside the clear allocation. Guest bay: 3.20 × 6.00 m.
-- The initial 21 m² internal-partition allowance became 12.62 m² for partitions
-  and doorway thresholds. That accounts for most of the extra room and
-  circulation area while keeping the overall target. Thicker acoustic or
-  structural walls could change this balance.
+- Other circulation: 26.80 m². Family corridor is 8.56 m long; guest corridor
+  is 11.16 m long. Both are 1.20 m wide; shower lobby is included in circulation.
+- Open courtyard: 88.40 m² within the original 8.00 × 12.80 m recess;
+  approximately 38 m² remains paved. A 4.00 m outdoor strip separates the
+  orangery from the family bedroom wing.
+- Illustrative plot: 35 × 45 m / 1,575 m². House offset remains 3.30 m from
+  the left boundary and 12.50 m from the rear; gym leaves 4.55 m to the right.
+- Carport clear allocation: 6.80 × 6.20 m. Provisional roof envelope:
+  7.20 × 6.60 m, with columns outside the clear allocation. Guest bay:
+  3.20 × 6.00 m. A 1.40 m strip separates house and parking allocations;
+  the carport roof overhang reduces that separation locally to 1.20 m.
+- Internal partitions and doorway thresholds: 17.35 m². These reconcile the
+  clear room polygons to GIA; thicker final walls could change the balance.
 
 ## Verification and limits
 
 `plan_model.py` is the editable geometry and drawing source. The generated
 `output/pdf/area-check.json` records room areas and checks. Geometry is in metres;
-room areas include fitted joinery footprints. Net room polygons plus residual
-internal partitions/thresholds reconcile to the internal area.
+room areas include fitted joinery footprints.
 
-The model checks room overlaps, furniture containment and overlaps, declared
-door connections, conflicts between pocket reservations and other openings,
-hinged door sweeps against furniture, and a sampled 0.70 m walking envelope on
-five nominated routes. The current run has no reported conflicts. The PDF was
-rendered and all three pages visually inspected.
+The model checks room overlaps and envelope containment, furniture containment
+and overlaps, declared internal door connections, conflicts between pocket
+reservations and other openings, hinged door sweeps against furniture, and a
+sampled 0.70 m walking envelope on seven nominated routes. These include the
+orangery connection and boot-to-gym access. The current run has no reported
+conflicts. All four PDF pages were rendered and visually inspected.
 
 These checks do not certify building-regulations compliance, accessibility,
-acoustics, structural spans, roof design, fire escape, drainage, ventilation,
-or actual vehicle turning. The 6 m manoeuvring apron is a space reservation;
-chosen vehicles still need a swept-path test. Pocket-door kit dimensions,
-wall build-ups, cabinetry and plumbing require detailed coordination.
+acoustics, structural spans, fire escape, drainage, ventilation or vehicle
+turning. The gym's 1.35 × 2.20 m treadmill rear zone is a provisional space
+reservation, not confirmation of a chosen manufacturer's clearance requirements.
+Barbell loading, cable use, equipment access and anchoring require further work.
+
+Orangery and laundry rooflights are indicative. The laundry's former side window
+is replaced by a proposed rooflight because the gym adjoins that wall. Orangery
+heating, glazing, shading and ventilation are undecided; doors allow separation
+from the house. Bedroom daylight, courtyard privacy and roof drainage need a
+site-specific review. The test plot is not a minimum plot specification or
+proof that any particular plot is buildable. Vehicle swept paths, pocket-door
+kits, structural wall build-ups, cabinetry and plumbing require coordination.
 
 The GIA convention follows the internal-face definition in England's
-[nationally described space standard](https://www.gov.uk/government/publications/technical-housing-standards-nationally-described-space-standard/technical-housing-standards-nationally-described-space-standard).
-It is used here as an area convention, not as a compliance claim.
+[nationally described space standard](https://www.gov.uk/government/publications/technical-housing-standards-nationally-described-space-standard).
+It is an area convention here, not a compliance claim. GIA includes the gym and
+orangery; carport and open courtyard are additional.
 
 ## Rebuild
 
