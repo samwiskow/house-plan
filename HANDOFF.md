@@ -1,5 +1,25 @@
 # House design handoff
 
+## Latest direction: concept 07B
+
+The shallow extensively glazed garden-room roof and broad plain ivory opening
+are now selected. Continue the same flooring; design insulating solar-control
+glass, external shading provision, high-level ventilation and whole-space
+winter/summer comfort together. `output/pdf/concept-07b-glazed-roof-transition.pdf`
+contains the section and interior view. Its heights and framing remain provisional.
+
+## Floor-plan direction: concept 07
+
+Concept 06B's continuous shared-room vault and lower stone wings/gym are chosen;
+detailed heights remain provisional. The garden room is now for year-round use,
+open to the shared room and adjoining hall. Concept 07 removes those two internal
+walls and relocates the hall door beyond the snug, separating office and guest
+rooms while leaving the snug and WC on the shared side. See the current README,
+MATERIALS-BRIEF.md and `output/pdf/concept-07-open-garden-room.pdf`. Earlier notes
+about an enclosed or seasonal orangery are superseded. Structural supports and
+the transition between the lower garden-room roof and higher vault remain open.
+
+
 ## Update: 11 September 2026
 
 The user has chosen the single-storey courtyard house for further development.

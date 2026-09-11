@@ -1,0 +1,12 @@
+{
+  "baseline": "concept 05, unchanged",
+  "coverage_sample_checks": 50320,
+  "shared_vault_sample_checks": 7473,
+  "main_roof_eave_m": 3.7,
+  "main_roof_ridge_m": 5.3166,
+  "shared_ceiling_spring_m": 3.5,
+  "shared_ceiling_apex_m": 4.9145,
+  "lower_envelope_top_m": 3.2,
+  "elevation_orientation": "Garden: gym left; arrival: gym right",
+  "status": "Exploratory heights and massing; no structural or roof junction validation"
+}

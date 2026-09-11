@@ -1,0 +1,180 @@
+{
+  "baseline": "concept 05; roof direction concept 06B",
+  "gia_m2": 319.9099999999999,
+  "external_footprint_m2": 360.265,
+  "garden_sitting_zone_m2": 14.0,
+  "partitions_and_thresholds_m2": 14.993999999999915,
+  "rooms": [
+    {
+      "id": "P",
+      "name": "Parents bedroom",
+      "area_m2": 16.8
+    },
+    {
+      "id": "W",
+      "name": "Walk-in wardrobe",
+      "area_m2": 6.678
+    },
+    {
+      "id": "E",
+      "name": "Parents ensuite",
+      "area_m2": 5.6604
+    },
+    {
+      "id": "FB",
+      "name": "Family bathroom",
+      "area_m2": 8.1204
+    },
+    {
+      "id": "ST",
+      "name": "Linen / plant",
+      "area_m2": 4.3026
+    },
+    {
+      "id": "C3",
+      "name": "Child 3",
+      "area_m2": 12.7866
+    },
+    {
+      "id": "C2",
+      "name": "Child 2",
+      "area_m2": 12.7866
+    },
+    {
+      "id": "C1",
+      "name": "Child 1",
+      "area_m2": 12.7866
+    },
+    {
+      "id": "FH",
+      "name": "Family hall",
+      "area_m2": 10.272
+    },
+    {
+      "id": "G",
+      "name": "Guest bedroom",
+      "area_m2": 17.1204
+    },
+    {
+      "id": "GS",
+      "name": "Guest storage",
+      "area_m2": 2.242
+    },
+    {
+      "id": "GB",
+      "name": "Guest shower",
+      "area_m2": 5.04
+    },
+    {
+      "id": "GL",
+      "name": "Shower lobby",
+      "area_m2": 3.1388
+    },
+    {
+      "id": "O",
+      "name": "Office / gaming",
+      "area_m2": 13.969
+    },
+    {
+      "id": "S",
+      "name": "Snug",
+      "area_m2": 11.908
+    },
+    {
+      "id": "GH",
+      "name": "Guest hall",
+      "area_m2": 8.82
+    },
+    {
+      "id": "PA",
+      "name": "Pantry",
+      "area_m2": 6.11
+    },
+    {
+      "id": "L",
+      "name": "Laundry",
+      "area_m2": 10.855
+    },
+    {
+      "id": "B",
+      "name": "Boot room",
+      "area_m2": 8.58
+    },
+    {
+      "id": "H",
+      "name": "Entrance hall",
+      "area_m2": 6.656
+    },
+    {
+      "id": "WC",
+      "name": "Visitor WC",
+      "area_m2": 3.122
+    },
+    {
+      "id": "OR",
+      "name": "Open garden sitting area",
+      "area_m2": 14.0
+    },
+    {
+      "id": "GY",
+      "name": "Indoor gym",
+      "area_m2": 24.0
+    },
+    {
+      "id": "KL",
+      "name": "Kitchen / dining / living",
+      "area_m2": 74.7336
+    },
+    {
+      "id": "GH2",
+      "name": "Shared hall",
+      "area_m2": 4.428
+    }
+  ],
+  "shared_and_garden_zones_m2": 88.73360000000002,
+  "removed_internal_doors": [
+    "O05 sliding leaves"
+  ],
+  "relocated_hall_door": {
+    "id": "D17",
+    "width_m": 0.9,
+    "wall_y_m": 9.4,
+    "shared_side": [
+      "Snug",
+      "WC",
+      "Garden sitting"
+    ],
+    "private_side": [
+      "Office",
+      "Guest bedroom",
+      "Guest shower"
+    ]
+  },
+  "open_connections": [
+    {
+      "id": "O05",
+      "width_m": 4.0
+    },
+    {
+      "id": "O07",
+      "width_m": 3.5
+    }
+  ],
+  "checked_routes": [
+    "Arrival to kitchen",
+    "Boot to pantry",
+    "Boot to laundry",
+    "Family to living",
+    "Guests to living",
+    "Hall through orangery to living",
+    "Boot to gym",
+    "Garden sitting to dining",
+    "Guest hall to garden sitting"
+  ],
+  "checks": [],
+  "baseline_checks": [],
+  "former_wall_probe_count": 3,
+  "structural_status": "Full openings are design intent; beams, bearings and possible posts are unresolved",
+  "year_round_use": true,
+  "garden_room_separating_doors": false
+}

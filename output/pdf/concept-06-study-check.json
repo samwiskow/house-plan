@@ -1,0 +1,19 @@
+{
+  "baseline": "concept 05",
+  "roof_pitch_degrees": 30,
+  "roof_wall_edge_datum_m": 2.8,
+  "ridge_levels_m": {
+    "Family wing": 5.1671,
+    "Guest / service wing": 4.7053,
+    "Shared room": 4.4166,
+    "Gym": 4.7341
+  },
+  "roof_coverage_sample_checks": 50320,
+  "baseline_geometry_read_only": true,
+  "elevation_orientation": "Garden: gym left; arrival: gym right",
+  "limitations": [
+    "Unresolved roof abutments and drainage",
+    "No structural or compliance validation",
+    "No site orientation"
+  ]
+}

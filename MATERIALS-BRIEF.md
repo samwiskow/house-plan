@@ -21,11 +21,14 @@ illustrations.
 
 ## Agreed architecture and arrangement
 
-- **Baseline:** the single-storey U-shaped concept 05. The separate two-storey
-  option remains an alternative, not the scheme being developed here.
-- **Roof form:** pitched roofs over the wings and shared family area. The
-  alternative with lower, near-flat wing roofs was not selected. Roof pitch,
-  covering, structure, eaves and junctions remain to be designed.
+- **Baseline:** the single-storey U-shaped house, with concept 07 opening the
+  garden room and relocating the hall door within the concept 05 footprint.
+  The separate two-storey option remains an alternative.
+- **Roof form:** concept 06B is the chosen direction: a continuous pitched roof
+  over the shared family area, with lower, near-flat roofs on the stone wings
+  and gym. This supersedes the earlier pitched-wing preference. The study's
+  detailed heights remain provisional; roof pitch, covering, structure, eaves
+  and junctions remain to be designed.
 - **Exterior character:** primarily stone projecting wings meeting timber on
   the main family area. Both the more-stone and mixed studies appealed; the
   distinct character of the wings is more important than an exact material ratio.
@@ -35,11 +38,61 @@ illustrations.
   receives light through outer-facing windows. The strongest courtyard
   connection is at dining and the orangery. Central-lounge alternatives and
   wider courtyard glazing were considered but not selected.
-- **Ceiling:** warm ivory pitched roof slopes, with exposed timber painted to
-  blend in. Natural wood is concentrated in furniture, frames and joinery.
+- **Garden room:** year-round use, open to the shared room and adjoining hall.
+  Remove the two internal orangery walls and their separating doors, retaining
+  the exterior glazing. Treat it as a garden-facing sitting area within the
+  shared interior. An extensively glazed roof is now a firm preference, with
+  year-round comfort designed around it. The selected transition is a shallow
+  glazed roof falling toward the courtyard, seen through a broad opening with
+  a plain ivory head. Continue the same floor and warm finishes through.
+  Glass should combine insulation and solar control, with neutral-looking samples;
+  provide for retractable external roof shading and investigate motorised
+  high-level vents with rain control. Heating/cooling should follow winter
+  heat-loss and summer-overheating assessments for the whole connected space.
+  These are agreed design requirements, not a completed performance specification.
+- **Guest/office separation:** relocate the former orangery hall door across the
+  hall beyond the snug, when walking from shared living. The snug, visitor WC
+  and garden sitting area stay on the shared side; office and guest rooms sit
+  beyond the new door. Concept 07 tests a 900 mm hinged door opening toward the
+  office, while retaining the office's own door.
+- **Ceiling:** one continuous shared-room vault is the preferred direction,
+  connecting lounge, dining and kitchen. Retain warm ivory pitched roof slopes,
+  with any exposed timber painted to blend in. Natural wood is concentrated in
+  furniture, frames and joinery. Finished heights and structural members are open.
 
-The measured source and PDFs have not been changed by this brief. Existing
-geometry checks do not validate the proposed roof, materials or stove.
+Concept 07 records the measured opening and hall-door revision. The original
+concept 05 remains available. Geometry checks do not validate structure, roof
+junctions, thermal performance, materials or the stove.
+
+## Roof development: concept 06B
+
+`output/pdf/concept-06b-continuous-vault-low-wings.pdf` illustrates the chosen
+continuous shared-room vault with lower stone wings and gym. It retains concept 05's room
+layout, including pantry and service rooms with flat ceilings beneath the same
+main roof. The earlier all-pitched study remains available for comparison.
+
+The main roof edge at +3.70 m, ridge at +5.32 m, lower roof envelopes at +3.20 m,
+and shared ceiling rising from 3.50 m to 4.91 m are study assumptions, not agreed
+heights. Low-roof falls, edge profiles and abutments require design. The orangery
+is reserved as a low volume. Its year-round use and open connection are now
+chosen. Concept 07B develops the selected shallow glazed-roof transition; its
+structural and weatherproof details remain to be designed. Concepts 07/07B
+supersede the older roof PDF notes about undecided use and separating walls.
+
+## Glazed-roof transition: concept 07B
+
+`output/pdf/concept-07b-glazed-roof-transition.pdf` shows a 1:50 section and a
+geometry-based interior perspective. It tests glass roof surface heights of
++2.85 m at the courtyard and +3.45 m at the house, a slope of about 9.7 degrees.
+The main opening tests a 3.10 m clear head with a 0.40 m ivory band beneath the
+3.50 m shared-room ceiling edge. These new dimensions are provisional and
+replace the earlier garden-roof box only for this study. The hall-side ceiling
+is lower, consistent with the wing ceiling direction.
+
+The full open corner is still design intent; no post-free structural scheme has
+been demonstrated. Framing, glass system, roof pitch, gutters/flashings, shading
+hardware, ventilation and thermal performance require coordination. No glazing
+product, supplier or heating/cooling capacity has been selected.
 
 ## Agreed shared-space palette
 
@@ -91,8 +144,8 @@ checked for appliance clearances. Retain the current room arrangement while
 testing it; do not assume the ordinary floor finish alone provides the required
 hearth construction.
 
-Plot, orientation, budget, final roof design and the orangery's seasonal versus
-heated year-round use also remain unresolved in the wider project brief.
+Plot, orientation, budget and final roof design remain unresolved. The garden
+room is now intended for year-round use as part of the shared interior.
 
 ## Visual references
 

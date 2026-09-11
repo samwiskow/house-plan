@@ -1,0 +1,17 @@
+{
+  "plan_reference": "concept 07",
+  "main_roof_reference": "concept 06B",
+  "garden_glass_low_m": 2.85,
+  "garden_glass_high_m": 3.45,
+  "garden_roof_slope_degrees": 9.728,
+  "opening_head_target_m": 3.1,
+  "visible_head_band_m": 0.4,
+  "camera_m": [
+    13.2,
+    16.4,
+    1.6
+  ],
+  "structural_validation": false,
+  "thermal_validation": false,
+  "status": "Design intent with provisional section dimensions"
+}
