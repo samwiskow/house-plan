@@ -1,5 +1,15 @@
 # House design handoff
 
+## Update: 11 September 2026
+
+The user has chosen the single-storey courtyard house for further development.
+[MATERIALS-BRIEF.md](MATERIALS-BRIEF.md) is the current record of architectural
+character, materials, arrangement A and the log-burner proposal. Its agreed
+directions supersede the older exploratory focus below. Exact products and
+technical specifications remain open; the measured model is unchanged.
+
+## Earlier handoff: 9 September 2026
+
 Prepared 9 September 2026. Next focus: low-fidelity exploration of a house
 with more than one floor, compared with the accepted single-storey scheme.
 An upper floor has not been selected or approved for the dimensioned model.

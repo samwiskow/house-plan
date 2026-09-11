@@ -5,6 +5,14 @@ Its four A3 sheets contain the 1:100 floor plan, room schedule and 1:60 family
 wing, 1:60 orangery/service/gym detail, and 1:200 illustrative site plan.
 Print at 100% to preserve scale. Concept 04 remains available in Git history.
 
+## Current design development
+
+[MATERIALS-BRIEF.md](MATERIALS-BRIEF.md) records the 11 September direction for
+the single-storey house: pitched roofs, stone wings meeting a timber family
+area, arrangement A, the shared-space palette and the proposed log burner.
+It distinguishes agreed choices from proposals and open decisions, and includes
+the exterior and interior atmosphere studies. The measured geometry is unchanged.
+
 ## Separate two-storey option
 
 `output/pdf/two-storey-linked-pavilion-option.pdf` records option C as two
