@@ -1,0 +1,503 @@
+{
+  "status": "Concept 08 working proposal; not a product or construction specification",
+  "plan_geometry": "Concept 07 rooms and openings unchanged",
+  "gia_m2": 319.9099999999999,
+  "furniture": [
+    {
+      "name": "Media unit",
+      "rect": [
+        0.35,
+        15.35,
+        0.4,
+        2.2
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "height": 0.5,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Stove placeholder",
+      "rect": [
+        0.6,
+        13.95,
+        0.55,
+        0.6
+      ],
+      "kind": "stove",
+      "material": "charcoal",
+      "height": 1.05,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Sofa",
+      "rect": [
+        4.6,
+        14.85,
+        1,
+        2.8
+      ],
+      "kind": "sofa",
+      "material": "oatmeal",
+      "height": 0.86,
+      "room": "KL",
+      "facing": "west"
+    },
+    {
+      "name": "Armchair A",
+      "rect": [
+        2.1,
+        14.7,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "material": "linen",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "south"
+    },
+    {
+      "name": "Armchair B",
+      "rect": [
+        1.3,
+        16.8,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "material": "linen",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "east"
+    },
+    {
+      "name": "Lounge table",
+      "rect": [
+        3,
+        15.5,
+        0.8,
+        1.2
+      ],
+      "kind": "table",
+      "material": "oak",
+      "height": 0.38,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Dining table",
+      "rect": [
+        7.85,
+        14.2,
+        1,
+        3
+      ],
+      "kind": "table",
+      "material": "oak",
+      "height": 0.75,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        14.325,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "east"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        14.325,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "west"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        15.075,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "east"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        15.075,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "west"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        15.825,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "east"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        15.825,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "west"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        16.575,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "east"
+    },
+    {
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        16.575,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak",
+      "height": 0.82,
+      "room": "KL",
+      "facing": "west"
+    },
+    {
+      "name": "Island",
+      "rect": [
+        10.95,
+        14.95,
+        2.8,
+        1.05
+      ],
+      "kind": "island",
+      "material": "green",
+      "height": 0.92,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Island stool",
+      "rect": [
+        11.3,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool",
+      "material": "oak",
+      "height": 0.68,
+      "room": "KL",
+      "facing": "south"
+    },
+    {
+      "name": "Island stool",
+      "rect": [
+        12.1,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool",
+      "material": "oak",
+      "height": 0.68,
+      "room": "KL",
+      "facing": "south"
+    },
+    {
+      "name": "Island stool",
+      "rect": [
+        12.9,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool",
+      "material": "oak",
+      "height": 0.68,
+      "room": "KL",
+      "facing": "south"
+    },
+    {
+      "name": "Drawers",
+      "rect": [
+        9.8,
+        17.45,
+        1,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory",
+      "height": 0.92,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Sink base",
+      "rect": [
+        10.8,
+        17.45,
+        0.8,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory",
+      "height": 0.92,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Dishwasher",
+      "rect": [
+        11.6,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory",
+      "height": 0.92,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Bins",
+      "rect": [
+        12.2,
+        17.45,
+        0.4,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory",
+      "height": 0.92,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Oven tower",
+      "rect": [
+        12.6,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "tall",
+      "material": "ivory",
+      "height": 2.2,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Fridge / freezer",
+      "rect": [
+        13.2,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "tall",
+      "material": "ivory",
+      "height": 2.2,
+      "room": "KL",
+      "facing": null
+    },
+    {
+      "name": "Garden sofa",
+      "rect": [
+        12.7,
+        10.25,
+        0.85,
+        1.8
+      ],
+      "kind": "sofa",
+      "material": "oatmeal",
+      "height": 0.82,
+      "room": "OR",
+      "facing": "east"
+    },
+    {
+      "name": "Garden table",
+      "rect": [
+        13.8,
+        11,
+        0.6,
+        0.6
+      ],
+      "kind": "table",
+      "material": "oak",
+      "height": 0.4,
+      "room": "OR",
+      "facing": null
+    },
+    {
+      "name": "Garden chair",
+      "rect": [
+        15.35,
+        10.3,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "material": "linen",
+      "height": 0.82,
+      "room": "OR",
+      "facing": "west"
+    }
+  ],
+  "hearth_reservation_m": [
+    0.35,
+    13.5,
+    1.35,
+    1.5
+  ],
+  "rug_m": [
+    2.25,
+    15.7,
+    3.45,
+    2.1
+  ],
+  "hob_m": [
+    12.55,
+    15.43,
+    0.8,
+    0.45
+  ],
+  "sink_m": [
+    10.92,
+    17.51,
+    0.56,
+    0.42
+  ],
+  "route_envelope_m": 0.7,
+  "checked_routes": [
+    "Arrival to kitchen",
+    "Boot to pantry",
+    "Boot to laundry",
+    "Family to living",
+    "Guests to living",
+    "Hall through orangery to living",
+    "Boot to gym",
+    "Garden sitting to dining",
+    "Guest hall to garden sitting",
+    "Garden door approach",
+    "Dining to cooking aisle",
+    "Rear of dining",
+    "Lounge approach"
+  ],
+  "geometry_issues": [],
+  "clearances": {
+    "island_to_rear_worktop_m": 1.4499999999999993,
+    "island_to_tall_front_m": 1.4499999999999993,
+    "garden_central_gap_m": 0.9499999999999993,
+    "courtyard_table_end_m": 1.049999999999999,
+    "rear_table_end_m": 0.8500000000000014,
+    "dining_chairs_to_island_normal_m": 1.549999999999999,
+    "dining_chairs_to_island_pulled_out_m": 1.1999999999999993,
+    "dining_chairs_to_sofa_normal_m": 1.7000000000000002,
+    "dining_chairs_to_sofa_pulled_out_m": 1.3500000000000005
+  },
+  "dining_chair_pullout_test_m": 0.35,
+  "dining_table_length_width_m": [
+    3.0,
+    1.0
+  ],
+  "dining_seat_pitch_m": 0.75,
+  "dining_chairs_per_long_side": 4,
+  "dining_end_chairs": 0,
+  "all_dining_chairs_pulled_out_geometry_issues": [],
+  "dishwasher_door_projection_assumption_m": 0.6,
+  "remaining_aisle_with_dishwasher_open_m": 0.85,
+  "appliance_use_limit": "Opening a door reduces working space; does not prove comfortable simultaneous use or accessibility.",
+  "cameras": [
+    {
+      "orientation_marker_x_over_depth": [
+        0.18084693795570006,
+        -0.09524389437313424
+      ],
+      "camera_m": [
+        8.2,
+        13.8,
+        1.6
+      ],
+      "target_m": [
+        0.6,
+        15.65,
+        1.65
+      ],
+      "horizontal_fov_degrees": 94
+    },
+    {
+      "orientation_marker_x_over_depth": [
+        0.044918682222925714,
+        -0.10190100731937643
+      ],
+      "camera_m": [
+        7.2,
+        17.6,
+        1.6
+      ],
+      "target_m": [
+        14.0,
+        13.0,
+        2.15
+      ],
+      "horizontal_fov_degrees": 94
+    }
+  ],
+  "stove_clearance_validation": false,
+  "structural_validation": false,
+  "thermal_validation": false,
+  "stove_reference": "https://www.hetas.co.uk/consumer/services/installers/"
+}

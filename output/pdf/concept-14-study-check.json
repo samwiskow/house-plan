@@ -1,0 +1,1159 @@
+{
+  "status": "Option A selected; Option B declined because of dressing-room compromises",
+  "option_b": {
+    "status": "Declined alternative; Option A selected",
+    "ensuite_m": [
+      3.18,
+      2.48
+    ],
+    "wardrobe_m": [
+      3.18,
+      1.4
+    ],
+    "shower_m": [
+      1.2,
+      1.0
+    ],
+    "bath_m": [
+      1.7,
+      0.75
+    ],
+    "double_vanity_width_m": 1.2,
+    "wardrobe_aisle_m": 0.74,
+    "wardrobe_hanging_wall_m": 2.6,
+    "furniture": [
+      [
+        "W",
+        "Hanging wardrobe wall",
+        [
+          5.16,
+          0.35,
+          2.6,
+          0.66
+        ],
+        "cabinet"
+      ],
+      [
+        "E",
+        "Double vanity",
+        [
+          4.82,
+          1.87,
+          1.2,
+          0.5
+        ],
+        "basin"
+      ],
+      [
+        "E",
+        "WC allowance",
+        [
+          6.15,
+          1.87,
+          0.65,
+          0.72
+        ],
+        "wc"
+      ],
+      [
+        "E",
+        "Bath allowance",
+        [
+          7.1,
+          1.95,
+          0.75,
+          1.7
+        ],
+        "bath"
+      ],
+      [
+        "E",
+        "Shower left screen",
+        [
+          5.835,
+          3.35,
+          0.03,
+          1.0
+        ],
+        "glass"
+      ],
+      [
+        "E",
+        "Shower right screen",
+        [
+          7.035,
+          3.35,
+          0.03,
+          1.0
+        ],
+        "glass"
+      ],
+      [
+        "E",
+        "Shower front left",
+        [
+          5.865,
+          3.335,
+          0.185,
+          0.03
+        ],
+        "glass"
+      ],
+      [
+        "E",
+        "Shower front right",
+        [
+          6.85,
+          3.335,
+          0.185,
+          0.03
+        ],
+        "glass"
+      ]
+    ],
+    "routes": {
+      "Arrival to kitchen": [
+        [
+          18.05,
+          17.5
+        ],
+        [
+          17.2,
+          16.4
+        ],
+        [
+          17.125,
+          15.8
+        ],
+        [
+          17.125,
+          14.5
+        ],
+        [
+          16.3,
+          14.25
+        ]
+      ],
+      "Boot to pantry": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          20.25,
+          16.65
+        ],
+        [
+          18.5,
+          16.65
+        ],
+        [
+          17.3,
+          16.5
+        ],
+        [
+          15.2,
+          16.5
+        ],
+        [
+          13.94,
+          16.5
+        ],
+        [
+          13.15,
+          16.7
+        ]
+      ],
+      "Boot to laundry": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          20.9,
+          16.2
+        ],
+        [
+          20.9,
+          14.0
+        ]
+      ],
+      "Family to living": [
+        [
+          4.1,
+          4.8
+        ],
+        [
+          4.1,
+          12.0
+        ],
+        [
+          3.95,
+          12.6
+        ],
+        [
+          3.95,
+          13.7
+        ],
+        [
+          6.1,
+          13.85
+        ]
+      ],
+      "Guests to living": [
+        [
+          19.0,
+          3.0
+        ],
+        [
+          18.1,
+          2.6
+        ],
+        [
+          17.15,
+          2.6
+        ],
+        [
+          17.15,
+          13.75
+        ],
+        [
+          16.5,
+          13.85
+        ],
+        [
+          9.7,
+          13.85
+        ]
+      ],
+      "Hall through orangery to living": [
+        [
+          17.15,
+          10.8
+        ],
+        [
+          17.15,
+          11.65
+        ],
+        [
+          16.375,
+          11.65
+        ],
+        [
+          15.25,
+          11.65
+        ],
+        [
+          15.25,
+          13.8
+        ]
+      ],
+      "Boot to gym": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          21.0,
+          16.65
+        ],
+        [
+          22.625,
+          16.65
+        ],
+        [
+          24.0,
+          16.65
+        ]
+      ],
+      "Garden sitting to dining": [
+        [
+          14.85,
+          12.25
+        ],
+        [
+          14.85,
+          13.85
+        ],
+        [
+          10.2,
+          13.85
+        ]
+      ],
+      "Guest hall to garden sitting": [
+        [
+          17.15,
+          10.9
+        ],
+        [
+          16.65,
+          11.9
+        ],
+        [
+          15.6,
+          12.15
+        ]
+      ],
+      "Garden door approach": [
+        [
+          14.85,
+          13.8
+        ],
+        [
+          14.85,
+          11.8
+        ],
+        [
+          14.85,
+          10.15
+        ],
+        [
+          14.4,
+          10.05
+        ]
+      ],
+      "Dining to cooking aisle": [
+        [
+          10.52,
+          13.85
+        ],
+        [
+          10.52,
+          16.65
+        ],
+        [
+          12.0,
+          16.7
+        ]
+      ],
+      "Rear of dining": [
+        [
+          6.1,
+          17.65
+        ],
+        [
+          9.35,
+          17.65
+        ]
+      ],
+      "Lounge approach": [
+        [
+          6.1,
+          13.85
+        ],
+        [
+          3.95,
+          13.85
+        ],
+        [
+          3.8,
+          14.65
+        ]
+      ],
+      "Utility to washer": [
+        [
+          20.9,
+          14.8
+        ],
+        [
+          20.72,
+          13.85
+        ],
+        [
+          20.72,
+          12.55
+        ]
+      ],
+      "Utility to folding": [
+        [
+          20.9,
+          14.8
+        ],
+        [
+          19.2,
+          14.8
+        ]
+      ],
+      "Boot bench approach": [
+        [
+          20.25,
+          16.65
+        ],
+        [
+          20.05,
+          17.05
+        ]
+      ],
+      "Kitchen directly to utility": [
+        [
+          16.8,
+          14.83
+        ],
+        [
+          17.81,
+          14.83
+        ],
+        [
+          18.8,
+          14.83
+        ],
+        [
+          19.2,
+          14.8
+        ]
+      ],
+      "Hall to snug sofa": [
+        [
+          17.15,
+          11.65
+        ],
+        [
+          17.15,
+          10.8
+        ],
+        [
+          18.5,
+          10.8
+        ],
+        [
+          19.75,
+          10.66
+        ]
+      ],
+      "Snug to window": [
+        [
+          19.75,
+          10.66
+        ],
+        [
+          19.75,
+          10.26
+        ],
+        [
+          19.75,
+          10.12
+        ],
+        [
+          21.6,
+          10.12
+        ],
+        [
+          22.02,
+          10.6
+        ]
+      ],
+      "Suite entry to bed west": [
+        [
+          4.03,
+          4.85
+        ],
+        [
+          4.03,
+          4.0
+        ],
+        [
+          3.9,
+          3.2
+        ],
+        [
+          3.65,
+          2.5
+        ]
+      ],
+      "Suite around bed to east": [
+        [
+          3.65,
+          2.5
+        ],
+        [
+          3.7,
+          1.65
+        ],
+        [
+          0.75,
+          1.65
+        ],
+        [
+          0.75,
+          3.25
+        ]
+      ],
+      "Suite to hanging and drawers": [
+        [
+          3.7,
+          1.65
+        ],
+        [
+          4.1,
+          1.225
+        ],
+        [
+          4.85,
+          1.225
+        ],
+        [
+          5.0,
+          1.38
+        ],
+        [
+          7.35,
+          1.38
+        ]
+      ],
+      "Suite to ensuite vanity": [
+        [
+          3.9,
+          3.2
+        ],
+        [
+          4.15,
+          3.575
+        ],
+        [
+          4.9,
+          3.575
+        ],
+        [
+          5.3,
+          2.95
+        ]
+      ],
+      "Ensuite WC approach": [
+        [
+          5.3,
+          2.95
+        ],
+        [
+          6.45,
+          2.96
+        ]
+      ],
+      "Ensuite shower entry": [
+        [
+          6.45,
+          2.96
+        ],
+        [
+          6.45,
+          3.8
+        ]
+      ],
+      "Ensuite bath approach": [
+        [
+          6.45,
+          2.96
+        ],
+        [
+          6.68,
+          2.96
+        ]
+      ]
+    },
+    "issues": [],
+    "partition_move_m": 0.7,
+    "removed_door": "P01",
+    "new_door": {
+      "id": "D20",
+      "a": "P",
+      "b": "W",
+      "x": 4.61,
+      "y": 0.8,
+      "width": 0.85,
+      "vertical": true,
+      "kind": "hinged",
+      "hinge_end": false,
+      "side": -1,
+      "pocket_direction": 1,
+      "thickness": 0.12
+    }
+  },
+  "recommended_option": "A - double basins and larger shower without ensuite bath",
+  "furniture": [
+    {
+      "id": "B1",
+      "room": "P",
+      "name": "Super-king frame allowance",
+      "rect": [
+        1.15,
+        2.1,
+        1.95,
+        2.15
+      ],
+      "height_m": 0.6,
+      "kind": "bed"
+    },
+    {
+      "id": "B2",
+      "room": "P",
+      "name": "East bedside",
+      "rect": [
+        0.65,
+        3.75,
+        0.4,
+        0.4
+      ],
+      "height_m": 0.55,
+      "kind": "cabinet"
+    },
+    {
+      "id": "B3",
+      "room": "P",
+      "name": "West bedside",
+      "rect": [
+        3.2,
+        3.75,
+        0.35,
+        0.4
+      ],
+      "height_m": 0.55,
+      "kind": "cabinet"
+    },
+    {
+      "id": "W1",
+      "room": "W",
+      "name": "Hanging wardrobe wall",
+      "rect": [
+        4.76,
+        0.35,
+        3.0,
+        0.66
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "W2",
+      "room": "W",
+      "name": "Shallow drawers / folded clothes",
+      "rect": [
+        5.65,
+        2.1,
+        2.1,
+        0.35
+      ],
+      "height_m": 0.95,
+      "kind": "cabinet"
+    },
+    {
+      "id": "E1",
+      "room": "E",
+      "name": "Double vanity",
+      "rect": [
+        4.72,
+        2.57,
+        1.2,
+        0.5
+      ],
+      "height_m": 0.85,
+      "kind": "basin"
+    },
+    {
+      "id": "E2",
+      "room": "E",
+      "name": "WC allowance",
+      "rect": [
+        6.0,
+        2.57,
+        0.65,
+        0.72
+      ],
+      "height_m": 0.42,
+      "kind": "wc"
+    },
+    {
+      "id": "E3",
+      "room": "E",
+      "name": "Fixed shower screen",
+      "rect": [
+        6.735,
+        2.57,
+        0.03,
+        0.88
+      ],
+      "height_m": 2.1,
+      "kind": "glass"
+    }
+  ],
+  "shower_walkable_zone_m": [
+    6.75,
+    2.57,
+    1.1,
+    1.78
+  ],
+  "fixed_screen_m": [
+    6.735,
+    2.57,
+    0.03,
+    0.88
+  ],
+  "routes": {
+    "Arrival to kitchen": [
+      [
+        18.05,
+        17.5
+      ],
+      [
+        17.2,
+        16.4
+      ],
+      [
+        17.125,
+        15.8
+      ],
+      [
+        17.125,
+        14.5
+      ],
+      [
+        16.3,
+        14.25
+      ]
+    ],
+    "Boot to pantry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.25,
+        16.65
+      ],
+      [
+        18.5,
+        16.65
+      ],
+      [
+        17.3,
+        16.5
+      ],
+      [
+        15.2,
+        16.5
+      ],
+      [
+        13.94,
+        16.5
+      ],
+      [
+        13.15,
+        16.7
+      ]
+    ],
+    "Boot to laundry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.9,
+        16.2
+      ],
+      [
+        20.9,
+        14.0
+      ]
+    ],
+    "Family to living": [
+      [
+        4.1,
+        4.8
+      ],
+      [
+        4.1,
+        12.0
+      ],
+      [
+        3.95,
+        12.6
+      ],
+      [
+        3.95,
+        13.7
+      ],
+      [
+        6.1,
+        13.85
+      ]
+    ],
+    "Guests to living": [
+      [
+        19.0,
+        3.0
+      ],
+      [
+        18.1,
+        2.6
+      ],
+      [
+        17.15,
+        2.6
+      ],
+      [
+        17.15,
+        13.75
+      ],
+      [
+        16.5,
+        13.85
+      ],
+      [
+        9.7,
+        13.85
+      ]
+    ],
+    "Hall through orangery to living": [
+      [
+        17.15,
+        10.8
+      ],
+      [
+        17.15,
+        11.65
+      ],
+      [
+        16.375,
+        11.65
+      ],
+      [
+        15.25,
+        11.65
+      ],
+      [
+        15.25,
+        13.8
+      ]
+    ],
+    "Boot to gym": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        21.0,
+        16.65
+      ],
+      [
+        22.625,
+        16.65
+      ],
+      [
+        24.0,
+        16.65
+      ]
+    ],
+    "Garden sitting to dining": [
+      [
+        14.85,
+        12.25
+      ],
+      [
+        14.85,
+        13.85
+      ],
+      [
+        10.2,
+        13.85
+      ]
+    ],
+    "Guest hall to garden sitting": [
+      [
+        17.15,
+        10.9
+      ],
+      [
+        16.65,
+        11.9
+      ],
+      [
+        15.6,
+        12.15
+      ]
+    ],
+    "Garden door approach": [
+      [
+        14.85,
+        13.8
+      ],
+      [
+        14.85,
+        11.8
+      ],
+      [
+        14.85,
+        10.15
+      ],
+      [
+        14.4,
+        10.05
+      ]
+    ],
+    "Dining to cooking aisle": [
+      [
+        10.52,
+        13.85
+      ],
+      [
+        10.52,
+        16.65
+      ],
+      [
+        12.0,
+        16.7
+      ]
+    ],
+    "Rear of dining": [
+      [
+        6.1,
+        17.65
+      ],
+      [
+        9.35,
+        17.65
+      ]
+    ],
+    "Lounge approach": [
+      [
+        6.1,
+        13.85
+      ],
+      [
+        3.95,
+        13.85
+      ],
+      [
+        3.8,
+        14.65
+      ]
+    ],
+    "Utility to washer": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        20.72,
+        13.85
+      ],
+      [
+        20.72,
+        12.55
+      ]
+    ],
+    "Utility to folding": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Boot bench approach": [
+      [
+        20.25,
+        16.65
+      ],
+      [
+        20.05,
+        17.05
+      ]
+    ],
+    "Kitchen directly to utility": [
+      [
+        16.8,
+        14.83
+      ],
+      [
+        17.81,
+        14.83
+      ],
+      [
+        18.8,
+        14.83
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Hall to snug sofa": [
+      [
+        17.15,
+        11.65
+      ],
+      [
+        17.15,
+        10.8
+      ],
+      [
+        18.5,
+        10.8
+      ],
+      [
+        19.75,
+        10.66
+      ]
+    ],
+    "Snug to window": [
+      [
+        19.75,
+        10.66
+      ],
+      [
+        19.75,
+        10.26
+      ],
+      [
+        19.75,
+        10.12
+      ],
+      [
+        21.6,
+        10.12
+      ],
+      [
+        22.02,
+        10.6
+      ]
+    ],
+    "Suite entry to bed west": [
+      [
+        4.03,
+        4.85
+      ],
+      [
+        4.03,
+        4.0
+      ],
+      [
+        3.9,
+        3.2
+      ],
+      [
+        3.65,
+        2.5
+      ]
+    ],
+    "Suite around bed to east": [
+      [
+        3.65,
+        2.5
+      ],
+      [
+        3.7,
+        1.65
+      ],
+      [
+        0.75,
+        1.65
+      ],
+      [
+        0.75,
+        3.25
+      ]
+    ],
+    "Suite to hanging and drawers": [
+      [
+        3.7,
+        1.65
+      ],
+      [
+        4.15,
+        1.825
+      ],
+      [
+        4.9,
+        1.825
+      ],
+      [
+        5.3,
+        1.55
+      ],
+      [
+        7.35,
+        1.55
+      ]
+    ],
+    "Suite to ensuite vanity": [
+      [
+        3.9,
+        3.2
+      ],
+      [
+        4.15,
+        3.575
+      ],
+      [
+        4.9,
+        3.575
+      ],
+      [
+        5.2,
+        3.5
+      ]
+    ],
+    "Ensuite WC approach": [
+      [
+        5.2,
+        3.5
+      ],
+      [
+        5.75,
+        3.8
+      ],
+      [
+        6.2,
+        3.8
+      ]
+    ],
+    "Ensuite shower entry": [
+      [
+        6.2,
+        3.8
+      ],
+      [
+        7.3,
+        3.8
+      ],
+      [
+        7.3,
+        3.05
+      ]
+    ]
+  },
+  "route_envelope_m": 0.7,
+  "issues": [],
+  "room_door_window_geometry_changed": false,
+  "bed_mattress_fit_test_m": [
+    1.8,
+    2.0
+  ],
+  "bed_frame_fit_test_m": [
+    1.95,
+    2.15
+  ],
+  "clearances_m": {
+    "bed_east": 0.8,
+    "bed_west": 1.45,
+    "bed_foot": 1.75,
+    "wardrobe_closed_aisle": 1.09,
+    "shower_entry": 0.9
+  },
+  "retained_prior_revisions": [
+    "D19 kitchen utility door",
+    "Concept 13 snug furniture"
+  ],
+  "limitations": [
+    "Fixture footprints only",
+    "No occupied use or joinery drawer-swing verification",
+    "No wetroom or electrical design",
+    "No selected bed frame",
+    "Provisional ceiling and joinery heights"
+  ],
+  "sources": [
+    "https://www.ikea.com/gb/en/p/pax-auli-wardrobe-with-sliding-doors-white-mirror-glass-s99561351/",
+    "https://eu.schluter.com/en-GB/bathroom-wetroom-systems-222.html"
+  ],
+  "selected_option": "A"
+}

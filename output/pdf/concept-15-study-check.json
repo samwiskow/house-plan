@@ -1,0 +1,991 @@
+{
+  "status": "Family rooms proposal; parents suite Option A selected",
+  "confirmed_preferences": [
+    "Small double beds where they fit",
+    "Family bath, separate generous shower and two basins",
+    "Parents suite Option A"
+  ],
+  "furniture": [
+    {
+      "id": "C1B",
+      "room": "C1",
+      "name": "Small-double bed frame",
+      "rect": [
+        5.65,
+        11.58,
+        2.1,
+        1.35
+      ],
+      "height_m": 0.6,
+      "kind": "bed"
+    },
+    {
+      "id": "C1W",
+      "room": "C1",
+      "name": "Clothes wardrobe",
+      "rect": [
+        4.82,
+        10.09,
+        0.66,
+        1.8
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "C1D",
+      "room": "C1",
+      "name": "Desk by window",
+      "rect": [
+        7.2,
+        9.940000000000001,
+        0.65,
+        1.4
+      ],
+      "height_m": 0.74,
+      "kind": "desk"
+    },
+    {
+      "id": "C1C",
+      "room": "C1",
+      "name": "Desk chair use reservation",
+      "rect": [
+        6.4,
+        10.13,
+        0.65,
+        0.65
+      ],
+      "height_m": 0.85,
+      "kind": "chair"
+    },
+    {
+      "id": "C2B",
+      "room": "C2",
+      "name": "Small-double bed frame",
+      "rect": [
+        0.4499999999999996,
+        11.58,
+        2.1,
+        1.35
+      ],
+      "height_m": 0.6,
+      "kind": "bed"
+    },
+    {
+      "id": "C2W",
+      "room": "C2",
+      "name": "Clothes wardrobe",
+      "rect": [
+        2.7199999999999998,
+        10.09,
+        0.66,
+        1.8
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "C2D",
+      "room": "C2",
+      "name": "Desk by window",
+      "rect": [
+        0.34999999999999987,
+        9.940000000000001,
+        0.65,
+        1.4
+      ],
+      "height_m": 0.74,
+      "kind": "desk"
+    },
+    {
+      "id": "C2C",
+      "room": "C2",
+      "name": "Desk chair use reservation",
+      "rect": [
+        1.1499999999999997,
+        10.13,
+        0.65,
+        0.65
+      ],
+      "height_m": 0.85,
+      "kind": "chair"
+    },
+    {
+      "id": "C3B",
+      "room": "C3",
+      "name": "Small-double bed frame",
+      "rect": [
+        5.65,
+        7.24,
+        2.1,
+        1.35
+      ],
+      "height_m": 0.6,
+      "kind": "bed"
+    },
+    {
+      "id": "C3W",
+      "room": "C3",
+      "name": "Clothes wardrobe",
+      "rect": [
+        4.82,
+        5.75,
+        0.66,
+        1.8
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "C3D",
+      "room": "C3",
+      "name": "Desk by window",
+      "rect": [
+        7.2,
+        5.6,
+        0.65,
+        1.4
+      ],
+      "height_m": 0.74,
+      "kind": "desk"
+    },
+    {
+      "id": "C3C",
+      "room": "C3",
+      "name": "Desk chair use reservation",
+      "rect": [
+        6.4,
+        5.79,
+        0.65,
+        0.65
+      ],
+      "height_m": 0.85,
+      "kind": "chair"
+    },
+    {
+      "id": "F1",
+      "room": "FB",
+      "name": "Bath",
+      "rect": [
+        0.35,
+        6.4,
+        1.7,
+        0.75
+      ],
+      "height_m": 0.58,
+      "kind": "bath"
+    },
+    {
+      "id": "F2",
+      "room": "FB",
+      "name": "Double vanity",
+      "rect": [
+        1.98,
+        4.47,
+        1.4,
+        0.5
+      ],
+      "height_m": 0.85,
+      "kind": "basin"
+    },
+    {
+      "id": "F3",
+      "room": "FB",
+      "name": "WC",
+      "rect": [
+        2.53,
+        6.43,
+        0.65,
+        0.72
+      ],
+      "height_m": 0.42,
+      "kind": "wc"
+    },
+    {
+      "id": "F4-1",
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        1.535,
+        4.47,
+        0.03,
+        0.18
+      ],
+      "height_m": 2.1,
+      "kind": "glass"
+    },
+    {
+      "id": "F4-2",
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        1.535,
+        5.55,
+        0.03,
+        0.12
+      ],
+      "height_m": 2.1,
+      "kind": "glass"
+    },
+    {
+      "id": "F4-3",
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        0.35,
+        5.655,
+        1.185,
+        0.03
+      ],
+      "height_m": 2.1,
+      "kind": "glass"
+    },
+    {
+      "id": "L1",
+      "room": "ST",
+      "name": "Retained plant allowance",
+      "rect": [
+        0.5,
+        7.4,
+        0.85,
+        0.85
+      ],
+      "height_m": null,
+      "kind": "plant"
+    },
+    {
+      "id": "L2",
+      "room": "ST",
+      "name": "Linen shelves",
+      "rect": [
+        1.5,
+        8.24,
+        0.9,
+        0.45
+      ],
+      "height_m": 2.2,
+      "kind": "cabinet"
+    }
+  ],
+  "routes": {
+    "Arrival to kitchen": [
+      [
+        18.05,
+        17.5
+      ],
+      [
+        17.2,
+        16.4
+      ],
+      [
+        17.125,
+        15.8
+      ],
+      [
+        17.125,
+        14.5
+      ],
+      [
+        16.3,
+        14.25
+      ]
+    ],
+    "Boot to pantry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.25,
+        16.65
+      ],
+      [
+        18.5,
+        16.65
+      ],
+      [
+        17.3,
+        16.5
+      ],
+      [
+        15.2,
+        16.5
+      ],
+      [
+        13.94,
+        16.5
+      ],
+      [
+        13.15,
+        16.7
+      ]
+    ],
+    "Boot to laundry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.9,
+        16.2
+      ],
+      [
+        20.9,
+        14.0
+      ]
+    ],
+    "Family to living": [
+      [
+        4.1,
+        4.8
+      ],
+      [
+        4.1,
+        12.0
+      ],
+      [
+        3.95,
+        12.6
+      ],
+      [
+        3.95,
+        13.7
+      ],
+      [
+        6.1,
+        13.85
+      ]
+    ],
+    "Guests to living": [
+      [
+        19.0,
+        3.0
+      ],
+      [
+        18.1,
+        2.6
+      ],
+      [
+        17.15,
+        2.6
+      ],
+      [
+        17.15,
+        13.75
+      ],
+      [
+        16.5,
+        13.85
+      ],
+      [
+        9.7,
+        13.85
+      ]
+    ],
+    "Hall through orangery to living": [
+      [
+        17.15,
+        10.8
+      ],
+      [
+        17.15,
+        11.65
+      ],
+      [
+        16.375,
+        11.65
+      ],
+      [
+        15.25,
+        11.65
+      ],
+      [
+        15.25,
+        13.8
+      ]
+    ],
+    "Boot to gym": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        21.0,
+        16.65
+      ],
+      [
+        22.625,
+        16.65
+      ],
+      [
+        24.0,
+        16.65
+      ]
+    ],
+    "Garden sitting to dining": [
+      [
+        14.85,
+        12.25
+      ],
+      [
+        14.85,
+        13.85
+      ],
+      [
+        10.2,
+        13.85
+      ]
+    ],
+    "Guest hall to garden sitting": [
+      [
+        17.15,
+        10.9
+      ],
+      [
+        16.65,
+        11.9
+      ],
+      [
+        15.6,
+        12.15
+      ]
+    ],
+    "Garden door approach": [
+      [
+        14.85,
+        13.8
+      ],
+      [
+        14.85,
+        11.8
+      ],
+      [
+        14.85,
+        10.15
+      ],
+      [
+        14.4,
+        10.05
+      ]
+    ],
+    "Dining to cooking aisle": [
+      [
+        10.52,
+        13.85
+      ],
+      [
+        10.52,
+        16.65
+      ],
+      [
+        12.0,
+        16.7
+      ]
+    ],
+    "Rear of dining": [
+      [
+        6.1,
+        17.65
+      ],
+      [
+        9.35,
+        17.65
+      ]
+    ],
+    "Lounge approach": [
+      [
+        6.1,
+        13.85
+      ],
+      [
+        3.95,
+        13.85
+      ],
+      [
+        3.8,
+        14.65
+      ]
+    ],
+    "Utility to washer": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        20.72,
+        13.85
+      ],
+      [
+        20.72,
+        12.55
+      ]
+    ],
+    "Utility to folding": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Boot bench approach": [
+      [
+        20.25,
+        16.65
+      ],
+      [
+        20.05,
+        17.05
+      ]
+    ],
+    "Kitchen directly to utility": [
+      [
+        16.8,
+        14.83
+      ],
+      [
+        17.81,
+        14.83
+      ],
+      [
+        18.8,
+        14.83
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Hall to snug sofa": [
+      [
+        17.15,
+        11.65
+      ],
+      [
+        17.15,
+        10.8
+      ],
+      [
+        18.5,
+        10.8
+      ],
+      [
+        19.75,
+        10.66
+      ]
+    ],
+    "Snug to window": [
+      [
+        19.75,
+        10.66
+      ],
+      [
+        19.75,
+        10.26
+      ],
+      [
+        19.75,
+        10.12
+      ],
+      [
+        21.6,
+        10.12
+      ],
+      [
+        22.02,
+        10.6
+      ]
+    ],
+    "Suite entry to bed west": [
+      [
+        4.03,
+        4.85
+      ],
+      [
+        4.03,
+        4.0
+      ],
+      [
+        3.9,
+        3.2
+      ],
+      [
+        3.65,
+        2.5
+      ]
+    ],
+    "Suite around bed to east": [
+      [
+        3.65,
+        2.5
+      ],
+      [
+        3.7,
+        1.65
+      ],
+      [
+        0.75,
+        1.65
+      ],
+      [
+        0.75,
+        3.25
+      ]
+    ],
+    "Suite to hanging and drawers": [
+      [
+        3.7,
+        1.65
+      ],
+      [
+        4.15,
+        1.825
+      ],
+      [
+        4.9,
+        1.825
+      ],
+      [
+        5.3,
+        1.55
+      ],
+      [
+        7.35,
+        1.55
+      ]
+    ],
+    "Suite to ensuite vanity": [
+      [
+        3.9,
+        3.2
+      ],
+      [
+        4.15,
+        3.575
+      ],
+      [
+        4.9,
+        3.575
+      ],
+      [
+        5.2,
+        3.5
+      ]
+    ],
+    "Ensuite WC approach": [
+      [
+        5.2,
+        3.5
+      ],
+      [
+        5.75,
+        3.8
+      ],
+      [
+        6.2,
+        3.8
+      ]
+    ],
+    "Ensuite shower entry": [
+      [
+        6.2,
+        3.8
+      ],
+      [
+        7.3,
+        3.8
+      ],
+      [
+        7.3,
+        3.05
+      ]
+    ],
+    "C1 entry to bed": [
+      [
+        4.1,
+        9.49
+      ],
+      [
+        5.92,
+        9.49
+      ],
+      [
+        5.92,
+        10.91
+      ],
+      [
+        6.12,
+        11.16
+      ]
+    ],
+    "C1 wardrobe approach": [
+      [
+        5.92,
+        9.49
+      ],
+      [
+        5.92,
+        10.41
+      ]
+    ],
+    "C1 desk approach": [
+      [
+        5.92,
+        10.91
+      ],
+      [
+        5.92,
+        11.16
+      ],
+      [
+        6.800000000000001,
+        11.16
+      ]
+    ],
+    "C2 entry to bed": [
+      [
+        4.1,
+        9.49
+      ],
+      [
+        2.28,
+        9.49
+      ],
+      [
+        2.28,
+        10.91
+      ],
+      [
+        2.0799999999999996,
+        11.16
+      ]
+    ],
+    "C2 wardrobe approach": [
+      [
+        2.28,
+        9.49
+      ],
+      [
+        2.28,
+        10.41
+      ]
+    ],
+    "C2 desk approach": [
+      [
+        2.28,
+        10.91
+      ],
+      [
+        2.28,
+        11.16
+      ],
+      [
+        1.4,
+        11.16
+      ]
+    ],
+    "C3 entry to bed": [
+      [
+        4.1,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        6.57
+      ],
+      [
+        6.12,
+        6.82
+      ]
+    ],
+    "C3 wardrobe approach": [
+      [
+        5.92,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        6.07
+      ]
+    ],
+    "C3 desk approach": [
+      [
+        5.92,
+        6.57
+      ],
+      [
+        5.92,
+        6.82
+      ],
+      [
+        6.800000000000001,
+        6.82
+      ]
+    ],
+    "Family bathroom vanity": [
+      [
+        4.1,
+        5.5
+      ],
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.65,
+        5.5
+      ]
+    ],
+    "Family bathroom shower": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.05,
+        5.4
+      ],
+      [
+        1.88,
+        5.32
+      ],
+      [
+        1.6,
+        5.15
+      ],
+      [
+        0.95,
+        5.1
+      ]
+    ],
+    "Family bathroom bath": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.2,
+        5.8
+      ],
+      [
+        1.9,
+        6.02
+      ]
+    ],
+    "Family bathroom WC": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.8,
+        5.98
+      ]
+    ],
+    "Linen approach": [
+      [
+        4.1,
+        7.9
+      ],
+      [
+        2.8,
+        7.9
+      ],
+      [
+        1.95,
+        7.8
+      ]
+    ],
+    "Plant approach": [
+      [
+        2.8,
+        7.9
+      ],
+      [
+        1.75,
+        7.8
+      ]
+    ]
+  },
+  "route_envelope_m": 0.7,
+  "issues": [],
+  "shower_zone_m": [
+    0.35,
+    4.47,
+    1.2,
+    1.2
+  ],
+  "fixed_shower_screens_m": [
+    [
+      1.535,
+      4.47,
+      0.03,
+      0.18
+    ],
+    [
+      1.535,
+      5.55,
+      0.03,
+      0.12
+    ],
+    [
+      0.35,
+      5.655,
+      1.185,
+      0.03
+    ]
+  ],
+  "bed_mattress_m": [
+    1.2,
+    2.0
+  ],
+  "bed_frame_m": [
+    1.35,
+    2.1
+  ],
+  "changed_door": {
+    "id": "D03",
+    "a": "FH",
+    "b": "FB",
+    "x": 3.44,
+    "y": 5.05,
+    "width": 0.9,
+    "vertical": true,
+    "kind": "hinged",
+    "hinge_end": false,
+    "side": -1,
+    "pocket_direction": 1,
+    "thickness": 0.12
+  },
+  "previous_D03_y_m": 4.8,
+  "room_window_geometry_changed": false,
+  "linen_shelves_m": {
+    "width": 0.9,
+    "depth": 0.45,
+    "heights": [
+      0.35,
+      0.75,
+      1.15,
+      1.55,
+      1.95
+    ]
+  },
+  "retained_plant_footprint_m": [
+    0.5,
+    7.4,
+    0.85,
+    0.85
+  ],
+  "limitations": [
+    "Plant not selected or sized",
+    "No occupied-use, window-operation or actual furniture hardware check",
+    "No bathroom services or compliance design",
+    "Shower floors walkable; fixed glass obstacles checked"
+  ]
+}

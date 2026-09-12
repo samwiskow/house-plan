@@ -1,8 +1,10 @@
 # U-shaped family home - concept 05
 
-The current floor-plan revision is `output/pdf/concept-07-open-garden-room.pdf`:
+The full floor-plan reference is `output/pdf/concept-07-open-garden-room.pdf`:
 a full plan at 1:100 and a before/after corner detail at 1:50, both on A3.
 It opens the year-round garden room and relocates the hall door beyond the snug.
+Read it alongside concept 12, which adds the approved direct kitchen–utility
+hinged door D19; that opening is not shown in the earlier full-plan export.
 Print at 100% to preserve scale.
 
 `output/pdf/u-home-dimensioned-concept.pdf` retains the original concept 05 plan,
@@ -19,6 +21,381 @@ and the proposed log burner.
 It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
+
+## Plant location: revised direction, 12 September 2026
+
+The user declined the family-wing annexe in concept 16. Investigate the laundry
+room and/or extending the existing gym block to accommodate plant at the service
+end, away from bedrooms. Preserve the full usable gym; an extension is permitted
+for investigation, not selected or dimensioned. Prefer continuing the existing
+block and roof form to creating another separate annexe. A gym-block extension
+still requires roof, structure and drainage coordination.
+
+[SERVICES-BRIEF.md](SERVICES-BRIEF.md) records the known requirements, missing
+household inputs and the comparison to develop. Confirmed: two adults and three
+children, with an upper planning allowance of five overnight guests (ten total). Design for two simultaneous
+high-flow rain showers, mandatory active cooling powered by solar, and preferably
+side-by-side washer / dryer. Cool all bedrooms, shared / garden room, office,
+snug and gym. The PV / battery / grid energy balance remains open. The utility is already fitted
+with separate washer / dryer bays, sink, sorting, folding and air-drying space;
+plant there requires a tested rearrangement. A gym-block extension may preserve
+both functions, but added footprint, access, acoustics and distribution routes
+remain untested. Check the longer hot-water route to the family bathrooms.
+
+`output/pdf/concept-16-plant-and-linen.pdf` is a historical, declined location
+study. It illustrates a 6.89 m2 family-wing annexe and conditional 2.00 x 0.55 m
+linen shelving; neither is adopted. Its original 40 house-route and two annexe
+approach checks apply only to that old scenario. Existing house geometry and
+full gym furniture were retained. The PDF is preserved as history; the study
+JSON and builder status record the rejection. Continue using concept 15's plant
+reservation until a service-end arrangement is designed and accepted. Do not
+load concept 16's cleared ST furniture as the latest adopted layout.
+
+## Concept 15: children's rooms, family bath and linen (proposal)
+
+`output/pdf/concept-15-family-bedrooms-bath-linen.pdf` contains four A3 sheets:
+a family-wing plan at 1:50, mirrored bedroom details at 1:30, a bathroom plan
+at 1:20 and linen / plant plan with shelving elevation at 1:20.
+The user confirmed **small double beds where they fit** and a family bathroom
+with **a bath, separate generous shower and two basins**.
+
+Each 3.03 x 4.22 m child room (12.79 m2) gets the same furniture allowances:
+a 1.20 x 2.00 m mattress in a 1.35 x 2.10 m frame, a 1.80 m wardrobe at 0.66 m
+depth, a 1.40 x 0.65 m desk and a 0.65 m-square chair reservation. Beds turn
+across the far end with their heads at the external wall. C1 / C3 share the
+layout and C2 mirrors it. Desk height, chair size, sill / window operation,
+blackout, fixings and actual bed frames still require selection.
+
+The 3.03 x 2.68 m family bathroom fits a 1.70 x 0.75 m bath, a separate
+1.20 x 1.20 m shower zone, a 1.40 m double vanity and WC. Move D03 north from
+y=4.80 to 5.05 m, retaining its width and swing, to clear the vanity. No room
+polygons or windows change. The shower window needs privacy, waterproofing
+and hardware coordination. Fixed glass is checked as an obstacle; the shower
+floor is walkable. Bath assistance, occupied use, actual enclosures, plumbing,
+electrical zones, drainage and construction compliance are not validated.
+
+The linen / plant store retains its existing 0.85 x 0.85 m plant placeholder.
+A 0.90 m-wide, 0.45 m-deep linen unit has five proposed shelf levels, keeping
+the door swing clear. This is modest provision for five bedrooms. The plant
+footprint is not a selected or sized equipment package: service / replacement
+clearances, cylinder, ventilation unit and pipework may change usable storage.
+No relocation of equipment into the utility is assumed.
+
+`family_rooms_study.py` loads selected parents-suite A before the rejected B
+alternative, retaining the snug and kitchen–utility D19. It replaces furniture
+only in C1 / C2 / C3 / FB / ST and moves D03. All 40 sampled routes and room-door
+sweeps pass at the existing 0.70 m envelope, with desk chair reservations present.
+These are footprint / approach checks, not occupied-use or accessibility tests.
+All four pages were rendered and visually reviewed. The proposal is recorded
+in `output/pdf/concept-15-study-check.json`.
+
+## Concept 14: parents' suite (proposal)
+
+`output/pdf/concept-14-parents-suite.pdf` contains four A3 sheets: the suite
+plan at 1:40, bedroom / wardrobe elevations at 1:25, an ensuite detail at 1:20
+with elevation at 1:25, and an alternative suite plan at 1:40.
+The user confirmed a **180 x 200 cm super king** and clarified that **two basins
+and a generous separate shower matter more than an ensuite bath**. Both options
+retain those priorities. The user selected Option A and declined the bath
+alternative because of its dressing-room compromises. The four-page comparison
+PDF is retained as the decision reference.
+
+The bed turns onto the solid north wall, away from the south window. Its
+1.95 x 2.15 m frame allowance leaves 0.80 m east, 1.45 m west and 1.75 m at the
+foot before furniture / door use. Bedside units clear the room-door sweep.
+The head wall backs onto the family bathroom: coordinate services and sound
+isolation. Actual frame, blinds, finishes and lighting remain to specify.
+
+**Option A is selected:** retain the existing rooms, with a compact 1.20 m
+double vanity, WC and a 1.10 x 1.78 m shower zone. A 0.88 m fixed screen leaves
+a 0.90 m entry. The dressing room has 3.00 m of hanging storage at 0.66 m overall
+depth and a 2.10 m shallow drawer / folded-clothes run at 0.35 m depth, leaving
+1.09 m between closed fronts. The wardrobe pocket cavity stays reserved.
+
+**Option B adds a bath:** move the partition 0.70 m into the dressing room,
+raising ensuite area from 5.66 to 7.89 m2. It fits a 1.70 x 0.75 m bath,
+1.20 x 1.00 m separate shower and 1.20 m double vanity. The dressing room drops
+from 6.68 to 4.45 m2, with 2.60 m hanging storage, no shallow drawer run and a
+0.74 m aisle. Replace P01 with relocated hinged D20 opening into the bedroom.
+These changes are an alternative only; the external walls and windows remain.
+The shower approach is only about 0.75 m deep, leaving little tolerance.
+
+`suite_study.py` loads concept 13 without regenerating older exports. It checks
+25 routes for A and 26 for B using the existing sampled 0.70 m envelope, with
+fixed shower screens as obstacles and shower floors walkable. Both route sets
+and door / furniture sweep checks pass. These checks do not establish occupied
+use, actual frame / fixture tolerances, drawer operation or construction and
+accessibility compliance. Waterproofing, drainage, the wet-zone window,
+ventilation and bathroom electrics require design. All four pages were rendered
+and visually reviewed. `output/pdf/concept-14-study-check.json` records A and B;
+its default furniture proposal is A, retaining D19 and the concept 13 snug.
+
+## Concept 13: snug (proposal)
+
+`output/pdf/concept-13-snug.pdf` contains a furnished plan and two full-wall
+interior elevations at 1:25 on A3. The user confirmed **TV and films, with room
+to read**; this supersedes the earlier reading / play emphasis for this room.
+The clear room remains 4.58 x 2.60 m (11.91 m2), retaining its west-facing
+window, room door and separation from the office / guest hall.
+
+Propose a 2.30 x 0.90 m sofa opposite 2.70 m of shallow storage, a movable
+0.50 m footstool and a small side table. A centred 55-inch screen is illustrated
+as a dimensional allowance, with its centre around 1.00 m high and an estimated
+2.0 m seated viewing distance; actual sofa posture, TV and mount need selection.
+Storage is 0.30 m deep with a 0.55 m-high base and side shelves. Keep cabling
+accessible and equipment ventilated. A recess blind controls window light;
+selected window / blind hardware still needs checking.
+
+Local lighting separates film, reading and general use: dimmable storage-wall
+ambient light, two reading lights and a general ceiling light whose position
+is open. Warm ivory, honey oak and bronze carry through; an olive / moss sofa
+and fitted wool-rich carpet are proposals for review, not selected finishes.
+
+`snug_study.py` loads concept 12 without regenerating its outputs, retains D19,
+and replaces only snug furniture. All 19 sampled routes pass with a 0.70 m
+envelope, including access to the sofa and window with the footstool present.
+Room-door swings clear furniture; room / door / window geometry is unchanged.
+The storage-to-sofa gap is 1.35 m; the parked footstool leaves a 0.80 m passage.
+These are footprint checks, not checks of occupied seating, joinery hinges,
+window swings, acoustic performance or lighting output. The two PDF pages
+were rendered and visually reviewed. The proposal is recorded in
+`output/pdf/concept-13-study-check.json`.
+
+## Concept 12: arrival, storage and utility (proposal)
+
+`output/pdf/concept-12-arrival-storage-utility.pdf` contains four A3 sheets: a
+furnished plan at 1:50, boot-room / hall elevations, utility elevations and
+pantry elevations. Elevations are 1:25 except the hall cupboard at 1:40. The
+room polygons and shared-room furniture remain unchanged. D19 adds an approved
+0.80 m opening allowance directly between kitchen and utility, hinged at its
+north end to open back into the utility. Boot-room access is retained. Final
+frame dimensions, clear passage and the head / ambient-light junction need design.
+Investigate a solid-core doorset with perimeter and suitable bottom seals;
+coordinate ventilation transfer. No acoustic performance rating is established.
+
+- Boot room: 1.10 m closed coat / bag storage, a 1.85 m oak bench with three shoe
+  bays and five staggered hooks for wet coats. Keep the laundry pocket cavity
+  clear. The bench is outside the room-door sweep.
+- Entrance: a 0.90 m visitor-coat cupboard and a 0.60 m-long, 0.28 m-deep keys
+  ledge with mirror above. Sliding cupboard fronts are proposed; actual usable
+  hanging depth and hardware need checking.
+- Utility: the user confirmed separate washer and dryer plus some air-drying
+  space. Reserve two 0.65 m appliance bays, a sink and sorting drawers along the
+  3.15 m wall. Use 0.75 m depth including connection space. The return has a
+  0.70 m ventilated hanging-cupboard reservation and 1.45 m folding counter.
+  Drying airflow and capacity are not established; this is modest provision.
+- Pantry: 0.60 m-deep counter / drawers on one end wall and 0.40 m food shelving
+  on the other, leaving a 1.60 m aisle. Keep both side walls clear for the pocket
+  doors. Upper counter shelves are 0.30 m deep. No extra sink or fridge is assumed.
+
+`arrival_study.py` reads the current shared-space model without regenerating
+earlier exports, replaces furniture only in H / B / L / PA and adds D19 for this study.
+It records 12 furniture reservations in `output/pdf/concept-12-study-check.json`.
+All 17 sampled routes pass at a 0.70 m envelope, as do room-door sweep checks
+against furniture. Repeating with both 0.55 m machine-door projection rectangles
+and the fully open D19 leaf also passes; the leaf is excluded from testing against
+its own swing. The narrow utility aisle is 1.48 m closed and 0.93 m behind those
+open reservations; the folding return has 1.03 m and is treated as a one-person
+work zone. Drawers and baskets occupy circulation during use.
+
+These checks do not validate selected appliance hinges, joinery-door operation,
+two-person use, accessibility compliance or manufacturing tolerances. Machine
+models, connections, extraction, noise, drying airflow and cabinet fixings remain
+to specify. A Bosch dimensional reference is linked in the PDF only to explain
+why door-open depth matters; it is not an appliance selection. The four pages
+were rendered and visually reviewed. Rebuild with the Python runtime below,
+substituting `arrival_study.py`.
+
+## Concept 11: year-round comfort (proposal)
+
+Working site assumption: Northumberland, England, with the courtyard opening due
+south. On the retained plan, south is up, north down, east left and west right.
+The shared-room courtyard glazing and garden-room front face south; the garden
+side window faces east and family-wing courtyard windows face west. This
+supersedes earlier notes that no compass orientation had been assigned. The
+exact plot, altitude, exposure, horizon and weather file are still unknown.
+
+`output/pdf/concept-11-year-round-comfort.pdf` contains three A3 sheets: a comfort
+plan at 1:100, a roof / shade / ventilation section at 1:50 and seasonal operating
+diagrams. It retains the measured walls, openings, roof heights, furniture and
+selected courtyard layout. The lighting direction is now supported by the user;
+fixture specifications and technical performance remain open.
+
+- Reserve retractable external shading over the glazed roof and screens for
+  south-facing sliders and the east garden-room side window. Retain insulating
+  solar-control glass, with whole-unit performance and appearance to specify.
+- The roof shade stops at plan y = 11.85 m, before two high vent reservations at
+  y = 12.10-12.60 m. The approximately 0.95 m upper strip remains unshaded in this
+  option and must be included in solar modelling. Plan separation is verified;
+  cassette, frame, opening sweep, weathering and low-pitch compatibility are not.
+- Investigate south-to-north purge openings and high-level exhaust, with a
+  designed secure inlet for night use. Door opening is an attended option.
+  Air arrows illustrate a possible route, not a wind or airflow calculation.
+- Develop wet underfloor heating for a heat-pump design, coordinating the garden
+  and shared-room loops and excluding fixed joinery / hearth. Assess winter
+  comfort near glass before deciding whether another emitter is needed.
+- Study whole-house MVHR for background fresh air separately from summer purge.
+  Plant, manifolds, duct sizes and terminal locations are not selected. Coordinate
+  service / hall ceiling routes with the vault, roof head and ambient lighting.
+
+`comfort_study.py` builds this independently. Its JSON records orientation,
+non-overlapping roof reservations and the retained clear routes. The illustrative
+solar-noon angles use 55.2 N as a representative latitude, not a plot coordinate:
+58.2 degrees in summer, 34.8 at equinox and 11.4 in winter. No shade duration or
+indoor temperature follows from those angles. All three pages were rendered
+and visually reviewed.
+
+Next technical work: site-specific year-round thermal modelling of the connected
+interior and bedrooms, room-by-room heat loss, usable ventilation areas, and
+supplier coordination of roof shading / vents. Use appropriate current and future
+weather data and confirm applicable regulations. No heating or cooling capacity,
+airflow, overheating or compliance result is claimed. Source links are in the PDF.
+Rebuild with the Python runtime below, substituting `comfort_study.py`.
+
+## Concept 10: lighting and evening scenes (direction supported)
+
+`output/pdf/concept-10-lighting-scenes.pdf` contains three A3 sheets: a lighting
+plan at 1:100, scene and control settings, and an evening view from dining toward
+the garden room and courtyard. It retains the current furniture and house geometry.
+
+- Six adjustable kitchen spots provide a separate task-light group. Four concealed
+  linear runs soften the shared-room edges; their ledges and maintenance access
+  need coordinating with the vault.
+- Keep the single dining chandelier, two lounge lamps and a garden-room reading
+  light on a solid pier. No lighting is fixed to the glazed roof.
+- Add three concealed ambient wall runs along the pantry face and WC approach,
+  on a separate group retained in every shared-room scene. Pantry shelf and WC
+  mirror lights have independent local switches.
+- Four bronze courtyard pillars replace the outdoor table lamps.
+  The study reserves 0.18 m square bases and 0.75 m height, spaced beside
+  the routes and seating with recessed downward light. Retain two low threshold
+  lights and one manual indoor garden-room table lamp.
+- Add seven broad downward wall lights around the courtyard, following the user's
+  numbered markup: W1-W4 on solid family-wing wall sections and W5-W7 on the guest
+  return. Propose 2.00 m mounting height and a separate ambient dimmer. These add
+  light across paving and seating alongside the pillars; overlapping coverage
+  remains a design target. Check bedroom-window spill and planting shadows with
+  actual fittings. No dedicated planting uplights are proposed.
+- Wall controls at the entrance hall, family-hall approach and dining slider recall
+  Everyday, Entertaining and Quiet evening. Keep local reading controls, labelled
+  lamp outlets and independent pillar / wall-light dimming at the dining slider;
+  no app is required. The revised interior ambient direction is supported.
+
+Scene percentages are starting dimmer settings for commissioning, not calculated
+light output. Outdoor scenes apply after dark while the court is in use, with a
+proposed 60-minute auto-off extendable at the slider control. Groups express the
+control intent, not final wiring circuits. Proposed colour temperatures are 2700 K
+inside and 2200-2700 K outside, subject to actual fittings and samples.
+
+`lighting_study.py` reads the current shared-space geometry and concept 09 JSON
+without regenerating earlier exports. It records 33 light locations, eight
+scene groups plus local task lights and one indoor portable, and three controls in
+`output/pdf/concept-10-study-check.json`. Scene coverage and value ranges pass;
+the 13 existing indoor route checks also pass with the floor-lamp base reserved.
+The four pillar bases stay inside the courtyard and clear of planting, furniture
+in both chair positions, and the four retained routes with their 1.00 m envelopes.
+Pillar spacing and output are proposals, not verified lighting coverage.
+All seven wall-light positions avoid the measured window spans; their light
+distribution, mounting details and courtyard uniformity are not validated.
+All three PDF sheets were rendered and visually reviewed.
+
+The evening view illustrates colour and mood using approximate falloff. It does
+not establish lux levels, glare, reflected glass, shadows, ecological performance
+or electrical compliance. Beam selection, output, dimming compatibility, mounting,
+outdoor ratings and spill require testing with actual fittings. Outdoor intent
+follows the [DarkSky / IES principles](https://darksky.org/resources/guides-and-how-tos/lighting-principles/).
+Rebuild with the Python runtime below, substituting `lighting_study.py`.
+
+## Concept 09: courtyard layout selected; elevations in development
+
+`output/pdf/concept-09-courtyard-elevations.pdf` contains a furnished courtyard
+plan at 1:75 and coordinated garden / courtyard return elevations at 1:100,
+on two A3 sheets. This develops the exterior around the current shared-space
+study without changing any house walls, room polygons or opening widths.
+The courtyard layout was selected on 12 September; technical details and exact
+materials, planting and facade treatments remain open.
+
+- Keep the 4.00 m strip beside the garden room clear as the route from shared
+  living. A connected landing serves the existing dining and garden-room sliders.
+- Put a 3.00 x 1.00 m outdoor table in the wider court, with four chairs per
+  long side. Circulation passes on the guest-wing side, outside the seating.
+- Add a separate pad toward the garden, beside the guest wing's solid return,
+  with a 2.20 m sofa, one chair and a low table.
+- Test a 0.75 m family-side planting band beyond a 0.35 m wall-side strip.
+  Proposed maintained heights are 0.90-1.20 m beside dining, lower near the
+  garden mouth. Planting filters views; species, mature dimensions, window
+  privacy and daylight performance have not been established.
+
+Paving totals 50.78 m2 of the 88.40 m2 open court. The remaining 37.62 m2 covers
+soft landscape and wall-side strips. This increases paving from the earlier
+rough 38 m2 allowance to accommodate the two seating areas and connecting paths;
+no site-wide landscape scheme is implied.
+
+The garden elevation correctly mirrors the plan: gym left, family wing right.
+Three return elevations show the family windows, largely solid guest return
+and the garden room's shallow glazed roof. Main eave/ridge, low-wing roof and
+glass roof heights follow concepts 06B/07B. Existing opening widths stay fixed;
+window heights, bronze frames, timber/stone distribution and edge details are
+proposals. Two-panel sliders are illustrated with a target of at least 1.20 m
+clear after framing, subject to system selection. Door passage is not validated.
+
+`courtyard_study.py` reads the current shared-space model without running its
+exports. It checks outdoor furniture containment, overlap and planting conflicts,
+paving containment and area, and four routes with a sampled 1.00 m envelope.
+All four routes pass with outdoor dining chairs in their normal positions and
+pulled out 0.40 m. These routes stop outside the door faces and do not validate
+threshold levels, accessibility or actual sliding-door clear widths. The JSON
+`output/pdf/concept-09-study-check.json` records dimensions, route checks and
+orientation assertions. Both sheets were rendered and visually reviewed.
+
+Concept 11 now assumes a south-facing courtyard in Northumberland. Sunlight,
+wind shelter, planting selection, privacy, drainage,
+roof junctions and surface / threshold specifications remain unresolved.
+Rebuild with the Python runtime below, substituting `courtyard_study.py`.
+
+## Concept 08: coordinated shared-space study (proposal)
+
+`output/pdf/concept-08-shared-space.pdf` contains an enlarged furnished plan at
+1:50 and two interior perspectives on three A3 sheets. This is a new proposal
+for review, retaining the concept 07 room polygons, openings and footprint.
+It does not replace the agreed room arrangement or approve new products.
+
+- The 2.80 m sofa retains its position. The dining table turns 90 degrees and
+  grows to 3.00 x 1.00 m, with four chairs along each long side and none at the
+  ends. Its centre and the chandelier position are retained. The media
+  unit shortens to 2.20 m, the north armchair moves, and a 1.35 x 1.50 m hearth
+  zone reserves the family-wing end for a stove. These are spatial allowances,
+  not validated hearth dimensions, combustible clearances or TV heat protection.
+- The 2.80 x 1.05 m island shifts 0.45 m toward the rear counter, with three
+  stools on its garden side. The cooking aisle is 1.45 m. An island hob is
+  proposed; extraction, ventilation and its proximity to seating need design.
+- A 2.80 m rear base run allocates 1.00 m drawers, 0.80 m sink base, 0.60 m
+  dishwasher and 0.40 m bins. Two 0.60 m towers reserve ovens and fridge/freezer.
+  Cabinet fillers, chosen appliance dimensions and full operating envelopes
+  are not resolved. The kitchen window retains its width and tests a 1.12 m sill.
+- The garden sitting area tests a 1.80 x 0.85 m sofa, one 0.85 m chair and a
+  0.60 m table. It retains the open hall connection and a central approach to
+  the existing sliding-door opening. The actual sliding system's clear opening
+  has not been validated.
+
+`shared_space_study.py` loads the concept 07 model without running its exports.
+The same furniture coordinates produce the plan and both depth-rendered views.
+All 13 nominated routes pass the existing sampled 0.70 m envelope check,
+including the added route around the rear table end. All 13 also pass with
+all eight dining chairs pulled out 0.35 m. The 0.75 m seat pitch gives four
+places per long side. Gaps from chairs to island and sofa are 1.55/1.70 m
+normally and 1.20/1.35 m with chairs pulled out. The clear table-end gaps are
+1.05 m toward the courtyard and 0.85 m toward the rear wall. These measured
+allowances remain subject to the chosen table, leg positions and chair sizes.
+A provisional 0.60 m appliance-door projection leaves 0.85 m of kitchen aisle;
+this is not proof of comfortable simultaneous use or accessibility.
+
+`output/pdf/concept-08-study-check.json` records furniture, camera positions,
+clearances, checks and limits. All three A3 pages were rendered and visually
+reviewed, including camera orientation. Stove installation, roof structure and comfort
+remain unverified. Views show study proportions and colours, not photorealistic
+materials or lighting performance. Rebuild using the Python runtime below,
+substituting `shared_space_study.py`; this renderer also uses NumPy and Pillow.
 
 ## Concept 07B: glazed-roof transition
 
@@ -135,7 +512,7 @@ Python runtime as the rebuild command below. It does not regenerate concept 05.
 - Parents' bedroom, walk-in wardrobe and ensuite; three children's bedrooms;
   guest bedroom and shower; separate family bathroom and visitor WC.
 - Compact family grouping with bathroom and storage buffering the parents.
-- Large open kitchen/dining/living area and an enclosed reading/play snug at
+- Large open kitchen/dining/living area and an enclosed TV / reading snug at
   the guest-wing transition, with circulation beside it.
 - Dedicated office/gaming room for one person; no business visitors.
 - Pantry beside the kitchen counter and fridge, also reached from the smaller

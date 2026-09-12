@@ -1,0 +1,525 @@
+{
+  "status": "Arrival joinery proposal; direct hinged kitchen / utility door selected",
+  "furniture": [
+    {
+      "id": "B1",
+      "room": "B",
+      "name": "Closed coats / sports bags",
+      "rect": [
+        19.15,
+        15.45,
+        1.1,
+        0.6
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "B2",
+      "room": "B",
+      "name": "Bench / three shoe bays",
+      "rect": [
+        19.15,
+        17.5,
+        1.85,
+        0.55
+      ],
+      "height_m": 0.45,
+      "kind": "bench"
+    },
+    {
+      "id": "H1",
+      "room": "H",
+      "name": "Visitor coat cupboard",
+      "rect": [
+        16.47,
+        17.45,
+        0.9,
+        0.6
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "H2",
+      "room": "H",
+      "name": "Keys ledge / mirror",
+      "rect": [
+        18.75,
+        15.45,
+        0.28,
+        0.6
+      ],
+      "height_m": 0.9,
+      "kind": "cabinet"
+    },
+    {
+      "id": "P1",
+      "room": "PA",
+      "name": "Pantry counter / drawers",
+      "rect": [
+        14,
+        15.45,
+        2.35,
+        0.6
+      ],
+      "height_m": 0.92,
+      "kind": "cabinet"
+    },
+    {
+      "id": "P2",
+      "room": "PA",
+      "name": "Dry-food shelves",
+      "rect": [
+        14,
+        17.65,
+        2.35,
+        0.4
+      ],
+      "height_m": 2.25,
+      "kind": "cabinet"
+    },
+    {
+      "id": "L1",
+      "room": "L",
+      "name": "Washer bay",
+      "rect": [
+        21.7,
+        12.23,
+        0.75,
+        0.65
+      ],
+      "height_m": 0.92,
+      "kind": "cabinet"
+    },
+    {
+      "id": "L2",
+      "room": "L",
+      "name": "Dryer bay",
+      "rect": [
+        21.7,
+        12.88,
+        0.75,
+        0.65
+      ],
+      "height_m": 0.92,
+      "kind": "cabinet"
+    },
+    {
+      "id": "L3",
+      "room": "L",
+      "name": "Sink base",
+      "rect": [
+        21.7,
+        13.53,
+        0.75,
+        0.8
+      ],
+      "height_m": 0.92,
+      "kind": "cabinet"
+    },
+    {
+      "id": "L4",
+      "room": "L",
+      "name": "Sorting / detergent drawers",
+      "rect": [
+        21.7,
+        14.33,
+        0.75,
+        0.95
+      ],
+      "height_m": 0.92,
+      "kind": "cabinet"
+    },
+    {
+      "id": "L5",
+      "room": "L",
+      "name": "Ventilated hanging cupboard",
+      "rect": [
+        17.87,
+        13.7,
+        0.7,
+        0.6
+      ],
+      "height_m": 2.3,
+      "kind": "cabinet"
+    },
+    {
+      "id": "L6",
+      "room": "L",
+      "name": "Folding counter / baskets",
+      "rect": [
+        18.62,
+        13.7,
+        1.45,
+        0.6
+      ],
+      "height_m": 0.92,
+      "kind": "cabinet"
+    }
+  ],
+  "clearances_m": {
+    "pantry_closed_aisle_m": 1.6,
+    "utility_closed_head_aisle_m": 1.48,
+    "utility_machine_open_aisle_m": 0.93,
+    "utility_folding_aisle_m": 1.03,
+    "boot_bench_to_coat_front_m": 1.45,
+    "pantry_one_500mm_drawer_open_aisle_m": 1.1
+  },
+  "routes": {
+    "Arrival to kitchen": [
+      [
+        18.05,
+        17.5
+      ],
+      [
+        17.2,
+        16.4
+      ],
+      [
+        17.125,
+        15.8
+      ],
+      [
+        17.125,
+        14.5
+      ],
+      [
+        16.3,
+        14.25
+      ]
+    ],
+    "Boot to pantry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.25,
+        16.65
+      ],
+      [
+        18.5,
+        16.65
+      ],
+      [
+        17.3,
+        16.5
+      ],
+      [
+        15.2,
+        16.5
+      ],
+      [
+        13.94,
+        16.5
+      ],
+      [
+        13.15,
+        16.7
+      ]
+    ],
+    "Boot to laundry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.9,
+        16.2
+      ],
+      [
+        20.9,
+        14.0
+      ]
+    ],
+    "Family to living": [
+      [
+        4.1,
+        4.8
+      ],
+      [
+        4.1,
+        12.0
+      ],
+      [
+        3.95,
+        12.6
+      ],
+      [
+        3.95,
+        13.7
+      ],
+      [
+        6.1,
+        13.85
+      ]
+    ],
+    "Guests to living": [
+      [
+        19.0,
+        3.0
+      ],
+      [
+        18.1,
+        2.6
+      ],
+      [
+        17.15,
+        2.6
+      ],
+      [
+        17.15,
+        13.75
+      ],
+      [
+        16.5,
+        13.85
+      ],
+      [
+        9.7,
+        13.85
+      ]
+    ],
+    "Hall through orangery to living": [
+      [
+        17.15,
+        10.8
+      ],
+      [
+        17.15,
+        11.65
+      ],
+      [
+        16.375,
+        11.65
+      ],
+      [
+        15.25,
+        11.65
+      ],
+      [
+        15.25,
+        13.8
+      ]
+    ],
+    "Boot to gym": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        21.0,
+        16.65
+      ],
+      [
+        22.625,
+        16.65
+      ],
+      [
+        24.0,
+        16.65
+      ]
+    ],
+    "Garden sitting to dining": [
+      [
+        14.85,
+        12.25
+      ],
+      [
+        14.85,
+        13.85
+      ],
+      [
+        10.2,
+        13.85
+      ]
+    ],
+    "Guest hall to garden sitting": [
+      [
+        17.15,
+        10.9
+      ],
+      [
+        16.65,
+        11.9
+      ],
+      [
+        15.6,
+        12.15
+      ]
+    ],
+    "Garden door approach": [
+      [
+        14.85,
+        13.8
+      ],
+      [
+        14.85,
+        11.8
+      ],
+      [
+        14.85,
+        10.15
+      ],
+      [
+        14.4,
+        10.05
+      ]
+    ],
+    "Dining to cooking aisle": [
+      [
+        10.52,
+        13.85
+      ],
+      [
+        10.52,
+        16.65
+      ],
+      [
+        12.0,
+        16.7
+      ]
+    ],
+    "Rear of dining": [
+      [
+        6.1,
+        17.65
+      ],
+      [
+        9.35,
+        17.65
+      ]
+    ],
+    "Lounge approach": [
+      [
+        6.1,
+        13.85
+      ],
+      [
+        3.95,
+        13.85
+      ],
+      [
+        3.8,
+        14.65
+      ]
+    ],
+    "Utility to washer": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        20.72,
+        13.85
+      ],
+      [
+        20.72,
+        12.55
+      ]
+    ],
+    "Utility to folding": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Boot bench approach": [
+      [
+        20.25,
+        16.65
+      ],
+      [
+        20.05,
+        17.05
+      ]
+    ],
+    "Kitchen directly to utility": [
+      [
+        16.8,
+        14.83
+      ],
+      [
+        17.81,
+        14.83
+      ],
+      [
+        18.8,
+        14.83
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ]
+  },
+  "route_envelope_m": 0.7,
+  "normal_issues": [],
+  "open_machine_projection_rectangles_m": [
+    [
+      21.15,
+      12.23,
+      0.55,
+      0.65
+    ],
+    [
+      21.15,
+      12.88,
+      0.55,
+      0.65
+    ]
+  ],
+  "open_machine_issues": [],
+  "room_geometry_changed": false,
+  "room_doors_changed": true,
+  "added_door": {
+    "id": "D19",
+    "a": "KL",
+    "b": "L",
+    "x": 17.81,
+    "y": 14.43,
+    "width": 0.8,
+    "vertical": true,
+    "kind": "hinged",
+    "hinge_end": true,
+    "side": 1,
+    "pocket_direction": 1,
+    "thickness": 0.12
+  },
+  "new_wall_opening_m": [
+    [
+      17.74,
+      14.43
+    ],
+    [
+      17.88,
+      14.43
+    ],
+    [
+      17.88,
+      15.23
+    ],
+    [
+      17.74,
+      15.23
+    ]
+  ],
+  "fully_open_door_leaf_reservation_m": [
+    17.875,
+    15.21,
+    0.735,
+    0.04
+  ],
+  "door_sweeps_checked": "All room door sweeps against furniture; fully open D19 leaf included in route check; not selected appliance or joinery hinges",
+  "acoustic_source": "https://www.lorientuk.com/files/Lorient-Acoustic-Sealing-Systems.pdf",
+  "acoustic_brief": "Solid-core hinged doorset with perimeter and suitable bottom seals; coordinate ventilation transfer; no verified rating",
+  "laundry_preference_confirmed": "Separate washer and dryer plus some air-drying space",
+  "air_drying_proposal": "Modest ventilated hanging cupboard; capacity and airflow unverified",
+  "product_selection": false,
+  "source": "https://media3.bosch-home.com/Documents/specsheet/en-GB/WGG245S2GB.pdf"
+}

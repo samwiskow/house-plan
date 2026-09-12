@@ -1,0 +1,681 @@
+{
+  "status": "Revised proposal: seven courtyard wall lights added to retained pillars",
+  "groups": {
+    "K": [
+      "Kitchen task",
+      "6 adjustable ceiling spots",
+      "2700 K; beam/output study needed"
+    ],
+    "A": [
+      "Soft ambient",
+      "4 concealed linear runs",
+      "2700 K; accessible ledges/drivers"
+    ],
+    "H": [
+      "Pantry / WC approach",
+      "3 concealed wall runs toward pantry / WC",
+      "2700 K; separate dimmable ambient group"
+    ],
+    "D": [
+      "Dining feature",
+      "Existing six-arm chandelier",
+      "2700 K; dimmable lamps"
+    ],
+    "L": [
+      "Lounge reading",
+      "2 shaded lamps",
+      "2700 K; local controls retained"
+    ],
+    "G": [
+      "Garden-room reading",
+      "1 wall reading light on solid pier",
+      "2700 K; no fixing to roof glass"
+    ],
+    "E": [
+      "Courtyard pillars + thresholds",
+      "4 bronze pillars + 2 low threshold lights",
+      "0.75 m pillars; 2200-2700 K; shielded downward"
+    ],
+    "W": [
+      "Courtyard ambient wall lights",
+      "7 broad downward lights; numbers match markup",
+      "2.00 m mounting proposal; separate dimmer"
+    ],
+    "T": [
+      "Pantry / WC local task",
+      "Pantry shelf light + WC mirror light",
+      "Local switches; independent of shared scenes"
+    ],
+    "P": [
+      "Garden-room table lamp",
+      "1 rechargeable, manually operated",
+      "Indoor only; courtyard tables stay clear"
+    ]
+  },
+  "lights": [
+    {
+      "id": "K1",
+      "group": "K",
+      "point_m": [
+        11.35,
+        15.65,
+        4.815640646055101
+      ],
+      "kind": "spot",
+      "target_m": [
+        11.35,
+        15.65,
+        0.92
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K2",
+      "group": "K",
+      "point_m": [
+        12.35,
+        15.65,
+        4.815640646055101
+      ],
+      "kind": "spot",
+      "target_m": [
+        12.35,
+        15.65,
+        0.92
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K3",
+      "group": "K",
+      "point_m": [
+        13.35,
+        15.65,
+        4.815640646055101
+      ],
+      "kind": "spot",
+      "target_m": [
+        13.35,
+        15.65,
+        0.92
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K4",
+      "group": "K",
+      "point_m": [
+        10.25,
+        17.13,
+        3.9611622476544563
+      ],
+      "kind": "spot",
+      "target_m": [
+        10.25,
+        17.7,
+        0.92
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K5",
+      "group": "K",
+      "point_m": [
+        11.35,
+        17.13,
+        3.9611622476544563
+      ],
+      "kind": "spot",
+      "target_m": [
+        11.35,
+        17.7,
+        0.92
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K6",
+      "group": "K",
+      "point_m": [
+        12.2,
+        17.13,
+        3.9611622476544563
+      ],
+      "kind": "spot",
+      "target_m": [
+        12.2,
+        17.7,
+        0.92
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "A1",
+      "group": "A",
+      "point_m": [
+        1.9,
+        13.2,
+        3.28
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 2.2,
+      "axis": "x"
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "point_m": [
+        6.2,
+        13.2,
+        3.28
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 2.6,
+      "axis": "x"
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "point_m": [
+        2.65,
+        18,
+        3.28
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 2.8,
+      "axis": "x"
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "point_m": [
+        8.1,
+        18,
+        3.28
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 2.8,
+      "axis": "x"
+    },
+    {
+      "id": "H1",
+      "group": "H",
+      "point_m": [
+        15.15,
+        15.28,
+        2.65
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 1.8,
+      "axis": "x"
+    },
+    {
+      "id": "H2",
+      "group": "H",
+      "point_m": [
+        17.7,
+        14.2,
+        2.65
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 1.3,
+      "axis": "y"
+    },
+    {
+      "id": "H3",
+      "group": "H",
+      "point_m": [
+        17.7,
+        11.85,
+        2.35
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 0.9,
+      "axis": "y"
+    },
+    {
+      "id": "T1",
+      "group": "T",
+      "point_m": [
+        15.15,
+        15.6,
+        1.5
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 1.8,
+      "axis": "x"
+    },
+    {
+      "id": "T2",
+      "group": "T",
+      "point_m": [
+        18.95,
+        12.22,
+        1.85
+      ],
+      "kind": "linear",
+      "target_m": null,
+      "length_m": 0.6,
+      "axis": "x"
+    },
+    {
+      "id": "D1",
+      "group": "D",
+      "point_m": [
+        8.35,
+        15.7,
+        2.35
+      ],
+      "kind": "chandelier",
+      "target_m": null,
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "L1",
+      "group": "L",
+      "point_m": [
+        0.7,
+        17.1,
+        1.05
+      ],
+      "kind": "table lamp",
+      "target_m": null,
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "L2",
+      "group": "L",
+      "point_m": [
+        4.2,
+        17.55,
+        1.35
+      ],
+      "kind": "floor lamp",
+      "target_m": null,
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "G1",
+      "group": "G",
+      "point_m": [
+        12.6,
+        10.1,
+        1.45
+      ],
+      "kind": "wall reading",
+      "target_m": [
+        13.1,
+        10.65,
+        0.7
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E1",
+      "group": "E",
+      "point_m": [
+        12.18,
+        12.3,
+        0.35
+      ],
+      "kind": "wall path",
+      "target_m": [
+        11.25,
+        12.1,
+        0
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E2",
+      "group": "E",
+      "point_m": [
+        15.95,
+        9.28,
+        0.35
+      ],
+      "kind": "wall path",
+      "target_m": [
+        15.1,
+        8.75,
+        0
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E3",
+      "group": "E",
+      "point_m": [
+        14.25,
+        8,
+        0.65
+      ],
+      "kind": "pillar",
+      "target_m": [
+        13.5,
+        8,
+        0
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E4",
+      "group": "E",
+      "point_m": [
+        14.25,
+        5,
+        0.65
+      ],
+      "kind": "pillar",
+      "target_m": [
+        13.5,
+        5,
+        0
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E5",
+      "group": "E",
+      "point_m": [
+        12.5,
+        3.3,
+        0.65
+      ],
+      "kind": "pillar",
+      "target_m": [
+        13.35,
+        3.3,
+        0
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E6",
+      "group": "E",
+      "point_m": [
+        12.5,
+        0.6,
+        0.65
+      ],
+      "kind": "pillar",
+      "target_m": [
+        11.8,
+        0.6,
+        0
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W1",
+      "group": "W",
+      "point_m": [
+        8.24,
+        7.9,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        11.1,
+        7.9,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W2",
+      "group": "W",
+      "point_m": [
+        8.24,
+        12.4,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        10.9,
+        12.4,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W3",
+      "group": "W",
+      "point_m": [
+        8.24,
+        4.1,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        11.2,
+        4.1,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W4",
+      "group": "W",
+      "point_m": [
+        8.24,
+        0.85,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        11.2,
+        0.85,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W5",
+      "group": "W",
+      "point_m": [
+        16.16,
+        0.8,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        13.2,
+        0.8,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W6",
+      "group": "W",
+      "point_m": [
+        16.16,
+        3.6,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        13.2,
+        3.6,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W7",
+      "group": "W",
+      "point_m": [
+        16.16,
+        7.9,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "target_m": [
+        13.2,
+        7.9,
+        0.25
+      ],
+      "length_m": 0,
+      "axis": "x"
+    },
+    {
+      "id": "P1",
+      "group": "P",
+      "point_m": [
+        14.1,
+        11.3,
+        0.66
+      ],
+      "kind": "portable",
+      "target_m": null,
+      "length_m": 0,
+      "axis": "x"
+    }
+  ],
+  "scenes_percent": {
+    "Everyday": {
+      "K": 100,
+      "A": 50,
+      "D": 60,
+      "L": 30,
+      "G": 50,
+      "H": 50,
+      "E": 0,
+      "W": 0
+    },
+    "Entertaining": {
+      "K": 15,
+      "A": 25,
+      "D": 40,
+      "L": 40,
+      "G": 30,
+      "H": 35,
+      "E": 30,
+      "W": 35
+    },
+    "Quiet evening": {
+      "K": 0,
+      "A": 10,
+      "D": 0,
+      "L": 35,
+      "G": 20,
+      "H": 20,
+      "E": 15,
+      "W": 10
+    }
+  },
+  "manual_portables_group": "P",
+  "local_task_group": "T",
+  "controls": [
+    [
+      "S1",
+      [
+        16.3,
+        15.3
+      ],
+      "Entrance / shared room"
+    ],
+    [
+      "S2",
+      [
+        4.65,
+        13.2
+      ],
+      "Family-hall approach"
+    ],
+    [
+      "S3",
+      [
+        11.85,
+        13.2
+      ],
+      "Dining slider pier"
+    ]
+  ],
+  "wall_light_mounting_height_m": 2.0,
+  "wall_light_numbers_match_user_markup": true,
+  "wall_light_window_position_issues": [],
+  "uniformity_verified": false,
+  "pillar_height_m": 0.75,
+  "pillar_bases_m": [
+    [
+      14.16,
+      7.91,
+      0.18,
+      0.18
+    ],
+    [
+      14.16,
+      4.91,
+      0.18,
+      0.18
+    ],
+    [
+      12.41,
+      3.21,
+      0.18,
+      0.18
+    ],
+    [
+      12.41,
+      0.51,
+      0.18,
+      0.18
+    ]
+  ],
+  "pillar_route_clearance_issues": [],
+  "outdoor_auto_off_proposal_minutes": 60,
+  "indoor_route_issues_with_floor_lamp": [],
+  "camera": {
+    "orientation_marker_x_over_depth": [
+      0.7669509939890518,
+      0.4950471886593256
+    ],
+    "camera_m": [
+      9.0,
+      17.6,
+      1.6
+    ],
+    "target_m": [
+      11.7,
+      8.0,
+      1.85
+    ],
+    "horizontal_fov_degrees": 94
+  },
+  "photometric_calculation": false,
+  "electrical_design": false,
+  "glare_reflections_or_ecology_verified": false,
+  "outdoor_reference": "https://darksky.org/resources/guides-and-how-tos/lighting-principles/"
+}

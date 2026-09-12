@@ -1,0 +1,56 @@
+{
+  "working_location": "Northumberland, England",
+  "courtyard_faces": "south",
+  "plan_up": "south",
+  "plan_down": "north",
+  "plan_left": "east",
+  "plan_right": "west",
+  "latitude_for_solar_illustration_deg": 55.2,
+  "latitude_is_plot_coordinate": false,
+  "solar_noon_altitudes_deg": {
+    "Summer solstice": 58.2,
+    "Equinox": 34.8,
+    "Winter solstice": 11.4
+  },
+  "roof_plan_m": [
+    12.55,
+    9.65,
+    4,
+    3.15
+  ],
+  "shade_reservation_m": [
+    12.55,
+    9.65,
+    4,
+    2.2
+  ],
+  "roof_vent_reservations_m": [
+    [
+      12.9,
+      12.1,
+      0.8,
+      0.5
+    ],
+    [
+      14.7,
+      12.1,
+      0.8,
+      0.5
+    ]
+  ],
+  "shade_vent_plan_overlap_issues": [],
+  "unshaded_upper_roof_strip_m": 0.95,
+  "room_geometry_changed": false,
+  "route_issues": [],
+  "heat_loss_calculated": false,
+  "thermal_simulation_completed": false,
+  "airflow_calculated": false,
+  "compliance_verified": false,
+  "technical_next_step": "Site-specific year-round thermal modelling, room heat loss and roof shade/vent coordination",
+  "sources": [
+    "https://www.cibse.org/policy-advocacy/key-policy-areas/health-and-wellbeing/overheating-position-statement/",
+    "https://www.gov.uk/government/publications/overheating-approved-document-o",
+    "https://energysavingtrust.org.uk/advice/underfloor-heating/",
+    "https://www.gov.uk/government/publications/ventilation-approved-document-f"
+  ]
+}
