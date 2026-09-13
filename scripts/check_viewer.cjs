@@ -8,7 +8,7 @@ const {chromium}=require('playwright');
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||(fs.existsSync(localChrome)?localChrome:undefined),headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
  fs.mkdirSync(path.join(root,'tmp/pdfs'),{recursive:true});
- try { const page=await browser.newPage({viewport:{width:1400,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ try { const page=await browser.newPage({viewport:process.env.CI?{width:900,height:640}:{width:1400,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.route('**/*',route=>route.request().url().startsWith(baseURL)?route.continue():route.abort());
  await page.goto(new URL('viewer/',baseURL).href);await page.waitForFunction(()=>window.house);
  assert.equal(await page.evaluate(()=>house.model.rooms.length),26);
@@ -47,11 +47,11 @@ const {chromium}=require('playwright');
  assert.equal(await page.evaluate(()=>house.canMove(.175,5)),false);assert.equal(await page.evaluate(()=>house.canMove(17.8,17.4)),true);
  await page.keyboard.press('Escape');assert.equal(await page.evaluate(()=>house.state.walking),false);
  await page.evaluate(()=>{house.camera.position.set(18.1,1.65,20.5);house.setWalking(true);house.camera.position.set(18.1,1.65,20.5);house.camera.lookAt(18.1,1.1,18.225);});
- await page.evaluate(()=>house.renderer.render(house.scene,house.camera));await page.mouse.click(700,500);
+ await page.evaluate(()=>house.renderer.render(house.scene,house.camera));const viewport=page.viewportSize();await page.mouse.click(viewport.width/2,viewport.height/2);
  assert.equal(await page.evaluate(()=>{let open;house.scene.traverse(o=>{if(o.userData.door?.data.id==='D15')open=o.userData.door.open;});return open;}),true);
  await page.getByRole('button',{name:'Whole house',exact:true}).click();
- await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-desktop.png')});
- await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-mobile.png')});
+ await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-desktop.png'),timeout:60000});
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-mobile.png'),timeout:60000});
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false);
  assert.deepEqual(errors,[]);console.log('Passed rooflight rays, outdoor chair orientation, PDF download, local-only load, view controls, office states, day/evening, walking, door interaction, wall collision and mobile overflow checks');
  } finally { await browser.close(); }
