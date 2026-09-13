@@ -1,6 +1,14 @@
 # Courtyard house - current development plan
 
-Concept 26 is the latest services strategy: wet underfloor heating is the confirmed
+Concept 27 is the latest measured ventilation comparison:
+`output/pdf/concept-27-measured-ventilation-layouts.pdf`. It compares one central
+unit with a cross-vault edge enclosure against two units and a smaller linen
+run. Both alternatives remain unselected; concept 25 stays the whole-house plan.
+Rebuild with `ventilation_layout_study.py`; the JSON records room provenance,
+route/access checks, shelf areas and provisional duct/terminal reservations.
+
+
+Concept 26 records the heating and hot-water strategy: wet underfloor heating is the confirmed
 winter preference, with a recommended air-to-water / cylinder system, separate
 wing cooling and a central-versus-two-system MVHR comparison. See
 `output/pdf/concept-26-heating-hot-water-and-ventilation.pdf`. Concept 25 remains

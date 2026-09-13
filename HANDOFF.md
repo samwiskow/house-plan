@@ -1,5 +1,17 @@
 # House design handoff
 
+## Latest measured comparison: concept 27
+
+See the five-page `concept-27-measured-ventilation-layouts.pdf` and the current
+SERVICES-BRIEF.md. Two local units are recommended for further design, not
+selected. B leaves a conditional 1.25 m linen run, versus 2.05 m for A with a
+13.05 m cross-vault enclosure. Shared living supply is now allocated to the
+family system, avoiding the earlier assumption that all shared-room supply
+comes from the rear. Local throw and acoustics remain to prove. Both alternatives
+pass 56 daytime routes; all five pages rendered and inspected. Worktree / branch
+`codex/measured-ventilation-layouts`; no remote and main unchanged.
+
+
 ## Latest services study: concept 26
 
 Wet underfloor winter heating is now confirmed. Concept 26 recommends a

@@ -11,6 +11,16 @@ for review; product and construction design remain outstanding.
 | [23: Two-workspace office](output/pdf/concept-23-two-workspace-office.pdf) | Two permanent desks for one person, both work modes and both overnight foot exits. |
 | [22: Garden-side plant and wing services](output/pdf/concept-22-garden-plant-and-wing-services.pdf) | Rear plant and gym layouts, internal access, rooflight, wing cooling and hot-water options. |
 
+## Latest measured ventilation comparison: concept 27
+
+[Central and two-local-unit layouts](output/pdf/concept-27-measured-ventilation-layouts.pdf)
+now show the cupboard plans, rear maintenance space, main duct routes and vault
+section. B is recommended for further design: retain 1.25 m linen beside a
+family-side unit, versus 2.05 m with central plant and a 13.05 m shared-room
+edge enclosure. Both alternatives pass 56 daytime routes. The five A3 sheets
+were rendered and inspected. Unit duty, outlet throw, acoustic performance and
+complete duct / roof fit remain unverified; neither option is selected.
+
 ## Latest services decision: concept 26
 
 Underfloor heating is confirmed as the winter comfort preference. The
@@ -34,11 +44,11 @@ room-duty references and illustrative water arithmetic were verified.
   plus two at the island. A ten-at-one-table arrangement is not drawn.
 - Separate wing cooling is the starting concept; outdoor-unit count and shared
   zone allocation depend on loads and the selected systems. Fresh-air ventilation
-  remains separate. Hot water and winter heating need a coordinated choice.
+  remains separate. Wet underfloor heating is confirmed; hot-water sizing remains to design.
 
 ## Next decisions, in order
 
-1. Develop the confirmed wet-underfloor direction and compare ventilation distribution.
+1. Develop the confirmed wet-underfloor direction and prove the proposed local ventilation outlets and acoustic treatment.
    Size hot water for simultaneous shower use; assess water supply, recovery,
    pipe delays / losses and equipment maintenance space.
 2. Draw the roof / exterior with the rear plant, snug rooflight, nearby office
@@ -75,3 +85,8 @@ unchanged. No remote is configured, so no PR/MR or remote pipeline is available.
 Concept 26 is delivered on `codex/heating-ventilation-options`, based on the
 complete concept 25 stack. The source script, four-page PDF and calculation
 snapshot form one scoped change; no older drawings are regenerated.
+
+Concept 27 is delivered on `codex/measured-ventilation-layouts`, based on the
+concept 26 stack. The whole-house geometry is unchanged; two conditional
+plant/linen furniture states are stored in the study snapshot. No remote is
+configured, and main remains unchanged.

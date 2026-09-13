@@ -5,6 +5,50 @@
 This brief defines performance and space requirements. It does not select
 plant capacity, products or an installation layout.
 
+## Concept 27: measured ventilation alternatives
+
+The five-sheet `output/pdf/concept-27-measured-ventilation-layouts.pdf` compares
+central and two-local-unit layouts against the concept 25 model. Both are
+conditional proposals, not a selected ventilation installation.
+
+- **A, central:** one unit in the rear plant room, with a 13.05 m cross-house
+  duct enclosure between the halls. The test enclosure projects 0.65 m into the
+  shared room and is 0.35 m deep, underside +2.70 m. It includes two illustrative
+  200 mm ducts with 25 mm radial insulation and explicit packing allowances.
+  These are not calculated duct sizes. Turns, roof structure and headers remain
+  unresolved. The proposed 2.05 m linen run assumes complete plant relocation.
+- **B, local:** a rear unit and a family unit in a 0.80 x 1.42 m service bay at
+  the external-wall end of ST. The unit faces along the cupboard, preserving a
+  1.00 m front maintenance reservation and a 1.25 m linen run. Compared with A,
+  this loses 0.80 m shelf run / 1.80 m2 nominal five-level shelf surface. It still
+  exceeds the current 0.90 m linen proposal, subject to acoustic lining, other
+  plant / UFH manifolds and selected connections.
+
+**B is recommended for further design to protect the vault.** A family-side
+unit has not been accepted by the household; its bedroom-noise and storage
+trade-off remains explicit. Both alternatives pass 56 sampled daytime routes,
+including the modified linen approaches. Front service rectangles clear fixed
+items, and the open interior plant door clears the connected plant routes.
+Other room geometry, furniture and existing office states are retained.
+
+The shared-room allocation is refined from concept 26: the family system also
+supplies the living end from its wing boundary. The service system supplies
+dining / garden as well as its rooms, with kitchen extract routed through the
+pantry side. This avoids a through-running family ventilation trunk in B, but
+local outlet throw, mixing, noise and header fit must be proven. Short shared
+branches may still be needed. No claim of invisible or fully sized ducts is made.
+
+Roof intake / exhaust points reserve 2.10 m rear and 2.00 m family separation in
+plan only. Height, windows, flues, PV, wind and selected-terminal requirements
+remain to coordinate. Unit body / access examples use manufacturer dimensions;
+ancillary, silencer, manifold and bend zones are study allowances. Full 3D fit,
+pressure losses, airflow and acoustic design remain outstanding.
+
+Concept 25 stays the latest whole-house geometry. Concept 27 stores alternatives
+separately and does not adopt a cupboard, new roof penetration or larger linen
+capacity. Rebuild with `ventilation_layout_study.py`; its snapshot records the
+geometry provenance, access checks, shelf calculation and candidate route lengths.
+
 ## Concept 26: underfloor preference and coordinated systems
 
 On 13 September the user confirmed **underfloor heating for everyday winter
@@ -32,8 +76,9 @@ The temperatures are arithmetic assumptions, not specified control setpoints.
 See `output/pdf/concept-26-heating-hot-water-and-ventilation.pdf` for the four-page
 comparison, room duties, demand examples and primary sources. Its JSON records
 transparent formula results and the unchanged concept 25 geometry reference.
-The next spatial pass should compare ventilation cupboards and route sections,
-then coordinate plant access, the rear roof, snug rooflight and outdoor units.
+Concept 27 now compares ventilation cupboards and route sections. The next
+coordination should prove local outlet reach and noise, then resolve plant
+access, the rear roof, snug rooflight and outdoor units.
 
 ## Revised direction: garden-side plant and separate wing cooling
 
