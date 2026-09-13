@@ -22,6 +22,23 @@ It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
 
+## Concept 17: service-end comparison (proposal)
+
+`output/pdf/concept-17-service-end-comparison.pdf` compares the laundry and a
+northward extension of the existing gym block on four A3 sheets. Neither is
+selected. A retains side-by-side machines and drying but reduces folding from
+1.45 m to 0.65 m, removes sorting drawers and leaves the controls zone unresolved.
+B preserves the laundry and full 4 x 6 m gym, testing a 4.70 x 2.60 m extension
+(12.22 m2 added footprint) with a 4 x 2.25 m clear plant compartment and external
+access. B is recommended for development, subject to site, roof and full package
+coordination. Equipment and maintenance envelopes are planning allowances.
+
+Both variants retain the 40 sampled house routes; B also checks three internal
+plant approaches and clear maintenance reservations. These do not establish
+occupied use, equipment replacement, performance or compliance. Keep the
+concept 15 family-wing plant reservation and modest linen shelves meanwhile.
+Rebuild with `service_end_study.py`; checks are in concept-17-study-check.json.
+
 ## Plant location: revised direction, 12 September 2026
 
 The user declined the family-wing annexe in concept 16. Investigate the laundry

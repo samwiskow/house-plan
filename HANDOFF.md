@@ -1,6 +1,19 @@
 # House design handoff
 
-## Current task: service-end plant and services brief
+## Current development: concept 17 service-end comparison
+
+13 September: comparison produced in `service_end_study.py` and the four-page
+`output/pdf/concept-17-service-end-comparison.pdf`. B extends the existing gym
+block northward, adding 12.22 m2 footprint / 9 m2 clear plant space. It preserves
+the gym and laundry; A loses sorting drawers and most folding space, and does
+not yet accommodate an equivalent full package. B is recommended, not selected.
+Keep the family-wing plant placeholder until relocation is accepted and designed.
+
+User has now approved studying an occasional office sofa bed. Visiting children
+may share beds. Develop a five-guest occupancy example without assuming a
+standard sofa bed sleeps three adults.
+
+## Prior direction: service-end plant and services brief
 
 12 September: user declined the family-wing annexe from concept 16. Investigate
 plant in the laundry and/or an extension of the gym block, away from bedrooms.
