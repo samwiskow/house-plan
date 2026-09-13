@@ -1,5 +1,16 @@
 # House design handoff
 
+## Latest consolidated proposal: concept 25
+
+Start with `output/pdf/concept-25-revised-whole-house-plan.pdf` and
+DESIGN-REVIEW.md. Concepts 22-24 provide the plant/services, two-workspace office
+and library details. Earlier concept 17 B is declined; concepts 18 / 20 / 21
+are historical wherever these revisions supersede them. The final local branch
+is `codex/revised-house-plan`; main remains unchanged and no remote is configured.
+The revised model has 26 rooms and 56 passing sampled routes in each of three
+office states. All 16 new A3 pages were rendered and visually inspected.
+
+
 ## Revised snug: antique library character
 
 Concept 24 (`output/pdf/concept-24-library-snug.pdf`) replaces the low storage
@@ -36,7 +47,7 @@ The provisional treadmill rear reservation remains clear. Exercise movement,
 barbell handling and selected equipment clearances still need verification.
 
 The extension covers the snug's west window. Concept 22 replaces it with a
-1.10 x 1.10 m rooflight reservation, retaining snug furniture. Blackout, daylight,
+1.10 x 1.10 m rooflight reservation. Concept 24 updates the snug furniture. Blackout, daylight,
 solar gain, opening / controls, roof structure, drainage and noise need design.
 This is a proposal, not a selected rooflight or a claim of equivalent daylight.
 The new plant leading edge is 0.25 m beyond the office window's plan extent;
@@ -66,7 +77,7 @@ and the complete package is sized. The old arrival-side study is historical.
 
 
 
-## 13 September development package complete for review
+## Historical first development package (concepts 17-21)
 
 Concepts 17-21 cover the service-end comparison, office / guests, everyday-use
 review, consolidated whole-house plan and preliminary building coordination.

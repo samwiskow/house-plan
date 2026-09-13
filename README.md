@@ -24,14 +24,12 @@ All 54 routes pass in each of the two work states and the overnight state.
 The actual sofa mechanism, window access and equipment remain to select.
 
 
-The current full-plan reference is `output/pdf/concept-20-current-whole-house-plan.pdf`:
-a furnished plan at 1:100 on A3, room schedule and decision register. It combines
-the open garden room, selected parents-suite A, later room proposals and D19.
-Print at 100% to preserve scale. Proposals remain proposals; plant relocation
-and the gym extension are not incorporated into the current footprint.
-
-`output/pdf/concept-07-open-garden-room.pdf` is the earlier full-plan reference;
-use concept 20 for the consolidated current development state.
+The latest full-plan reference is `output/pdf/concept-25-revised-whole-house-plan.pdf`:
+a furnished proposal at 1:100 on A3, room schedule and next-decision register.
+It combines the retained household layout with the garden-side plant extension,
+two-workspace office and library snug. Concept 20 is now historical.
+Print at 100% to preserve scale. See DESIGN-REVIEW.md for the current register.
+Equipment, joinery, rooflight, structure and services remain to detail.
 
 `output/pdf/u-home-dimensioned-concept.pdf` retains the original concept 05 plan,
 room schedule, family/service details and illustrative site plan. Its enclosed
@@ -50,7 +48,7 @@ The provisional treadmill rear reservation remains clear. Exercise movement,
 barbell handling and selected equipment clearances still need verification.
 
 The extension covers the snug's west window. Concept 22 replaces it with a
-1.10 x 1.10 m rooflight reservation, retaining snug furniture. Blackout, daylight,
+1.10 x 1.10 m rooflight reservation. Concept 24 updates the snug furniture. Blackout, daylight,
 solar gain, opening / controls, roof structure, drainage and noise need design.
 This is a proposal, not a selected rooflight or a claim of equivalent daylight.
 The new plant leading edge is 0.25 m beyond the office window's plan extent;
@@ -88,7 +86,7 @@ It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
 
-## Concept 21: preliminary building coordination
+## Concept 21: historical preliminary building coordination
 
 `output/pdf/concept-21-building-coordination.pdf` contains five A3 sheets:
 a candidate distribution plan, a family-hall / shared-vault section, plant
@@ -110,9 +108,9 @@ what the architect and services designers need to resolve next.
 
 Rebuild with `building_coordination.py`; concept-21-study-check.json records
 route lengths, reservations, room coverage and uncompleted technical work.
-`DESIGN-REVIEW.md` is the index for the five new development documents.
+`DESIGN-REVIEW.md` is the index for the latest development documents.
 
-## Concept 20: consolidated whole-house plan
+## Concept 20: historical consolidated whole-house plan
 
 The three-sheet PDF brings the 25 room / circulation polygons, current furniture,
 fixed shower screens and selected courtyard arrangement into one drawing.
@@ -770,3 +768,12 @@ Codex runtime:
 ```
 
 Temporary page renders are under `tmp/pdfs/`.
+
+## Rebuild the revised proposal
+
+Run `garden_plant_study.py`, `two_workspace_office.py`, `library_snug.py`, then
+`revised_house_plan.py` with the bundled Python runtime. These source-check the
+earlier measured snapshot and each succeeding proposal. Concept 25 combines
+26 room polygons: 332.96 m2 internal envelope, 373.31 m2 external footprint and
+315.52 m2 clear rooms. It includes the extension as a proposal; the original
+family plant remains a conditional placeholder, not a second installed package.

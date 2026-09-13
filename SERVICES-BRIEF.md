@@ -17,7 +17,7 @@ The provisional treadmill rear reservation remains clear. Exercise movement,
 barbell handling and selected equipment clearances still need verification.
 
 The extension covers the snug's west window. Concept 22 replaces it with a
-1.10 x 1.10 m rooflight reservation, retaining snug furniture. Blackout, daylight,
+1.10 x 1.10 m rooflight reservation. Concept 24 updates the snug furniture. Blackout, daylight,
 solar gain, opening / controls, roof structure, drainage and noise need design.
 This is a proposal, not a selected rooflight or a claim of equivalent daylight.
 The new plant leading edge is 0.25 m beyond the office window's plan extent;

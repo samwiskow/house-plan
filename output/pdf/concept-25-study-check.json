@@ -1,0 +1,3480 @@
+{
+  "status": "Revised consolidated proposal",
+  "model": {
+    "rooms": [
+      {
+        "id": "P",
+        "name": "Parents bedroom",
+        "poly": [
+          [
+            0.35,
+            0.35
+          ],
+          [
+            4.55,
+            0.35
+          ],
+          [
+            4.55,
+            4.35
+          ],
+          [
+            0.35,
+            4.35
+          ]
+        ],
+        "category": "family",
+        "target": 16,
+        "label": [
+          2.25,
+          3.13
+        ],
+        "lines": [
+          "Parents"
+        ],
+        "dimensions": "4.20 x 4.00 m"
+      },
+      {
+        "id": "W",
+        "name": "Walk-in wardrobe",
+        "poly": [
+          [
+            4.67,
+            0.35
+          ],
+          [
+            7.85,
+            0.35
+          ],
+          [
+            7.85,
+            2.45
+          ],
+          [
+            4.67,
+            2.45
+          ]
+        ],
+        "category": "service",
+        "target": 7,
+        "label": [
+          6.26,
+          1.35
+        ],
+        "lines": [
+          "Walk-in"
+        ],
+        "dimensions": "3.18 x 2.10 m"
+      },
+      {
+        "id": "E",
+        "name": "Parents ensuite",
+        "poly": [
+          [
+            4.67,
+            2.57
+          ],
+          [
+            7.85,
+            2.57
+          ],
+          [
+            7.85,
+            4.35
+          ],
+          [
+            4.67,
+            4.35
+          ]
+        ],
+        "category": "service",
+        "target": 6,
+        "label": [
+          6.05,
+          3.7
+        ],
+        "lines": [
+          "Ensuite"
+        ],
+        "dimensions": "3.18 x 1.78 m"
+      },
+      {
+        "id": "FB",
+        "name": "Family bathroom",
+        "poly": [
+          [
+            0.35,
+            4.47
+          ],
+          [
+            3.38,
+            4.47
+          ],
+          [
+            3.38,
+            7.15
+          ],
+          [
+            0.35,
+            7.15
+          ]
+        ],
+        "category": "service",
+        "target": 8,
+        "label": [
+          1.85,
+          5.85
+        ],
+        "lines": [
+          "Family bath"
+        ],
+        "dimensions": "3.03 x 2.68 m"
+      },
+      {
+        "id": "ST",
+        "name": "Linen / plant",
+        "poly": [
+          [
+            0.35,
+            7.27
+          ],
+          [
+            3.38,
+            7.27
+          ],
+          [
+            3.38,
+            8.69
+          ],
+          [
+            0.35,
+            8.69
+          ]
+        ],
+        "category": "service",
+        "target": 4.5,
+        "label": [
+          1.85,
+          8.4
+        ],
+        "lines": [
+          "Linen / plant"
+        ],
+        "dimensions": "3.03 x 1.42 m"
+      },
+      {
+        "id": "C3",
+        "name": "Child 3",
+        "poly": [
+          [
+            4.82,
+            4.47
+          ],
+          [
+            7.85,
+            4.47
+          ],
+          [
+            7.85,
+            8.69
+          ],
+          [
+            4.82,
+            8.69
+          ]
+        ],
+        "category": "family",
+        "target": 13,
+        "label": [
+          6.03,
+          6.87
+        ],
+        "lines": [
+          "Child 3"
+        ],
+        "dimensions": "3.03 x 4.22 m"
+      },
+      {
+        "id": "C2",
+        "name": "Child 2",
+        "poly": [
+          [
+            0.35,
+            8.81
+          ],
+          [
+            3.38,
+            8.81
+          ],
+          [
+            3.38,
+            13.030000000000001
+          ],
+          [
+            0.35,
+            13.030000000000001
+          ]
+        ],
+        "category": "family",
+        "target": 13,
+        "label": [
+          2.05,
+          11.1
+        ],
+        "lines": [
+          "Child 2"
+        ],
+        "dimensions": "3.03 x 4.22 m"
+      },
+      {
+        "id": "C1",
+        "name": "Child 1",
+        "poly": [
+          [
+            4.82,
+            8.81
+          ],
+          [
+            7.85,
+            8.81
+          ],
+          [
+            7.85,
+            13.030000000000001
+          ],
+          [
+            4.82,
+            13.030000000000001
+          ]
+        ],
+        "category": "family",
+        "target": 13,
+        "label": [
+          6.03,
+          11.1
+        ],
+        "lines": [
+          "Child 1"
+        ],
+        "dimensions": "3.03 x 4.22 m"
+      },
+      {
+        "id": "FH",
+        "name": "Family hall",
+        "poly": [
+          [
+            3.5,
+            4.47
+          ],
+          [
+            4.7,
+            4.47
+          ],
+          [
+            4.7,
+            13.030000000000001
+          ],
+          [
+            3.5,
+            13.030000000000001
+          ]
+        ],
+        "category": "circulation",
+        "target": 10.5,
+        "label": [
+          4.1,
+          10.65
+        ],
+        "lines": [
+          "1.20 m",
+          "hall"
+        ],
+        "dimensions": "1.20 x 8.56 m"
+      },
+      {
+        "id": "G",
+        "name": "Guest bedroom",
+        "poly": [
+          [
+            16.55,
+            0.35
+          ],
+          [
+            22.45,
+            0.35
+          ],
+          [
+            22.45,
+            3.65
+          ],
+          [
+            17.87,
+            3.65
+          ],
+          [
+            17.87,
+            1.87
+          ],
+          [
+            16.55,
+            1.87
+          ]
+        ],
+        "category": "guest",
+        "target": 15,
+        "label": [
+          19.9,
+          3.18
+        ],
+        "lines": [
+          "Guest bedroom"
+        ],
+        "dimensions": "4.58 x 3.30 m + wardrobe recess"
+      },
+      {
+        "id": "GS",
+        "name": "Guest storage",
+        "poly": [
+          [
+            17.87,
+            3.77
+          ],
+          [
+            20.23,
+            3.77
+          ],
+          [
+            20.23,
+            4.72
+          ],
+          [
+            17.87,
+            4.72
+          ]
+        ],
+        "category": "service",
+        "target": 2.5,
+        "label": [
+          19.05,
+          4.26
+        ],
+        "lines": [
+          "Guest storage"
+        ],
+        "dimensions": "2.36 x 0.95 m"
+      },
+      {
+        "id": "GB",
+        "name": "Guest shower",
+        "poly": [
+          [
+            20.35,
+            3.77
+          ],
+          [
+            22.450000000000003,
+            3.77
+          ],
+          [
+            22.450000000000003,
+            6.17
+          ],
+          [
+            20.35,
+            6.17
+          ]
+        ],
+        "category": "service",
+        "target": 5,
+        "label": [
+          21.4,
+          5.4
+        ],
+        "lines": [
+          "Guest shower"
+        ],
+        "dimensions": "2.10 x 2.40 m"
+      },
+      {
+        "id": "GL",
+        "name": "Shower lobby",
+        "poly": [
+          [
+            17.87,
+            4.84
+          ],
+          [
+            20.23,
+            4.84
+          ],
+          [
+            20.23,
+            6.17
+          ],
+          [
+            17.87,
+            6.17
+          ]
+        ],
+        "category": "circulation",
+        "target": 2,
+        "label": [
+          18.93,
+          5.53
+        ],
+        "lines": [
+          "Lobby"
+        ],
+        "dimensions": "2.36 x 1.33 m"
+      },
+      {
+        "id": "O",
+        "name": "Office / gaming",
+        "poly": [
+          [
+            17.87,
+            6.29
+          ],
+          [
+            22.450000000000003,
+            6.29
+          ],
+          [
+            22.450000000000003,
+            9.34
+          ],
+          [
+            17.87,
+            9.34
+          ]
+        ],
+        "category": "guest",
+        "target": 14,
+        "label": [
+          20.0,
+          8.45
+        ],
+        "lines": [
+          "Office / gaming"
+        ],
+        "dimensions": "4.58 x 3.05 m"
+      },
+      {
+        "id": "S",
+        "name": "Snug",
+        "poly": [
+          [
+            17.87,
+            9.46
+          ],
+          [
+            22.450000000000003,
+            9.46
+          ],
+          [
+            22.450000000000003,
+            12.06
+          ],
+          [
+            17.87,
+            12.06
+          ]
+        ],
+        "category": "shared",
+        "target": 12,
+        "label": [
+          19.4,
+          10.6
+        ],
+        "lines": [
+          "Snug"
+        ],
+        "dimensions": "4.58 x 2.60 m"
+      },
+      {
+        "id": "GH",
+        "name": "Guest hall",
+        "poly": [
+          [
+            16.55,
+            1.99
+          ],
+          [
+            17.75,
+            1.99
+          ],
+          [
+            17.75,
+            9.34
+          ],
+          [
+            16.55,
+            9.34
+          ]
+        ],
+        "category": "circulation",
+        "target": 11.5,
+        "label": [
+          17.15,
+          7.15
+        ],
+        "lines": [
+          "1.20 m",
+          "hall"
+        ],
+        "dimensions": "1.20 x 7.35 m"
+      },
+      {
+        "id": "PA",
+        "name": "Pantry",
+        "poly": [
+          [
+            14,
+            15.45
+          ],
+          [
+            16.35,
+            15.45
+          ],
+          [
+            16.35,
+            18.05
+          ],
+          [
+            14,
+            18.05
+          ]
+        ],
+        "category": "service",
+        "target": 6,
+        "label": [
+          15.17,
+          16.45
+        ],
+        "lines": [
+          "Pantry"
+        ],
+        "dimensions": "2.35 x 2.60 m"
+      },
+      {
+        "id": "L",
+        "name": "Laundry",
+        "poly": [
+          [
+            20.22,
+            12.18
+          ],
+          [
+            22.45,
+            12.18
+          ],
+          [
+            22.45,
+            15.33
+          ],
+          [
+            17.87,
+            15.33
+          ],
+          [
+            17.87,
+            13.7
+          ],
+          [
+            20.22,
+            13.7
+          ]
+        ],
+        "category": "service",
+        "target": 10.5,
+        "label": [
+          20.45,
+          14.65
+        ],
+        "lines": [
+          "Laundry"
+        ],
+        "dimensions": "L-shape: 4.58 x 3.15 m envelope"
+      },
+      {
+        "id": "B",
+        "name": "Boot room",
+        "poly": [
+          [
+            19.15,
+            15.45
+          ],
+          [
+            22.45,
+            15.45
+          ],
+          [
+            22.45,
+            18.05
+          ],
+          [
+            19.15,
+            18.05
+          ]
+        ],
+        "category": "service",
+        "target": 8,
+        "label": [
+          20.6,
+          17.2
+        ],
+        "lines": [
+          "Boot room"
+        ],
+        "dimensions": "3.30 x 2.60 m"
+      },
+      {
+        "id": "H",
+        "name": "Entrance hall",
+        "poly": [
+          [
+            16.47,
+            15.45
+          ],
+          [
+            19.029999999999998,
+            15.45
+          ],
+          [
+            19.029999999999998,
+            18.05
+          ],
+          [
+            16.47,
+            18.05
+          ]
+        ],
+        "category": "circulation",
+        "target": 6.7,
+        "label": [
+          17.6,
+          17.35
+        ],
+        "lines": [
+          "Entrance hall"
+        ],
+        "dimensions": "2.56 x 2.60 m"
+      },
+      {
+        "id": "WC",
+        "name": "Visitor WC",
+        "poly": [
+          [
+            17.87,
+            12.18
+          ],
+          [
+            20.1,
+            12.18
+          ],
+          [
+            20.1,
+            13.58
+          ],
+          [
+            17.87,
+            13.58
+          ]
+        ],
+        "category": "service",
+        "target": 3,
+        "label": [
+          18.8,
+          12.95
+        ],
+        "lines": [
+          "WC"
+        ],
+        "dimensions": "2.23 x 1.40 m"
+      },
+      {
+        "id": "OR",
+        "name": "Open garden sitting area",
+        "poly": [
+          [
+            12.55,
+            9.65
+          ],
+          [
+            16.55,
+            9.65
+          ],
+          [
+            16.55,
+            13.15
+          ],
+          [
+            12.55,
+            13.15
+          ]
+        ],
+        "category": "shared",
+        "target": 11.5,
+        "label": [
+          14.45,
+          11.8
+        ],
+        "lines": [
+          "Garden sitting"
+        ],
+        "dimensions": "4.00 x 3.50 m open zone"
+      },
+      {
+        "id": "GY",
+        "name": "Indoor gym",
+        "poly": [
+          [
+            22.8,
+            12.05
+          ],
+          [
+            26.8,
+            12.05
+          ],
+          [
+            26.8,
+            18.05
+          ],
+          [
+            22.8,
+            18.05
+          ]
+        ],
+        "category": "guest",
+        "target": 24,
+        "label": [
+          24.1,
+          15.75
+        ],
+        "lines": [
+          "Indoor gym"
+        ],
+        "dimensions": "4.00 x 6.00 m"
+      },
+      {
+        "id": "KL",
+        "name": "Kitchen / dining / living",
+        "poly": [
+          [
+            0.35,
+            13.15
+          ],
+          [
+            17.75,
+            13.15
+          ],
+          [
+            17.75,
+            15.33
+          ],
+          [
+            13.88,
+            15.33
+          ],
+          [
+            13.88,
+            18.05
+          ],
+          [
+            0.35,
+            18.05
+          ]
+        ],
+        "category": "shared",
+        "target": 72,
+        "label": [
+          8.0,
+          17.4
+        ],
+        "lines": [
+          "OPEN KITCHEN / DINING / LIVING"
+        ],
+        "dimensions": "Main clear depth 4.90 m; stepped kitchen / entrance edge"
+      },
+      {
+        "id": "GH2",
+        "name": "Shared hall",
+        "poly": [
+          [
+            16.55,
+            9.46
+          ],
+          [
+            17.75,
+            9.46
+          ],
+          [
+            17.75,
+            13.15
+          ],
+          [
+            16.55,
+            13.15
+          ]
+        ],
+        "category": "circulation",
+        "target": 4.4,
+        "label": [
+          17.15,
+          12.35
+        ],
+        "lines": [
+          "Shared",
+          "hall"
+        ],
+        "dimensions": "1.20 x 3.69 m"
+      },
+      {
+        "id": "PL",
+        "name": "Garden-side plant",
+        "poly": [
+          [
+            22.8,
+            9.05
+          ],
+          [
+            26.8,
+            9.05
+          ],
+          [
+            26.8,
+            11.700000000000001
+          ],
+          [
+            22.8,
+            11.700000000000001
+          ]
+        ],
+        "category": "service",
+        "target": 10.6,
+        "label": [
+          24.8,
+          10.6
+        ],
+        "lines": [
+          "Plant"
+        ],
+        "dimensions": "4.00 x 2.65 m"
+      }
+    ],
+    "doors": [
+      {
+        "id": "D01",
+        "a": "FH",
+        "b": "P",
+        "x": 3.58,
+        "y": 4.41,
+        "width": 0.9,
+        "vertical": false,
+        "kind": "hinged",
+        "hinge_end": true,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "P01",
+        "a": "P",
+        "b": "W",
+        "x": 4.61,
+        "y": 1.4,
+        "width": 0.85,
+        "vertical": true,
+        "kind": "pocket",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": -1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D02",
+        "a": "P",
+        "b": "E",
+        "x": 4.61,
+        "y": 3.15,
+        "width": 0.85,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": true,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D03",
+        "a": "FH",
+        "b": "FB",
+        "x": 3.44,
+        "y": 5.05,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D04",
+        "a": "FH",
+        "b": "ST",
+        "x": 3.44,
+        "y": 7.45,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D05",
+        "a": "FH",
+        "b": "C3",
+        "x": 4.76,
+        "y": 4.7,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D06",
+        "a": "FH",
+        "b": "C2",
+        "x": 3.44,
+        "y": 9.0,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D07",
+        "a": "FH",
+        "b": "C1",
+        "x": 4.76,
+        "y": 9.0,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D08",
+        "a": "KL",
+        "b": "FH",
+        "x": 3.5,
+        "y": 13.09,
+        "width": 0.9,
+        "vertical": false,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D09",
+        "a": "GH",
+        "b": "G",
+        "x": 17.81,
+        "y": 2.15,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "O01",
+        "a": "GH",
+        "b": "GL",
+        "x": 17.81,
+        "y": 5.1,
+        "width": 1.0,
+        "vertical": true,
+        "kind": "opening",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "C01",
+        "a": "GL",
+        "b": "GS",
+        "x": 18.1,
+        "y": 4.78,
+        "width": 1.6,
+        "vertical": false,
+        "kind": "sliding",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D10",
+        "a": "GL",
+        "b": "GB",
+        "x": 20.29,
+        "y": 5.13,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": true,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D11",
+        "a": "GH",
+        "b": "O",
+        "x": 17.81,
+        "y": 8.2,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": true,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D12",
+        "a": "GH2",
+        "b": "S",
+        "x": 17.81,
+        "y": 10.35,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "O02",
+        "a": "GH2",
+        "b": "KL",
+        "x": 16.6,
+        "y": 13.15,
+        "width": 1.1,
+        "vertical": false,
+        "kind": "opening",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.01
+      },
+      {
+        "id": "P02",
+        "a": "KL",
+        "b": "PA",
+        "x": 13.94,
+        "y": 16.05,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "pocket",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "P03",
+        "a": "PA",
+        "b": "H",
+        "x": 16.41,
+        "y": 16.05,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "pocket",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "P04",
+        "a": "L",
+        "b": "B",
+        "x": 20.45,
+        "y": 15.39,
+        "width": 0.9,
+        "vertical": false,
+        "kind": "pocket",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D13",
+        "a": "H",
+        "b": "B",
+        "x": 19.09,
+        "y": 16.2,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "O03",
+        "a": "KL",
+        "b": "H",
+        "x": 16.65,
+        "y": 15.39,
+        "width": 0.95,
+        "vertical": false,
+        "kind": "opening",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D14",
+        "a": "GH2",
+        "b": "WC",
+        "x": 17.81,
+        "y": 12.4,
+        "width": 0.85,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D15",
+        "a": "OUT",
+        "b": "H",
+        "x": 17.6,
+        "y": 18.225,
+        "width": 1.0,
+        "vertical": false,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      },
+      {
+        "id": "D16",
+        "a": "OUT",
+        "b": "B",
+        "x": 21.15,
+        "y": 18.225,
+        "width": 1.0,
+        "vertical": false,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      },
+      {
+        "id": "O04",
+        "a": "COURT",
+        "b": "KL",
+        "x": 9.0,
+        "y": 12.975,
+        "width": 2.6,
+        "vertical": false,
+        "kind": "sliding",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      },
+      {
+        "id": "O05",
+        "a": "OR",
+        "b": "KL",
+        "x": 12.55,
+        "y": 13.15,
+        "width": 4.0,
+        "vertical": false,
+        "kind": "opening",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.01
+      },
+      {
+        "id": "O07",
+        "a": "GH2",
+        "b": "OR",
+        "x": 16.55,
+        "y": 9.65,
+        "width": 3.5,
+        "vertical": true,
+        "kind": "opening",
+        "hinge_end": true,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.01
+      },
+      {
+        "id": "O06",
+        "a": "COURT",
+        "b": "OR",
+        "x": 13.0,
+        "y": 9.475,
+        "width": 2.8,
+        "vertical": false,
+        "kind": "sliding",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      },
+      {
+        "id": "D18",
+        "a": "B",
+        "b": "GY",
+        "x": 22.625,
+        "y": 15.6,
+        "width": 0.9,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      },
+      {
+        "id": "D17",
+        "a": "GH",
+        "b": "GH2",
+        "x": 16.7,
+        "y": 9.4,
+        "width": 0.9,
+        "vertical": false,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D19",
+        "a": "KL",
+        "b": "L",
+        "x": 17.81,
+        "y": 14.43,
+        "width": 0.8,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": true,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.12
+      },
+      {
+        "id": "D21",
+        "a": "GY",
+        "b": "PL",
+        "x": 23.4,
+        "y": 11.875,
+        "width": 0.9,
+        "vertical": false,
+        "kind": "hinged",
+        "hinge_end": true,
+        "side": -1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      },
+      {
+        "id": "D22",
+        "a": "PL",
+        "b": "OUT",
+        "x": 26.975,
+        "y": 9.5,
+        "width": 1.0,
+        "vertical": true,
+        "kind": "hinged",
+        "hinge_end": false,
+        "side": 1,
+        "pocket_direction": 1,
+        "thickness": 0.35
+      }
+    ],
+    "windows": [
+      [
+        "h",
+        0.8,
+        0,
+        2.4
+      ],
+      [
+        "v",
+        0,
+        1.0,
+        1.6
+      ],
+      [
+        "v",
+        8.2,
+        2.9,
+        0.85
+      ],
+      [
+        "v",
+        0,
+        4.65,
+        1.3
+      ],
+      [
+        "v",
+        0,
+        9.2,
+        2.0
+      ],
+      [
+        "v",
+        8.2,
+        4.8,
+        2.0
+      ],
+      [
+        "v",
+        8.2,
+        9.2,
+        2.0
+      ],
+      [
+        "h",
+        19,
+        0,
+        2.6
+      ],
+      [
+        "v",
+        22.8,
+        4.2,
+        1.0
+      ],
+      [
+        "v",
+        22.8,
+        6.65,
+        1.8
+      ],
+      [
+        "v",
+        27.15,
+        13.3,
+        2.4
+      ],
+      [
+        "v",
+        12.2,
+        10.4,
+        1.5
+      ],
+      [
+        "h",
+        1.1,
+        18.4,
+        3.1
+      ],
+      [
+        "h",
+        6.6,
+        18.4,
+        3.0
+      ],
+      [
+        "h",
+        10.5,
+        18.4,
+        2.0
+      ]
+    ],
+    "outline": [
+      [
+        0,
+        0
+      ],
+      [
+        8.2,
+        0
+      ],
+      [
+        8.2,
+        12.8
+      ],
+      [
+        12.2,
+        12.8
+      ],
+      [
+        12.2,
+        9.3
+      ],
+      [
+        16.2,
+        9.3
+      ],
+      [
+        16.2,
+        0
+      ],
+      [
+        22.8,
+        0
+      ],
+      [
+        22.8,
+        8.7
+      ],
+      [
+        27.15,
+        8.7
+      ],
+      [
+        27.15,
+        18.4
+      ],
+      [
+        0,
+        18.4
+      ]
+    ],
+    "inner": [
+      [
+        0.35,
+        0.35
+      ],
+      [
+        7.85,
+        0.35
+      ],
+      [
+        7.85,
+        13.15
+      ],
+      [
+        12.55,
+        13.15
+      ],
+      [
+        12.55,
+        9.65
+      ],
+      [
+        16.55,
+        9.65
+      ],
+      [
+        16.55,
+        0.35
+      ],
+      [
+        22.45,
+        0.35
+      ],
+      [
+        22.45,
+        9.05
+      ],
+      [
+        26.8,
+        9.05
+      ],
+      [
+        26.8,
+        18.05
+      ],
+      [
+        0.35,
+        18.05
+      ]
+    ]
+  },
+  "furniture": [
+    {
+      "room": "WC",
+      "name": "WC",
+      "rect": [
+        19.25,
+        12.5,
+        0.72,
+        0.65
+      ],
+      "kind": "wc"
+    },
+    {
+      "room": "WC",
+      "name": "Basin",
+      "rect": [
+        18.75,
+        12.18,
+        0.4,
+        0.35
+      ],
+      "kind": "basin"
+    },
+    {
+      "room": "KL",
+      "name": "Media unit",
+      "rect": [
+        0.35,
+        15.35,
+        0.4,
+        2.2
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "KL",
+      "name": "Stove placeholder",
+      "rect": [
+        0.6,
+        13.95,
+        0.55,
+        0.6
+      ],
+      "kind": "stove"
+    },
+    {
+      "room": "KL",
+      "name": "Sofa",
+      "rect": [
+        4.6,
+        14.85,
+        1,
+        2.8
+      ],
+      "kind": "sofa"
+    },
+    {
+      "room": "KL",
+      "name": "Armchair A",
+      "rect": [
+        2.1,
+        14.7,
+        0.85,
+        0.85
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "KL",
+      "name": "Armchair B",
+      "rect": [
+        1.3,
+        16.8,
+        0.85,
+        0.85
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "KL",
+      "name": "Lounge table",
+      "rect": [
+        3,
+        15.5,
+        0.8,
+        1.2
+      ],
+      "kind": "table"
+    },
+    {
+      "room": "KL",
+      "name": "Dining table",
+      "rect": [
+        7.85,
+        14.2,
+        1,
+        3
+      ],
+      "kind": "table"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        14.325,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        14.325,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        15.075,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        15.075,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        15.825,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        15.825,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        16.575,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        16.575,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair"
+    },
+    {
+      "room": "KL",
+      "name": "Island",
+      "rect": [
+        10.95,
+        14.95,
+        2.8,
+        1.05
+      ],
+      "kind": "island"
+    },
+    {
+      "room": "KL",
+      "name": "Island stool",
+      "rect": [
+        11.3,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool"
+    },
+    {
+      "room": "KL",
+      "name": "Island stool",
+      "rect": [
+        12.1,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool"
+    },
+    {
+      "room": "KL",
+      "name": "Island stool",
+      "rect": [
+        12.9,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool"
+    },
+    {
+      "room": "KL",
+      "name": "Drawers",
+      "rect": [
+        9.8,
+        17.45,
+        1,
+        0.6
+      ],
+      "kind": "kitchen"
+    },
+    {
+      "room": "KL",
+      "name": "Sink base",
+      "rect": [
+        10.8,
+        17.45,
+        0.8,
+        0.6
+      ],
+      "kind": "kitchen"
+    },
+    {
+      "room": "KL",
+      "name": "Dishwasher",
+      "rect": [
+        11.6,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "kitchen"
+    },
+    {
+      "room": "KL",
+      "name": "Bins",
+      "rect": [
+        12.2,
+        17.45,
+        0.4,
+        0.6
+      ],
+      "kind": "kitchen"
+    },
+    {
+      "room": "KL",
+      "name": "Oven tower",
+      "rect": [
+        12.6,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "tall"
+    },
+    {
+      "room": "KL",
+      "name": "Fridge / freezer",
+      "rect": [
+        13.2,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "tall"
+    },
+    {
+      "room": "OR",
+      "name": "Garden sofa",
+      "rect": [
+        12.7,
+        10.25,
+        0.85,
+        1.8
+      ],
+      "kind": "sofa"
+    },
+    {
+      "room": "OR",
+      "name": "Garden table",
+      "rect": [
+        13.8,
+        11,
+        0.6,
+        0.6
+      ],
+      "kind": "table"
+    },
+    {
+      "room": "OR",
+      "name": "Garden chair",
+      "rect": [
+        15.35,
+        10.3,
+        0.85,
+        0.85
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "B",
+      "name": "Closed coats / sports bags",
+      "rect": [
+        19.15,
+        15.45,
+        1.1,
+        0.6
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "B",
+      "name": "Bench / three shoe bays",
+      "rect": [
+        19.15,
+        17.5,
+        1.85,
+        0.55
+      ],
+      "kind": "bench"
+    },
+    {
+      "room": "H",
+      "name": "Visitor coat cupboard",
+      "rect": [
+        16.47,
+        17.45,
+        0.9,
+        0.6
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "H",
+      "name": "Keys ledge / mirror",
+      "rect": [
+        18.75,
+        15.45,
+        0.28,
+        0.6
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "PA",
+      "name": "Pantry counter / drawers",
+      "rect": [
+        14,
+        15.45,
+        2.35,
+        0.6
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "PA",
+      "name": "Dry-food shelves",
+      "rect": [
+        14,
+        17.65,
+        2.35,
+        0.4
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "L",
+      "name": "Washer bay",
+      "rect": [
+        21.7,
+        12.23,
+        0.75,
+        0.65
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "L",
+      "name": "Dryer bay",
+      "rect": [
+        21.7,
+        12.88,
+        0.75,
+        0.65
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "L",
+      "name": "Sink base",
+      "rect": [
+        21.7,
+        13.53,
+        0.75,
+        0.8
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "L",
+      "name": "Sorting / detergent drawers",
+      "rect": [
+        21.7,
+        14.33,
+        0.75,
+        0.95
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "L",
+      "name": "Ventilated hanging cupboard",
+      "rect": [
+        17.87,
+        13.7,
+        0.7,
+        0.6
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "L",
+      "name": "Folding counter / baskets",
+      "rect": [
+        18.62,
+        13.7,
+        1.45,
+        0.6
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "P",
+      "name": "Super-king frame allowance",
+      "rect": [
+        1.15,
+        2.1,
+        1.95,
+        2.15
+      ],
+      "kind": "bed"
+    },
+    {
+      "room": "P",
+      "name": "East bedside",
+      "rect": [
+        0.65,
+        3.75,
+        0.4,
+        0.4
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "P",
+      "name": "West bedside",
+      "rect": [
+        3.2,
+        3.75,
+        0.35,
+        0.4
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "W",
+      "name": "Hanging wardrobe wall",
+      "rect": [
+        4.76,
+        0.35,
+        3.0,
+        0.66
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "W",
+      "name": "Shallow drawers / folded clothes",
+      "rect": [
+        5.65,
+        2.1,
+        2.1,
+        0.35
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "E",
+      "name": "Double vanity",
+      "rect": [
+        4.72,
+        2.57,
+        1.2,
+        0.5
+      ],
+      "kind": "basin"
+    },
+    {
+      "room": "E",
+      "name": "WC allowance",
+      "rect": [
+        6.0,
+        2.57,
+        0.65,
+        0.72
+      ],
+      "kind": "wc"
+    },
+    {
+      "room": "E",
+      "name": "Fixed shower screen",
+      "rect": [
+        6.735,
+        2.57,
+        0.03,
+        0.88
+      ],
+      "kind": "glass"
+    },
+    {
+      "room": "C1",
+      "name": "Small-double bed frame",
+      "rect": [
+        5.65,
+        11.58,
+        2.1,
+        1.35
+      ],
+      "kind": "bed"
+    },
+    {
+      "room": "C1",
+      "name": "Clothes wardrobe",
+      "rect": [
+        4.82,
+        10.09,
+        0.66,
+        1.8
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "C1",
+      "name": "Desk by window",
+      "rect": [
+        7.2,
+        9.940000000000001,
+        0.65,
+        1.4
+      ],
+      "kind": "desk"
+    },
+    {
+      "room": "C1",
+      "name": "Desk chair use reservation",
+      "rect": [
+        6.4,
+        10.13,
+        0.65,
+        0.65
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "C2",
+      "name": "Small-double bed frame",
+      "rect": [
+        0.4499999999999996,
+        11.58,
+        2.1,
+        1.35
+      ],
+      "kind": "bed"
+    },
+    {
+      "room": "C2",
+      "name": "Clothes wardrobe",
+      "rect": [
+        2.7199999999999998,
+        10.09,
+        0.66,
+        1.8
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "C2",
+      "name": "Desk by window",
+      "rect": [
+        0.34999999999999987,
+        9.940000000000001,
+        0.65,
+        1.4
+      ],
+      "kind": "desk"
+    },
+    {
+      "room": "C2",
+      "name": "Desk chair use reservation",
+      "rect": [
+        1.1499999999999997,
+        10.13,
+        0.65,
+        0.65
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "C3",
+      "name": "Small-double bed frame",
+      "rect": [
+        5.65,
+        7.24,
+        2.1,
+        1.35
+      ],
+      "kind": "bed"
+    },
+    {
+      "room": "C3",
+      "name": "Clothes wardrobe",
+      "rect": [
+        4.82,
+        5.75,
+        0.66,
+        1.8
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "C3",
+      "name": "Desk by window",
+      "rect": [
+        7.2,
+        5.6,
+        0.65,
+        1.4
+      ],
+      "kind": "desk"
+    },
+    {
+      "room": "C3",
+      "name": "Desk chair use reservation",
+      "rect": [
+        6.4,
+        5.79,
+        0.65,
+        0.65
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "FB",
+      "name": "Bath",
+      "rect": [
+        0.35,
+        6.4,
+        1.7,
+        0.75
+      ],
+      "kind": "bath"
+    },
+    {
+      "room": "FB",
+      "name": "Double vanity",
+      "rect": [
+        1.98,
+        4.47,
+        1.4,
+        0.5
+      ],
+      "kind": "basin"
+    },
+    {
+      "room": "FB",
+      "name": "WC",
+      "rect": [
+        2.53,
+        6.43,
+        0.65,
+        0.72
+      ],
+      "kind": "wc"
+    },
+    {
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        1.535,
+        4.47,
+        0.03,
+        0.18
+      ],
+      "kind": "glass"
+    },
+    {
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        1.535,
+        5.55,
+        0.03,
+        0.12
+      ],
+      "kind": "glass"
+    },
+    {
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        0.35,
+        5.655,
+        1.185,
+        0.03
+      ],
+      "kind": "glass"
+    },
+    {
+      "room": "ST",
+      "name": "Retained plant allowance",
+      "rect": [
+        0.5,
+        7.4,
+        0.85,
+        0.85
+      ],
+      "kind": "plant"
+    },
+    {
+      "room": "ST",
+      "name": "Linen shelves",
+      "rect": [
+        1.5,
+        8.24,
+        0.9,
+        0.45
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "G",
+      "name": "Guest double frame allowance",
+      "rect": [
+        20.05,
+        0.65,
+        1.65,
+        2.1
+      ],
+      "kind": "bed"
+    },
+    {
+      "room": "G",
+      "name": "Guest bedside left",
+      "rect": [
+        19.6,
+        0.85,
+        0.35,
+        0.4
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "G",
+      "name": "Guest bedside right",
+      "rect": [
+        21.85,
+        0.85,
+        0.35,
+        0.4
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "G",
+      "name": "Guest hanging wardrobe",
+      "rect": [
+        16.55,
+        0.35,
+        0.6,
+        1.52
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "GS",
+      "name": "Luggage and spare bedding",
+      "rect": [
+        17.87,
+        3.77,
+        2.36,
+        0.5
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "GB",
+      "name": "Guest WC",
+      "rect": [
+        21.68,
+        3.77,
+        0.65,
+        0.72
+      ],
+      "kind": "wc"
+    },
+    {
+      "room": "GB",
+      "name": "Guest vanity",
+      "rect": [
+        21.95,
+        5.42,
+        0.5,
+        0.7
+      ],
+      "kind": "basin"
+    },
+    {
+      "room": "GB",
+      "name": "Guest shower fixed screen",
+      "rect": [
+        21.535,
+        3.77,
+        0.03,
+        1.0
+      ],
+      "kind": "glass"
+    },
+    {
+      "room": "GB",
+      "name": "Guest shower return",
+      "rect": [
+        20.35,
+        4.755,
+        0.27,
+        0.03
+      ],
+      "kind": "glass"
+    },
+    {
+      "room": "GY",
+      "name": "Combined rack / cables",
+      "rect": [
+        22.85,
+        16.8,
+        2.4,
+        1.1
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "GY",
+      "name": "Bench",
+      "rect": [
+        24.05,
+        13.7,
+        0.7,
+        1.5
+      ],
+      "kind": "bench"
+    },
+    {
+      "room": "GY",
+      "name": "Treadmill",
+      "rect": [
+        25.55,
+        13.25,
+        1.0,
+        2.05
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "GY",
+      "name": "Dumbbells",
+      "rect": [
+        22.9,
+        13.5,
+        0.4,
+        2.0
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "PL",
+      "name": "P1 cylinder / connections",
+      "rect": [
+        22.95,
+        9.2,
+        0.9,
+        0.9
+      ],
+      "kind": "plant"
+    },
+    {
+      "room": "PL",
+      "name": "P2 ventilation allowance",
+      "rect": [
+        25.95,
+        10.6,
+        0.65,
+        0.85
+      ],
+      "kind": "plant"
+    },
+    {
+      "room": "PL",
+      "name": "P3 hydraulic / controls",
+      "rect": [
+        24.1,
+        9.2,
+        0.8,
+        0.45
+      ],
+      "kind": "plant"
+    },
+    {
+      "room": "O",
+      "name": "Professional workspace",
+      "rect": [
+        20.85,
+        6.29,
+        1.6,
+        0.75
+      ],
+      "kind": "desk"
+    },
+    {
+      "room": "O",
+      "name": "Personal workspace",
+      "rect": [
+        21.7,
+        7.54,
+        0.75,
+        1.8
+      ],
+      "kind": "desk"
+    },
+    {
+      "room": "O",
+      "name": "Sofa bed closed",
+      "rect": [
+        17.87,
+        6.29,
+        0.9,
+        1.9
+      ],
+      "kind": "sofa"
+    },
+    {
+      "room": "O",
+      "name": "Shallow books / small items",
+      "rect": [
+        19.0,
+        9.04,
+        1.2,
+        0.3
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "O",
+      "name": "One task chair",
+      "rect": [
+        20.93,
+        7.12,
+        0.65,
+        0.65
+      ],
+      "kind": "chair"
+    },
+    {
+      "room": "S",
+      "name": "Full-height library / TV wall",
+      "rect": [
+        17.87,
+        9.46,
+        4.58,
+        0.35
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "S",
+      "name": "Full-height library return",
+      "rect": [
+        22.15,
+        9.81,
+        0.3,
+        2.25
+      ],
+      "kind": "cabinet"
+    },
+    {
+      "room": "S",
+      "name": "Three-seat sofa allowance",
+      "rect": [
+        19.05,
+        11.11,
+        2.3,
+        0.9
+      ],
+      "kind": "sofa"
+    },
+    {
+      "room": "S",
+      "name": "Movable upholstered footstool",
+      "rect": [
+        20.35,
+        10.56,
+        0.5,
+        0.5
+      ],
+      "kind": "table"
+    },
+    {
+      "room": "S",
+      "name": "Sofa side table",
+      "rect": [
+        18.55,
+        11.51,
+        0.4,
+        0.4
+      ],
+      "kind": "table"
+    }
+  ],
+  "routes": {
+    "Arrival to kitchen": [
+      [
+        18.05,
+        17.5
+      ],
+      [
+        17.2,
+        16.4
+      ],
+      [
+        17.125,
+        15.8
+      ],
+      [
+        17.125,
+        14.5
+      ],
+      [
+        16.3,
+        14.25
+      ]
+    ],
+    "Boot to pantry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.25,
+        16.65
+      ],
+      [
+        18.5,
+        16.65
+      ],
+      [
+        17.3,
+        16.5
+      ],
+      [
+        15.2,
+        16.5
+      ],
+      [
+        13.94,
+        16.5
+      ],
+      [
+        13.15,
+        16.7
+      ]
+    ],
+    "Boot to laundry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.9,
+        16.2
+      ],
+      [
+        20.9,
+        14.0
+      ]
+    ],
+    "Family to living": [
+      [
+        4.1,
+        4.8
+      ],
+      [
+        4.1,
+        12.0
+      ],
+      [
+        3.95,
+        12.6
+      ],
+      [
+        3.95,
+        13.7
+      ],
+      [
+        6.1,
+        13.85
+      ]
+    ],
+    "Guests to living": [
+      [
+        19.0,
+        3.0
+      ],
+      [
+        18.1,
+        2.6
+      ],
+      [
+        17.15,
+        2.6
+      ],
+      [
+        17.15,
+        13.75
+      ],
+      [
+        16.5,
+        13.85
+      ],
+      [
+        9.7,
+        13.85
+      ]
+    ],
+    "Hall through orangery to living": [
+      [
+        17.15,
+        10.8
+      ],
+      [
+        17.15,
+        11.65
+      ],
+      [
+        16.375,
+        11.65
+      ],
+      [
+        15.25,
+        11.65
+      ],
+      [
+        15.25,
+        13.8
+      ]
+    ],
+    "Boot to gym": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        21.0,
+        16.65
+      ],
+      [
+        21.65,
+        16.05
+      ],
+      [
+        22.625,
+        16.05
+      ],
+      [
+        23.675,
+        16.05
+      ]
+    ],
+    "Garden sitting to dining": [
+      [
+        14.85,
+        12.25
+      ],
+      [
+        14.85,
+        13.85
+      ],
+      [
+        10.2,
+        13.85
+      ]
+    ],
+    "Guest hall to garden sitting": [
+      [
+        17.15,
+        10.9
+      ],
+      [
+        16.65,
+        11.9
+      ],
+      [
+        15.6,
+        12.15
+      ]
+    ],
+    "Garden door approach": [
+      [
+        14.85,
+        13.8
+      ],
+      [
+        14.85,
+        11.8
+      ],
+      [
+        14.85,
+        10.15
+      ],
+      [
+        14.4,
+        10.05
+      ]
+    ],
+    "Dining to cooking aisle": [
+      [
+        10.52,
+        13.85
+      ],
+      [
+        10.52,
+        16.65
+      ],
+      [
+        12.0,
+        16.7
+      ]
+    ],
+    "Rear of dining": [
+      [
+        6.1,
+        17.65
+      ],
+      [
+        9.35,
+        17.65
+      ]
+    ],
+    "Lounge approach": [
+      [
+        6.1,
+        13.85
+      ],
+      [
+        3.95,
+        13.85
+      ],
+      [
+        3.8,
+        14.65
+      ]
+    ],
+    "Utility to washer": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        20.72,
+        13.85
+      ],
+      [
+        20.72,
+        12.55
+      ]
+    ],
+    "Utility to folding": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Boot bench approach": [
+      [
+        20.25,
+        16.65
+      ],
+      [
+        20.05,
+        17.05
+      ]
+    ],
+    "Kitchen directly to utility": [
+      [
+        16.8,
+        14.83
+      ],
+      [
+        17.81,
+        14.83
+      ],
+      [
+        18.8,
+        14.83
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Hall to snug sofa": [
+      [
+        17.15,
+        11.65
+      ],
+      [
+        17.15,
+        10.8
+      ],
+      [
+        18.5,
+        10.8
+      ],
+      [
+        19.75,
+        10.66
+      ]
+    ],
+    "Suite entry to bed west": [
+      [
+        4.03,
+        4.85
+      ],
+      [
+        4.03,
+        4.0
+      ],
+      [
+        3.9,
+        3.2
+      ],
+      [
+        3.65,
+        2.5
+      ]
+    ],
+    "Suite around bed to east": [
+      [
+        3.65,
+        2.5
+      ],
+      [
+        3.7,
+        1.65
+      ],
+      [
+        0.75,
+        1.65
+      ],
+      [
+        0.75,
+        3.25
+      ]
+    ],
+    "Suite to hanging and drawers": [
+      [
+        3.7,
+        1.65
+      ],
+      [
+        4.15,
+        1.825
+      ],
+      [
+        4.9,
+        1.825
+      ],
+      [
+        5.3,
+        1.55
+      ],
+      [
+        7.35,
+        1.55
+      ]
+    ],
+    "Suite to ensuite vanity": [
+      [
+        3.9,
+        3.2
+      ],
+      [
+        4.15,
+        3.575
+      ],
+      [
+        4.9,
+        3.575
+      ],
+      [
+        5.2,
+        3.5
+      ]
+    ],
+    "Ensuite WC approach": [
+      [
+        5.2,
+        3.5
+      ],
+      [
+        5.75,
+        3.8
+      ],
+      [
+        6.2,
+        3.8
+      ]
+    ],
+    "Ensuite shower entry": [
+      [
+        6.2,
+        3.8
+      ],
+      [
+        7.3,
+        3.8
+      ],
+      [
+        7.3,
+        3.05
+      ]
+    ],
+    "C1 entry to bed": [
+      [
+        4.1,
+        9.49
+      ],
+      [
+        5.92,
+        9.49
+      ],
+      [
+        5.92,
+        10.91
+      ],
+      [
+        6.12,
+        11.16
+      ]
+    ],
+    "C1 wardrobe approach": [
+      [
+        5.92,
+        9.49
+      ],
+      [
+        5.92,
+        10.41
+      ]
+    ],
+    "C1 desk approach": [
+      [
+        5.92,
+        10.91
+      ],
+      [
+        5.92,
+        11.16
+      ],
+      [
+        6.800000000000001,
+        11.16
+      ]
+    ],
+    "C2 entry to bed": [
+      [
+        4.1,
+        9.49
+      ],
+      [
+        2.28,
+        9.49
+      ],
+      [
+        2.28,
+        10.91
+      ],
+      [
+        2.0799999999999996,
+        11.16
+      ]
+    ],
+    "C2 wardrobe approach": [
+      [
+        2.28,
+        9.49
+      ],
+      [
+        2.28,
+        10.41
+      ]
+    ],
+    "C2 desk approach": [
+      [
+        2.28,
+        10.91
+      ],
+      [
+        2.28,
+        11.16
+      ],
+      [
+        1.4,
+        11.16
+      ]
+    ],
+    "C3 entry to bed": [
+      [
+        4.1,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        6.57
+      ],
+      [
+        6.12,
+        6.82
+      ]
+    ],
+    "C3 wardrobe approach": [
+      [
+        5.92,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        6.07
+      ]
+    ],
+    "C3 desk approach": [
+      [
+        5.92,
+        6.57
+      ],
+      [
+        5.92,
+        6.82
+      ],
+      [
+        6.800000000000001,
+        6.82
+      ]
+    ],
+    "Family bathroom vanity": [
+      [
+        4.1,
+        5.5
+      ],
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.65,
+        5.5
+      ]
+    ],
+    "Family bathroom shower": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.05,
+        5.4
+      ],
+      [
+        1.88,
+        5.32
+      ],
+      [
+        1.6,
+        5.15
+      ],
+      [
+        0.95,
+        5.1
+      ]
+    ],
+    "Family bathroom bath": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.2,
+        5.8
+      ],
+      [
+        1.9,
+        6.02
+      ]
+    ],
+    "Family bathroom WC": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.8,
+        5.98
+      ]
+    ],
+    "Linen approach": [
+      [
+        4.1,
+        7.9
+      ],
+      [
+        2.8,
+        7.9
+      ],
+      [
+        1.95,
+        7.8
+      ]
+    ],
+    "Plant approach": [
+      [
+        2.8,
+        7.9
+      ],
+      [
+        1.75,
+        7.8
+      ]
+    ],
+    "Guest bed left": [
+      [
+        18.4,
+        2.6
+      ],
+      [
+        19.25,
+        3.15
+      ],
+      [
+        19.65,
+        3.15
+      ],
+      [
+        19.65,
+        2.2
+      ]
+    ],
+    "Guest bed right": [
+      [
+        19.65,
+        3.15
+      ],
+      [
+        22.08,
+        3.15
+      ],
+      [
+        22.08,
+        2.2
+      ]
+    ],
+    "Guest wardrobe": [
+      [
+        18.4,
+        2.6
+      ],
+      [
+        18.5,
+        1.4
+      ],
+      [
+        17.65,
+        1.4
+      ]
+    ],
+    "Guest shower room": [
+      [
+        17.15,
+        5.6
+      ],
+      [
+        19.7,
+        5.6
+      ],
+      [
+        20.7,
+        5.6
+      ]
+    ],
+    "Guest shower entry": [
+      [
+        20.7,
+        5.6
+      ],
+      [
+        21.1,
+        5.35
+      ],
+      [
+        21.1,
+        4.35
+      ]
+    ],
+    "Guest WC approach": [
+      [
+        20.7,
+        5.6
+      ],
+      [
+        21.1,
+        5.14
+      ],
+      [
+        21.6,
+        5.14
+      ],
+      [
+        21.92,
+        5.02
+      ]
+    ],
+    "Guest vanity approach": [
+      [
+        20.7,
+        5.6
+      ],
+      [
+        21.5,
+        5.6
+      ]
+    ],
+    "Gym to plant": [
+      [
+        23.675,
+        16.05
+      ],
+      [
+        23.675,
+        12.7
+      ],
+      [
+        23.85,
+        12.5
+      ],
+      [
+        23.85,
+        11.4
+      ],
+      [
+        23.85,
+        10.55
+      ]
+    ],
+    "Plant cylinder approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        23.4,
+        10.55
+      ]
+    ],
+    "Plant ventilation approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        24.7,
+        10.55
+      ],
+      [
+        25.45,
+        11.0
+      ]
+    ],
+    "Plant controls approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        24.5,
+        10.55
+      ],
+      [
+        24.5,
+        10.15
+      ]
+    ],
+    "Plant external door approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        24.7,
+        10.55
+      ],
+      [
+        26.35,
+        10.05
+      ]
+    ],
+    "Snug rooflight control": [
+      [
+        19.75,
+        10.66
+      ],
+      [
+        18.55,
+        10.66
+      ],
+      [
+        18.55,
+        10.25
+      ]
+    ],
+    "Office entry to work": [
+      [
+        17.15,
+        8.65
+      ],
+      [
+        19.1,
+        8.65
+      ],
+      [
+        20.45,
+        8.65
+      ],
+      [
+        20.45,
+        7.5
+      ]
+    ],
+    "Office personal setup approach": [
+      [
+        20.45,
+        8.65
+      ],
+      [
+        20.45,
+        8.25
+      ]
+    ],
+    "Snug main bookcase approach": [
+      [
+        18.55,
+        10.66
+      ],
+      [
+        18.55,
+        10.2
+      ],
+      [
+        21.75,
+        10.2
+      ]
+    ],
+    "Snug return bookcase approach": [
+      [
+        21.75,
+        10.2
+      ],
+      [
+        21.75,
+        11.55
+      ]
+    ]
+  },
+  "gia_m2": 332.96,
+  "external_footprint_m2": 373.315,
+  "clear_room_area_m2": 315.516,
+  "plant_extension_included_as_proposal": true,
+  "family_plant_placeholder_retained": true,
+  "dining_assumption": "8 at table plus 2 at island",
+  "snug_rooflight_reservation_m": [
+    18.65,
+    9.95,
+    1.1,
+    1.1
+  ],
+  "source_hashes": {
+    "plan_model.py": "36e6a505b793a9bbc4536120503951aeb4d0eb26c89e85f0ff836125913443d4",
+    "open_orangery_study.py": "b69daa5c8e8ec30899a1a5952f678e0e9ba144c3c670e8b754e34a164cacca0e",
+    "shared_space_study.py": "f2eff59da3f6799d2bc22643b929a3e3a064b39214cc22a38f7b51991f16a7c2",
+    "arrival_study.py": "164be364682466e06a9b482e318adf0ed73dfafee2f4a8e3590769ed6d040ba8",
+    "snug_study.py": "d45340028fc03eff282f4bc74acda644b25b1c2ff73495e5d4de1a1a73ae1908",
+    "suite_study.py": "33fbf928393578a488f306bc9aec9796fc066d300c6b615483acad8d9a17022e",
+    "family_rooms_study.py": "647f6197f150a0ad2bbd01e35cf74ab4247930a67a33c280dc02d6baf81dbd00",
+    "office_guest_study.py": "d76751ba3b8e70205802abb225809550af850d6881d1b43519b578feb0e2408f"
+  },
+  "library_source_sha256": "ee1acaac986e74c1fb2b8ab500ecdaa546c73acbf3c7c4e6b76a44e13014610f",
+  "source_sha256": "18fe4703b3ed4822d8dcc5e7258d12da198d73255256c09d2c0f2fbb98c7382b",
+  "state_route_counts": {
+    "Professional": 56,
+    "Personal": 56,
+    "Night": 56
+  },
+  "issues": []
+}
