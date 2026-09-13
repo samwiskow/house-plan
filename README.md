@@ -22,6 +22,28 @@ It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
 
+## Concept 19: everyday-use review
+
+`output/pdf/concept-19-everyday-use-review.pdf` records 12 reproducible spatial
+scenarios across laundry, shopping, cooking, school mornings, dining and bath
+assistance. Open machine doors retain the sampled approach; a basket in the
+laundry aisle blocks it. Open pantry drawers and dishwasher doors obstruct their
+work routes; the existing direct kitchen and courtyard-side routes offer bypasses.
+An occupied boot bench needs the gym-side bypass. A bath-assisting adult occupies
+the bath approach. These are synthetic occupied-use reservations, not a simulation
+of simultaneous household movement.
+
+The current table has eight chairs. End-chair tests for ten obstruct both dining
+cross-routes; no ten-at-one-table layout is adopted. Eight plus island seating
+is separate seating. Concept 18's five-visitor sleeping example remains conditional
+on child sharing and acceptance of the office sofa-bed exit compromise.
+
+`household_use_review.py` and concept-19-study-check.json preserve both failures
+and passing alternatives. Each scenario route passes without its temporary
+obstacles; 0.70 m moving envelopes are checked against the obstacle additions.
+`development_model.py` loads the concept 18 geometry / furniture snapshot and
+rejects changed source files, avoiding regeneration of historical PDFs.
+
 ## Concept 18: office and overnight guests (proposal)
 
 `output/pdf/concept-18-office-and-guests.pdf` develops the office day / night

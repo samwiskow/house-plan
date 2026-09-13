@@ -1,0 +1,461 @@
+{
+  "status": "Use review; conflicts intentionally retained as findings",
+  "route_width_m": 0.7,
+  "scenarios": [
+    {
+      "id": "L1",
+      "name": "Laundry / both machine doors open",
+      "route": [
+        [
+          20.9,
+          14.8
+        ],
+        [
+          20.72,
+          13.85
+        ],
+        [
+          20.72,
+          12.55
+        ]
+      ],
+      "extra": [
+        [
+          "Washer door",
+          [
+            21.15,
+            12.23,
+            0.55,
+            0.65
+          ]
+        ],
+        [
+          "Dryer door",
+          [
+            21.15,
+            12.88,
+            0.55,
+            0.65
+          ]
+        ]
+      ],
+      "expect": true,
+      "result": {
+        "clear": true
+      }
+    },
+    {
+      "id": "L2",
+      "name": "Laundry / basket left in the aisle",
+      "route": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          20.9,
+          16.2
+        ],
+        [
+          20.9,
+          14.0
+        ]
+      ],
+      "extra": [
+        [
+          "Laundry basket",
+          [
+            20.1,
+            14.65,
+            0.65,
+            0.45
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Laundry basket",
+        "point": [
+          20.9,
+          15.4
+        ]
+      }
+    },
+    {
+      "id": "L3",
+      "name": "Laundry / basket stored under counter",
+      "route": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          20.9,
+          16.2
+        ],
+        [
+          20.9,
+          14.0
+        ]
+      ],
+      "extra": [],
+      "expect": true,
+      "result": {
+        "clear": true
+      }
+    },
+    {
+      "id": "P1",
+      "name": "Shopping / pantry drawer open",
+      "route": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          20.25,
+          16.65
+        ],
+        [
+          18.5,
+          16.65
+        ],
+        [
+          17.3,
+          16.5
+        ],
+        [
+          15.2,
+          16.5
+        ],
+        [
+          13.94,
+          16.5
+        ],
+        [
+          13.15,
+          16.7
+        ]
+      ],
+      "extra": [
+        [
+          "Open pantry drawer",
+          [
+            14,
+            16.05,
+            2.35,
+            0.5
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Open pantry drawer",
+        "point": [
+          16.68235294117647,
+          16.5
+        ]
+      }
+    },
+    {
+      "id": "P2",
+      "name": "Shopping / use direct entrance-kitchen route",
+      "route": [
+        [
+          18.05,
+          17.5
+        ],
+        [
+          17.2,
+          16.4
+        ],
+        [
+          17.125,
+          15.8
+        ],
+        [
+          17.125,
+          14.5
+        ],
+        [
+          16.3,
+          14.25
+        ]
+      ],
+      "extra": [
+        [
+          "Open pantry drawer",
+          [
+            14,
+            16.05,
+            2.35,
+            0.5
+          ]
+        ]
+      ],
+      "expect": true,
+      "result": {
+        "clear": true
+      }
+    },
+    {
+      "id": "K1",
+      "name": "Cooking / dishwasher open",
+      "route": [
+        [
+          10.52,
+          13.85
+        ],
+        [
+          10.52,
+          16.65
+        ],
+        [
+          12.0,
+          16.7
+        ]
+      ],
+      "extra": [
+        [
+          "Dishwasher door",
+          [
+            11.6,
+            16.8,
+            0.6,
+            0.65
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Dishwasher door",
+        "point": [
+          11.284666666666666,
+          16.675833333333333
+        ]
+      }
+    },
+    {
+      "id": "K2",
+      "name": "Cooking / pass on the courtyard side",
+      "route": [
+        [
+          10.2,
+          13.85
+        ],
+        [
+          14.85,
+          13.85
+        ]
+      ],
+      "extra": [
+        [
+          "Dishwasher door",
+          [
+            11.6,
+            16.8,
+            0.6,
+            0.65
+          ]
+        ]
+      ],
+      "expect": true,
+      "result": {
+        "clear": true
+      }
+    },
+    {
+      "id": "B1",
+      "name": "School morning / occupied boot bench",
+      "route": [
+        [
+          20.25,
+          17.1
+        ],
+        [
+          21.0,
+          16.65
+        ],
+        [
+          22.625,
+          16.65
+        ],
+        [
+          24.0,
+          16.65
+        ]
+      ],
+      "extra": [
+        [
+          "Seated person / knees",
+          [
+            19.4,
+            16.8,
+            0.6,
+            0.6
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Seated person / knees",
+        "point": [
+          20.25,
+          17.1
+        ]
+      }
+    },
+    {
+      "id": "B2",
+      "name": "School morning / pass on gym side",
+      "route": [
+        [
+          21.65,
+          17.6
+        ],
+        [
+          21.65,
+          16.65
+        ],
+        [
+          24.0,
+          16.65
+        ]
+      ],
+      "extra": [
+        [
+          "Seated person / knees",
+          [
+            19.4,
+            16.8,
+            0.6,
+            0.6
+          ]
+        ]
+      ],
+      "expect": true,
+      "result": {
+        "clear": true
+      }
+    },
+    {
+      "id": "D1",
+      "name": "Ten at one table / courtyard-end chair",
+      "route": [
+        [
+          6.1,
+          13.85
+        ],
+        [
+          9.7,
+          13.85
+        ]
+      ],
+      "extra": [
+        [
+          "Extra end chair",
+          [
+            8.1,
+            13.6,
+            0.5,
+            0.5
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Extra end chair",
+        "point": [
+          7.7749999999999995,
+          13.85
+        ]
+      }
+    },
+    {
+      "id": "D2",
+      "name": "Ten at one table / rear-end chair",
+      "route": [
+        [
+          6.1,
+          17.65
+        ],
+        [
+          9.35,
+          17.65
+        ]
+      ],
+      "extra": [
+        [
+          "Extra end chair",
+          [
+            8.1,
+            17.3,
+            0.5,
+            0.5
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Extra end chair",
+        "point": [
+          7.7749999999999995,
+          17.65
+        ]
+      }
+    },
+    {
+      "id": "F1",
+      "name": "Bath assistance / adult at bath edge",
+      "route": [
+        [
+          3.0,
+          5.5
+        ],
+        [
+          2.2,
+          5.8
+        ],
+        [
+          1.9,
+          6.02
+        ]
+      ],
+      "extra": [
+        [
+          "Adult helping at bath",
+          [
+            1.25,
+            5.8,
+            0.6,
+            0.6
+          ]
+        ]
+      ],
+      "expect": false,
+      "result": {
+        "clear": false,
+        "obstacle": "Adult helping at bath",
+        "point": [
+          2.18,
+          5.814666666666667
+        ]
+      }
+    }
+  ],
+  "model_changed": false,
+  "dining_seats": 8,
+  "five_visitors_depend_on_child_sharing": true,
+  "limitations": [
+    "Synthetic body and object sizes",
+    "No multi-agent movement or occupied bathroom simulation",
+    "No accessibility validation",
+    "No water pressure or hot-water capacity test"
+  ]
+}

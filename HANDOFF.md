@@ -1,5 +1,14 @@
 # House design handoff
 
+## Current development: concept 19 everyday-use review
+
+Twelve scenarios record occupied-space conflicts and passing alternatives.
+Most significant unresolved preference: ten dining together versus eight at the
+table plus island seating. No new furniture is adopted by this review.
+Use the source-checked concept 18 snapshot through development_model.py for the
+whole-house consolidation. See README and concept-19-study-check.json.
+
+
 ## Current development: concept 18 office and guests
 
 Four A3 sheets compare daytime work and occasional sleeping, then develop the
