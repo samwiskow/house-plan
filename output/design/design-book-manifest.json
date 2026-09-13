@@ -1,7 +1,7 @@
 {
   "revision": "Design book / 02",
   "pages": 16,
-  "model_sha256": "111ab8de5761c370e2160b17885ff20a74107ac92f71feb1a8868a94f48d8810",
+  "model_sha256": "e9ba82a0d06f9a5dc9fdf48cd345643381566903169f32b0b4ffe5c548e5fa05",
   "source_layout": "concept-24 snapshot / concept-25 whole-house proposal",
   "book": "output/pdf/house-design-book.pdf",
   "views": {

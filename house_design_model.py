@@ -47,8 +47,8 @@ def rooflights():
         x, y, w, d = light['rect']
         points = [(x,y), (x+w,y), (x+w,y+d), (x,y+d)]
         pitched = light['room'] == 'KL'
-        light['roofVertices'] = [[a,b,3.7+(18.4-b)*tan(pi/6)+.03 if pitched else 3.23] for a,b in points]
-        light['ceilingVertices'] = [[a,b,3.5+(18.05-b)*tan(pi/6) if pitched else 2.6] for a,b in points]
+        light['roofVertices'] = [[a,b,round(3.7+(18.4-b)*tan(pi/6)+.03,6) if pitched else 3.23] for a,b in points]
+        light['ceilingVertices'] = [[a,b,round(3.5+(18.05-b)*tan(pi/6),6) if pitched else 2.6] for a,b in points]
     return lights
 
 
@@ -62,7 +62,7 @@ def surface_with_openings(name, rect, height, openings, material):
             mx,my = (a+c)/2,(b+e)/2
             if any(hx < mx < hx+hw and hy < my < hy+hd for hx,hy,hw,hd in openings):
                 continue
-            result.append(dict(name=name, vertices=[[u,v,height(v)] for u,v in [(a,b),(c,b),(c,e),(a,e)]], material=material))
+            result.append(dict(name=name, vertices=[[u,v,round(height(v),6)] for u,v in [(a,b),(c,b),(c,e),(a,e)]], material=material))
     return result
 
 
