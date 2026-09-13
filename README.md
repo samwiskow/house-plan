@@ -1,5 +1,17 @@
 # Courtyard house - current development plan
 
+## Revised snug: antique library character
+
+Concept 24 (`output/pdf/concept-24-library-snug.pdf`) replaces the low storage
+with a 4.58 m full-height library wall, central TV recess and 2.25 m return
+on the former window wall. Dark timber, framed cupboards, a cornice and warm
+reading lights establish the proposed antique-library character. The 2.30 m
+sofa moves 0.30 m, retaining a nominal 0.80 m passage to the return shelves.
+The garden-side plant and rooflight reservation remain. All 56 sampled routes
+pass in both office work states and the overnight state. Joinery height,
+book loads, TV, lighting and rooflight remain to detail and select.
+
+
 ## Revised office: two permanent setups
 
 Concept 23 (`output/pdf/concept-23-two-workspace-office.pdf`) provides a
