@@ -24,6 +24,30 @@ It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
 
+## Concept 21: preliminary building coordination
+
+`output/pdf/concept-21-building-coordination.pdf` contains five A3 sheets:
+a candidate distribution plan, a family-hall / shared-vault section, plant
+height and glazed-roof coordination, room comfort duties and a designer input
+brief. It uses unselected plant option B as a route-study scenario only.
+
+The family distribution crossing is unresolved: there is no enclosed corridor
+across the shared space. A visible 0.50 m projection / 0.40 m-deep edge band is
+drawn at +2.70 to +3.10 m for architectural review, not adopted. The difference
+between +3.20 m roof top and +2.60 m ceiling is 0.60 m gross; roof build-up consumes
+part of it. It is not a verified duct void. The illustrative family hot-water
+route measures 35.25 m in plan, excluding verticals, fittings and final branches.
+
+All required cooling spaces are listed. Retained roof shade and vent rectangles
+remain separate in plan; actual hardware coordination and performance are open.
+No heat loss, cooling load, airflow, hot-water capacity, solar balance, structural
+or site compliance calculation is claimed. The input / output brief identifies
+what the architect and services designers need to resolve next.
+
+Rebuild with `building_coordination.py`; concept-21-study-check.json records
+route lengths, reservations, room coverage and uncompleted technical work.
+`DESIGN-REVIEW.md` is the index for the five new development documents.
+
 ## Concept 20: consolidated whole-house plan
 
 The three-sheet PDF brings the 25 room / circulation polygons, current furniture,

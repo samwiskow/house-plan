@@ -71,7 +71,21 @@ is required or which of the listed rooms to include.
 Unknown site and supply details do not prevent a preliminary comparison, but
 must remain explicit assumptions rather than settled design inputs.
 
-## Location comparison to develop
+## Location comparison: concept 17, for review
+
+The measured comparison is now in
+`output/pdf/concept-17-service-end-comparison.pdf`. A retains side-by-side
+machines but loses sorting drawers and reduces folding to 0.65 m. B tests a
+12.22 m2 extension of the gym block with 9 m2 clear plant space, preserving the
+full gym and laundry. B is recommended for development, not selected. Both use
+provisional equipment / service allowances; neither is a sized installation.
+
+`output/pdf/concept-21-building-coordination.pdf` adds candidate distribution
+routes and a section of the unresolved crossing to the family wing. A visible
+services band is a proposal for review. The example hot-water route is 35.25 m
+in plan before verticals and fittings. No thermal or hydraulic result follows.
+
+### Comparison criteria retained
 
 | Option | What the current plan tells us | What the measured study must test |
 | --- | --- | --- |

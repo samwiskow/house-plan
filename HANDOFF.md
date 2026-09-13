@@ -1,5 +1,16 @@
 # House design handoff
 
+## 13 September development package complete for review
+
+Concepts 17-21 cover the service-end comparison, office / guests, everyday-use
+review, consolidated whole-house plan and preliminary building coordination.
+Start with DESIGN-REVIEW.md and concept 20. All PDFs were rendered and inspected.
+No plant location or visible services band is selected. The office sofa-bed
+one-sided exit and ten-at-one-table dining remain decisions for review.
+The current plant reservation stays in place. Actual site, equipment sizing,
+roof structure and energy calculations remain work for the design team.
+
+
 ## Current full-plan reference: concept 20
 
 Use output/pdf/concept-20-current-whole-house-plan.pdf for the current furnished
