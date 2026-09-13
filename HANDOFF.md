@@ -1,5 +1,14 @@
 # House design handoff
 
+## Current full-plan reference: concept 20
+
+Use output/pdf/concept-20-current-whole-house-plan.pdf for the current furnished
+development plan, room schedule and decision register. Concept 07 is now an
+earlier full-plan export. The consolidated drawing retains the original plant
+reservation and eight dining chairs; neither a plant option nor ten-place
+dining has been adopted. Office shown in day mode; concept 18 records night use.
+
+
 ## Current development: concept 19 everyday-use review
 
 Twelve scenarios record occupied-space conflicts and passing alternatives.

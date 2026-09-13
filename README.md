@@ -1,11 +1,13 @@
-# U-shaped family home - concept 05
+# Courtyard house - current development plan
 
-The full floor-plan reference is `output/pdf/concept-07-open-garden-room.pdf`:
-a full plan at 1:100 and a before/after corner detail at 1:50, both on A3.
-It opens the year-round garden room and relocates the hall door beyond the snug.
-Read it alongside concept 12, which adds the approved direct kitchen–utility
-hinged door D19; that opening is not shown in the earlier full-plan export.
-Print at 100% to preserve scale.
+The current full-plan reference is `output/pdf/concept-20-current-whole-house-plan.pdf`:
+a furnished plan at 1:100 on A3, room schedule and decision register. It combines
+the open garden room, selected parents-suite A, later room proposals and D19.
+Print at 100% to preserve scale. Proposals remain proposals; plant relocation
+and the gym extension are not incorporated into the current footprint.
+
+`output/pdf/concept-07-open-garden-room.pdf` is the earlier full-plan reference;
+use concept 20 for the consolidated current development state.
 
 `output/pdf/u-home-dimensioned-concept.pdf` retains the original concept 05 plan,
 room schedule, family/service details and illustrative site plan. Its enclosed
@@ -21,6 +23,24 @@ and the proposed log burner.
 It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
+
+## Concept 20: consolidated whole-house plan
+
+The three-sheet PDF brings the 25 room / circulation polygons, current furniture,
+fixed shower screens and selected courtyard arrangement into one drawing.
+Room codes link the furnished plan to the schedule. The schedule records
+319.91 m2 internal envelope (GIA), 360.26 m2 external footprint and 304.92 m2
+summed clear rooms under the existing model's area convention.
+
+The status register separates selected directions, drawn proposals, unadopted
+plant options and technical work. It retains the concept 15 plant reservation,
+full gym, D03 relocation and D19. The office is shown in daytime mode; concept 18
+remains the night-use reference. Eight dining chairs remain pending a decision
+on ten together versus occasional island seating.
+
+`consolidated_plan.py` loads the source-checked concept 18 model without
+regenerating older drawings. Assertions check the selected suite, gym, doors,
+retained plant and unique room IDs. Data is in concept-20-study-check.json.
 
 ## Concept 19: everyday-use review
 
