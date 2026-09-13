@@ -47,3 +47,18 @@ Google Chrome binary. Captures are stored in `output/design/book-views/`.
 `model.json` is the common geometric input to this scene and the PDF. The book
 manifest records the model and image hashes. Source scripts and generated
 files are kept together so future editions can be regenerated consistently.
+
+## Edition 02 and publishing
+
+The office now has a continuous L-shaped worktop. Outdoor seats follow their
+recorded facing directions. Three main-space and two family-hall rooflights
+join the library opening, with matching roof openings, ceiling openings and
+lightwells. These remain a concept proposal with shading and product selection
+open.
+
+`python3 scripts/build_pages.py` stages the current scene and PDF in `tmp/pages`.
+GitHub Actions verifies geometry, the book manifest and browser behaviour before
+publishing that folder on a push to `main`. Pull requests run the same checks.
+The browser check supports `BASE_URL` for checking the deployed project path
+and `CHROME_PATH` to override the local browser. On Linux it uses Playwright's
+installed Chromium.

@@ -21,6 +21,19 @@ for mode in ('Professional','Personal','Night'):
     current,_=load_current_model(mode)
     assert not current.verify(),mode
     assert [f['rect'] for f in model['officeStates'][mode]]==[f['rect'] for f in current.furniture if f['room']=='O']
+    desks = [f['rect'] for f in current.furniture if f['room']=='O' and f['kind']=='desk']
+    assert len(desks)==2
+    arm,turn=desks
+    assert abs(arm[1]+arm[3]-turn[1])<1e-6, ('desk corner gap',mode)
+    assert abs(arm[0]+arm[2]-turn[0]-turn[2])<1e-6
+
+assert [l['room'] for l in model['rooflights']].count('KL')==3
+assert [l['room'] for l in model['rooflights']].count('FH')==2
+for light in model['rooflights']:
+    x,y,w,d=light['rect']
+    assert all(source.inside((a,b),source.R[light['room']].poly) for a,b in [(x,y),(x+w,y+d)])
+    assert all(top[2]>bottom[2] for top,bottom in zip(light['roofVertices'],light['ceilingVertices']))
+    assert not any(source.inside((x+w/2,y+d/2),[[v[0],v[1]] for v in s['vertices']]) for s in model['vaultedCeilingSurfaces'])
 
 for d in source.doors:
     x=d.x if d.vertical else d.x+d.width/2

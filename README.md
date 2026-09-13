@@ -1,4 +1,6 @@
-# Current presentation: House Design Book 01
+# Current presentation: House Design Book 02
+
+Explore the [live house model](https://samwiskow.github.io/house-plan/).
 
 Start with [HOUSE-DESIGN-BOOK.md](HOUSE-DESIGN-BOOK.md) for the consolidated
 16-page book and fresh accompanying 3D model. It supersedes the older

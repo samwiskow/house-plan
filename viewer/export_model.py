@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from house_design_model import load_current_model, roof_surfaces, REVISION
+from house_design_model import load_current_model, roof_surfaces, rooflights, vaulted_ceiling_surfaces, REVISION
 
 source, snapshot = load_current_model()
 OUT = Path(__file__).parent / 'model.json'
@@ -155,6 +155,7 @@ def main():
         'plantingBeds': [dict(name=name,rect=rect) for name,rect in court['planting_beds']],
         'outdoorFurniture': outdoor_data(court), 'lights': light_data(lighting),
         'roofSurfaces': roof_surfaces(), 'rooflight': snapshot['snug_rooflight_reservation_m'],
+        'rooflights': rooflights(), 'vaultedCeilingSurfaces': vaulted_ceiling_surfaces(),
         'roofInfill': [
             {'rect':[0,12.8,8.2,.16],'bottom':3.2,'top':3.7,'material':'timber'},
             {'rect':[16.2,12.8,6.6,.16],'bottom':3.2,'top':3.7,'material':'timber'},
@@ -171,6 +172,7 @@ def main():
                    'heating':'Wet underfloor heating confirmed',
                    'ventilation':'Two local MVHR units recommended for development; unselected',
                    'roof':'Study heights; low roofs are envelopes without designed falls',
+                   'rooflights':'Proposed main-space and family-hall openings; dimensions and shading to develop with the site and PV layout',
                    'site':'Illustrative ground only; no plot or boundary is implied',
                    'furniture':'Measured plan allowances; forms, heights and finishes illustrative'},
     }

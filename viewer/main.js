@@ -77,16 +77,20 @@ for(const roof of model.roofSurfaces){
 // Flat ceilings remain over the private and service rooms; only the shared room is vaulted.
 for(const room of model.rooms){
   if(['KL','OR'].includes(room.id))continue;
-  flat(room.polygon,2.6,'ivory',ceilings,room.id==='S'?[corners(model.rooflight)]:[]);
+  flat(room.polygon,2.6,'ivory',ceilings,model.rooflights.filter(l=>l.room===room.id).map(l=>corners(l.rect)));
 }
-for(const [a,b] of [[13.15,15.6],[15.6,18.05]]){
-  const height=z=>3.5+Math.min(z-13.15,18.05-z)*Math.tan(Math.PI/6);
-  face([[.35,a,height(a)],[17.75,a,height(a)],[17.75,b,height(b)],[.35,b,height(b)]],'ivory',ceilings);
-}
+model.vaultedCeilingSurfaces.forEach(s=>face(s.vertices,'ivory',ceilings));
 box([12.55,13.08,4,.14],3.1,3.5,'ivory',ceilings);
-const [lx,lz,lw,ld]=model.rooflight;
-box([lx-.055,lz-.055,lw+.11,.055],2.6,3.23,'ivory',ceilings);box([lx-.055,lz+ld,lw+.11,.055],2.6,3.23,'ivory',ceilings);
-box([lx-.055,lz,.055,ld],2.6,3.23,'ivory',ceilings);box([lx+lw,lz,.055,ld],2.6,3.23,'ivory',ceilings);
+for(const light of model.rooflights){
+  const lower=light.ceilingVertices,upper=light.roofVertices.map(([x,z,h])=>[x,z,h+.018]);
+  const [x,z,w,d]=light.rect;
+  const inset=upper.map(([a,b,h])=>[a+(a===x?.045:-.045),b+(b===z?.045:-.045),h+(upper[2][2]-upper[1][2])/d*(b===z?.045:-.045)]);
+  for(let i=0;i<4;i++){
+    const j=(i+1)%4;
+    face([lower[i],lower[j],upper[j],upper[i]],'ivory',ceilings);
+    face([upper[i],upper[j],inset[j],inset[i]],'bronze',roofs);
+  }
+}
 for(const win of model.windows){
   const horizontal=win.orientation==='h';
   const x=horizontal?win.x:(win.x===0||win.x===12.2||win.x===16.2?win.x+.175:win.x-.175);
@@ -164,6 +168,7 @@ function makeFurniture(f,parent=furnishing){
     if(f.kind==='diningchair'){
       let rr=[x,z,w,.06];
       if(f.room==='KL')rr=[x+(x<8.35?0:w-.06),z,.06,d];
+      if(f.facing)rr={south:[x,z,w,.06],north:[x,z+d-.06,w,.06],east:[x,z,.06,d],west:[x+w-.06,z,.06,d]}[f.facing];
       box(rr,h,.88,'oak',group);
     }
     if(f.kind==='desk'){
@@ -183,6 +188,7 @@ function makeFurniture(f,parent=furnishing){
       let back=[x,z+d-.16,w,.16];
       if(f.room==='KL'&&f.kind==='sofa')back=[x+w-.16,z,.16,d];
       if(f.room==='O')back=[x,z,.14,d];
+      if(f.facing)back={south:[x,z,w,.16],north:[x,z+d-.16,w,.16],east:[x,z,.16,d],west:[x+w-.16,z,.16,d]}[f.facing];
       box(back,h,.85,material,group);
       if(w>d){box([x,z,.12,d],h,.65,material,group);box([x+w-.12,z,.12,d],h,.65,material,group);}
       else if(f.kind==='sofa'){box([x,z,w,.12],h,.65,material,group);box([x,z+d-.12,w,.12],h,.65,material,group);}
@@ -246,7 +252,7 @@ const views={
   living:{position:[13.65,1.62,17.05],target:[3.2,1.7,15.6],title:'One continuous shared room',note:'Ivory kitchen, forest-green island and warm oak beneath a continuous vault.'},
   dining:{position:[9.4,1.62,17.65],target:[14.6,1.6,11.3],title:'Dining toward the garden room',note:'The main floor and warm finishes continue into the open, glazed sitting area.'},
   library:{position:[18.4,1.55,11.8],target:[20.55,1.3,9.5],title:'A library with room for films',note:'Dark timber bookshelves, an integrated television and warm reading light. Rooflight shown as a reservation.'},
-  office:{position:[19.2,2.0,9.05],target:[21.3,1.0,7.0],title:'Two setups, one person',note:'Professional and personal desks stay in place when the occasional guest bed opens.'},
+  office:{position:[19.2,2.0,9.05],target:[21.3,1.0,7.0],title:'One L-shaped desk, two setups',note:'A continuous corner worktop connects the professional and personal setups, with the sofa bed still usable.'},
   plan:{position:[13.575,35,9.21],target:[13.575,0,9.2],title:'The furnished plan',note:'Roof removed to see the layout. North is down; the courtyard opens south.'}
 };
 let currentView='overview',night=false,walking=false,roofOn=true;

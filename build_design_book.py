@@ -26,7 +26,7 @@ for name,file in [('Text','Arial.ttf'),('Bold','Arial Bold.ttf'),('Title','Georg
     pdfmetrics.registerFont(TTFont(name, '/System/Library/Fonts/Supplemental/'+file))
 pdfmetrics.registerFontFamily('Text',normal='Text',bold='Bold',italic='Text',boldItalic='Bold')
 C=canvas.Canvas(str(OUT),pagesize=(W*MM,H*MM))
-C.setTitle('The courtyard house - House Design Book 01')
+C.setTitle('The courtyard house - House Design Book 02')
 C.setAuthor('House design study')
 C.setSubject('Consolidated concept design, 13 September 2026')
 INK='#303d33';MUTED='#68695d';PAPER='#fffdf7';LINE='#cfc8b8';GREEN='#35533d';GOLD='#9b7951'
@@ -75,7 +75,7 @@ def page(chapter,title,subtitle):
     para(18,40,382,subtitle,3.05)
     line((18,56),(402,56))
     line((18,280),(402,280))
-    text(18,287,'DESIGN BOOK 01  /  13 SEPTEMBER 2026  /  CONCEPT DESIGN',2.3,'Text',MUTED)
+    text(18,287,'DESIGN BOOK 02  /  13 SEPTEMBER 2026  /  CONCEPT DESIGN',2.3,'Text',MUTED)
     text(402,287,f'{PAGE:02d} / 16',2.6,'Text',MUTED,'right')
     C.bookmarkPage(f'p{PAGE}');C.addOutlineEntry(title,f'p{PAGE}',0)
 
@@ -175,7 +175,7 @@ def elevation(x,y,scale,direction):
         else:vertices=[[a+w,b,lo],[a+w,b+d,lo],[a+w,b+d,hi],[a+w,b,hi]]
         project(vertices,P[wall['material']],None)
     for a in [0,22.8]:project([[a,12.8,3.7],[a,15.6,MODEL['roofHeights']['main_roof_ridge_m']],[a,18.4,3.7]],P['timber'])
-    for r in MODEL['roofSurfaces']:project(r['vertices'],'#a7aaa0' if r['material']=='roof' else '#c5d7ce')
+    for r in MODEL['roofSurfaces']:project(r['vertices'],'#a7aaa0' if r['material']=='roof' else '#c5d7ce',None if r['material']=='roof' else GREEN)
     for w in MODEL['windows']:
         a,b,l=w['x'],w['y'],w['length']
         if direction=='arrival' and w['orientation']=='h':b+=.001;project([[a,b,.82],[a+l,b,.82],[a+l,b,2.15],[a,b,2.15]],'#d6e4db',GREEN)
@@ -196,7 +196,7 @@ page('The house brief','The courtyard house','A warm, single-storey family home,
 image('courtyard',18,65,384,166)
 text(18,247,'A home for five. Space to welcome more.',5.4,'Title')
 para(18,255,242,'Stone wings, a continuous vaulted shared room, a glazed garden sitting area and a darker library snug. One current proposal brings the rooms, materials and everyday routines together.',3.35)
-para(294,246,108,'<b>Edition 01</b><br/>Drawn layout and design intentions.<br/>Roof heights, joinery and products remain proposals.',3.1)
+para(294,246,108,'<b>Edition 02</b><br/>Drawn layout and design intentions.<br/>Roof heights, joinery and products remain proposals.',3.1)
 end()
 
 page('01 / The house brief','The life this house makes room for','The starting point is how the household lives: together when wanted, with useful places to retreat.')
@@ -247,19 +247,21 @@ para(20,230,177,'The rear plant room continues the gym volume. Its garden-facing
 para(218,254,184,'Elevation silhouettes and perspective use the same roof heights and footprint. Low-roof falls, edge profiles and material samples remain to develop.',2.8)
 end()
 
-page('03 / Outside and roof','A high shared roof and lower wings','The roof layout carries the latest rear extension and library rooflight into the established massing direction.')
+page('03 / Outside and roof','A high shared roof and lower wings','Three rooflights over the main room and two along the family hall add daylight openings to the retained library rooflight.')
 ox,oy,s=23,77,8
 for surface in MODEL['roofSurfaces']:
     poly([(ox+x*s,oy+y*s) for x,y,h in surface['vertices']], '#dbe8e0' if surface['material']=='glass' else '#bcbcae',GREEN if surface['material']=='glass' else None,.2)
-for label,x,y in [('Family wing',4.1,5),('Guest / library',19.5,5),('Shared vault',11.4,16),('Gym + plant',25,14)]:text(ox+x*s,oy+y*s,label,3,align='center')
+for label,x,y in [('Family wing',4.1,5),('Guest / library',19.5,5),('Shared vault',11.4,14.3),('Gym + plant',25,14)]:text(ox+x*s,oy+y*s,label,3,align='center')
 line((ox,oy+15.6*s),(ox+22.8*s,oy+15.6*s),GREEN,.45)
 text(ox+14.2*s,oy+11.4*s,'GLASS',2.3,'Bold',GREEN,'center')
 line((ox+19.2*s,oy+10.5*s),(250,175),GOLD,.25)
 text(250,181,'Library rooflight',2.8,'Bold',GOLD)
+text(ox+4.1*s,oy+8.5*s,'HALL',2.2,'Bold',GREEN,'center')
+text(ox+8.35*s,oy+18.9*s,'THREE MAIN-SPACE ROOFLIGHTS',2.4,'Bold',GREEN,'center')
 image('garden',267,70,135,94)
 note(267,190,133,'Study heights','Main roof edge 3.70 m; ridge 5.32 m. Lower roof envelopes 3.20 m. These carry forward the height study; they are not fixed construction dimensions.')
-para(23,246,221,'The low gym and plant roof is shown as one continuous envelope. The nearby office window, rooflight, drainage and outdoor equipment still need to be coordinated in detail.',3.1)
-para(267,250,133,'PV is a requirement to investigate. An array is not drawn without a site and coordinated roof layout.',2.9)
+para(23,246,221,'Proposed plan openings: three at 0.90 x 1.20 m over living, dining and kitchen; two at 0.65 x 0.90 m along the family hall. The library retains its 1.10 m square opening. Product sizes, shading and roof details remain open.',3.1)
+para(267,250,133,'Keep the courtyard roof slope clear for the PV study. Confirm the actual orientation, solar exposure and shading once a plot is known.',2.9)
 end()
 
 page('04 / Space and height','How the house changes in section','The shared room has a continuous vault; private and service rooms have lower ceilings. Vertical dimensions remain study allowances.')
@@ -293,7 +295,7 @@ end()
 
 page('05 / Interior character','Warm, quiet and naturally textured','The shared space is light and warm: ivory, forest green, honey oak and muted bronze, with one dining chandelier.')
 image('living',18,65,260,164)
-note(298,78,104,'A continuous room','The lounge faces its media wall; dining sits between the sofa and kitchen. Strong courtyard connections come at dining and the garden room.')
+note(298,78,104,'A continuous room','The lounge, dining and kitchen share one vault. Three modest rooflights punctuate its arrival-side slope, with openings modelled through the ceiling.')
 note(298,153,104,'Materials to carry forward','Warm ivory cabinetry, a definite forest-green island, creamy worktops and warm hard flooring. The log burner is a reserved location to develop.')
 for i,(col,name,desc) in enumerate([(P['ivory'],'Warm ivory','Painted kitchen'),(P['green'],'Forest green','Island'),(P['oak'],'Honey oak','Furniture / joinery'),(P['bronze'],'Muted bronze','Lights / details'),(P['floor'],'Warm stone tone','Floor / worktop')]):chip(18+i*78,239,69,col,name,desc)
 end()
@@ -325,10 +327,10 @@ note(152,216,115,'Selected suite arrangement','Two basins and a 1.10 x 1.78 m sh
 note(284,216,115,'Independent guest use','Separate guest shower room with a 1.20 x 1.00 m shower, basin and WC. The guest lobby separates storage and washing.')
 end()
 
-page('06 / Living in the house','Working here, and welcoming guests','One person switches between two permanent workspaces. Both desks remain when the sofa bed opens.')
+page('06 / Living in the house','Working here, and welcoming guests','One continuous L-shaped worktop connects two permanent setups. The 50 cm corner gap is closed; the sofa bed still opens.')
 text(20,73,'OFFICE / WORKING',2.8,'Bold');detail(20,86,181,113,['O'],(17.7,6.17,22.57,9.46),labels=False)
 text(221,73,'OFFICE / OVERNIGHT',2.8,'Bold');detail(221,86,181,113,['O'],(17.7,6.17,22.57,9.46),mode='Night',labels=False)
-note(20,219,177,'Two setups, no daily rearranging','A 1.60 x 0.75 m professional desk and a 1.80 x 0.75 m personal desk. One chair switches between them.')
+note(20,219,177,'A continuous L-shaped desk','A 1.60 m arm meets a 2.30 m return, both 0.75 m deep. The return closes the former corner gap. Two setups share one chair.')
 note(221,219,181,'An occasional extra bedroom','Both sleepers have a connected route at the foot of the bed, with a nominal 0.78 m gap. The chair parks at the personal desk; the sofa mechanism remains to select.')
 para(20,265,382,'Guest capacity uses the separate guest double, occasional office bed and visiting children sharing beds. It is not five additional adult beds. Dining currently assumes eight at the table plus two at the island.',2.9)
 end()
@@ -353,17 +355,17 @@ plan(21,73,7.4,labels=False,zones=True)
 for label,point in [('FAMILY',(4.2,6)),('GUEST / SERVICE',(20,6)),('SHARED',(9,16)),('PLANT',(25,10.5))]:
     text(21+point[0]*7.4,73+point[1]*7.4,label,2.65,'Bold',GREEN,'center')
 para(21,229,205,'The rear plant location is the current direction. Two local ventilation units are recommended for further design, but are not selected. The existing family-side plant / linen reservation is retained until the package is resolved.',3.2)
-for i,(title,body) in enumerate([('Winter warmth','Wet underfloor heating, with the proposed heat-pump and hot-water arrangement to develop.'),('Summer comfort','Active cooling in all bedrooms, shared / garden room, office, library and gym. Solar is intended to contribute; battery and grid use remain open.'),('Fresh air and glass','Fresh-air ventilation is separate from cooling. Reserve external garden-roof shading and high vents; protect the continuous vault.'),('Hot water and storage','Design for two simultaneous high-flow rain showers. Pipe delays, storage and maintenance access still need resolution.')]):note(248,76+i*48,152,title,body)
+for i,(title,body) in enumerate([('Winter warmth','Wet underfloor heating, with the proposed heat-pump and hot-water arrangement to develop.'),('Summer comfort','Active cooling in all bedrooms, shared / garden room, office, library and gym. Solar is intended to contribute; battery and grid use remain open.'),('Fresh air and glass','Coordinate rooflight blinds, glass and opening controls with cooling and ventilation. Retain external garden-roof shading and high vents.'),('Hot water and storage','Design for two simultaneous high-flow rain showers. Pipe delays, storage and maintenance access still need resolution.')]):note(248,76+i*48,152,title,body)
 end()
 
 page('08 / Decisions still open','What to settle next','This book is a coherent working proposal. The remaining choices can now be considered against the whole house.')
-items=[('01','Exterior form','Review the low roof edges, stone / timber distribution and rear plant roof together. Confirm that the library rooflight and nearby office window give the relationship you want.'),('02','Services that affect rooms','Resolve ventilation without an unwanted visible band across the vault. Confirm the family cupboard / linen trade-off, hot-water distribution and the plant maintenance space.'),('03','Site and budget','Use the actual plot to settle orientation, arrival, parking, privacy and wider garden. A broad budget should guide the next level of refinement.'),('04','Materials and room character','Compare flooring and worktop samples; decide how timber should weather. Develop bedrooms and bathrooms without treating the shared-room palette as a finished scheme for every room.'),('05','Products and everyday use','Check the actual sofa bed, beds, appliances, chairs, wardrobe fronts and gym equipment against the drawn allowances before fixing joinery.')]
+items=[('01','Exterior form','Review the low roof edges, stone / timber distribution and rear plant roof together. Review the proposed main-space and family-hall rooflights with shading, solar panels and the actual site orientation.'),('02','Services that affect rooms','Resolve ventilation without an unwanted visible band across the vault. Confirm the family cupboard / linen trade-off, hot-water distribution and the plant maintenance space.'),('03','Site and budget','Use the actual plot to settle orientation, arrival, parking, privacy and wider garden. A broad budget should guide the next level of refinement.'),('04','Materials and room character','Compare flooring and worktop samples; decide how timber should weather. Develop bedrooms and bathrooms without treating the shared-room palette as a finished scheme for every room.'),('05','Products and everyday use','Check the actual sofa bed, beds, appliances, chairs, wardrobe fronts and gym equipment against the drawn allowances before fixing joinery.')]
 for i,(number,title,body) in enumerate(items):
     yy=76+i*35
     text(19,yy,number,5.5,'Title',GOLD);text(39,yy,title,3.7,'Bold');para(39,yy+5,359,body,3.05)
 line((18,250),(402,250))
-para(18,258,236,'<b>One current set.</b> Layout from concepts 22-25; roof direction from 06B / 07B; courtyard and lighting from 09 / 10; services updated through 26 / 27. Earlier alternatives stay in the archive.',2.75)
-para(274,258,128,'<b>Companion model</b><br/>Open the local viewer and choose Whole house, Arrival, Courtyard or an interior. Roof and office-use controls make the main relationships inspectable.',2.75)
+para(18,258,236,'<b>One current set.</b> Layout from concepts 22-25, with the L-desk and rooflight proposal of edition 02; roof direction from 06B / 07B; courtyard and lighting from 09 / 10; services updated through 26 / 27. Earlier alternatives stay in the archive.',2.75)
+para(274,258,128,'<b>Companion model</b><br/>Open the companion viewer and choose Whole house, Arrival, Courtyard or an interior. Roof and office-use controls make the main relationships inspectable.',2.75)
 end()
 assert PAGE==16
 C.save()

@@ -1,4 +1,6 @@
-# The courtyard house - Design book 01
+# The courtyard house - Design book 02
+
+Explore the [published house model](https://samwiskow.github.io/house-plan/).
 
 Start with [the house design book](output/pdf/house-design-book.pdf).
 The accompanying [fresh 3D model](viewer/index.html) uses the same measured
@@ -33,7 +35,7 @@ from the older atmosphere images or viewer.
   equally sized child rooms with small doubles where they fit. Family bathroom
   with a bath, separate generous shower and two basins.
 - Library snug with TV provision and dark, full-height timber bookcases.
-- One person using two permanent office setups, with occasional sofa-bed use.
+- One person using two permanent setups on a continuous L-shaped worktop, with occasional sofa-bed use. The 1.60 m arm meets a 2.30 m return at 0.75 m depth.
 - Side-by-side laundry appliances, useful storage and the full 4 x 6 m gym.
 - Garden-side plant behind the gym, with internal and external access, is the
   current direction. The dimensioned room, equipment and rooflight remain a
@@ -41,6 +43,11 @@ from the older atmosphere images or viewer.
 - Wet underfloor heating is confirmed. Active cooling and solar contribution
   are requirements. Two local MVHR systems are recommended for development,
   not selected; hot-water sizing and distribution remain open.
+
+Edition 02 also corrects outdoor seat orientations and proposes three rooflights
+over the main space and two smaller openings along the family hall. The existing
+library rooflight remains. These are concept openings, with product sizes, blinds,
+solar exposure and the PV layout still to coordinate.
 
 ## Matters still open
 
@@ -56,7 +63,8 @@ further work. The book is a concept design, not a construction package.
 
 `house_design_model.py` loads the checked concept 24 snapshot underlying the
 concept 25 full plan. It checks its recorded source hashes and retains all three
-office states. `viewer/export_model.py` derives the new scene directly from the
+office states. Edition 02 applies the L-shaped worktop as a current refinement
+without rewriting the historical study snapshots. `viewer/export_model.py` derives the new scene directly from the
 room polygons, wall gaps and measured openings; it does not import or reuse the
 old viewer. `build_design_book.py` reads the same generated model.
 
@@ -66,5 +74,5 @@ PDFs and their source scripts remain available in `output/pdf/` and the older
 working folders. They are supporting records, not competing current sets.
 
 `output/design/design-book-manifest.json` records the model and image hashes for
-this edition. No remote is configured in this repository; delivery is local on
-`codex/house-design-book`.
+this edition. The browser scene and current book form the published presentation;
+historical studies remain supporting source material.

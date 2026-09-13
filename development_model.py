@@ -17,7 +17,10 @@ def load_model():
     source=ast.parse((ROOT/'plan_model.py').read_text())
     cut=next(i for i,n in enumerate(source.body) if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='PALETTE' for t in n.targets))
     m=types.ModuleType('development_plan');m.__file__=str(ROOT/'plan_model.py');sys.modules[m.__name__]=m
-    exec(compile(ast.Module(body=source.body[:cut],type_ignores=[]),m.__file__,'exec'),m.__dict__)
+    geometry=[n for n in source.body[:cut] if not (
+        isinstance(n,ast.Expr) and isinstance(n.value,ast.Call)
+        and isinstance(n.value.func,ast.Attribute) and n.value.func.attr=='registerFont')]
+    exec(compile(ast.Module(body=geometry,type_ignores=[]),m.__file__,'exec'),m.__dict__)
     names={'color','text','line','rect','poly','Plan','paragraph'}
     helpers=[n for n in source.body[cut:] if isinstance(n,(ast.FunctionDef,ast.ClassDef)) and n.name in names]
     exec(compile(ast.Module(body=helpers,type_ignores=[]),m.__file__,'exec'),m.__dict__)
