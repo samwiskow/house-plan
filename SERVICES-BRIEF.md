@@ -13,6 +13,10 @@ plant capacity, products or an installation layout.
   Visiting family may include grandparents, aunt, uncle and cousins. The user
   estimates four or five overnight guests: use five as the upper planning
   allowance, ten people total, rather than assuming ten permanent residents.
+  On 13 September the user agreed to an occasional office sofa bed and visiting
+  children sharing beds. The five-guest example is two people in the guest room,
+  two in the office and one visiting child sharing a child-room bed.
+  Do not interpret this as provision for five adult guests.
 - Open, year-round garden room with extensive roof glazing; continuous shared
   room vault and lower wing roofs. Protect usable ceiling heights and roof form
   when developing ducts and pipe routes.

@@ -22,6 +22,28 @@ It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
 
+## Concept 18: office and overnight guests (proposal)
+
+`output/pdf/concept-18-office-and-guests.pdf` develops the office day / night
+layout and guest bedroom / shower on four A3 sheets. User confirmed an
+occasional office sofa bed and that visiting children may share beds.
+A five-visitor example is two in the guest double, two on the office sofa bed and one visiting child
+sharing a child-room bed. This can include four adults and one child, subject
+to sofa-bed comfort and its one-sided exit; it does not provide five adult beds.
+
+The office retains a 2.60 x 0.75 m desk and adds a 2.00 x 0.90 m sofa reservation.
+Its open envelope is 2.00 x 2.20 m, with a 1.40 x 2.00 m mattress allowance.
+The desk cannot be used in night mode; the chair parks inside the room.
+Only the entry side has a connected floor route out. A far-side sleeper must
+cross the mattress. This compromise is explicitly awaiting review.
+The guest double shifts to provide a 0.75 m narrower side and 0.90 m foot gap.
+The guest shower proposal is 1.20 x 1.00 m with fixed glass, WC and 0.70 m vanity.
+
+`office_guest_study.py` retains concept 15 and checks both furniture states;
+concept-18-study-check.json records routes and limitations. Room boundaries,
+doors and windows stay unchanged. Product mechanisms, occupied bathroom use,
+window operation and accessibility are not validated.
+
 ## Concept 17: service-end comparison (proposal)
 
 `output/pdf/concept-17-service-end-comparison.pdf` compares the laundry and a

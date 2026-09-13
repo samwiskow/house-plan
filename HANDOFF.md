@@ -1,5 +1,14 @@
 # House design handoff
 
+## Current development: concept 18 office and guests
+
+Four A3 sheets compare daytime work and occasional sleeping, then develop the
+guest bed / shower. The office bed has an entry-side route only; its far-side
+sleeper crosses the mattress. This is an explicit proposal for review. The
+user accepts an occasional office sofa bed and visiting children sharing beds.
+See README and concept-18-study-check.json. No room boundaries change.
+
+
 ## Current development: concept 17 service-end comparison
 
 13 September: comparison produced in `service_end_study.py` and the four-page
