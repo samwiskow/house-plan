@@ -11,6 +11,16 @@ for review; product and construction design remain outstanding.
 | [23: Two-workspace office](output/pdf/concept-23-two-workspace-office.pdf) | Two permanent desks for one person, both work modes and both overnight foot exits. |
 | [22: Garden-side plant and wing services](output/pdf/concept-22-garden-plant-and-wing-services.pdf) | Rear plant and gym layouts, internal access, rooflight, wing cooling and hot-water options. |
 
+## Latest services decision: concept 26
+
+Underfloor heating is confirmed as the winter comfort preference. The
+[heating, hot-water and ventilation study](output/pdf/concept-26-heating-hot-water-and-ventilation.pdf)
+recommends an air-to-water heat pump for wet floors and a service-end cylinder,
+plus separate wing cooling. Two local MVHR systems are the first routing option
+to test against central duct distribution, conditional on a family-side cupboard.
+No geometry or equipment size changes. All four A3 pages were rendered and checked;
+room-duty references and illustrative water arithmetic were verified.
+
 ## Current direction
 
 - The plant projects behind the gym toward the garden, with an interior gym
@@ -28,7 +38,7 @@ for review; product and construction design remain outstanding.
 
 ## Next decisions, in order
 
-1. Choose the winter heating principle and compare ventilation distribution.
+1. Develop the confirmed wet-underfloor direction and compare ventilation distribution.
    Size hot water for simultaneous shower use; assess water supply, recovery,
    pipe delays / losses and equipment maintenance space.
 2. Draw the roof / exterior with the rear plant, snug rooflight, nearby office
@@ -61,3 +71,7 @@ historical records rather than being silently regenerated.
 Four sequential local commits isolate plant / services, office, library and
 consolidation. `codex/revised-house-plan` contains the complete stack. Main is
 unchanged. No remote is configured, so no PR/MR or remote pipeline is available.
+
+Concept 26 is delivered on `codex/heating-ventilation-options`, based on the
+complete concept 25 stack. The source script, four-page PDF and calculation
+snapshot form one scoped change; no older drawings are regenerated.

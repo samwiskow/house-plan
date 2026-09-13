@@ -1,5 +1,16 @@
 # House design handoff
 
+## Latest services study: concept 26
+
+Wet underfloor winter heating is now confirmed. Concept 26 recommends a
+separate air-to-water / cylinder system and wing cooling, and compares central
+MVHR against two local systems. A family-side MVHR cupboard is a conditional
+proposal, not accepted relocation. The study includes transparent shower and
+pipe-volume examples; these are not equipment sizing. All four A3 pages checked.
+Concept 25 remains the current geometry. Worktree / branch:
+`codex/heating-ventilation-options`; no remote configured and main unchanged.
+
+
 ## Latest consolidated proposal: concept 25
 
 Start with `output/pdf/concept-25-revised-whole-house-plan.pdf` and

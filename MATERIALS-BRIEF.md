@@ -347,6 +347,13 @@ Only a 0.90 m-wide x 0.45 m-deep, five-level linen unit is proposed. Its capacit
 is modest; equipment and maintenance space may reduce it further. Do not order
 joinery or relocate equipment based on this footprint exercise.
 
+## Winter comfort preference confirmed, 13 September
+
+The user prefers underfloor heating for everyday winter comfort. Concept 26
+recommends wet floors and a hot-water cylinder served by an air-to-water heat
+pump, alongside independent wing cooling. Floor finishes and underfloor output
+must be coordinated. Ventilation layout and equipment sizing remain open.
+
 ## Services requirements confirmed, 12 September
 
 Regular household: two adults and three children. Visiting family may include

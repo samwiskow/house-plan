@@ -1,9 +1,39 @@
 # Courtyard house: services brief
 
-12 September 2026 · Draft for household input and design coordination
+13 September 2026 · Current requirements and system recommendations
 
 This brief defines performance and space requirements. It does not select
 plant capacity, products or an installation layout.
+
+## Concept 26: underfloor preference and coordinated systems
+
+On 13 September the user confirmed **underfloor heating for everyday winter
+comfort**. The recommended architecture is wet UFH plus a cylinder served by
+an air-to-water heat pump, with independent air-to-air cooling for the wings.
+This normally adds an air-to-water outdoor unit to the two starting cooling
+units; shared-space capacity / connections may require further cooling equipment.
+No final outdoor count, capacity, cylinder volume or product is selected.
+
+Develop two balanced MVHR systems as the first routing study, compared against
+one central system with a proven cross-house duct section. The two-system
+approach would need an accessible acoustic cupboard on the family side, likely
+using some of ST. This is a proposal with a linen-space and bedroom-noise trade-off,
+not household approval to return plant to that wing. Central MVHR keeps its
+main equipment at the service end but still needs supply and extract routes.
+
+Start hot-water design with one correctly sized service-end store; compare
+insulated direct distribution with a controlled return. A local family store
+remains a fallback. Two 16 L/min showers for ten minutes use 320 L mixed water;
+an illustrative 55 C store / 10 C cold / 40 C mixed calculation gives 213 L
+ideal hot draw before unusable volume, losses or recovery. This does not select
+a 213 L or 230 L cylinder. Supply pressure / flow and repeat guest use matter.
+The temperatures are arithmetic assumptions, not specified control setpoints.
+
+See `output/pdf/concept-26-heating-hot-water-and-ventilation.pdf` for the four-page
+comparison, room duties, demand examples and primary sources. Its JSON records
+transparent formula results and the unchanged concept 25 geometry reference.
+The next spatial pass should compare ventilation cupboards and route sections,
+then coordinate plant access, the rear roof, snug rooflight and outdoor units.
 
 ## Revised direction: garden-side plant and separate wing cooling
 
@@ -35,9 +65,8 @@ Ordinary air-to-air systems usually do not provide tap water; combined products
 exist. Compare a service-end cylinder / separate heat pump with a combined
 system against the two simultaneous rain-shower requirement. Local family-side
 storage is a fallback with space and maintenance costs. Hot-water pipes may use
-floor / service construction, subject to build-up and routing design. Winter
-heating (retained wet UFH versus air-to-air or a defined combination) remains a
-key system decision. No capacity or performance result is claimed.
+floor / service construction, subject to build-up and routing design. Wet underfloor heating is now the confirmed winter preference;
+concept 26 develops the associated heating and hot-water architecture. No capacity or performance result is claimed.
 
 See `output/pdf/concept-22-garden-plant-and-wing-services.pdf` (six A3 pages),
 `garden_plant_study.py` and concept-22-study-check.json. All 54 sampled routes,
@@ -111,13 +140,13 @@ is required or which of the listed rooms to include.
 Unknown site and supply details do not prevent a preliminary comparison, but
 must remain explicit assumptions rather than settled design inputs.
 
-## Location comparison: concept 17, for review
+## Historical location comparison: concept 17
 
 The measured comparison is now in
 `output/pdf/concept-17-service-end-comparison.pdf`. A retains side-by-side
 machines but loses sorting drawers and reduces folding to 0.65 m. B tests a
 12.22 m2 extension of the gym block with 9 m2 clear plant space, preserving the
-full gym and laundry. B is recommended for development, not selected. Both use
+full gym and laundry. B was recommended at that stage and is now declined. Both use
 provisional equipment / service allowances; neither is a sized installation.
 
 `output/pdf/concept-21-building-coordination.pdf` adds candidate distribution
@@ -187,7 +216,6 @@ for examples of heat-pump cooling emitters; this is not a product selection.
 ## Drawing status
 
 The concept 16 PDF is preserved as a historical declined option. Its numerical
-checks apply to that old scenario only. Start the next measured comparison from
-concept 15, retaining its plant reservation, selected parents-suite A, full gym
-and D19. No new room boundary, roof, plant location or linen capacity is adopted
-by this brief.
+checks apply to that old scenario only. Concept 25 is the latest measured whole-house proposal, retaining
+the selected parents-suite A, full gym and D19. Concept 26 changes system
+direction only; it does not revise room geometry or select equipment.

@@ -1,0 +1,109 @@
+{
+  "status": "Underfloor preference confirmed; coordinated architecture recommended, not sized",
+  "geometry_reference": "concept-25-study-check.json",
+  "geometry_reference_sha256": "b4216020ed0bec1488c348bd2802f3eec698c64ced9cb4de966542bce1e904b0",
+  "geometry_changed": false,
+  "supply_room_groups": {
+    "family": [
+      "P",
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "service_and_shared": [
+      "G",
+      "O",
+      "S",
+      "GY",
+      "KL",
+      "OR"
+    ]
+  },
+  "extract_room_groups": {
+    "family": [
+      "E",
+      "FB"
+    ],
+    "service_and_shared": [
+      "GB",
+      "WC",
+      "L",
+      "KL"
+    ]
+  },
+  "shower_scenarios": [
+    {
+      "each_shower_l_min": 12,
+      "duration_min": 10,
+      "mixed_l": 240,
+      "ideal_hot_l": 160.0,
+      "heat_kwh": 8.372
+    },
+    {
+      "each_shower_l_min": 16,
+      "duration_min": 10,
+      "mixed_l": 320,
+      "ideal_hot_l": 213.33333333333334,
+      "heat_kwh": 11.162666666666667
+    },
+    {
+      "each_shower_l_min": 20,
+      "duration_min": 10,
+      "mixed_l": 400,
+      "ideal_hot_l": 266.6666666666667,
+      "heat_kwh": 13.953333333333333
+    }
+  ],
+  "pipe_examples": [
+    {
+      "internal_bore_mm": 16,
+      "example_length_m": 30,
+      "water_l": 6.031857894892402,
+      "flush_seconds_at_6_l_min": 60.31857894892402
+    },
+    {
+      "internal_bore_mm": 20,
+      "example_length_m": 30,
+      "water_l": 9.42477796076938,
+      "flush_seconds_at_6_l_min": 94.24777960769379
+    }
+  ],
+  "temperature_assumptions_c": {
+    "mixed": 40,
+    "cold": 10,
+    "stored": 55
+  },
+  "recommendation": "Wet UFH and separate air-to-water hot-water system plus wing cooling; test two local MVHR systems against central routing",
+  "family_mvhr_not_selected": true,
+  "sources": [
+    {
+      "title": "Energy Saving Trust: air-to-water heating and hot water",
+      "url": "https://energysavingtrust.org.uk/advice/air-source-heat-pumps/"
+    },
+    {
+      "title": "Energy Saving Trust: air-to-air heating and cooling",
+      "url": "https://energysavingtrust.org.uk/advice/air-to-air-heat-pumps/"
+    },
+    {
+      "title": "Daikin Multi+: system and tank options",
+      "url": "https://www.daikin.co.uk/en_gb/residential/products-and-advice/product-categories/heat-pumps/air-to-air-heat-pumps/multi-plus-split.html"
+    },
+    {
+      "title": "Daikin user guide: priority operation, pages 35-36",
+      "url": "https://www.daikin.co.uk/content/dam/document-library/user%20reference%20guide/opt-and-acc/ckhws-bv3-ckhwsu-bv3/CKHWS-BV3.CKHWSU-BV3_User%20reference%20guide_4PEN779552-1_English.pdf"
+    },
+    {
+      "title": "Zehnder: MVHR and equipment access",
+      "url": "https://www.zehnder.co.uk/en/indoor-ventilation/solutions/mechanical-ventilation-with-heat-recovery?stay=true"
+    },
+    {
+      "title": "Vaillant: dedicated hot-water heat pump example",
+      "url": "https://professional.vaillant.co.uk/for-installers/products/arostor-domestic-hot-water-heat-pump-200-litre-145477.html"
+    },
+    {
+      "title": "Zehnder: air distribution components",
+      "url": "https://www.zehnder.co.uk/en/indoor-ventilation/solutions/air-distribution?stay=true"
+    }
+  ],
+  "source_sha256": "9ed10cff211d800fb084e545c133570e3c60dc525ac2011ccaa81b67dcbf6d10"
+}
