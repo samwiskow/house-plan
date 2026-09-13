@@ -1,5 +1,17 @@
 # House design handoff
 
+## Revised office: two permanent setups
+
+Concept 23 (`output/pdf/concept-23-two-workspace-office.pdf`) provides a
+1.60 x 0.75 m professional desk and 1.80 x 0.75 m personal desk for one person
+switching between setups. One chair has two tested work positions. Both desks
+stay in place when the sofa bed opens; the chair parks at the personal desk.
+Both sleepers can reach the door from the foot of the bed, with a nominal
+0.78 m gap. This supersedes concept 18's one-sided exit arrangement.
+All 54 routes pass in each of the two work states and the overnight state.
+The actual sofa mechanism, window access and equipment remain to select.
+
+
 ## Revised direction: garden-side plant and separate wing cooling
 
 The arrival-side plant projection in concept 17 B is declined. Concept 22 tests
