@@ -1,0 +1,6870 @@
+{
+  "modelVersion": 3,
+  "revision": "Design book / 01",
+  "name": "The courtyard house",
+  "units": "metres",
+  "metadata": {
+    "giaM2": 332.96,
+    "externalFootprintM2": 373.31,
+    "clearRoomM2": 315.52,
+    "outerWidthM": 27.15,
+    "outerDepthM": 18.4,
+    "briefDate": "2026-09-13"
+  },
+  "outline": [
+    [
+      0,
+      0
+    ],
+    [
+      8.2,
+      0
+    ],
+    [
+      8.2,
+      12.8
+    ],
+    [
+      12.2,
+      12.8
+    ],
+    [
+      12.2,
+      9.3
+    ],
+    [
+      16.2,
+      9.3
+    ],
+    [
+      16.2,
+      0
+    ],
+    [
+      22.8,
+      0
+    ],
+    [
+      22.8,
+      8.7
+    ],
+    [
+      27.15,
+      8.7
+    ],
+    [
+      27.15,
+      18.4
+    ],
+    [
+      0,
+      18.4
+    ]
+  ],
+  "innerEnvelope": [
+    [
+      0.35,
+      0.35
+    ],
+    [
+      7.85,
+      0.35
+    ],
+    [
+      7.85,
+      13.15
+    ],
+    [
+      12.55,
+      13.15
+    ],
+    [
+      12.55,
+      9.65
+    ],
+    [
+      16.55,
+      9.65
+    ],
+    [
+      16.55,
+      0.35
+    ],
+    [
+      22.45,
+      0.35
+    ],
+    [
+      22.45,
+      9.05
+    ],
+    [
+      26.8,
+      9.05
+    ],
+    [
+      26.8,
+      18.05
+    ],
+    [
+      0.35,
+      18.05
+    ]
+  ],
+  "rooms": [
+    {
+      "id": "P",
+      "name": "Parents bedroom",
+      "polygon": [
+        [
+          0.35,
+          0.35
+        ],
+        [
+          4.55,
+          0.35
+        ],
+        [
+          4.55,
+          4.35
+        ],
+        [
+          0.35,
+          4.35
+        ]
+      ],
+      "category": "family",
+      "area": 16.8,
+      "dimensions": "4.20 x 4.00 m",
+      "label": [
+        "Parents"
+      ],
+      "labelPoint": [
+        2.25,
+        3.13
+      ]
+    },
+    {
+      "id": "W",
+      "name": "Walk-in wardrobe",
+      "polygon": [
+        [
+          4.67,
+          0.35
+        ],
+        [
+          7.85,
+          0.35
+        ],
+        [
+          7.85,
+          2.45
+        ],
+        [
+          4.67,
+          2.45
+        ]
+      ],
+      "category": "service",
+      "area": 6.678,
+      "dimensions": "3.18 x 2.10 m",
+      "label": [
+        "Walk-in"
+      ],
+      "labelPoint": [
+        6.26,
+        1.35
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Parents ensuite",
+      "polygon": [
+        [
+          4.67,
+          2.57
+        ],
+        [
+          7.85,
+          2.57
+        ],
+        [
+          7.85,
+          4.35
+        ],
+        [
+          4.67,
+          4.35
+        ]
+      ],
+      "category": "service",
+      "area": 5.6604,
+      "dimensions": "3.18 x 1.78 m",
+      "label": [
+        "Ensuite"
+      ],
+      "labelPoint": [
+        6.05,
+        3.7
+      ]
+    },
+    {
+      "id": "FB",
+      "name": "Family bathroom",
+      "polygon": [
+        [
+          0.35,
+          4.47
+        ],
+        [
+          3.38,
+          4.47
+        ],
+        [
+          3.38,
+          7.15
+        ],
+        [
+          0.35,
+          7.15
+        ]
+      ],
+      "category": "service",
+      "area": 8.1204,
+      "dimensions": "3.03 x 2.68 m",
+      "label": [
+        "Family bath"
+      ],
+      "labelPoint": [
+        1.85,
+        5.85
+      ]
+    },
+    {
+      "id": "ST",
+      "name": "Linen / plant",
+      "polygon": [
+        [
+          0.35,
+          7.27
+        ],
+        [
+          3.38,
+          7.27
+        ],
+        [
+          3.38,
+          8.69
+        ],
+        [
+          0.35,
+          8.69
+        ]
+      ],
+      "category": "service",
+      "area": 4.3026,
+      "dimensions": "3.03 x 1.42 m",
+      "label": [
+        "Linen / plant"
+      ],
+      "labelPoint": [
+        1.85,
+        8.4
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "Child 3",
+      "polygon": [
+        [
+          4.82,
+          4.47
+        ],
+        [
+          7.85,
+          4.47
+        ],
+        [
+          7.85,
+          8.69
+        ],
+        [
+          4.82,
+          8.69
+        ]
+      ],
+      "category": "family",
+      "area": 12.7866,
+      "dimensions": "3.03 x 4.22 m",
+      "label": [
+        "Child 3"
+      ],
+      "labelPoint": [
+        6.03,
+        6.87
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Child 2",
+      "polygon": [
+        [
+          0.35,
+          8.81
+        ],
+        [
+          3.38,
+          8.81
+        ],
+        [
+          3.38,
+          13.030000000000001
+        ],
+        [
+          0.35,
+          13.030000000000001
+        ]
+      ],
+      "category": "family",
+      "area": 12.7866,
+      "dimensions": "3.03 x 4.22 m",
+      "label": [
+        "Child 2"
+      ],
+      "labelPoint": [
+        2.05,
+        11.1
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "Child 1",
+      "polygon": [
+        [
+          4.82,
+          8.81
+        ],
+        [
+          7.85,
+          8.81
+        ],
+        [
+          7.85,
+          13.030000000000001
+        ],
+        [
+          4.82,
+          13.030000000000001
+        ]
+      ],
+      "category": "family",
+      "area": 12.7866,
+      "dimensions": "3.03 x 4.22 m",
+      "label": [
+        "Child 1"
+      ],
+      "labelPoint": [
+        6.03,
+        11.1
+      ]
+    },
+    {
+      "id": "FH",
+      "name": "Family hall",
+      "polygon": [
+        [
+          3.5,
+          4.47
+        ],
+        [
+          4.7,
+          4.47
+        ],
+        [
+          4.7,
+          13.030000000000001
+        ],
+        [
+          3.5,
+          13.030000000000001
+        ]
+      ],
+      "category": "circulation",
+      "area": 10.272,
+      "dimensions": "1.20 x 8.56 m",
+      "label": [
+        "1.20 m",
+        "hall"
+      ],
+      "labelPoint": [
+        4.1,
+        10.65
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Guest bedroom",
+      "polygon": [
+        [
+          16.55,
+          0.35
+        ],
+        [
+          22.45,
+          0.35
+        ],
+        [
+          22.45,
+          3.65
+        ],
+        [
+          17.87,
+          3.65
+        ],
+        [
+          17.87,
+          1.87
+        ],
+        [
+          16.55,
+          1.87
+        ]
+      ],
+      "category": "guest",
+      "area": 17.1204,
+      "dimensions": "4.58 x 3.30 m + wardrobe recess",
+      "label": [
+        "Guest bedroom"
+      ],
+      "labelPoint": [
+        19.9,
+        3.18
+      ]
+    },
+    {
+      "id": "GS",
+      "name": "Guest storage",
+      "polygon": [
+        [
+          17.87,
+          3.77
+        ],
+        [
+          20.23,
+          3.77
+        ],
+        [
+          20.23,
+          4.72
+        ],
+        [
+          17.87,
+          4.72
+        ]
+      ],
+      "category": "service",
+      "area": 2.242,
+      "dimensions": "2.36 x 0.95 m",
+      "label": [
+        "Guest storage"
+      ],
+      "labelPoint": [
+        19.05,
+        4.26
+      ]
+    },
+    {
+      "id": "GB",
+      "name": "Guest shower",
+      "polygon": [
+        [
+          20.35,
+          3.77
+        ],
+        [
+          22.450000000000003,
+          3.77
+        ],
+        [
+          22.450000000000003,
+          6.17
+        ],
+        [
+          20.35,
+          6.17
+        ]
+      ],
+      "category": "service",
+      "area": 5.04,
+      "dimensions": "2.10 x 2.40 m",
+      "label": [
+        "Guest shower"
+      ],
+      "labelPoint": [
+        21.4,
+        5.4
+      ]
+    },
+    {
+      "id": "GL",
+      "name": "Shower lobby",
+      "polygon": [
+        [
+          17.87,
+          4.84
+        ],
+        [
+          20.23,
+          4.84
+        ],
+        [
+          20.23,
+          6.17
+        ],
+        [
+          17.87,
+          6.17
+        ]
+      ],
+      "category": "circulation",
+      "area": 3.1388,
+      "dimensions": "2.36 x 1.33 m",
+      "label": [
+        "Lobby"
+      ],
+      "labelPoint": [
+        18.93,
+        5.53
+      ]
+    },
+    {
+      "id": "O",
+      "name": "Office / gaming",
+      "polygon": [
+        [
+          17.87,
+          6.29
+        ],
+        [
+          22.450000000000003,
+          6.29
+        ],
+        [
+          22.450000000000003,
+          9.34
+        ],
+        [
+          17.87,
+          9.34
+        ]
+      ],
+      "category": "guest",
+      "area": 13.969,
+      "dimensions": "4.58 x 3.05 m",
+      "label": [
+        "Office / gaming"
+      ],
+      "labelPoint": [
+        20.0,
+        8.45
+      ]
+    },
+    {
+      "id": "S",
+      "name": "Snug",
+      "polygon": [
+        [
+          17.87,
+          9.46
+        ],
+        [
+          22.450000000000003,
+          9.46
+        ],
+        [
+          22.450000000000003,
+          12.06
+        ],
+        [
+          17.87,
+          12.06
+        ]
+      ],
+      "category": "shared",
+      "area": 11.908,
+      "dimensions": "4.58 x 2.60 m",
+      "label": [
+        "Snug"
+      ],
+      "labelPoint": [
+        19.4,
+        10.6
+      ]
+    },
+    {
+      "id": "GH",
+      "name": "Guest hall",
+      "polygon": [
+        [
+          16.55,
+          1.99
+        ],
+        [
+          17.75,
+          1.99
+        ],
+        [
+          17.75,
+          9.34
+        ],
+        [
+          16.55,
+          9.34
+        ]
+      ],
+      "category": "circulation",
+      "area": 8.82,
+      "dimensions": "1.20 x 7.35 m",
+      "label": [
+        "1.20 m",
+        "hall"
+      ],
+      "labelPoint": [
+        17.15,
+        7.15
+      ]
+    },
+    {
+      "id": "PA",
+      "name": "Pantry",
+      "polygon": [
+        [
+          14,
+          15.45
+        ],
+        [
+          16.35,
+          15.45
+        ],
+        [
+          16.35,
+          18.05
+        ],
+        [
+          14,
+          18.05
+        ]
+      ],
+      "category": "service",
+      "area": 6.11,
+      "dimensions": "2.35 x 2.60 m",
+      "label": [
+        "Pantry"
+      ],
+      "labelPoint": [
+        15.17,
+        16.45
+      ]
+    },
+    {
+      "id": "L",
+      "name": "Laundry",
+      "polygon": [
+        [
+          20.22,
+          12.18
+        ],
+        [
+          22.45,
+          12.18
+        ],
+        [
+          22.45,
+          15.33
+        ],
+        [
+          17.87,
+          15.33
+        ],
+        [
+          17.87,
+          13.7
+        ],
+        [
+          20.22,
+          13.7
+        ]
+      ],
+      "category": "service",
+      "area": 10.855,
+      "dimensions": "L-shape: 4.58 x 3.15 m envelope",
+      "label": [
+        "Laundry"
+      ],
+      "labelPoint": [
+        20.45,
+        14.65
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Boot room",
+      "polygon": [
+        [
+          19.15,
+          15.45
+        ],
+        [
+          22.45,
+          15.45
+        ],
+        [
+          22.45,
+          18.05
+        ],
+        [
+          19.15,
+          18.05
+        ]
+      ],
+      "category": "service",
+      "area": 8.58,
+      "dimensions": "3.30 x 2.60 m",
+      "label": [
+        "Boot room"
+      ],
+      "labelPoint": [
+        20.6,
+        17.2
+      ]
+    },
+    {
+      "id": "H",
+      "name": "Entrance hall",
+      "polygon": [
+        [
+          16.47,
+          15.45
+        ],
+        [
+          19.029999999999998,
+          15.45
+        ],
+        [
+          19.029999999999998,
+          18.05
+        ],
+        [
+          16.47,
+          18.05
+        ]
+      ],
+      "category": "circulation",
+      "area": 6.656,
+      "dimensions": "2.56 x 2.60 m",
+      "label": [
+        "Entrance hall"
+      ],
+      "labelPoint": [
+        17.6,
+        17.35
+      ]
+    },
+    {
+      "id": "WC",
+      "name": "Visitor WC",
+      "polygon": [
+        [
+          17.87,
+          12.18
+        ],
+        [
+          20.1,
+          12.18
+        ],
+        [
+          20.1,
+          13.58
+        ],
+        [
+          17.87,
+          13.58
+        ]
+      ],
+      "category": "service",
+      "area": 3.122,
+      "dimensions": "2.23 x 1.40 m",
+      "label": [
+        "WC"
+      ],
+      "labelPoint": [
+        18.8,
+        12.95
+      ]
+    },
+    {
+      "id": "OR",
+      "name": "Open garden sitting area",
+      "polygon": [
+        [
+          12.55,
+          9.65
+        ],
+        [
+          16.55,
+          9.65
+        ],
+        [
+          16.55,
+          13.15
+        ],
+        [
+          12.55,
+          13.15
+        ]
+      ],
+      "category": "shared",
+      "area": 14.0,
+      "dimensions": "4.00 x 3.50 m open zone",
+      "label": [
+        "Garden sitting"
+      ],
+      "labelPoint": [
+        14.45,
+        11.8
+      ]
+    },
+    {
+      "id": "GY",
+      "name": "Indoor gym",
+      "polygon": [
+        [
+          22.8,
+          12.05
+        ],
+        [
+          26.8,
+          12.05
+        ],
+        [
+          26.8,
+          18.05
+        ],
+        [
+          22.8,
+          18.05
+        ]
+      ],
+      "category": "guest",
+      "area": 24.0,
+      "dimensions": "4.00 x 6.00 m",
+      "label": [
+        "Indoor gym"
+      ],
+      "labelPoint": [
+        24.1,
+        15.75
+      ]
+    },
+    {
+      "id": "KL",
+      "name": "Kitchen / dining / living",
+      "polygon": [
+        [
+          0.35,
+          13.15
+        ],
+        [
+          17.75,
+          13.15
+        ],
+        [
+          17.75,
+          15.33
+        ],
+        [
+          13.88,
+          15.33
+        ],
+        [
+          13.88,
+          18.05
+        ],
+        [
+          0.35,
+          18.05
+        ]
+      ],
+      "category": "shared",
+      "area": 74.7336,
+      "dimensions": "Main clear depth 4.90 m; stepped kitchen / entrance edge",
+      "label": [
+        "OPEN KITCHEN / DINING / LIVING"
+      ],
+      "labelPoint": [
+        8.0,
+        17.4
+      ]
+    },
+    {
+      "id": "GH2",
+      "name": "Shared hall",
+      "polygon": [
+        [
+          16.55,
+          9.46
+        ],
+        [
+          17.75,
+          9.46
+        ],
+        [
+          17.75,
+          13.15
+        ],
+        [
+          16.55,
+          13.15
+        ]
+      ],
+      "category": "circulation",
+      "area": 4.428,
+      "dimensions": "1.20 x 3.69 m",
+      "label": [
+        "Shared",
+        "hall"
+      ],
+      "labelPoint": [
+        17.15,
+        12.35
+      ]
+    },
+    {
+      "id": "PL",
+      "name": "Garden-side plant",
+      "polygon": [
+        [
+          22.8,
+          9.05
+        ],
+        [
+          26.8,
+          9.05
+        ],
+        [
+          26.8,
+          11.700000000000001
+        ],
+        [
+          22.8,
+          11.700000000000001
+        ]
+      ],
+      "category": "service",
+      "area": 10.6,
+      "dimensions": "4.00 x 2.65 m",
+      "label": [
+        "Plant"
+      ],
+      "labelPoint": [
+        24.8,
+        10.6
+      ]
+    }
+  ],
+  "walls": [
+    {
+      "rect": [
+        0,
+        0,
+        0.8,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0.8,
+        0,
+        2.4,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0.8,
+        0,
+        2.4,
+        0.35
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        3.2,
+        0,
+        5.0,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        16.2,
+        0,
+        2.8,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        19,
+        0,
+        2.6,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        19,
+        0,
+        2.6,
+        0.35
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        21.6,
+        0,
+        1.2,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        0.35,
+        0.35,
+        0.65
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        4.55,
+        0.35,
+        0.12,
+        1.05
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        7.85,
+        0.35,
+        0.35,
+        2.55
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        16.2,
+        0.35,
+        0.35,
+        9.3
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        22.45,
+        0.35,
+        0.35,
+        3.85
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        1.0,
+        0.35,
+        1.6
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        1.0,
+        0.35,
+        1.6
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        4.55,
+        1.4,
+        0.12,
+        0.85
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        16.55,
+        1.87,
+        1.32,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        1.99,
+        0.12,
+        0.16
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        2.15,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.55,
+        2.25,
+        0.12,
+        0.2
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.55,
+        2.45,
+        3.3,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.55,
+        2.57,
+        0.12,
+        0.58
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        0,
+        2.6,
+        0.35,
+        2.05
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        2.9,
+        0.35,
+        0.85
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        2.9,
+        0.35,
+        0.85
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        3.05,
+        0.12,
+        0.6
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.55,
+        3.15,
+        0.12,
+        0.85
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        3.65,
+        4.7,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        7.85,
+        3.75,
+        0.35,
+        1.05
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        3.77,
+        0.12,
+        0.95
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.23,
+        3.77,
+        0.12,
+        0.95
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.55,
+        4.0,
+        0.12,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        4.2,
+        0.35,
+        1.0
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        22.45,
+        4.2,
+        0.35,
+        1.0
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0.35,
+        4.35,
+        3.23,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.58,
+        4.35,
+        0.9,
+        0.12
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.48,
+        4.35,
+        3.37,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.38,
+        4.47,
+        0.12,
+        0.58
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.7,
+        4.47,
+        0.12,
+        0.23
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        0,
+        4.65,
+        0.35,
+        1.3
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        4.65,
+        0.35,
+        1.3
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        4.7,
+        4.7,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        4.72,
+        0.35,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        18.1,
+        4.72,
+        1.6,
+        0.12
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        19.7,
+        4.72,
+        0.65,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        7.85,
+        4.8,
+        0.35,
+        2.0
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        4.8,
+        0.35,
+        2.0
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        4.84,
+        0.12,
+        0.26
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.23,
+        4.84,
+        0.12,
+        0.29
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.38,
+        5.05,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        5.1,
+        0.12,
+        1.0
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.23,
+        5.13,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        5.2,
+        0.35,
+        1.45
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        4.7,
+        5.6,
+        0.12,
+        3.09
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        0,
+        5.95,
+        0.35,
+        3.25
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        3.38,
+        5.95,
+        0.12,
+        1.2
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.23,
+        6.03,
+        0.12,
+        0.14
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        6.1,
+        0.12,
+        0.07
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        6.17,
+        4.7,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        6.29,
+        0.12,
+        1.91
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        6.65,
+        0.35,
+        1.8
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        22.45,
+        6.65,
+        0.35,
+        1.8
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        6.8,
+        0.35,
+        2.4
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0.35,
+        7.15,
+        3.15,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.38,
+        7.27,
+        0.12,
+        0.18
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.38,
+        7.45,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        8.2,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.38,
+        8.35,
+        0.12,
+        0.34
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        8.45,
+        0.35,
+        0.25
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0.35,
+        8.69,
+        3.15,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.7,
+        8.69,
+        3.15,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        8.7,
+        4.7,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        3.38,
+        8.81,
+        0.12,
+        0.19
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.7,
+        8.81,
+        0.12,
+        0.19
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.38,
+        9.0,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.7,
+        9.0,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        9.05,
+        0.35,
+        0.29
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        26.8,
+        9.05,
+        0.35,
+        0.45
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        9.1,
+        0.12,
+        0.24
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        0,
+        9.2,
+        0.35,
+        2.0
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        9.2,
+        0.35,
+        2.0
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        9.2,
+        0.35,
+        2.0
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        9.2,
+        0.35,
+        2.0
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        9.3,
+        0.8,
+        0.03
+      ],
+      "bottom": 0,
+      "top": 2.8526,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.0,
+        9.3,
+        2.8,
+        0.03
+      ],
+      "bottom": 2.6,
+      "top": 2.8526,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        15.8,
+        9.3,
+        0.4,
+        0.03
+      ],
+      "bottom": 0,
+      "top": 2.8526,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        9.33,
+        0.8,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 2.856,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.0,
+        9.33,
+        2.8,
+        0.01
+      ],
+      "bottom": 2.6,
+      "top": 2.856,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        15.8,
+        9.33,
+        0.4,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 2.856,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        9.34,
+        0.8,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.8671,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.0,
+        9.34,
+        2.8,
+        0.12
+      ],
+      "bottom": 2.6,
+      "top": 2.8671,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        15.8,
+        9.34,
+        0.4,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.8671,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        16.55,
+        9.34,
+        0.15,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        16.7,
+        9.34,
+        0.9,
+        0.12
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.6,
+        9.34,
+        5.2,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        9.46,
+        0.8,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 2.8783,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.0,
+        9.46,
+        2.8,
+        0.01
+      ],
+      "bottom": 2.6,
+      "top": 2.8783,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        15.8,
+        9.46,
+        0.4,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 2.8783,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        9.46,
+        0.12,
+        0.89
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        9.46,
+        0.35,
+        2.24
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        9.47,
+        0.8,
+        0.03
+      ],
+      "bottom": 0,
+      "top": 2.8817,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.0,
+        9.47,
+        2.8,
+        0.03
+      ],
+      "bottom": 2.6,
+      "top": 2.8817,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        15.8,
+        9.47,
+        0.4,
+        0.03
+      ],
+      "bottom": 0,
+      "top": 2.8817,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        9.5,
+        0.8,
+        0.15
+      ],
+      "bottom": 0,
+      "top": 2.8971,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.0,
+        9.5,
+        2.8,
+        0.15
+      ],
+      "bottom": 2.6,
+      "top": 2.8971,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        15.8,
+        9.5,
+        0.4,
+        0.15
+      ],
+      "bottom": 0,
+      "top": 2.8971,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        26.8,
+        9.5,
+        0.35,
+        1.0
+      ],
+      "bottom": 2.2,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        9.65,
+        0.35,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 2.9109,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        9.66,
+        0.35,
+        0.24
+      ],
+      "bottom": 0,
+      "top": 2.9323,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        3.38,
+        9.9,
+        0.12,
+        2.9
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.7,
+        9.9,
+        0.12,
+        2.9
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        9.9,
+        0.35,
+        0.45
+      ],
+      "bottom": 0,
+      "top": 2.9914,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        10.35,
+        0.35,
+        0.05
+      ],
+      "bottom": 0,
+      "top": 3.0343,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        10.35,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        10.4,
+        0.35,
+        1.5
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        10.4,
+        0.35,
+        0.1
+      ],
+      "bottom": 2.15,
+      "top": 3.0471,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        10.5,
+        0.35,
+        0.7
+      ],
+      "bottom": 2.15,
+      "top": 3.1157,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        26.8,
+        10.5,
+        0.35,
+        2.8
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        11.2,
+        0.35,
+        1.6
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        7.85,
+        11.2,
+        0.35,
+        1.6
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        11.2,
+        0.35,
+        0.05
+      ],
+      "bottom": 2.15,
+      "top": 3.18,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        11.25,
+        0.35,
+        0.44
+      ],
+      "bottom": 2.15,
+      "top": 3.222,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        11.25,
+        0.12,
+        0.81
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        11.69,
+        0.35,
+        0.01
+      ],
+      "bottom": 2.15,
+      "top": 3.2606,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        11.7,
+        0.35,
+        0.2
+      ],
+      "bottom": 2.15,
+      "top": 3.2786,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        22.45,
+        11.7,
+        0.95,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        23.4,
+        11.7,
+        0.9,
+        0.35
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        24.3,
+        11.7,
+        2.5,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        11.9,
+        0.35,
+        0.15
+      ],
+      "bottom": 0,
+      "top": 3.3086,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        12.2,
+        12.05,
+        0.35,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 3.3223,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        22.45,
+        12.05,
+        0.35,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        12.06,
+        0.35,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.3334,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        12.06,
+        5.05,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        12.18,
+        0.35,
+        0.22
+      ],
+      "bottom": 0,
+      "top": 3.3626,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        12.18,
+        0.12,
+        0.22
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.1,
+        12.18,
+        0.12,
+        0.62
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        12.18,
+        0.35,
+        0.62
+      ],
+      "bottom": 0,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        12.4,
+        0.35,
+        0.39
+      ],
+      "bottom": 0,
+      "top": 3.4149,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        12.4,
+        0.12,
+        0.4
+      ],
+      "bottom": 2.2,
+      "top": 2.6,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        12.2,
+        12.79,
+        0.35,
+        0.01
+      ],
+      "bottom": 0,
+      "top": 3.4491,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        0,
+        12.8,
+        0.35,
+        5.25
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        3.38,
+        12.8,
+        0.12,
+        0.23
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.7,
+        12.8,
+        0.12,
+        0.23
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        7.85,
+        12.8,
+        1.15,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        9.0,
+        12.8,
+        2.6,
+        0.35
+      ],
+      "bottom": 2.6,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        11.6,
+        12.8,
+        0.95,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        17.75,
+        12.8,
+        0.12,
+        0.45
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.1,
+        12.8,
+        0.12,
+        0.78
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        12.8,
+        0.35,
+        2.53
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        0.35,
+        13.03,
+        3.15,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        3.5,
+        13.03,
+        0.9,
+        0.12
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        4.4,
+        13.03,
+        3.45,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        13.25,
+        0.12,
+        0.33
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        26.8,
+        13.3,
+        0.35,
+        2.4
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        26.8,
+        13.3,
+        0.35,
+        2.4
+      ],
+      "bottom": 2.15,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        17.75,
+        13.58,
+        2.47,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        13.7,
+        0.12,
+        0.73
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        14.43,
+        0.12,
+        0.8
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.75,
+        15.23,
+        0.12,
+        0.1
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        13.88,
+        15.33,
+        2.77,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        16.65,
+        15.33,
+        0.95,
+        0.12
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        17.6,
+        15.33,
+        2.85,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        20.45,
+        15.33,
+        0.9,
+        0.12
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        21.35,
+        15.33,
+        1.45,
+        0.12
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        13.88,
+        15.45,
+        0.12,
+        0.6
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        16.35,
+        15.45,
+        0.12,
+        0.6
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        19.03,
+        15.45,
+        0.12,
+        0.75
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        15.45,
+        0.35,
+        0.15
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        15.6,
+        0.35,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        26.8,
+        15.7,
+        0.35,
+        2.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    },
+    {
+      "rect": [
+        13.88,
+        16.05,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        16.35,
+        16.05,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        19.03,
+        16.2,
+        0.12,
+        0.9
+      ],
+      "bottom": 2.2,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        22.45,
+        16.5,
+        0.35,
+        1.55
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        13.88,
+        16.95,
+        0.12,
+        1.1
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        16.35,
+        16.95,
+        0.12,
+        1.1
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        19.03,
+        17.1,
+        0.12,
+        0.95
+      ],
+      "bottom": 0,
+      "top": 3.5,
+      "material": "ivory"
+    },
+    {
+      "rect": [
+        0,
+        18.05,
+        1.1,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        1.1,
+        18.05,
+        3.1,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        1.1,
+        18.05,
+        3.1,
+        0.35
+      ],
+      "bottom": 2.15,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        4.2,
+        18.05,
+        2.4,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        6.6,
+        18.05,
+        3.0,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        6.6,
+        18.05,
+        3.0,
+        0.35
+      ],
+      "bottom": 2.15,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        9.6,
+        18.05,
+        0.9,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        10.5,
+        18.05,
+        2.0,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 0.82,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        10.5,
+        18.05,
+        2.0,
+        0.35
+      ],
+      "bottom": 2.15,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        12.5,
+        18.05,
+        5.1,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        17.6,
+        18.05,
+        1.0,
+        0.35
+      ],
+      "bottom": 2.2,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        18.6,
+        18.05,
+        2.55,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        21.15,
+        18.05,
+        1.0,
+        0.35
+      ],
+      "bottom": 2.2,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        22.15,
+        18.05,
+        0.65,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        22.8,
+        18.05,
+        4.35,
+        0.35
+      ],
+      "bottom": 0,
+      "top": 3.2,
+      "material": "stone"
+    }
+  ],
+  "doors": [
+    {
+      "id": "D01",
+      "x": 3.58,
+      "y": 4.41,
+      "width": 0.9,
+      "vertical": false,
+      "kind": "hinged",
+      "hingeEnd": true,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "FH",
+      "to": "P"
+    },
+    {
+      "id": "P01",
+      "x": 4.61,
+      "y": 1.4,
+      "width": 0.85,
+      "vertical": true,
+      "kind": "pocket",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": -1,
+      "from": "P",
+      "to": "W"
+    },
+    {
+      "id": "D02",
+      "x": 4.61,
+      "y": 3.15,
+      "width": 0.85,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": true,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "P",
+      "to": "E"
+    },
+    {
+      "id": "D03",
+      "x": 3.44,
+      "y": 5.05,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "FH",
+      "to": "FB"
+    },
+    {
+      "id": "D04",
+      "x": 3.44,
+      "y": 7.45,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "FH",
+      "to": "ST"
+    },
+    {
+      "id": "D05",
+      "x": 4.76,
+      "y": 4.7,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "FH",
+      "to": "C3"
+    },
+    {
+      "id": "D06",
+      "x": 3.44,
+      "y": 9.0,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "FH",
+      "to": "C2"
+    },
+    {
+      "id": "D07",
+      "x": 4.76,
+      "y": 9.0,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "FH",
+      "to": "C1"
+    },
+    {
+      "id": "D08",
+      "x": 3.5,
+      "y": 13.09,
+      "width": 0.9,
+      "vertical": false,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "KL",
+      "to": "FH"
+    },
+    {
+      "id": "D09",
+      "x": 17.81,
+      "y": 2.15,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GH",
+      "to": "G"
+    },
+    {
+      "id": "O01",
+      "x": 17.81,
+      "y": 5.1,
+      "width": 1.0,
+      "vertical": true,
+      "kind": "opening",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GH",
+      "to": "GL"
+    },
+    {
+      "id": "C01",
+      "x": 18.1,
+      "y": 4.78,
+      "width": 1.6,
+      "vertical": false,
+      "kind": "sliding",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GL",
+      "to": "GS"
+    },
+    {
+      "id": "D10",
+      "x": 20.29,
+      "y": 5.13,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": true,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GL",
+      "to": "GB"
+    },
+    {
+      "id": "D11",
+      "x": 17.81,
+      "y": 8.2,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": true,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GH",
+      "to": "O"
+    },
+    {
+      "id": "D12",
+      "x": 17.81,
+      "y": 10.35,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GH2",
+      "to": "S"
+    },
+    {
+      "id": "O02",
+      "x": 16.6,
+      "y": 13.15,
+      "width": 1.1,
+      "vertical": false,
+      "kind": "opening",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GH2",
+      "to": "KL"
+    },
+    {
+      "id": "P02",
+      "x": 13.94,
+      "y": 16.05,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "pocket",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "KL",
+      "to": "PA"
+    },
+    {
+      "id": "P03",
+      "x": 16.41,
+      "y": 16.05,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "pocket",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "PA",
+      "to": "H"
+    },
+    {
+      "id": "P04",
+      "x": 20.45,
+      "y": 15.39,
+      "width": 0.9,
+      "vertical": false,
+      "kind": "pocket",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "L",
+      "to": "B"
+    },
+    {
+      "id": "D13",
+      "x": 19.09,
+      "y": 16.2,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "H",
+      "to": "B"
+    },
+    {
+      "id": "O03",
+      "x": 16.65,
+      "y": 15.39,
+      "width": 0.95,
+      "vertical": false,
+      "kind": "opening",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "KL",
+      "to": "H"
+    },
+    {
+      "id": "D14",
+      "x": 17.81,
+      "y": 12.4,
+      "width": 0.85,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "GH2",
+      "to": "WC"
+    },
+    {
+      "id": "D15",
+      "x": 17.6,
+      "y": 18.225,
+      "width": 1.0,
+      "vertical": false,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "OUT",
+      "to": "H"
+    },
+    {
+      "id": "D16",
+      "x": 21.15,
+      "y": 18.225,
+      "width": 1.0,
+      "vertical": false,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "OUT",
+      "to": "B"
+    },
+    {
+      "id": "O04",
+      "x": 9.0,
+      "y": 12.975,
+      "width": 2.6,
+      "vertical": false,
+      "kind": "sliding",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "COURT",
+      "to": "KL"
+    },
+    {
+      "id": "O05",
+      "x": 12.55,
+      "y": 13.15,
+      "width": 4.0,
+      "vertical": false,
+      "kind": "opening",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "OR",
+      "to": "KL"
+    },
+    {
+      "id": "O07",
+      "x": 16.55,
+      "y": 9.65,
+      "width": 3.5,
+      "vertical": true,
+      "kind": "opening",
+      "hingeEnd": true,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "GH2",
+      "to": "OR"
+    },
+    {
+      "id": "O06",
+      "x": 13.0,
+      "y": 9.475,
+      "width": 2.8,
+      "vertical": false,
+      "kind": "sliding",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "COURT",
+      "to": "OR"
+    },
+    {
+      "id": "D18",
+      "x": 22.625,
+      "y": 15.6,
+      "width": 0.9,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "B",
+      "to": "GY"
+    },
+    {
+      "id": "D17",
+      "x": 16.7,
+      "y": 9.4,
+      "width": 0.9,
+      "vertical": false,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "GH",
+      "to": "GH2"
+    },
+    {
+      "id": "D19",
+      "x": 17.81,
+      "y": 14.43,
+      "width": 0.8,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": true,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "KL",
+      "to": "L"
+    },
+    {
+      "id": "D21",
+      "x": 23.4,
+      "y": 11.875,
+      "width": 0.9,
+      "vertical": false,
+      "kind": "hinged",
+      "hingeEnd": true,
+      "side": -1,
+      "pocketDirection": 1,
+      "from": "GY",
+      "to": "PL"
+    },
+    {
+      "id": "D22",
+      "x": 26.975,
+      "y": 9.5,
+      "width": 1.0,
+      "vertical": true,
+      "kind": "hinged",
+      "hingeEnd": false,
+      "side": 1,
+      "pocketDirection": 1,
+      "from": "PL",
+      "to": "OUT"
+    }
+  ],
+  "windows": [
+    {
+      "orientation": "h",
+      "x": 0.8,
+      "y": 0,
+      "length": 2.4
+    },
+    {
+      "orientation": "v",
+      "x": 0,
+      "y": 1.0,
+      "length": 1.6
+    },
+    {
+      "orientation": "v",
+      "x": 8.2,
+      "y": 2.9,
+      "length": 0.85
+    },
+    {
+      "orientation": "v",
+      "x": 0,
+      "y": 4.65,
+      "length": 1.3
+    },
+    {
+      "orientation": "v",
+      "x": 0,
+      "y": 9.2,
+      "length": 2.0
+    },
+    {
+      "orientation": "v",
+      "x": 8.2,
+      "y": 4.8,
+      "length": 2.0
+    },
+    {
+      "orientation": "v",
+      "x": 8.2,
+      "y": 9.2,
+      "length": 2.0
+    },
+    {
+      "orientation": "h",
+      "x": 19,
+      "y": 0,
+      "length": 2.6
+    },
+    {
+      "orientation": "v",
+      "x": 22.8,
+      "y": 4.2,
+      "length": 1.0
+    },
+    {
+      "orientation": "v",
+      "x": 22.8,
+      "y": 6.65,
+      "length": 1.8
+    },
+    {
+      "orientation": "v",
+      "x": 27.15,
+      "y": 13.3,
+      "length": 2.4
+    },
+    {
+      "orientation": "v",
+      "x": 12.2,
+      "y": 10.4,
+      "length": 1.5
+    },
+    {
+      "orientation": "h",
+      "x": 1.1,
+      "y": 18.4,
+      "length": 3.1
+    },
+    {
+      "orientation": "h",
+      "x": 6.6,
+      "y": 18.4,
+      "length": 3.0
+    },
+    {
+      "orientation": "h",
+      "x": 10.5,
+      "y": 18.4,
+      "length": 2.0
+    }
+  ],
+  "furniture": [
+    {
+      "room": "WC",
+      "name": "WC",
+      "rect": [
+        19.25,
+        12.5,
+        0.72,
+        0.65
+      ],
+      "kind": "wc",
+      "material": "porcelain"
+    },
+    {
+      "room": "WC",
+      "name": "Basin",
+      "rect": [
+        18.75,
+        12.18,
+        0.4,
+        0.35
+      ],
+      "kind": "basin",
+      "material": "porcelain"
+    },
+    {
+      "room": "KL",
+      "name": "Media unit",
+      "rect": [
+        0.35,
+        15.35,
+        0.4,
+        2.2
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Stove placeholder",
+      "rect": [
+        0.6,
+        13.95,
+        0.55,
+        0.6
+      ],
+      "kind": "stove",
+      "material": "charcoal"
+    },
+    {
+      "room": "KL",
+      "name": "Sofa",
+      "rect": [
+        4.6,
+        14.85,
+        1,
+        2.8
+      ],
+      "kind": "sofa",
+      "material": "oatmeal"
+    },
+    {
+      "room": "KL",
+      "name": "Armchair A",
+      "rect": [
+        2.1,
+        14.7,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "material": "oatmeal"
+    },
+    {
+      "room": "KL",
+      "name": "Armchair B",
+      "rect": [
+        1.3,
+        16.8,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "material": "oatmeal"
+    },
+    {
+      "room": "KL",
+      "name": "Lounge table",
+      "rect": [
+        3,
+        15.5,
+        0.8,
+        1.2
+      ],
+      "kind": "table",
+      "material": "oak",
+      "heightM": 0.43
+    },
+    {
+      "room": "KL",
+      "name": "Dining table",
+      "rect": [
+        7.85,
+        14.2,
+        1,
+        3
+      ],
+      "kind": "table",
+      "material": "oak",
+      "heightM": 0.75
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        14.325,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        14.325,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        15.075,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        15.075,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        15.825,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        15.825,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        7.3,
+        16.575,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Dining chair",
+      "rect": [
+        8.9,
+        16.575,
+        0.5,
+        0.5
+      ],
+      "kind": "diningchair",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Island",
+      "rect": [
+        10.95,
+        14.95,
+        2.8,
+        1.05
+      ],
+      "kind": "island",
+      "material": "green"
+    },
+    {
+      "room": "KL",
+      "name": "Island stool",
+      "rect": [
+        11.3,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Island stool",
+      "rect": [
+        12.1,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Island stool",
+      "rect": [
+        12.9,
+        14.3,
+        0.5,
+        0.5
+      ],
+      "kind": "stool",
+      "material": "oak"
+    },
+    {
+      "room": "KL",
+      "name": "Drawers",
+      "rect": [
+        9.8,
+        17.45,
+        1,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory"
+    },
+    {
+      "room": "KL",
+      "name": "Sink base",
+      "rect": [
+        10.8,
+        17.45,
+        0.8,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory"
+    },
+    {
+      "room": "KL",
+      "name": "Dishwasher",
+      "rect": [
+        11.6,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory"
+    },
+    {
+      "room": "KL",
+      "name": "Bins",
+      "rect": [
+        12.2,
+        17.45,
+        0.4,
+        0.6
+      ],
+      "kind": "kitchen",
+      "material": "ivory"
+    },
+    {
+      "room": "KL",
+      "name": "Oven tower",
+      "rect": [
+        12.6,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "tall",
+      "material": "ivory"
+    },
+    {
+      "room": "KL",
+      "name": "Fridge / freezer",
+      "rect": [
+        13.2,
+        17.45,
+        0.6,
+        0.6
+      ],
+      "kind": "tall",
+      "material": "ivory"
+    },
+    {
+      "room": "OR",
+      "name": "Garden sofa",
+      "rect": [
+        12.7,
+        10.25,
+        0.85,
+        1.8
+      ],
+      "kind": "sofa",
+      "material": "oatmeal"
+    },
+    {
+      "room": "OR",
+      "name": "Garden table",
+      "rect": [
+        13.8,
+        11,
+        0.6,
+        0.6
+      ],
+      "kind": "table",
+      "material": "oak",
+      "heightM": 0.43
+    },
+    {
+      "room": "OR",
+      "name": "Garden chair",
+      "rect": [
+        15.35,
+        10.3,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "material": "oatmeal"
+    },
+    {
+      "room": "B",
+      "name": "Closed coats / sports bags",
+      "rect": [
+        19.15,
+        15.45,
+        1.1,
+        0.6
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "B",
+      "name": "Bench / three shoe bays",
+      "rect": [
+        19.15,
+        17.5,
+        1.85,
+        0.55
+      ],
+      "kind": "bench",
+      "material": "oak"
+    },
+    {
+      "room": "H",
+      "name": "Visitor coat cupboard",
+      "rect": [
+        16.47,
+        17.45,
+        0.9,
+        0.6
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "H",
+      "name": "Keys ledge / mirror",
+      "rect": [
+        18.75,
+        15.45,
+        0.28,
+        0.6
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "PA",
+      "name": "Pantry counter / drawers",
+      "rect": [
+        14,
+        15.45,
+        2.35,
+        0.6
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "PA",
+      "name": "Dry-food shelves",
+      "rect": [
+        14,
+        17.65,
+        2.35,
+        0.4
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "L",
+      "name": "Washer bay",
+      "rect": [
+        21.7,
+        12.23,
+        0.75,
+        0.65
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "L",
+      "name": "Dryer bay",
+      "rect": [
+        21.7,
+        12.88,
+        0.75,
+        0.65
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "L",
+      "name": "Sink base",
+      "rect": [
+        21.7,
+        13.53,
+        0.75,
+        0.8
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "L",
+      "name": "Sorting / detergent drawers",
+      "rect": [
+        21.7,
+        14.33,
+        0.75,
+        0.95
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "L",
+      "name": "Ventilated hanging cupboard",
+      "rect": [
+        17.87,
+        13.7,
+        0.7,
+        0.6
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "heightM": 2.3
+    },
+    {
+      "room": "L",
+      "name": "Folding counter / baskets",
+      "rect": [
+        18.62,
+        13.7,
+        1.45,
+        0.6
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "P",
+      "name": "Super-king frame allowance",
+      "rect": [
+        1.15,
+        2.1,
+        1.95,
+        2.15
+      ],
+      "kind": "bed",
+      "material": "oatmeal"
+    },
+    {
+      "room": "P",
+      "name": "East bedside",
+      "rect": [
+        0.65,
+        3.75,
+        0.4,
+        0.4
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "P",
+      "name": "West bedside",
+      "rect": [
+        3.2,
+        3.75,
+        0.35,
+        0.4
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "W",
+      "name": "Hanging wardrobe wall",
+      "rect": [
+        4.76,
+        0.35,
+        3.0,
+        0.66
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "heightM": 2.3
+    },
+    {
+      "room": "W",
+      "name": "Shallow drawers / folded clothes",
+      "rect": [
+        5.65,
+        2.1,
+        2.1,
+        0.35
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "E",
+      "name": "Double vanity",
+      "rect": [
+        4.72,
+        2.57,
+        1.2,
+        0.5
+      ],
+      "kind": "basin",
+      "material": "porcelain"
+    },
+    {
+      "room": "E",
+      "name": "WC allowance",
+      "rect": [
+        6.0,
+        2.57,
+        0.65,
+        0.72
+      ],
+      "kind": "wc",
+      "material": "porcelain"
+    },
+    {
+      "room": "E",
+      "name": "Fixed shower screen",
+      "rect": [
+        6.735,
+        2.57,
+        0.03,
+        0.88
+      ],
+      "kind": "glass",
+      "material": "glass",
+      "heightM": 2.0
+    },
+    {
+      "room": "C1",
+      "name": "Small-double bed frame",
+      "rect": [
+        5.65,
+        11.58,
+        2.1,
+        1.35
+      ],
+      "kind": "bed",
+      "material": "oatmeal"
+    },
+    {
+      "room": "C1",
+      "name": "Clothes wardrobe",
+      "rect": [
+        4.82,
+        10.09,
+        0.66,
+        1.8
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "heightM": 2.3
+    },
+    {
+      "room": "C1",
+      "name": "Desk by window",
+      "rect": [
+        7.2,
+        9.940000000000001,
+        0.65,
+        1.4
+      ],
+      "kind": "desk",
+      "material": "oak",
+      "heightM": 0.74
+    },
+    {
+      "room": "C1",
+      "name": "Desk chair use reservation",
+      "rect": [
+        6.4,
+        10.13,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "material": "oatmeal",
+      "heightM": 0.74
+    },
+    {
+      "room": "C2",
+      "name": "Small-double bed frame",
+      "rect": [
+        0.4499999999999996,
+        11.58,
+        2.1,
+        1.35
+      ],
+      "kind": "bed",
+      "material": "oatmeal"
+    },
+    {
+      "room": "C2",
+      "name": "Clothes wardrobe",
+      "rect": [
+        2.7199999999999998,
+        10.09,
+        0.66,
+        1.8
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "heightM": 2.3
+    },
+    {
+      "room": "C2",
+      "name": "Desk by window",
+      "rect": [
+        0.34999999999999987,
+        9.940000000000001,
+        0.65,
+        1.4
+      ],
+      "kind": "desk",
+      "material": "oak",
+      "heightM": 0.74
+    },
+    {
+      "room": "C2",
+      "name": "Desk chair use reservation",
+      "rect": [
+        1.1499999999999997,
+        10.13,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "material": "oatmeal",
+      "heightM": 0.74
+    },
+    {
+      "room": "C3",
+      "name": "Small-double bed frame",
+      "rect": [
+        5.65,
+        7.24,
+        2.1,
+        1.35
+      ],
+      "kind": "bed",
+      "material": "oatmeal"
+    },
+    {
+      "room": "C3",
+      "name": "Clothes wardrobe",
+      "rect": [
+        4.82,
+        5.75,
+        0.66,
+        1.8
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "heightM": 2.3
+    },
+    {
+      "room": "C3",
+      "name": "Desk by window",
+      "rect": [
+        7.2,
+        5.6,
+        0.65,
+        1.4
+      ],
+      "kind": "desk",
+      "material": "oak",
+      "heightM": 0.74
+    },
+    {
+      "room": "C3",
+      "name": "Desk chair use reservation",
+      "rect": [
+        6.4,
+        5.79,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "material": "oatmeal",
+      "heightM": 0.74
+    },
+    {
+      "room": "FB",
+      "name": "Bath",
+      "rect": [
+        0.35,
+        6.4,
+        1.7,
+        0.75
+      ],
+      "kind": "bath",
+      "material": "porcelain"
+    },
+    {
+      "room": "FB",
+      "name": "Double vanity",
+      "rect": [
+        1.98,
+        4.47,
+        1.4,
+        0.5
+      ],
+      "kind": "basin",
+      "material": "porcelain"
+    },
+    {
+      "room": "FB",
+      "name": "WC",
+      "rect": [
+        2.53,
+        6.43,
+        0.65,
+        0.72
+      ],
+      "kind": "wc",
+      "material": "porcelain"
+    },
+    {
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        1.535,
+        4.47,
+        0.03,
+        0.18
+      ],
+      "kind": "glass",
+      "material": "glass",
+      "heightM": 2.0
+    },
+    {
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        1.535,
+        5.55,
+        0.03,
+        0.12
+      ],
+      "kind": "glass",
+      "material": "glass",
+      "heightM": 2.0
+    },
+    {
+      "room": "FB",
+      "name": "Fixed shower screen",
+      "rect": [
+        0.35,
+        5.655,
+        1.185,
+        0.03
+      ],
+      "kind": "glass",
+      "material": "glass",
+      "heightM": 2.0
+    },
+    {
+      "room": "ST",
+      "name": "Retained plant allowance",
+      "rect": [
+        0.5,
+        7.4,
+        0.85,
+        0.85
+      ],
+      "kind": "plant",
+      "material": "equipment"
+    },
+    {
+      "room": "ST",
+      "name": "Linen shelves",
+      "rect": [
+        1.5,
+        8.24,
+        0.9,
+        0.45
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "G",
+      "name": "Guest double frame allowance",
+      "rect": [
+        20.05,
+        0.65,
+        1.65,
+        2.1
+      ],
+      "kind": "bed",
+      "material": "oatmeal"
+    },
+    {
+      "room": "G",
+      "name": "Guest bedside left",
+      "rect": [
+        19.6,
+        0.85,
+        0.35,
+        0.4
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "G",
+      "name": "Guest bedside right",
+      "rect": [
+        21.85,
+        0.85,
+        0.35,
+        0.4
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "G",
+      "name": "Guest hanging wardrobe",
+      "rect": [
+        16.55,
+        0.35,
+        0.6,
+        1.52
+      ],
+      "kind": "cabinet",
+      "material": "oak",
+      "heightM": 2.3
+    },
+    {
+      "room": "GS",
+      "name": "Luggage and spare bedding",
+      "rect": [
+        17.87,
+        3.77,
+        2.36,
+        0.5
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "GB",
+      "name": "Guest WC",
+      "rect": [
+        21.68,
+        3.77,
+        0.65,
+        0.72
+      ],
+      "kind": "wc",
+      "material": "porcelain"
+    },
+    {
+      "room": "GB",
+      "name": "Guest vanity",
+      "rect": [
+        21.95,
+        5.42,
+        0.5,
+        0.7
+      ],
+      "kind": "basin",
+      "material": "porcelain"
+    },
+    {
+      "room": "GB",
+      "name": "Guest shower fixed screen",
+      "rect": [
+        21.535,
+        3.77,
+        0.03,
+        1.0
+      ],
+      "kind": "glass",
+      "material": "glass",
+      "heightM": 2.0
+    },
+    {
+      "room": "GB",
+      "name": "Guest shower return",
+      "rect": [
+        20.35,
+        4.755,
+        0.27,
+        0.03
+      ],
+      "kind": "glass",
+      "material": "glass",
+      "heightM": 2.0
+    },
+    {
+      "room": "GY",
+      "name": "Combined rack / cables",
+      "rect": [
+        22.85,
+        16.8,
+        2.4,
+        1.1
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "GY",
+      "name": "Bench",
+      "rect": [
+        24.05,
+        13.7,
+        0.7,
+        1.5
+      ],
+      "kind": "bench",
+      "material": "oak"
+    },
+    {
+      "room": "GY",
+      "name": "Treadmill",
+      "rect": [
+        25.55,
+        13.25,
+        1.0,
+        2.05
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "GY",
+      "name": "Dumbbells",
+      "rect": [
+        22.9,
+        13.5,
+        0.4,
+        2.0
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "PL",
+      "name": "P1 cylinder / connections",
+      "rect": [
+        22.95,
+        9.2,
+        0.9,
+        0.9
+      ],
+      "kind": "plant",
+      "material": "equipment"
+    },
+    {
+      "room": "PL",
+      "name": "P2 ventilation allowance",
+      "rect": [
+        25.95,
+        10.6,
+        0.65,
+        0.85
+      ],
+      "kind": "plant",
+      "material": "equipment"
+    },
+    {
+      "room": "PL",
+      "name": "P3 hydraulic / controls",
+      "rect": [
+        24.1,
+        9.2,
+        0.8,
+        0.45
+      ],
+      "kind": "plant",
+      "material": "equipment"
+    },
+    {
+      "room": "O",
+      "name": "Professional workspace",
+      "rect": [
+        20.85,
+        6.29,
+        1.6,
+        0.75
+      ],
+      "kind": "desk",
+      "material": "oak",
+      "heightM": 0.74
+    },
+    {
+      "room": "O",
+      "name": "Personal workspace",
+      "rect": [
+        21.7,
+        7.54,
+        0.75,
+        1.8
+      ],
+      "kind": "desk",
+      "material": "oak",
+      "heightM": 0.74
+    },
+    {
+      "room": "O",
+      "name": "Sofa bed closed",
+      "rect": [
+        17.87,
+        6.29,
+        0.9,
+        1.9
+      ],
+      "kind": "sofa",
+      "material": "oatmeal"
+    },
+    {
+      "room": "O",
+      "name": "Shallow books / small items",
+      "rect": [
+        19.0,
+        9.04,
+        1.2,
+        0.3
+      ],
+      "kind": "cabinet",
+      "material": "oak"
+    },
+    {
+      "room": "O",
+      "name": "One task chair",
+      "rect": [
+        20.93,
+        7.12,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "material": "oatmeal"
+    },
+    {
+      "room": "S",
+      "name": "Full-height library / TV wall",
+      "rect": [
+        17.87,
+        9.46,
+        4.58,
+        0.35
+      ],
+      "kind": "cabinet",
+      "material": "darkOak",
+      "heightM": 2.6
+    },
+    {
+      "room": "S",
+      "name": "Full-height library return",
+      "rect": [
+        22.15,
+        9.81,
+        0.3,
+        2.25
+      ],
+      "kind": "cabinet",
+      "material": "darkOak",
+      "heightM": 2.6
+    },
+    {
+      "room": "S",
+      "name": "Three-seat sofa allowance",
+      "rect": [
+        19.05,
+        11.11,
+        2.3,
+        0.9
+      ],
+      "kind": "sofa",
+      "material": "oatmeal"
+    },
+    {
+      "room": "S",
+      "name": "Movable upholstered footstool",
+      "rect": [
+        20.35,
+        10.56,
+        0.5,
+        0.5
+      ],
+      "kind": "table",
+      "material": "oak",
+      "heightM": 0.43
+    },
+    {
+      "room": "S",
+      "name": "Sofa side table",
+      "rect": [
+        18.55,
+        11.51,
+        0.4,
+        0.4
+      ],
+      "kind": "table",
+      "material": "oak",
+      "heightM": 0.43
+    }
+  ],
+  "officeStates": {
+    "Professional": [
+      {
+        "room": "O",
+        "name": "Professional workspace",
+        "rect": [
+          20.85,
+          6.29,
+          1.6,
+          0.75
+        ],
+        "kind": "desk",
+        "material": "oak",
+        "heightM": 0.74
+      },
+      {
+        "room": "O",
+        "name": "Personal workspace",
+        "rect": [
+          21.7,
+          7.54,
+          0.75,
+          1.8
+        ],
+        "kind": "desk",
+        "material": "oak",
+        "heightM": 0.74
+      },
+      {
+        "room": "O",
+        "name": "Sofa bed closed",
+        "rect": [
+          17.87,
+          6.29,
+          0.9,
+          1.9
+        ],
+        "kind": "sofa",
+        "material": "oatmeal"
+      },
+      {
+        "room": "O",
+        "name": "Shallow books / small items",
+        "rect": [
+          19.0,
+          9.04,
+          1.2,
+          0.3
+        ],
+        "kind": "cabinet",
+        "material": "oak"
+      },
+      {
+        "room": "O",
+        "name": "One task chair",
+        "rect": [
+          20.93,
+          7.12,
+          0.65,
+          0.65
+        ],
+        "kind": "chair",
+        "material": "oatmeal"
+      }
+    ],
+    "Personal": [
+      {
+        "room": "O",
+        "name": "Professional workspace",
+        "rect": [
+          20.85,
+          6.29,
+          1.6,
+          0.75
+        ],
+        "kind": "desk",
+        "material": "oak",
+        "heightM": 0.74
+      },
+      {
+        "room": "O",
+        "name": "Personal workspace",
+        "rect": [
+          21.7,
+          7.54,
+          0.75,
+          1.8
+        ],
+        "kind": "desk",
+        "material": "oak",
+        "heightM": 0.74
+      },
+      {
+        "room": "O",
+        "name": "Sofa bed closed",
+        "rect": [
+          17.87,
+          6.29,
+          0.9,
+          1.9
+        ],
+        "kind": "sofa",
+        "material": "oatmeal"
+      },
+      {
+        "room": "O",
+        "name": "Shallow books / small items",
+        "rect": [
+          19.0,
+          9.04,
+          1.2,
+          0.3
+        ],
+        "kind": "cabinet",
+        "material": "oak"
+      },
+      {
+        "room": "O",
+        "name": "One task chair",
+        "rect": [
+          20.93,
+          8.1,
+          0.65,
+          0.65
+        ],
+        "kind": "chair",
+        "material": "oatmeal"
+      }
+    ],
+    "Night": [
+      {
+        "room": "O",
+        "name": "Professional workspace",
+        "rect": [
+          20.85,
+          6.29,
+          1.6,
+          0.75
+        ],
+        "kind": "desk",
+        "material": "oak",
+        "heightM": 0.74
+      },
+      {
+        "room": "O",
+        "name": "Personal workspace",
+        "rect": [
+          21.7,
+          7.54,
+          0.75,
+          1.8
+        ],
+        "kind": "desk",
+        "material": "oak",
+        "heightM": 0.74
+      },
+      {
+        "room": "O",
+        "name": "Shallow books / small items",
+        "rect": [
+          19.0,
+          9.04,
+          1.2,
+          0.3
+        ],
+        "kind": "cabinet",
+        "material": "oak"
+      },
+      {
+        "room": "O",
+        "name": "Open sofa bed frame",
+        "rect": [
+          17.87,
+          6.29,
+          2.2,
+          1.9
+        ],
+        "kind": "bed",
+        "material": "oatmeal"
+      },
+      {
+        "room": "O",
+        "name": "Task chair parked",
+        "rect": [
+          20.93,
+          8.6,
+          0.65,
+          0.65
+        ],
+        "kind": "chair",
+        "material": "oatmeal"
+      }
+    ]
+  },
+  "routes": {
+    "Arrival to kitchen": [
+      [
+        18.05,
+        17.5
+      ],
+      [
+        17.2,
+        16.4
+      ],
+      [
+        17.125,
+        15.8
+      ],
+      [
+        17.125,
+        14.5
+      ],
+      [
+        16.3,
+        14.25
+      ]
+    ],
+    "Boot to pantry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.25,
+        16.65
+      ],
+      [
+        18.5,
+        16.65
+      ],
+      [
+        17.3,
+        16.5
+      ],
+      [
+        15.2,
+        16.5
+      ],
+      [
+        13.94,
+        16.5
+      ],
+      [
+        13.15,
+        16.7
+      ]
+    ],
+    "Boot to laundry": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        20.9,
+        16.2
+      ],
+      [
+        20.9,
+        14.0
+      ]
+    ],
+    "Family to living": [
+      [
+        4.1,
+        4.8
+      ],
+      [
+        4.1,
+        12.0
+      ],
+      [
+        3.95,
+        12.6
+      ],
+      [
+        3.95,
+        13.7
+      ],
+      [
+        6.1,
+        13.85
+      ]
+    ],
+    "Guests to living": [
+      [
+        19.0,
+        3.0
+      ],
+      [
+        18.1,
+        2.6
+      ],
+      [
+        17.15,
+        2.6
+      ],
+      [
+        17.15,
+        13.75
+      ],
+      [
+        16.5,
+        13.85
+      ],
+      [
+        9.7,
+        13.85
+      ]
+    ],
+    "Hall through orangery to living": [
+      [
+        17.15,
+        10.8
+      ],
+      [
+        17.15,
+        11.65
+      ],
+      [
+        16.375,
+        11.65
+      ],
+      [
+        15.25,
+        11.65
+      ],
+      [
+        15.25,
+        13.8
+      ]
+    ],
+    "Boot to gym": [
+      [
+        20.25,
+        17.1
+      ],
+      [
+        21.0,
+        16.65
+      ],
+      [
+        21.65,
+        16.05
+      ],
+      [
+        22.625,
+        16.05
+      ],
+      [
+        23.675,
+        16.05
+      ]
+    ],
+    "Garden sitting to dining": [
+      [
+        14.85,
+        12.25
+      ],
+      [
+        14.85,
+        13.85
+      ],
+      [
+        10.2,
+        13.85
+      ]
+    ],
+    "Guest hall to garden sitting": [
+      [
+        17.15,
+        10.9
+      ],
+      [
+        16.65,
+        11.9
+      ],
+      [
+        15.6,
+        12.15
+      ]
+    ],
+    "Garden door approach": [
+      [
+        14.85,
+        13.8
+      ],
+      [
+        14.85,
+        11.8
+      ],
+      [
+        14.85,
+        10.15
+      ],
+      [
+        14.4,
+        10.05
+      ]
+    ],
+    "Dining to cooking aisle": [
+      [
+        10.52,
+        13.85
+      ],
+      [
+        10.52,
+        16.65
+      ],
+      [
+        12.0,
+        16.7
+      ]
+    ],
+    "Rear of dining": [
+      [
+        6.1,
+        17.65
+      ],
+      [
+        9.35,
+        17.65
+      ]
+    ],
+    "Lounge approach": [
+      [
+        6.1,
+        13.85
+      ],
+      [
+        3.95,
+        13.85
+      ],
+      [
+        3.8,
+        14.65
+      ]
+    ],
+    "Utility to washer": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        20.72,
+        13.85
+      ],
+      [
+        20.72,
+        12.55
+      ]
+    ],
+    "Utility to folding": [
+      [
+        20.9,
+        14.8
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Boot bench approach": [
+      [
+        20.25,
+        16.65
+      ],
+      [
+        20.05,
+        17.05
+      ]
+    ],
+    "Kitchen directly to utility": [
+      [
+        16.8,
+        14.83
+      ],
+      [
+        17.81,
+        14.83
+      ],
+      [
+        18.8,
+        14.83
+      ],
+      [
+        19.2,
+        14.8
+      ]
+    ],
+    "Hall to snug sofa": [
+      [
+        17.15,
+        11.65
+      ],
+      [
+        17.15,
+        10.8
+      ],
+      [
+        18.5,
+        10.8
+      ],
+      [
+        19.75,
+        10.66
+      ]
+    ],
+    "Suite entry to bed west": [
+      [
+        4.03,
+        4.85
+      ],
+      [
+        4.03,
+        4.0
+      ],
+      [
+        3.9,
+        3.2
+      ],
+      [
+        3.65,
+        2.5
+      ]
+    ],
+    "Suite around bed to east": [
+      [
+        3.65,
+        2.5
+      ],
+      [
+        3.7,
+        1.65
+      ],
+      [
+        0.75,
+        1.65
+      ],
+      [
+        0.75,
+        3.25
+      ]
+    ],
+    "Suite to hanging and drawers": [
+      [
+        3.7,
+        1.65
+      ],
+      [
+        4.15,
+        1.825
+      ],
+      [
+        4.9,
+        1.825
+      ],
+      [
+        5.3,
+        1.55
+      ],
+      [
+        7.35,
+        1.55
+      ]
+    ],
+    "Suite to ensuite vanity": [
+      [
+        3.9,
+        3.2
+      ],
+      [
+        4.15,
+        3.575
+      ],
+      [
+        4.9,
+        3.575
+      ],
+      [
+        5.2,
+        3.5
+      ]
+    ],
+    "Ensuite WC approach": [
+      [
+        5.2,
+        3.5
+      ],
+      [
+        5.75,
+        3.8
+      ],
+      [
+        6.2,
+        3.8
+      ]
+    ],
+    "Ensuite shower entry": [
+      [
+        6.2,
+        3.8
+      ],
+      [
+        7.3,
+        3.8
+      ],
+      [
+        7.3,
+        3.05
+      ]
+    ],
+    "C1 entry to bed": [
+      [
+        4.1,
+        9.49
+      ],
+      [
+        5.92,
+        9.49
+      ],
+      [
+        5.92,
+        10.91
+      ],
+      [
+        6.12,
+        11.16
+      ]
+    ],
+    "C1 wardrobe approach": [
+      [
+        5.92,
+        9.49
+      ],
+      [
+        5.92,
+        10.41
+      ]
+    ],
+    "C1 desk approach": [
+      [
+        5.92,
+        10.91
+      ],
+      [
+        5.92,
+        11.16
+      ],
+      [
+        6.800000000000001,
+        11.16
+      ]
+    ],
+    "C2 entry to bed": [
+      [
+        4.1,
+        9.49
+      ],
+      [
+        2.28,
+        9.49
+      ],
+      [
+        2.28,
+        10.91
+      ],
+      [
+        2.0799999999999996,
+        11.16
+      ]
+    ],
+    "C2 wardrobe approach": [
+      [
+        2.28,
+        9.49
+      ],
+      [
+        2.28,
+        10.41
+      ]
+    ],
+    "C2 desk approach": [
+      [
+        2.28,
+        10.91
+      ],
+      [
+        2.28,
+        11.16
+      ],
+      [
+        1.4,
+        11.16
+      ]
+    ],
+    "C3 entry to bed": [
+      [
+        4.1,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        6.57
+      ],
+      [
+        6.12,
+        6.82
+      ]
+    ],
+    "C3 wardrobe approach": [
+      [
+        5.92,
+        5.1499999999999995
+      ],
+      [
+        5.92,
+        6.07
+      ]
+    ],
+    "C3 desk approach": [
+      [
+        5.92,
+        6.57
+      ],
+      [
+        5.92,
+        6.82
+      ],
+      [
+        6.800000000000001,
+        6.82
+      ]
+    ],
+    "Family bathroom vanity": [
+      [
+        4.1,
+        5.5
+      ],
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.65,
+        5.5
+      ]
+    ],
+    "Family bathroom shower": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.05,
+        5.4
+      ],
+      [
+        1.88,
+        5.32
+      ],
+      [
+        1.6,
+        5.15
+      ],
+      [
+        0.95,
+        5.1
+      ]
+    ],
+    "Family bathroom bath": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.2,
+        5.8
+      ],
+      [
+        1.9,
+        6.02
+      ]
+    ],
+    "Family bathroom WC": [
+      [
+        3.0,
+        5.5
+      ],
+      [
+        2.8,
+        5.98
+      ]
+    ],
+    "Linen approach": [
+      [
+        4.1,
+        7.9
+      ],
+      [
+        2.8,
+        7.9
+      ],
+      [
+        1.95,
+        7.8
+      ]
+    ],
+    "Plant approach": [
+      [
+        2.8,
+        7.9
+      ],
+      [
+        1.75,
+        7.8
+      ]
+    ],
+    "Guest bed left": [
+      [
+        18.4,
+        2.6
+      ],
+      [
+        19.25,
+        3.15
+      ],
+      [
+        19.65,
+        3.15
+      ],
+      [
+        19.65,
+        2.2
+      ]
+    ],
+    "Guest bed right": [
+      [
+        19.65,
+        3.15
+      ],
+      [
+        22.08,
+        3.15
+      ],
+      [
+        22.08,
+        2.2
+      ]
+    ],
+    "Guest wardrobe": [
+      [
+        18.4,
+        2.6
+      ],
+      [
+        18.5,
+        1.4
+      ],
+      [
+        17.65,
+        1.4
+      ]
+    ],
+    "Guest shower room": [
+      [
+        17.15,
+        5.6
+      ],
+      [
+        19.7,
+        5.6
+      ],
+      [
+        20.7,
+        5.6
+      ]
+    ],
+    "Guest shower entry": [
+      [
+        20.7,
+        5.6
+      ],
+      [
+        21.1,
+        5.35
+      ],
+      [
+        21.1,
+        4.35
+      ]
+    ],
+    "Guest WC approach": [
+      [
+        20.7,
+        5.6
+      ],
+      [
+        21.1,
+        5.14
+      ],
+      [
+        21.6,
+        5.14
+      ],
+      [
+        21.92,
+        5.02
+      ]
+    ],
+    "Guest vanity approach": [
+      [
+        20.7,
+        5.6
+      ],
+      [
+        21.5,
+        5.6
+      ]
+    ],
+    "Gym to plant": [
+      [
+        23.675,
+        16.05
+      ],
+      [
+        23.675,
+        12.7
+      ],
+      [
+        23.85,
+        12.5
+      ],
+      [
+        23.85,
+        11.4
+      ],
+      [
+        23.85,
+        10.55
+      ]
+    ],
+    "Plant cylinder approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        23.4,
+        10.55
+      ]
+    ],
+    "Plant ventilation approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        24.7,
+        10.55
+      ],
+      [
+        25.45,
+        11.0
+      ]
+    ],
+    "Plant controls approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        24.5,
+        10.55
+      ],
+      [
+        24.5,
+        10.15
+      ]
+    ],
+    "Plant external door approach": [
+      [
+        23.85,
+        10.55
+      ],
+      [
+        24.7,
+        10.55
+      ],
+      [
+        26.35,
+        10.05
+      ]
+    ],
+    "Snug rooflight control": [
+      [
+        19.75,
+        10.66
+      ],
+      [
+        18.55,
+        10.66
+      ],
+      [
+        18.55,
+        10.25
+      ]
+    ],
+    "Office entry to work": [
+      [
+        17.15,
+        8.65
+      ],
+      [
+        19.1,
+        8.65
+      ],
+      [
+        20.45,
+        8.65
+      ],
+      [
+        20.45,
+        7.5
+      ]
+    ],
+    "Office personal setup approach": [
+      [
+        20.45,
+        8.65
+      ],
+      [
+        20.45,
+        8.25
+      ]
+    ],
+    "Snug main bookcase approach": [
+      [
+        18.55,
+        10.66
+      ],
+      [
+        18.55,
+        10.2
+      ],
+      [
+        21.75,
+        10.2
+      ]
+    ],
+    "Snug return bookcase approach": [
+      [
+        21.75,
+        10.2
+      ],
+      [
+        21.75,
+        11.55
+      ]
+    ]
+  },
+  "courtyard": [
+    [
+      8.2,
+      0
+    ],
+    [
+      16.2,
+      0
+    ],
+    [
+      16.2,
+      9.3
+    ],
+    [
+      12.2,
+      9.3
+    ],
+    [
+      12.2,
+      12.8
+    ],
+    [
+      8.2,
+      12.8
+    ]
+  ],
+  "paving": [
+    [
+      9.3,
+      5.0,
+      4.8,
+      4.3
+    ],
+    [
+      9.3,
+      9.3,
+      2.9,
+      3.5
+    ],
+    [
+      12.2,
+      8.2,
+      4,
+      1.1
+    ],
+    [
+      12.1,
+      1.05,
+      3.55,
+      3.2
+    ],
+    [
+      12.9,
+      4.25,
+      1.2,
+      0.75
+    ],
+    [
+      11.2,
+      0,
+      1.2,
+      5.0
+    ],
+    [
+      11.2,
+      3.75,
+      2.9,
+      1.25
+    ]
+  ],
+  "plantingBeds": [
+    {
+      "name": "Family buffer",
+      "rect": [
+        8.55,
+        0.4,
+        0.75,
+        11.45
+      ]
+    },
+    {
+      "name": "Guest-side planting",
+      "rect": [
+        15.65,
+        0.4,
+        0.55,
+        7.35
+      ]
+    }
+  ],
+  "outdoorFurniture": [
+    {
+      "name": "Dining table",
+      "rect": [
+        9.55,
+        6.2,
+        3,
+        1
+      ],
+      "material": "oak",
+      "kind": "table",
+      "facing": "table"
+    },
+    {
+      "name": "Dining north",
+      "rect": [
+        9.675,
+        5.6,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "south"
+    },
+    {
+      "name": "Dining south",
+      "rect": [
+        9.675,
+        7.25,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "north"
+    },
+    {
+      "name": "Dining north",
+      "rect": [
+        10.425,
+        5.6,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "south"
+    },
+    {
+      "name": "Dining south",
+      "rect": [
+        10.425,
+        7.25,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "north"
+    },
+    {
+      "name": "Dining north",
+      "rect": [
+        11.175,
+        5.6,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "south"
+    },
+    {
+      "name": "Dining south",
+      "rect": [
+        11.175,
+        7.25,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "north"
+    },
+    {
+      "name": "Dining north",
+      "rect": [
+        11.925,
+        5.6,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "south"
+    },
+    {
+      "name": "Dining south",
+      "rect": [
+        11.925,
+        7.25,
+        0.55,
+        0.55
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "north"
+    },
+    {
+      "name": "Outdoor sofa",
+      "rect": [
+        14.7,
+        1.3,
+        0.85,
+        2.2
+      ],
+      "material": "oak",
+      "kind": "sofa",
+      "facing": "west"
+    },
+    {
+      "name": "Outdoor chair",
+      "rect": [
+        12.45,
+        1.65,
+        0.85,
+        0.85
+      ],
+      "material": "oak",
+      "kind": "diningchair",
+      "facing": "east"
+    },
+    {
+      "name": "Low table",
+      "rect": [
+        13.65,
+        2.4,
+        0.6,
+        0.6
+      ],
+      "material": "oak",
+      "kind": "table",
+      "facing": "table"
+    }
+  ],
+  "lights": [
+    {
+      "id": "K1",
+      "group": "K",
+      "point": [
+        11.35,
+        15.65,
+        4.815640646055101
+      ],
+      "kind": "spot",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K2",
+      "group": "K",
+      "point": [
+        12.35,
+        15.65,
+        4.815640646055101
+      ],
+      "kind": "spot",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K3",
+      "group": "K",
+      "point": [
+        13.35,
+        15.65,
+        4.815640646055101
+      ],
+      "kind": "spot",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K4",
+      "group": "K",
+      "point": [
+        10.25,
+        17.13,
+        3.9611622476544563
+      ],
+      "kind": "spot",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K5",
+      "group": "K",
+      "point": [
+        11.35,
+        17.13,
+        3.9611622476544563
+      ],
+      "kind": "spot",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "K6",
+      "group": "K",
+      "point": [
+        12.2,
+        17.13,
+        3.9611622476544563
+      ],
+      "kind": "spot",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "A1",
+      "group": "A",
+      "point": [
+        1.9,
+        13.2,
+        3.28
+      ],
+      "kind": "linear",
+      "length": 2.2,
+      "axis": "x"
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "point": [
+        6.2,
+        13.2,
+        3.28
+      ],
+      "kind": "linear",
+      "length": 2.6,
+      "axis": "x"
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "point": [
+        2.65,
+        18,
+        3.28
+      ],
+      "kind": "linear",
+      "length": 2.8,
+      "axis": "x"
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "point": [
+        8.1,
+        18,
+        3.28
+      ],
+      "kind": "linear",
+      "length": 2.8,
+      "axis": "x"
+    },
+    {
+      "id": "H1",
+      "group": "H",
+      "point": [
+        15.15,
+        15.28,
+        2.65
+      ],
+      "kind": "linear",
+      "length": 1.8,
+      "axis": "x"
+    },
+    {
+      "id": "H2",
+      "group": "H",
+      "point": [
+        17.7,
+        14.2,
+        2.65
+      ],
+      "kind": "linear",
+      "length": 1.3,
+      "axis": "y"
+    },
+    {
+      "id": "H3",
+      "group": "H",
+      "point": [
+        17.7,
+        11.85,
+        2.35
+      ],
+      "kind": "linear",
+      "length": 0.9,
+      "axis": "y"
+    },
+    {
+      "id": "T1",
+      "group": "T",
+      "point": [
+        15.15,
+        15.6,
+        1.5
+      ],
+      "kind": "linear",
+      "length": 1.8,
+      "axis": "x"
+    },
+    {
+      "id": "T2",
+      "group": "T",
+      "point": [
+        18.95,
+        12.22,
+        1.85
+      ],
+      "kind": "linear",
+      "length": 0.6,
+      "axis": "x"
+    },
+    {
+      "id": "D1",
+      "group": "D",
+      "point": [
+        8.35,
+        15.7,
+        2.35
+      ],
+      "kind": "chandelier",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "L1",
+      "group": "L",
+      "point": [
+        0.7,
+        17.1,
+        1.05
+      ],
+      "kind": "table lamp",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "L2",
+      "group": "L",
+      "point": [
+        4.2,
+        17.55,
+        1.35
+      ],
+      "kind": "floor lamp",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "G1",
+      "group": "G",
+      "point": [
+        12.6,
+        10.1,
+        1.45
+      ],
+      "kind": "wall reading",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E1",
+      "group": "E",
+      "point": [
+        12.18,
+        12.3,
+        0.35
+      ],
+      "kind": "wall path",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E2",
+      "group": "E",
+      "point": [
+        15.95,
+        9.28,
+        0.35
+      ],
+      "kind": "wall path",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E3",
+      "group": "E",
+      "point": [
+        14.25,
+        8,
+        0.65
+      ],
+      "kind": "pillar",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E4",
+      "group": "E",
+      "point": [
+        14.25,
+        5,
+        0.65
+      ],
+      "kind": "pillar",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E5",
+      "group": "E",
+      "point": [
+        12.5,
+        3.3,
+        0.65
+      ],
+      "kind": "pillar",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "E6",
+      "group": "E",
+      "point": [
+        12.5,
+        0.6,
+        0.65
+      ],
+      "kind": "pillar",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W1",
+      "group": "W",
+      "point": [
+        8.24,
+        7.9,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W2",
+      "group": "W",
+      "point": [
+        8.24,
+        12.4,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W3",
+      "group": "W",
+      "point": [
+        8.24,
+        4.1,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W4",
+      "group": "W",
+      "point": [
+        8.24,
+        0.85,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W5",
+      "group": "W",
+      "point": [
+        16.16,
+        0.8,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W6",
+      "group": "W",
+      "point": [
+        16.16,
+        3.6,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "W7",
+      "group": "W",
+      "point": [
+        16.16,
+        7.9,
+        2.0
+      ],
+      "kind": "ambient wall",
+      "length": 0,
+      "axis": "x"
+    },
+    {
+      "id": "P1",
+      "group": "P",
+      "point": [
+        14.1,
+        11.3,
+        0.66
+      ],
+      "kind": "portable",
+      "length": 0,
+      "axis": "x"
+    }
+  ],
+  "roofSurfaces": [
+    {
+      "name": "Family wing roof envelope",
+      "vertices": [
+        [
+          0,
+          0,
+          3.2
+        ],
+        [
+          8.2,
+          0,
+          3.2
+        ],
+        [
+          8.2,
+          12.8,
+          3.2
+        ],
+        [
+          0,
+          12.8,
+          3.2
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Guest roof south",
+      "vertices": [
+        [
+          16.2,
+          0,
+          3.2
+        ],
+        [
+          22.8,
+          0,
+          3.2
+        ],
+        [
+          22.8,
+          9.95,
+          3.2
+        ],
+        [
+          16.2,
+          9.95,
+          3.2
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Guest roof north",
+      "vertices": [
+        [
+          16.2,
+          11.049999999999999,
+          3.2
+        ],
+        [
+          22.8,
+          11.049999999999999,
+          3.2
+        ],
+        [
+          22.8,
+          12.8,
+          3.2
+        ],
+        [
+          16.2,
+          12.8,
+          3.2
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Guest roof east",
+      "vertices": [
+        [
+          16.2,
+          9.95,
+          3.2
+        ],
+        [
+          18.65,
+          9.95,
+          3.2
+        ],
+        [
+          18.65,
+          11.049999999999999,
+          3.2
+        ],
+        [
+          16.2,
+          11.049999999999999,
+          3.2
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Guest roof west",
+      "vertices": [
+        [
+          19.75,
+          9.95,
+          3.2
+        ],
+        [
+          22.8,
+          9.95,
+          3.2
+        ],
+        [
+          22.8,
+          11.049999999999999,
+          3.2
+        ],
+        [
+          19.75,
+          11.049999999999999,
+          3.2
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Library rooflight reservation",
+      "vertices": [
+        [
+          18.65,
+          9.95,
+          3.23
+        ],
+        [
+          19.75,
+          9.95,
+          3.23
+        ],
+        [
+          19.75,
+          11.049999999999999,
+          3.23
+        ],
+        [
+          18.65,
+          11.049999999999999,
+          3.23
+        ]
+      ],
+      "material": "glass"
+    },
+    {
+      "name": "Continuous gym and rear plant roof envelope",
+      "vertices": [
+        [
+          22.8,
+          8.7,
+          3.2
+        ],
+        [
+          27.15,
+          8.7,
+          3.2
+        ],
+        [
+          27.15,
+          18.4,
+          3.2
+        ],
+        [
+          22.8,
+          18.4,
+          3.2
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Main roof courtyard slope",
+      "vertices": [
+        [
+          0,
+          12.8,
+          3.7
+        ],
+        [
+          22.8,
+          12.8,
+          3.7
+        ],
+        [
+          22.8,
+          15.6,
+          5.3166
+        ],
+        [
+          0,
+          15.6,
+          5.3166
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Main roof arrival slope",
+      "vertices": [
+        [
+          0,
+          15.6,
+          5.3166
+        ],
+        [
+          22.8,
+          15.6,
+          5.3166
+        ],
+        [
+          22.8,
+          18.4,
+          3.7
+        ],
+        [
+          0,
+          18.4,
+          3.7
+        ]
+      ],
+      "material": "roof"
+    },
+    {
+      "name": "Garden room glazed roof",
+      "vertices": [
+        [
+          12.2,
+          9.3,
+          2.85
+        ],
+        [
+          16.2,
+          9.3,
+          2.85
+        ],
+        [
+          16.2,
+          12.8,
+          3.45
+        ],
+        [
+          12.2,
+          12.8,
+          3.45
+        ]
+      ],
+      "material": "glass"
+    }
+  ],
+  "rooflight": [
+    18.65,
+    9.95,
+    1.1,
+    1.1
+  ],
+  "roofInfill": [
+    {
+      "rect": [
+        0,
+        12.8,
+        8.2,
+        0.16
+      ],
+      "bottom": 3.2,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        16.2,
+        12.8,
+        6.6,
+        0.16
+      ],
+      "bottom": 3.2,
+      "top": 3.7,
+      "material": "timber"
+    },
+    {
+      "rect": [
+        12.2,
+        12.8,
+        4,
+        0.14
+      ],
+      "bottom": 3.45,
+      "top": 3.7,
+      "material": "timber"
+    }
+  ],
+  "wetZones": [
+    [
+      0.35,
+      4.47,
+      1.2,
+      1.2
+    ],
+    [
+      6.75,
+      2.57,
+      1.1,
+      1.78
+    ],
+    [
+      20.35,
+      3.77,
+      1.2,
+      1
+    ]
+  ],
+  "roofHeights": {
+    "baseline": "concept 05, unchanged",
+    "coverage_sample_checks": 50320,
+    "shared_vault_sample_checks": 7473,
+    "main_roof_eave_m": 3.7,
+    "main_roof_ridge_m": 5.3166,
+    "shared_ceiling_spring_m": 3.5,
+    "shared_ceiling_apex_m": 4.9145,
+    "lower_envelope_top_m": 3.2,
+    "elevation_orientation": "Garden: gym left; arrival: gym right",
+    "status": "Exploratory heights and massing; no structural or roof junction validation"
+  },
+  "shadeReservation": [
+    12.55,
+    9.65,
+    4,
+    2.2
+  ],
+  "ventReservations": [
+    [
+      12.9,
+      12.1,
+      0.8,
+      0.5
+    ],
+    [
+      14.7,
+      12.1,
+      0.8,
+      0.5
+    ]
+  ],
+  "palette": {
+    "stone": "#d9c8ac",
+    "timber": "#ac8155",
+    "roof": "#6c6860",
+    "ivory": "#eee7da",
+    "oak": "#ba9669",
+    "darkOak": "#523c2b",
+    "green": "#294d38",
+    "oatmeal": "#cbbca4",
+    "porcelain": "#f8f4e9",
+    "floor": "#ded3bd",
+    "glass": "#a6c1bf",
+    "bronze": "#92714e",
+    "charcoal": "#333731",
+    "equipment": "#b3b9b4"
+  },
+  "status": {
+    "layout": "Current drawn proposal, based on concept 25",
+    "heating": "Wet underfloor heating confirmed",
+    "ventilation": "Two local MVHR units recommended for development; unselected",
+    "roof": "Study heights; low roofs are envelopes without designed falls",
+    "site": "Illustrative ground only; no plot or boundary is implied",
+    "furniture": "Measured plan allowances; forms, heights and finishes illustrative"
+  }
+}

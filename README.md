@@ -1,3 +1,9 @@
+# Current presentation: House Design Book 01
+
+Start with [HOUSE-DESIGN-BOOK.md](HOUSE-DESIGN-BOOK.md) for the consolidated
+16-page book and fresh accompanying 3D model. It supersedes the older
+presentation references below. Historical studies are retained for provenance.
+
 # Courtyard house - current development plan
 
 Concept 27 is the latest measured ventilation comparison:
