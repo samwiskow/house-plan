@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  pages: read
 concurrency:
   group: house-pages-${{ github.ref }}
   cancel-in-progress: false
