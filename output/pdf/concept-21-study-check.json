@@ -1,0 +1,141 @@
+{
+  "status": "Preliminary coordination; technical design pending",
+  "uses_unselected_plant_option": "B",
+  "concept_routes": {
+    "Family distribution": [
+      [
+        24.5,
+        19.3
+      ],
+      [
+        24.5,
+        17.7
+      ],
+      [
+        20.9,
+        17.7
+      ],
+      [
+        20.9,
+        14.4
+      ],
+      [
+        17.15,
+        14.4
+      ],
+      [
+        17.15,
+        13.4
+      ],
+      [
+        4.1,
+        13.4
+      ],
+      [
+        4.1,
+        5.5
+      ]
+    ],
+    "Guest distribution": [
+      [
+        20.9,
+        14.4
+      ],
+      [
+        17.15,
+        14.4
+      ],
+      [
+        17.15,
+        5.5
+      ]
+    ],
+    "Family hot-water route": [
+      [
+        23.4,
+        20.0
+      ],
+      [
+        23.4,
+        17.7
+      ],
+      [
+        20.9,
+        17.7
+      ],
+      [
+        20.9,
+        14.4
+      ],
+      [
+        17.15,
+        14.4
+      ],
+      [
+        4.1,
+        14.4
+      ],
+      [
+        4.1,
+        5.5
+      ],
+      [
+        2.65,
+        5.5
+      ]
+    ]
+  },
+  "plan_route_lengths_m": {
+    "Family distribution": 34.2,
+    "Guest distribution": 12.65,
+    "Family hot-water route": 35.25
+  },
+  "routes_are_not_sized_installation_paths": true,
+  "cooled_room_ids": [
+    "P",
+    "C1",
+    "C2",
+    "C3",
+    "G",
+    "KL",
+    "OR",
+    "O",
+    "S",
+    "GY"
+  ],
+  "gross_roof_ceiling_zone_m": 0.6000000000000001,
+  "gross_zone_is_not_usable_duct_void": true,
+  "shared_edge_band_proposal": {
+    "projection_m": 0.5,
+    "height_m": 0.4,
+    "underside_m": 2.7,
+    "top_m": 3.1,
+    "adopted": false
+  },
+  "roof_shade_vent_plan_overlap": false,
+  "plant_extension_adopted": false,
+  "heat_loss_calculated": false,
+  "cooling_loads_calculated": false,
+  "ventilation_sized": false,
+  "hot_water_sized": false,
+  "solar_energy_balance_calculated": false,
+  "site_verified": false,
+  "sources": [
+    [
+      "Energy Saving Trust: room-by-room heat loss",
+      "https://greenheattoolkit.energysavingtrust.org.uk/t/heat-pump-installers-toolkit/heat-pump-system-design/heat-loss-calculations-detailed-guidance/"
+    ],
+    [
+      "Zehnder: ventilation system selection and duties",
+      "https://www.zehnder.co.uk/en/indoor-ventilation/resources/mvhr-selection-tool"
+    ],
+    [
+      "Energy Saving Trust: battery storage",
+      "https://energysavingtrust.org.uk/advice/battery-storage/"
+    ],
+    [
+      "GOV.UK: Approved Document O; applicability / edition to confirm for project",
+      "https://www.gov.uk/government/publications/overheating-approved-document-o"
+    ]
+  ]
+}

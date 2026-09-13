@@ -1,16 +1,105 @@
-# U-shaped family home - concept 05
+# Current presentation: House Design Book 02
 
-The full floor-plan reference is `output/pdf/concept-07-open-garden-room.pdf`:
-a full plan at 1:100 and a before/after corner detail at 1:50, both on A3.
-It opens the year-round garden room and relocates the hall door beyond the snug.
-Read it alongside concept 12, which adds the approved direct kitchen–utility
-hinged door D19; that opening is not shown in the earlier full-plan export.
-Print at 100% to preserve scale.
+Explore the [live house model](https://samwiskow.github.io/house-plan/).
+
+Start with [HOUSE-DESIGN-BOOK.md](HOUSE-DESIGN-BOOK.md) for the consolidated
+16-page book and fresh accompanying 3D model. It supersedes the older
+presentation references below. Historical studies are retained for provenance.
+
+# Courtyard house - current development plan
+
+Concept 27 is the latest measured ventilation comparison:
+`output/pdf/concept-27-measured-ventilation-layouts.pdf`. It compares one central
+unit with a cross-vault edge enclosure against two units and a smaller linen
+run. Both alternatives remain unselected; concept 25 stays the whole-house plan.
+Rebuild with `ventilation_layout_study.py`; the JSON records room provenance,
+route/access checks, shelf areas and provisional duct/terminal reservations.
+
+
+Concept 26 records the heating and hot-water strategy: wet underfloor heating is the confirmed
+winter preference, with a recommended air-to-water / cylinder system, separate
+wing cooling and a central-versus-two-system MVHR comparison. See
+`output/pdf/concept-26-heating-hot-water-and-ventilation.pdf`. Concept 25 remains
+the current whole-house geometry. Rebuild this study with
+`heating_ventilation_options.py`; illustrative water calculations are recorded
+in concept-26-study-check.json and are not equipment sizing.
+
+
+## Revised snug: antique library character
+
+Concept 24 (`output/pdf/concept-24-library-snug.pdf`) replaces the low storage
+with a 4.58 m full-height library wall, central TV recess and 2.25 m return
+on the former window wall. Dark timber, framed cupboards, a cornice and warm
+reading lights establish the proposed antique-library character. The 2.30 m
+sofa moves 0.30 m, retaining a nominal 0.80 m passage to the return shelves.
+The garden-side plant and rooflight reservation remain. All 56 sampled routes
+pass in both office work states and the overnight state. Joinery height,
+book loads, TV, lighting and rooflight remain to detail and select.
+
+
+## Revised office: two permanent setups
+
+Concept 23 (`output/pdf/concept-23-two-workspace-office.pdf`) provides a
+1.60 x 0.75 m professional desk and 1.80 x 0.75 m personal desk for one person
+switching between setups. One chair has two tested work positions. Both desks
+stay in place when the sofa bed opens; the chair parks at the personal desk.
+Both sleepers can reach the door from the foot of the bed, with a nominal
+0.78 m gap. This supersedes concept 18's one-sided exit arrangement.
+All 54 routes pass in each of the two work states and the overnight state.
+The actual sofa mechanism, window access and equipment remain to select.
+
+
+The latest full-plan reference is `output/pdf/concept-25-revised-whole-house-plan.pdf`:
+a furnished proposal at 1:100 on A3, room schedule and next-decision register.
+It combines the retained household layout with the garden-side plant extension,
+two-workspace office and library snug. Concept 20 is now historical.
+Print at 100% to preserve scale. See DESIGN-REVIEW.md for the current register.
+Equipment, joinery, rooflight, structure and services remain to detail.
 
 `output/pdf/u-home-dimensioned-concept.pdf` retains the original concept 05 plan,
 room schedule, family/service details and illustrative site plan. Its enclosed
 orangery and hall arrangement are superseded by concept 07. Concept 04 remains
 available in Git history.
+
+## Revised direction: garden-side plant and separate wing cooling
+
+The arrival-side plant projection in concept 17 B is declined. Concept 22 tests
+an extension behind the gym, toward the garden / south (up on the plan), with
+internal access through the gym and a separate external service door. It adds
+13.05 m2 net footprint and gives 4.00 x 2.65 m clear plant space. Existing room
+polygons remain unchanged. The rack and dumbbells move; D18 shifts 0.60 m to
+clear them. Treadmill / bench positions and all equipment body sizes are retained.
+The provisional treadmill rear reservation remains clear. Exercise movement,
+barbell handling and selected equipment clearances still need verification.
+
+The extension covers the snug's west window. Concept 22 replaces it with a
+1.10 x 1.10 m rooflight reservation. Concept 24 updates the snug furniture. Blackout, daylight,
+solar gain, opening / controls, roof structure, drainage and noise need design.
+This is a proposal, not a selected rooflight or a claim of equivalent daylight.
+The new plant leading edge is 0.25 m beyond the office window's plan extent;
+roof edges, daylight and shading at that window require coordination.
+
+Cooling direction: separate multi-split systems for the family and guest / service
+wings. Each closed room needs suitable delivery; the shared / garden space is a
+separate load and control zone whose outdoor-system allocation remains open.
+Two outdoor units are a starting idea, not a sized equipment count. The prior
+cross-vault cooling duct band is no longer assumed. Refrigerant, power and
+condensate routes remain to design. MVHR / fresh-air ventilation is separate and
+its distribution is unresolved.
+
+Ordinary air-to-air systems usually do not provide tap water; combined products
+exist. Compare a service-end cylinder / separate heat pump with a combined
+system against the two simultaneous rain-shower requirement. Local family-side
+storage is a fallback with space and maintenance costs. Hot-water pipes may use
+floor / service construction, subject to build-up and routing design. Winter
+heating (retained wet UFH versus air-to-air or a defined combination) remains a
+key system decision. No capacity or performance result is claimed.
+
+See `output/pdf/concept-22-garden-plant-and-wing-services.pdf` (six A3 pages),
+`garden_plant_study.py` and concept-22-study-check.json. All 54 sampled routes,
+room-door sweeps and the new routes around the open internal plant door pass.
+The existing family plant placeholder remains until relocation is accepted
+and the complete package is sized. The old arrival-side study is historical.
 
 ## Current design development
 
@@ -21,6 +110,109 @@ and the proposed log burner.
 It distinguishes agreed choices from proposals and open decisions, and includes
 the exterior and interior atmosphere studies. Concept 07 changes internal walls
 and the hall door within the same external footprint.
+
+## Concept 21: historical preliminary building coordination
+
+`output/pdf/concept-21-building-coordination.pdf` contains five A3 sheets:
+a candidate distribution plan, a family-hall / shared-vault section, plant
+height and glazed-roof coordination, room comfort duties and a designer input
+brief. It uses unselected plant option B as a route-study scenario only.
+
+The family distribution crossing is unresolved: there is no enclosed corridor
+across the shared space. A visible 0.50 m projection / 0.40 m-deep edge band is
+drawn at +2.70 to +3.10 m for architectural review, not adopted. The difference
+between +3.20 m roof top and +2.60 m ceiling is 0.60 m gross; roof build-up consumes
+part of it. It is not a verified duct void. The illustrative family hot-water
+route measures 35.25 m in plan, excluding verticals, fittings and final branches.
+
+All required cooling spaces are listed. Retained roof shade and vent rectangles
+remain separate in plan; actual hardware coordination and performance are open.
+No heat loss, cooling load, airflow, hot-water capacity, solar balance, structural
+or site compliance calculation is claimed. The input / output brief identifies
+what the architect and services designers need to resolve next.
+
+Rebuild with `building_coordination.py`; concept-21-study-check.json records
+route lengths, reservations, room coverage and uncompleted technical work.
+`DESIGN-REVIEW.md` is the index for the latest development documents.
+
+## Concept 20: historical consolidated whole-house plan
+
+The three-sheet PDF brings the 25 room / circulation polygons, current furniture,
+fixed shower screens and selected courtyard arrangement into one drawing.
+Room codes link the furnished plan to the schedule. The schedule records
+319.91 m2 internal envelope (GIA), 360.26 m2 external footprint and 304.92 m2
+summed clear rooms under the existing model's area convention.
+
+The status register separates selected directions, drawn proposals, unadopted
+plant options and technical work. It retains the concept 15 plant reservation,
+full gym, D03 relocation and D19. The office is shown in daytime mode; concept 18
+remains the night-use reference. Eight dining chairs remain pending a decision
+on ten together versus occasional island seating.
+
+`consolidated_plan.py` loads the source-checked concept 18 model without
+regenerating older drawings. Assertions check the selected suite, gym, doors,
+retained plant and unique room IDs. Data is in concept-20-study-check.json.
+
+## Concept 19: everyday-use review
+
+`output/pdf/concept-19-everyday-use-review.pdf` records 12 reproducible spatial
+scenarios across laundry, shopping, cooking, school mornings, dining and bath
+assistance. Open machine doors retain the sampled approach; a basket in the
+laundry aisle blocks it. Open pantry drawers and dishwasher doors obstruct their
+work routes; the existing direct kitchen and courtyard-side routes offer bypasses.
+An occupied boot bench needs the gym-side bypass. A bath-assisting adult occupies
+the bath approach. These are synthetic occupied-use reservations, not a simulation
+of simultaneous household movement.
+
+The current table has eight chairs. End-chair tests for ten obstruct both dining
+cross-routes; no ten-at-one-table layout is adopted. Eight plus island seating
+is separate seating. Concept 18's five-visitor sleeping example remains conditional
+on child sharing and acceptance of the office sofa-bed exit compromise.
+
+`household_use_review.py` and concept-19-study-check.json preserve both failures
+and passing alternatives. Each scenario route passes without its temporary
+obstacles; 0.70 m moving envelopes are checked against the obstacle additions.
+`development_model.py` loads the concept 18 geometry / furniture snapshot and
+rejects changed source files, avoiding regeneration of historical PDFs.
+
+## Concept 18: office and overnight guests (proposal)
+
+`output/pdf/concept-18-office-and-guests.pdf` develops the office day / night
+layout and guest bedroom / shower on four A3 sheets. User confirmed an
+occasional office sofa bed and that visiting children may share beds.
+A five-visitor example is two in the guest double, two on the office sofa bed and one visiting child
+sharing a child-room bed. This can include four adults and one child, subject
+to sofa-bed comfort and its one-sided exit; it does not provide five adult beds.
+
+The office retains a 2.60 x 0.75 m desk and adds a 2.00 x 0.90 m sofa reservation.
+Its open envelope is 2.00 x 2.20 m, with a 1.40 x 2.00 m mattress allowance.
+The desk cannot be used in night mode; the chair parks inside the room.
+Only the entry side has a connected floor route out. A far-side sleeper must
+cross the mattress. This compromise is explicitly awaiting review.
+The guest double shifts to provide a 0.75 m narrower side and 0.90 m foot gap.
+The guest shower proposal is 1.20 x 1.00 m with fixed glass, WC and 0.70 m vanity.
+
+`office_guest_study.py` retains concept 15 and checks both furniture states;
+concept-18-study-check.json records routes and limitations. Room boundaries,
+doors and windows stay unchanged. Product mechanisms, occupied bathroom use,
+window operation and accessibility are not validated.
+
+## Concept 17: service-end comparison (proposal)
+
+`output/pdf/concept-17-service-end-comparison.pdf` compares the laundry and a
+northward extension of the existing gym block on four A3 sheets. Neither is
+selected. A retains side-by-side machines and drying but reduces folding from
+1.45 m to 0.65 m, removes sorting drawers and leaves the controls zone unresolved.
+B preserves the laundry and full 4 x 6 m gym, testing a 4.70 x 2.60 m extension
+(12.22 m2 added footprint) with a 4 x 2.25 m clear plant compartment and external
+access. B is recommended for development, subject to site, roof and full package
+coordination. Equipment and maintenance envelopes are planning allowances.
+
+Both variants retain the 40 sampled house routes; B also checks three internal
+plant approaches and clear maintenance reservations. These do not establish
+occupied use, equipment replacement, performance or compliance. Keep the
+concept 15 family-wing plant reservation and modest linen shelves meanwhile.
+Rebuild with `service_end_study.py`; checks are in concept-17-study-check.json.
 
 ## Plant location: revised direction, 12 September 2026
 
@@ -601,3 +793,12 @@ Codex runtime:
 ```
 
 Temporary page renders are under `tmp/pdfs/`.
+
+## Rebuild the revised proposal
+
+Run `garden_plant_study.py`, `two_workspace_office.py`, `library_snug.py`, then
+`revised_house_plan.py` with the bundled Python runtime. These source-check the
+earlier measured snapshot and each succeeding proposal. Concept 25 combines
+26 room polygons: 332.96 m2 internal envelope, 373.31 m2 external footprint and
+315.52 m2 clear rooms. It includes the extension as a proposal; the original
+family plant remains a conditional placeholder, not a second installed package.

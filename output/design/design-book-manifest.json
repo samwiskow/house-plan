@@ -1,0 +1,26 @@
+{
+  "revision": "Design book / 02",
+  "pages": 16,
+  "model_sha256": "e9ba82a0d06f9a5dc9fdf48cd345643381566903169f32b0b4ffe5c548e5fa05",
+  "source_layout": "concept-24 snapshot / concept-25 whole-house proposal",
+  "book": "output/pdf/house-design-book.pdf",
+  "views": {
+    "arrival.png": "948493d4ca8903829fa84a666320066120b4f327a8394da17aa4f8bb06db2465",
+    "courtyard.png": "6e4c599fbe81fff449b12d6f390ab3475f1b442a89de62795732a8593448aa8f",
+    "dining.png": "8b66d3eebf248272de22d18381168d229767cb294c038696b460b9051ae14083",
+    "evening-court.png": "2a0ce6ec2ed7f9114a8a941eeeed45924c9f51f45bc2366cf0b918b5a722fc10",
+    "evening.png": "0e1cdee9c1763ef2d567a67a3ea1f105d295fb5f3118d27ce5ac722541a35d3c",
+    "garden.png": "182d72f097b2f0bb3f453e0062ccf572aa2ed09813b45a242c689044892d8f10",
+    "library.png": "9b3ff3596dacf74b700c3576018d4f285c07bec0e1f014b9cb84df61825311e4",
+    "living.png": "9b6d5c819cd07505c6c1d6dc0504819b859138f69415c3b2e11650a2b62695b4",
+    "office.png": "82dc303edd95b5fdf71771f42f5e1cb34afa3a9ab235d0e97e77595dabf25d56",
+    "overview.png": "b8ed40708f32f68636e010df2a6f7c221f1febfc52d0367465827b318d5af5a1",
+    "plan.png": "d1e1b5e2f3fef47f06668e797f6a82660f406148fb872ede400e3631087f3acf"
+  },
+  "limitations": [
+    "Concept design, not construction documentation",
+    "Roof and joinery heights are illustrative study dimensions",
+    "Plot and budget are not defined",
+    "Ventilation recommendation remains unselected"
+  ]
+}

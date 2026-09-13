@@ -1,9 +1,123 @@
 # Courtyard house: services brief
 
-12 September 2026 · Draft for household input and design coordination
+13 September 2026 · Current requirements and system recommendations
 
 This brief defines performance and space requirements. It does not select
 plant capacity, products or an installation layout.
+
+## Concept 27: measured ventilation alternatives
+
+The five-sheet `output/pdf/concept-27-measured-ventilation-layouts.pdf` compares
+central and two-local-unit layouts against the concept 25 model. Both are
+conditional proposals, not a selected ventilation installation.
+
+- **A, central:** one unit in the rear plant room, with a 13.05 m cross-house
+  duct enclosure between the halls. The test enclosure projects 0.65 m into the
+  shared room and is 0.35 m deep, underside +2.70 m. It includes two illustrative
+  200 mm ducts with 25 mm radial insulation and explicit packing allowances.
+  These are not calculated duct sizes. Turns, roof structure and headers remain
+  unresolved. The proposed 2.05 m linen run assumes complete plant relocation.
+- **B, local:** a rear unit and a family unit in a 0.80 x 1.42 m service bay at
+  the external-wall end of ST. The unit faces along the cupboard, preserving a
+  1.00 m front maintenance reservation and a 1.25 m linen run. Compared with A,
+  this loses 0.80 m shelf run / 1.80 m2 nominal five-level shelf surface. It still
+  exceeds the current 0.90 m linen proposal, subject to acoustic lining, other
+  plant / UFH manifolds and selected connections.
+
+**B is recommended for further design to protect the vault.** A family-side
+unit has not been accepted by the household; its bedroom-noise and storage
+trade-off remains explicit. Both alternatives pass 56 sampled daytime routes,
+including the modified linen approaches. Front service rectangles clear fixed
+items, and the open interior plant door clears the connected plant routes.
+Other room geometry, furniture and existing office states are retained.
+
+The shared-room allocation is refined from concept 26: the family system also
+supplies the living end from its wing boundary. The service system supplies
+dining / garden as well as its rooms, with kitchen extract routed through the
+pantry side. This avoids a through-running family ventilation trunk in B, but
+local outlet throw, mixing, noise and header fit must be proven. Short shared
+branches may still be needed. No claim of invisible or fully sized ducts is made.
+
+Roof intake / exhaust points reserve 2.10 m rear and 2.00 m family separation in
+plan only. Height, windows, flues, PV, wind and selected-terminal requirements
+remain to coordinate. Unit body / access examples use manufacturer dimensions;
+ancillary, silencer, manifold and bend zones are study allowances. Full 3D fit,
+pressure losses, airflow and acoustic design remain outstanding.
+
+Concept 25 stays the latest whole-house geometry. Concept 27 stores alternatives
+separately and does not adopt a cupboard, new roof penetration or larger linen
+capacity. Rebuild with `ventilation_layout_study.py`; its snapshot records the
+geometry provenance, access checks, shelf calculation and candidate route lengths.
+
+## Concept 26: underfloor preference and coordinated systems
+
+On 13 September the user confirmed **underfloor heating for everyday winter
+comfort**. The recommended architecture is wet UFH plus a cylinder served by
+an air-to-water heat pump, with independent air-to-air cooling for the wings.
+This normally adds an air-to-water outdoor unit to the two starting cooling
+units; shared-space capacity / connections may require further cooling equipment.
+No final outdoor count, capacity, cylinder volume or product is selected.
+
+Develop two balanced MVHR systems as the first routing study, compared against
+one central system with a proven cross-house duct section. The two-system
+approach would need an accessible acoustic cupboard on the family side, likely
+using some of ST. This is a proposal with a linen-space and bedroom-noise trade-off,
+not household approval to return plant to that wing. Central MVHR keeps its
+main equipment at the service end but still needs supply and extract routes.
+
+Start hot-water design with one correctly sized service-end store; compare
+insulated direct distribution with a controlled return. A local family store
+remains a fallback. Two 16 L/min showers for ten minutes use 320 L mixed water;
+an illustrative 55 C store / 10 C cold / 40 C mixed calculation gives 213 L
+ideal hot draw before unusable volume, losses or recovery. This does not select
+a 213 L or 230 L cylinder. Supply pressure / flow and repeat guest use matter.
+The temperatures are arithmetic assumptions, not specified control setpoints.
+
+See `output/pdf/concept-26-heating-hot-water-and-ventilation.pdf` for the four-page
+comparison, room duties, demand examples and primary sources. Its JSON records
+transparent formula results and the unchanged concept 25 geometry reference.
+Concept 27 now compares ventilation cupboards and route sections. The next
+coordination should prove local outlet reach and noise, then resolve plant
+access, the rear roof, snug rooflight and outdoor units.
+
+## Revised direction: garden-side plant and separate wing cooling
+
+The arrival-side plant projection in concept 17 B is declined. Concept 22 tests
+an extension behind the gym, toward the garden / south (up on the plan), with
+internal access through the gym and a separate external service door. It adds
+13.05 m2 net footprint and gives 4.00 x 2.65 m clear plant space. Existing room
+polygons remain unchanged. The rack and dumbbells move; D18 shifts 0.60 m to
+clear them. Treadmill / bench positions and all equipment body sizes are retained.
+The provisional treadmill rear reservation remains clear. Exercise movement,
+barbell handling and selected equipment clearances still need verification.
+
+The extension covers the snug's west window. Concept 22 replaces it with a
+1.10 x 1.10 m rooflight reservation. Concept 24 updates the snug furniture. Blackout, daylight,
+solar gain, opening / controls, roof structure, drainage and noise need design.
+This is a proposal, not a selected rooflight or a claim of equivalent daylight.
+The new plant leading edge is 0.25 m beyond the office window's plan extent;
+roof edges, daylight and shading at that window require coordination.
+
+Cooling direction: separate multi-split systems for the family and guest / service
+wings. Each closed room needs suitable delivery; the shared / garden space is a
+separate load and control zone whose outdoor-system allocation remains open.
+Two outdoor units are a starting idea, not a sized equipment count. The prior
+cross-vault cooling duct band is no longer assumed. Refrigerant, power and
+condensate routes remain to design. MVHR / fresh-air ventilation is separate and
+its distribution is unresolved.
+
+Ordinary air-to-air systems usually do not provide tap water; combined products
+exist. Compare a service-end cylinder / separate heat pump with a combined
+system against the two simultaneous rain-shower requirement. Local family-side
+storage is a fallback with space and maintenance costs. Hot-water pipes may use
+floor / service construction, subject to build-up and routing design. Wet underfloor heating is now the confirmed winter preference;
+concept 26 develops the associated heating and hot-water architecture. No capacity or performance result is claimed.
+
+See `output/pdf/concept-22-garden-plant-and-wing-services.pdf` (six A3 pages),
+`garden_plant_study.py` and concept-22-study-check.json. All 54 sampled routes,
+room-door sweeps and the new routes around the open internal plant door pass.
+The existing family plant placeholder remains until relocation is accepted
+and the complete package is sized. The old arrival-side study is historical.
 
 ## Established requirements
 
@@ -13,6 +127,10 @@ plant capacity, products or an installation layout.
   Visiting family may include grandparents, aunt, uncle and cousins. The user
   estimates four or five overnight guests: use five as the upper planning
   allowance, ten people total, rather than assuming ten permanent residents.
+  On 13 September the user agreed to an occasional office sofa bed and visiting
+  children sharing beds. The five-guest example is two people in the guest room,
+  two in the office and one visiting child sharing a child-room bed.
+  Do not interpret this as provision for five adult guests.
 - Open, year-round garden room with extensive roof glazing; continuous shared
   room vault and lower wing roofs. Protect usable ceiling heights and roof form
   when developing ducts and pipe routes.
@@ -67,7 +185,21 @@ is required or which of the listed rooms to include.
 Unknown site and supply details do not prevent a preliminary comparison, but
 must remain explicit assumptions rather than settled design inputs.
 
-## Location comparison to develop
+## Historical location comparison: concept 17
+
+The measured comparison is now in
+`output/pdf/concept-17-service-end-comparison.pdf`. A retains side-by-side
+machines but loses sorting drawers and reduces folding to 0.65 m. B tests a
+12.22 m2 extension of the gym block with 9 m2 clear plant space, preserving the
+full gym and laundry. B was recommended at that stage and is now declined. Both use
+provisional equipment / service allowances; neither is a sized installation.
+
+`output/pdf/concept-21-building-coordination.pdf` adds candidate distribution
+routes and a section of the unresolved crossing to the family wing. A visible
+services band is a proposal for review. The example hot-water route is 35.25 m
+in plan before verticals and fittings. No thermal or hydraulic result follows.
+
+### Comparison criteria retained
 
 | Option | What the current plan tells us | What the measured study must test |
 | --- | --- | --- |
@@ -129,7 +261,6 @@ for examples of heat-pump cooling emitters; this is not a product selection.
 ## Drawing status
 
 The concept 16 PDF is preserved as a historical declined option. Its numerical
-checks apply to that old scenario only. Start the next measured comparison from
-concept 15, retaining its plant reservation, selected parents-suite A, full gym
-and D19. No new room boundary, roof, plant location or linen capacity is adopted
-by this brief.
+checks apply to that old scenario only. Concept 25 is the latest measured whole-house proposal, retaining
+the selected parents-suite A, full gym and D19. Concept 26 changes system
+direction only; it does not revise room geometry or select equipment.

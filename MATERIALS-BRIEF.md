@@ -215,7 +215,7 @@ as independently approved finishes for every room.
 | Worktop material | Appearance and edge direction are agreed; no material or product has been selected. | Compare samples for appearance, texture and practical use. |
 | Exterior materials | Stone wings and a timber family area are the working direction. Exact distribution, stone, timber and roofing remain open. | Resolve elevations and junctions; compare actual samples and expected weathering, particularly any greying of timber. |
 | Log burner | A modern log burner is wanted within the existing lounge arrangement. Fit has not been demonstrated. | Coordinate appliance, hearth, heat output, clearances, air supply, flue and roof structure. |
-| Other rooms | Concept 12 proposes arrival / utility joinery; concept 13 develops the snug for TV, films and reading. | Parents-suite A is selected; concept 15 proposes children, family bath and linen. |
+| Other rooms | Concept 12 proposes arrival / utility joinery; concept 24 develops the snug as a library with TV provision. | Parents-suite A is selected; concept 15 proposes children, family bath and linen. |
 
 For the stove, the preliminary location to investigate is the family-wing end
 of the existing TV/media wall, beside the television. The discussion suggested
@@ -283,22 +283,26 @@ pocket-door cavities remain reserved. Cabinet divisions and shelf heights are
 proposals; check countertop appliances, hardware and electrical access before
 manufacture. The layout is awaiting review; the laundry preference is confirmed.
 
-## Snug: concept 13 (proposal)
+## Snug: library direction, concept 24
 
-The confirmed use is **TV and films, with room to read**, superseding the earlier
-reading / play emphasis. Retain the enclosed 4.58 x 2.60 m room and its window.
-`output/pdf/concept-13-snug.pdf` proposes a 2.30 m sofa facing a low-mounted
-55-inch TV allowance, surrounded by shallow honey-oak / warm-ivory storage.
-The screen size is provisional; coordinate actual eye height, mount and cables.
-Use closed storage below, books at either side, a movable upholstered footstool
-and a small side table. Keep the window approach open and use a recess blind
-for film viewing, subject to window hardware and blind selection.
+The user wants an **antique-library feeling, floor-to-ceiling books and space
+for a TV**. This supersedes concept 13's TV-led room and low oak / ivory storage.
+Concept 24 proposes a 4.58 m full-height dark-timber bookcase with a central TV
+recess and a 2.25 m return on the former window wall. Framed lower cupboards,
+a modest cornice and warm bronze reading lights establish the character.
+Walnut-stained oak, warm cream / subdued moss walls and wool upholstery are
+proposed finishes, not selected products. Joinery height is provisionally 2.60 m.
 
-Propose an olive / moss sofa, fitted wool-rich carpet and bronze reading lights.
-These extend the palette but are not selected products or approved finishes.
-Separate low ambient light for films, local reading lights and general light
-for everyday use. Check screen reflections and actual output; no lighting or
-acoustic calculation is claimed. The room geometry and door stay unchanged.
+The 2.30 m sofa shifts 0.30 m, preserving a nominal 0.80 m passage at its end.
+Retain the footstool and move the side table to the entrance side. The TV has
+an indicative 55-inch allowance, with books beside and above; confirm equipment,
+viewing height, power / data, cooling and maintenance access. Shelves and fixings
+need design for the book loads; plan occasional access to the highest shelves.
+
+The garden-side plant proposal replaces the snug window with a 1.10 m-square
+rooflight reservation. Coordinate structure, daylight, solar gain, shading,
+controls and cleaning. The shared plant wall needs acoustic construction;
+books do not establish sound isolation. Room dimensions and the door are retained.
 
 ## Parents' suite: concept 14 (proposal)
 
@@ -342,6 +346,13 @@ Retain the linen cupboard's existing plant placeholder until services are sized.
 Only a 0.90 m-wide x 0.45 m-deep, five-level linen unit is proposed. Its capacity
 is modest; equipment and maintenance space may reduce it further. Do not order
 joinery or relocate equipment based on this footprint exercise.
+
+## Winter comfort preference confirmed, 13 September
+
+The user prefers underfloor heating for everyday winter comfort. Concept 26
+recommends wet floors and a hot-water cylinder served by an air-to-water heat
+pump, alongside independent wing cooling. Floor finishes and underfloor output
+must be coordinated. Ventilation layout and equipment sizing remain open.
 
 ## Services requirements confirmed, 12 September
 

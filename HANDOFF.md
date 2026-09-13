@@ -1,6 +1,157 @@
 # House design handoff
 
-## Current task: service-end plant and services brief
+## Latest measured comparison: concept 27
+
+See the five-page `concept-27-measured-ventilation-layouts.pdf` and the current
+SERVICES-BRIEF.md. Two local units are recommended for further design, not
+selected. B leaves a conditional 1.25 m linen run, versus 2.05 m for A with a
+13.05 m cross-vault enclosure. Shared living supply is now allocated to the
+family system, avoiding the earlier assumption that all shared-room supply
+comes from the rear. Local throw and acoustics remain to prove. Both alternatives
+pass 56 daytime routes; all five pages rendered and inspected. Worktree / branch
+`codex/measured-ventilation-layouts`; no remote and main unchanged.
+
+
+## Latest services study: concept 26
+
+Wet underfloor winter heating is now confirmed. Concept 26 recommends a
+separate air-to-water / cylinder system and wing cooling, and compares central
+MVHR against two local systems. A family-side MVHR cupboard is a conditional
+proposal, not accepted relocation. The study includes transparent shower and
+pipe-volume examples; these are not equipment sizing. All four A3 pages checked.
+Concept 25 remains the current geometry. Worktree / branch:
+`codex/heating-ventilation-options`; no remote configured and main unchanged.
+
+
+## Latest consolidated proposal: concept 25
+
+Start with `output/pdf/concept-25-revised-whole-house-plan.pdf` and
+DESIGN-REVIEW.md. Concepts 22-24 provide the plant/services, two-workspace office
+and library details. Earlier concept 17 B is declined; concepts 18 / 20 / 21
+are historical wherever these revisions supersede them. The final local branch
+is `codex/revised-house-plan`; main remains unchanged and no remote is configured.
+The revised model has 26 rooms and 56 passing sampled routes in each of three
+office states. All 16 new A3 pages were rendered and visually inspected.
+
+
+## Revised snug: antique library character
+
+Concept 24 (`output/pdf/concept-24-library-snug.pdf`) replaces the low storage
+with a 4.58 m full-height library wall, central TV recess and 2.25 m return
+on the former window wall. Dark timber, framed cupboards, a cornice and warm
+reading lights establish the proposed antique-library character. The 2.30 m
+sofa moves 0.30 m, retaining a nominal 0.80 m passage to the return shelves.
+The garden-side plant and rooflight reservation remain. All 56 sampled routes
+pass in both office work states and the overnight state. Joinery height,
+book loads, TV, lighting and rooflight remain to detail and select.
+
+
+## Revised office: two permanent setups
+
+Concept 23 (`output/pdf/concept-23-two-workspace-office.pdf`) provides a
+1.60 x 0.75 m professional desk and 1.80 x 0.75 m personal desk for one person
+switching between setups. One chair has two tested work positions. Both desks
+stay in place when the sofa bed opens; the chair parks at the personal desk.
+Both sleepers can reach the door from the foot of the bed, with a nominal
+0.78 m gap. This supersedes concept 18's one-sided exit arrangement.
+All 54 routes pass in each of the two work states and the overnight state.
+The actual sofa mechanism, window access and equipment remain to select.
+
+
+## Revised direction: garden-side plant and separate wing cooling
+
+The arrival-side plant projection in concept 17 B is declined. Concept 22 tests
+an extension behind the gym, toward the garden / south (up on the plan), with
+internal access through the gym and a separate external service door. It adds
+13.05 m2 net footprint and gives 4.00 x 2.65 m clear plant space. Existing room
+polygons remain unchanged. The rack and dumbbells move; D18 shifts 0.60 m to
+clear them. Treadmill / bench positions and all equipment body sizes are retained.
+The provisional treadmill rear reservation remains clear. Exercise movement,
+barbell handling and selected equipment clearances still need verification.
+
+The extension covers the snug's west window. Concept 22 replaces it with a
+1.10 x 1.10 m rooflight reservation. Concept 24 updates the snug furniture. Blackout, daylight,
+solar gain, opening / controls, roof structure, drainage and noise need design.
+This is a proposal, not a selected rooflight or a claim of equivalent daylight.
+The new plant leading edge is 0.25 m beyond the office window's plan extent;
+roof edges, daylight and shading at that window require coordination.
+
+Cooling direction: separate multi-split systems for the family and guest / service
+wings. Each closed room needs suitable delivery; the shared / garden space is a
+separate load and control zone whose outdoor-system allocation remains open.
+Two outdoor units are a starting idea, not a sized equipment count. The prior
+cross-vault cooling duct band is no longer assumed. Refrigerant, power and
+condensate routes remain to design. MVHR / fresh-air ventilation is separate and
+its distribution is unresolved.
+
+Ordinary air-to-air systems usually do not provide tap water; combined products
+exist. Compare a service-end cylinder / separate heat pump with a combined
+system against the two simultaneous rain-shower requirement. Local family-side
+storage is a fallback with space and maintenance costs. Hot-water pipes may use
+floor / service construction, subject to build-up and routing design. Winter
+heating (retained wet UFH versus air-to-air or a defined combination) remains a
+key system decision. No capacity or performance result is claimed.
+
+See `output/pdf/concept-22-garden-plant-and-wing-services.pdf` (six A3 pages),
+`garden_plant_study.py` and concept-22-study-check.json. All 54 sampled routes,
+room-door sweeps and the new routes around the open internal plant door pass.
+The existing family plant placeholder remains until relocation is accepted
+and the complete package is sized. The old arrival-side study is historical.
+
+
+
+## Historical first development package (concepts 17-21)
+
+Concepts 17-21 cover the service-end comparison, office / guests, everyday-use
+review, consolidated whole-house plan and preliminary building coordination.
+Start with DESIGN-REVIEW.md and concept 20. All PDFs were rendered and inspected.
+No plant location or visible services band is selected. The office sofa-bed
+one-sided exit and ten-at-one-table dining remain decisions for review.
+The current plant reservation stays in place. Actual site, equipment sizing,
+roof structure and energy calculations remain work for the design team.
+
+
+## Current full-plan reference: concept 20
+
+Use output/pdf/concept-20-current-whole-house-plan.pdf for the current furnished
+development plan, room schedule and decision register. Concept 07 is now an
+earlier full-plan export. The consolidated drawing retains the original plant
+reservation and eight dining chairs; neither a plant option nor ten-place
+dining has been adopted. Office shown in day mode; concept 18 records night use.
+
+
+## Current development: concept 19 everyday-use review
+
+Twelve scenarios record occupied-space conflicts and passing alternatives.
+Most significant unresolved preference: ten dining together versus eight at the
+table plus island seating. No new furniture is adopted by this review.
+Use the source-checked concept 18 snapshot through development_model.py for the
+whole-house consolidation. See README and concept-19-study-check.json.
+
+
+## Current development: concept 18 office and guests
+
+Four A3 sheets compare daytime work and occasional sleeping, then develop the
+guest bed / shower. The office bed has an entry-side route only; its far-side
+sleeper crosses the mattress. This is an explicit proposal for review. The
+user accepts an occasional office sofa bed and visiting children sharing beds.
+See README and concept-18-study-check.json. No room boundaries change.
+
+
+## Current development: concept 17 service-end comparison
+
+13 September: comparison produced in `service_end_study.py` and the four-page
+`output/pdf/concept-17-service-end-comparison.pdf`. B extends the existing gym
+block northward, adding 12.22 m2 footprint / 9 m2 clear plant space. It preserves
+the gym and laundry; A loses sorting drawers and most folding space, and does
+not yet accommodate an equivalent full package. B is recommended, not selected.
+Keep the family-wing plant placeholder until relocation is accepted and designed.
+
+User has now approved studying an occasional office sofa bed. Visiting children
+may share beds. Develop a five-guest occupancy example without assuming a
+standard sofa bed sleeps three adults.
+
+## Prior direction: service-end plant and services brief
 
 12 September: user declined the family-wing annexe from concept 16. Investigate
 plant in the laundry and/or an extension of the gym block, away from bedrooms.
