@@ -1,5 +1,47 @@
 # House design handoff
 
+## Revised direction: garden-side plant and separate wing cooling
+
+The arrival-side plant projection in concept 17 B is declined. Concept 22 tests
+an extension behind the gym, toward the garden / south (up on the plan), with
+internal access through the gym and a separate external service door. It adds
+13.05 m2 net footprint and gives 4.00 x 2.65 m clear plant space. Existing room
+polygons remain unchanged. The rack and dumbbells move; D18 shifts 0.60 m to
+clear them. Treadmill / bench positions and all equipment body sizes are retained.
+The provisional treadmill rear reservation remains clear. Exercise movement,
+barbell handling and selected equipment clearances still need verification.
+
+The extension covers the snug's west window. Concept 22 replaces it with a
+1.10 x 1.10 m rooflight reservation, retaining snug furniture. Blackout, daylight,
+solar gain, opening / controls, roof structure, drainage and noise need design.
+This is a proposal, not a selected rooflight or a claim of equivalent daylight.
+The new plant leading edge is 0.25 m beyond the office window's plan extent;
+roof edges, daylight and shading at that window require coordination.
+
+Cooling direction: separate multi-split systems for the family and guest / service
+wings. Each closed room needs suitable delivery; the shared / garden space is a
+separate load and control zone whose outdoor-system allocation remains open.
+Two outdoor units are a starting idea, not a sized equipment count. The prior
+cross-vault cooling duct band is no longer assumed. Refrigerant, power and
+condensate routes remain to design. MVHR / fresh-air ventilation is separate and
+its distribution is unresolved.
+
+Ordinary air-to-air systems usually do not provide tap water; combined products
+exist. Compare a service-end cylinder / separate heat pump with a combined
+system against the two simultaneous rain-shower requirement. Local family-side
+storage is a fallback with space and maintenance costs. Hot-water pipes may use
+floor / service construction, subject to build-up and routing design. Winter
+heating (retained wet UFH versus air-to-air or a defined combination) remains a
+key system decision. No capacity or performance result is claimed.
+
+See `output/pdf/concept-22-garden-plant-and-wing-services.pdf` (six A3 pages),
+`garden_plant_study.py` and concept-22-study-check.json. All 54 sampled routes,
+room-door sweeps and the new routes around the open internal plant door pass.
+The existing family plant placeholder remains until relocation is accepted
+and the complete package is sized. The old arrival-side study is historical.
+
+
+
 ## 13 September development package complete for review
 
 Concepts 17-21 cover the service-end comparison, office / guests, everyday-use

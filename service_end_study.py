@@ -167,7 +167,7 @@ for y,label,url in [(218,'Vaillant cylinder dimensional reference','https://prof
 text(20,253,'Next decision: select a location direction after reviewing the added volume and laundry compromise.',3.2,True)
 m.c.showPage();m.c.save()
 (OUT/'concept-17-study-check.json').write_text(json.dumps({
- 'status':'Comparison for review; no option adopted','recommended_for_development':'B',
+ 'status':'Historical comparison; arrival-side B declined; see concept 22','recommended_for_development':None,
  'A':{'furniture':A_ITEMS,'service_floor':A_SERVICE,'issues':A_ISSUES,'full_package_resolved':False,'folding_width_m':.65,'sorting_drawers_retained':False},
  'B':{'outer':EXT_OUTER,'clear':EXT_CLEAR,'added_footprint_m2':12.22,'clear_area_m2':9,'equipment':B_ITEMS,'service_floor':B_SERVICE,'internal_routes':B_ROUTES,'door':EXT_DOOR.__dict__},
  'retained_house_route_count':len(BASE_ROUTES),'gym_unchanged':True,'house_geometry_unchanged':True,'linen_conversion_adopted':False,

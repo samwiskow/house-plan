@@ -1,6 +1,6 @@
 {
-  "status": "Comparison for review; no option adopted",
-  "recommended_for_development": "B",
+  "status": "Historical comparison; arrival-side B declined; see concept 22",
+  "recommended_for_development": null,
   "A": {
     "furniture": [
       [
@@ -199,7 +199,8 @@
       "side": 1,
       "pocket_direction": 1,
       "thickness": 0.35
-    }
+    },
+    "status": "Arrival-side location declined"
   },
   "retained_house_route_count": 40,
   "gym_unchanged": true,
