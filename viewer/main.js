@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const model = await fetch('./model.json').then(r => { if (!r.ok) throw Error('House model could not be loaded'); return r.json(); });
-const renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
 renderer.setSize(innerWidth,innerHeight);
 renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.shadowMap.enabled=true;
@@ -21,7 +21,7 @@ orbit.enableDamping=true;orbit.dampingFactor=.12;orbit.minDistance=.25;orbit.max
 const hemisphere=new THREE.HemisphereLight('#fffcf1','#777765',1.05);scene.add(hemisphere);
 const sun=new THREE.DirectionalLight('#fff1d0',2.15);
 sun.position.set(-14,30,-18);sun.target.position.set(13,0,9);scene.add(sun,sun.target);
-sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-30;sun.shadow.camera.right=30;sun.shadow.camera.top=30;sun.shadow.camera.bottom=-30;sun.shadow.camera.far=100;sun.shadow.normalBias=.045;sun.shadow.bias=-.0002;
+sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-30;sun.shadow.camera.right=30;sun.shadow.camera.top=30;sun.shadow.camera.bottom=-30;sun.shadow.camera.far=100;sun.shadow.normalBias=.045;sun.shadow.bias=-.0002;
 const building=new THREE.Group(), roofs=new THREE.Group(), ceilings=new THREE.Group(), furnishing=new THREE.Group(), outdoor=new THREE.Group(), lights=new THREE.Group();
 scene.add(building,roofs,ceilings,furnishing,outdoor,lights);
 const palette=model.palette;
@@ -87,7 +87,8 @@ function mat(name,transparent=false){
     const options={color:palette[name]||name,roughness:transparent?.16:profile.roughness??.8,metalness:name==='bronze'?.62:0,side:THREE.DoubleSide,transparent,opacity:transparent?.28:1,depthWrite:!transparent,...profile};
     if(profile.normalMap)options.normalScale=new THREE.Vector2(.12,.12);
     if(name==='glass')Object.assign(options,{roughness:.1,metalness:.02,transmission:.45,ior:1.45,thickness:.04,envMapIntensity:.65});
-    materials.set(key,new THREE.MeshPhysicalMaterial(options));
+    const Material=name==='glass'?THREE.MeshPhysicalMaterial:THREE.MeshStandardMaterial;
+    materials.set(key,new Material(options));
   }
   return materials.get(key);
 }
@@ -95,14 +96,14 @@ function box(rect,bottom,top,material,parent=building){
   const [x,z,w,d]=rect;
   if(top<=bottom||w<=0||d<=0)return;
   const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,top-bottom,d),mat(material,material==='glass'));
-  mesh.position.set(x+w/2,(bottom+top)/2,z+d/2);mesh.castShadow=material!=='glass';mesh.receiveShadow=true;parent.add(mesh);return mesh;
+  mesh.position.set(x+w/2,(bottom+top)/2,z+d/2);mesh.castShadow=material!=='glass'&&parent!==lights;mesh.receiveShadow=true;parent.add(mesh);return mesh;
 }
 function roundedBox(rect,bottom,top,material,parent=building,radius=.045){
   const [x,z,w,d]=rect;if(top<=bottom||w<=0||d<=0)return;
   const r=Math.min(radius,w/2-.005,d/2-.005,(top-bottom)/2-.005),shape=new THREE.Shape();
   shape.moveTo(-w/2+r,-d/2);shape.lineTo(w/2-r,-d/2);shape.quadraticCurveTo(w/2,-d/2,w/2,-d/2+r);shape.lineTo(w/2,d/2-r);shape.quadraticCurveTo(w/2,d/2,w/2-r,d/2);shape.lineTo(-w/2+r,d/2);shape.quadraticCurveTo(-w/2,d/2,-w/2,d/2-r);shape.lineTo(-w/2,-d/2+r);shape.quadraticCurveTo(-w/2,-d/2,-w/2+r,-d/2);
   const geometry=new THREE.ExtrudeGeometry(shape,{depth:top-bottom,bevelEnabled:true,bevelSegments:2,steps:1,bevelSize:r*.45,bevelThickness:r*.45});geometry.rotateX(-Math.PI/2);geometry.translate(x+w/2,bottom,z+d/2);
-  const mesh=new THREE.Mesh(geometry,mat(material,material==='glass'));mesh.castShadow=material!=='glass';mesh.receiveShadow=true;parent.add(mesh);return mesh;
+  const mesh=new THREE.Mesh(geometry,mat(material,material==='glass'));mesh.castShadow=material!=='glass'&&parent!==lights;mesh.receiveShadow=true;parent.add(mesh);return mesh;
 }
 function contactPatch(rect,opacity=.12,parent=building){
   const [x,z,w,d]=rect;const mesh=new THREE.Mesh(new THREE.CircleGeometry(.5,32),new THREE.MeshBasicMaterial({color:'#4f493e',transparent:true,opacity,depthWrite:false}));
@@ -113,7 +114,7 @@ function face(vertices,material,parent=building){
   const coords=[];
   for(let i=1;i<vertices.length-1;i++)for(const [x,z,y] of [vertices[0],vertices[i],vertices[i+1]])coords.push(x,y,z);
   shape.setAttribute('position',new THREE.Float32BufferAttribute(coords,3));shape.computeVertexNormals();
-  const mesh=new THREE.Mesh(shape,mat(material,material==='glass'));mesh.receiveShadow=true;mesh.castShadow=material!=='glass';parent.add(mesh);return mesh;
+  const mesh=new THREE.Mesh(shape,mat(material,material==='glass'));mesh.receiveShadow=true;mesh.castShadow=material!=='glass'&&parent!==ceilings;parent.add(mesh);return mesh;
 }
 function flat(points,height,material,parent=building,holes=[]){
   const shape=new THREE.Shape(points.map(([x,z])=>new THREE.Vector2(x,-z)));
@@ -304,25 +305,25 @@ model.furniture.forEach(f=>makeFurniture(f));
 model.outdoorFurniture.forEach(f=>makeFurniture(f,outdoor));
 function makeShrub(x,z,scale=1,variant=0,parent=outdoor){
   const group=new THREE.Group();group.position.set(x,.08,z);parent.add(group);
-  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.018*scale,.028*scale,.34*scale,7),mat('darkOak'));stem.position.y=.17*scale;stem.castShadow=true;group.add(stem);
+  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.018*scale,.028*scale,.34*scale,7),mat('darkOak'));stem.position.y=.17*scale;stem.castShadow=false;group.add(stem);
   for(let i=0;i<3;i++){
     const leaf=new THREE.Mesh(new THREE.IcosahedronGeometry(.23*scale,1),mat(i===variant%3?'leaf':'green'));
-    leaf.position.set((i-1)*.13*scale,.34*scale+(i%2)*.08*scale,(variant%2?-.05:.05)*scale);leaf.scale.set(.9+(i%2)*.2,1.15,.8);leaf.castShadow=true;group.add(leaf);
+    leaf.position.set((i-1)*.13*scale,.34*scale+(i%2)*.08*scale,(variant%2?-.05:.05)*scale);leaf.scale.set(.9+(i%2)*.2,1.15,.8);leaf.castShadow=false;group.add(leaf);
   }
   return group;
 }
 function makeTree(x,z,scale=1,parent=outdoor){
   const group=new THREE.Group();group.position.set(x,0,z);parent.add(group);
-  const trunk=new THREE.Mesh(new THREE.CylinderGeometry(.11*scale,.18*scale,1.15*scale,9),mat('darkOak'));trunk.position.y=.58*scale;trunk.castShadow=true;group.add(trunk);
+  const trunk=new THREE.Mesh(new THREE.CylinderGeometry(.11*scale,.18*scale,1.15*scale,9),mat('darkOak'));trunk.position.y=.58*scale;trunk.castShadow=false;group.add(trunk);
   for(const [px,py,pz,s] of [[0,1.45,0,.62],[-.3,1.32,.08,.48],[.32,1.34,-.05,.5],[0,1.78,.02,.48]]){
-    const crown=new THREE.Mesh(new THREE.IcosahedronGeometry(s*scale,1),mat('leaf'));crown.position.set(px*scale,py*scale,pz*scale);crown.scale.set(1,.9,1);crown.castShadow=true;group.add(crown);
+    const crown=new THREE.Mesh(new THREE.IcosahedronGeometry(s*scale,1),mat('leaf'));crown.position.set(px*scale,py*scale,pz*scale);crown.scale.set(1,.9,1);crown.castShadow=false;group.add(crown);
   }
   return group;
 }
 function makeGrassClump(x,z,scale=1,parent=outdoor){
   const group=new THREE.Group();group.position.set(x,.04,z);parent.add(group);
   for(let i=0;i<5;i++){
-    const blade=new THREE.Mesh(new THREE.ConeGeometry(.018*scale,.28*scale,5),mat('green'));blade.position.set((i-2)*.04*scale,.14*scale,Math.sin(i)*.035*scale);blade.rotation.z=(i-2)*.18;blade.castShadow=true;group.add(blade);
+    const blade=new THREE.Mesh(new THREE.ConeGeometry(.018*scale,.28*scale,5),mat('green'));blade.position.set((i-2)*.04*scale,.14*scale,Math.sin(i)*.035*scale);blade.rotation.z=(i-2)*.18;blade.castShadow=false;group.add(blade);
   }
 }
 model.plantingBeds.forEach(({rect},i)=>{
@@ -344,7 +345,7 @@ for(const l of model.lights){
   if(l.kind==='pillar')box([x-.09,z-.09,.18,.18],.03,.75,'bronze',lights);
   if(l.kind==='linear')box(l.axis==='x'?[x-l.length/2,z-.025,l.length,.05]:[x-.025,z-l.length/2,.05,l.length],h,h+.035,'porcelain',lights);
   if(l.kind==='spot'){
-    const spot=new THREE.SpotLight('#fff2d6',1.8,5.5,Math.PI/7,.72,1.7);spot.position.set(x,h,z);spot.target.position.set(x,0,z);spot.castShadow=false;lights.add(spot,spot.target);taskLights.push(spot);
+    const spot=new THREE.SpotLight('#fff2d6',1.8,5.5,Math.PI/7,.72,1.7);spot.position.set(x,h,z);spot.target.position.set(x,0,z);spot.castShadow=false;spot.visible=false;lights.add(spot,spot.target);taskLights.push(spot);
   }
   if(l.kind==='chandelier'){
     box([x-.018,z-.018,.036,.036],h,4.4,'bronze',lights);
@@ -358,12 +359,12 @@ for(const l of model.lights){
   }
   if(l.kind==='ambient wall')box([x-.07,z-.07,.14,.14],h-.12,h+.12,'bronze',lights);
   if(l.kind==='pillar'||l.kind==='ambient wall'||l.kind==='chandelier'||l.kind==='wall path'||l.kind==='table lamp'||l.kind==='floor lamp'||l.kind==='wall reading'||l.kind==='portable'){
-    const point=new THREE.PointLight('#ffd59b',0,l.kind==='chandelier'?8:4,2);point.position.set(x,h+.12,z);lights.add(point);practical.push(point);
+    const point=new THREE.PointLight('#ffd59b',0,l.kind==='chandelier'?8:4,2);point.position.set(x,h+.12,z);point.visible=false;lights.add(point);practical.push(point);
   }
 }
 const interiorFill=[];
 for(const [x,z,h] of [[3,16,3],[8.5,15.6,3.6],[12.5,16.5,3.2],[14.5,11.8,2.4],[20,10.8,2.3],[20,7.5,2.4]]){
-  const light=new THREE.PointLight('#fff0d4',8,8,2);light.position.set(x,h,z);lights.add(light);interiorFill.push(light);
+  const light=new THREE.PointLight('#fff0d4',5,8,2);light.position.set(x,h,z);lights.add(light);interiorFill.push(light);
 }
 const views={
   overview:{position:[34,26,38],target:[13.5,0,9],title:'A house around a garden',note:'Low stone wings meet a taller timber shared room. Drag to orbit; scroll to move closer.'},
@@ -379,7 +380,7 @@ const views={
 let currentView='overview',night=false,walking=false,roofOn=true;
 const keys=new Set();
 function setRoof(value){roofOn=value;roofs.visible=value;ceilings.visible=value;document.querySelector('#roof-toggle').textContent=value?'Roof on':'Roof off';document.querySelector('#roof-toggle').setAttribute('aria-pressed',String(value));}
-function setNight(value){night=value;document.body.classList.toggle('night',value);scene.background.set(value?'#222f38':'#e6e5dc');scene.fog.color.copy(scene.background);scene.environmentIntensity=value?.12:.42;hemisphere.intensity=value?.22:1.05;sun.intensity=value?.06:2.15;practical.forEach(l=>l.intensity=value?7:0);taskLights.forEach(l=>l.intensity=value?3:.9);interiorFill.forEach(l=>l.intensity=value?8:8);document.querySelector('#light-toggle').textContent=value?'Evening':'Daylight';document.querySelector('#light-toggle').setAttribute('aria-pressed',String(value));}
+function setNight(value){night=value;document.body.classList.toggle('night',value);scene.background.set(value?'#222f38':'#e6e5dc');scene.fog.color.copy(scene.background);scene.environmentIntensity=value?.12:.42;hemisphere.intensity=value?.22:1.05;sun.intensity=value?.06:2.15;practical.forEach(l=>{l.visible=value;l.intensity=value?7:0;});taskLights.forEach(l=>{l.visible=value;l.intensity=value?3:0;});interiorFill.forEach(l=>l.intensity=value?8:5);document.querySelector('#light-toggle').textContent=value?'Evening':'Daylight';document.querySelector('#light-toggle').setAttribute('aria-pressed',String(value));}
 function setWalking(value){walking=value;orbit.enabled=!value;keys.clear();document.querySelector('#walk-toggle').textContent=value?'Stop walking':'Walk';document.querySelector('#walk-toggle').setAttribute('aria-pressed',String(value));if(value){if(camera.position.y>3)camera.position.set(17.8,1.65,17.4);camera.position.y=1.65;document.querySelector('#view-note').textContent='Drag to look. Use WASD or arrow keys to walk; click a door to open it. Escape stops walking.';}else{const direction=new THREE.Vector3();camera.getWorldDirection(direction);orbit.target.copy(camera.position).addScaledVector(direction,3);}}
 function setView(name){
   const view=views[name];currentView=name;setWalking(false);camera.position.set(...view.position);orbit.target.set(...view.target);if(!['living','dining','library','office'].includes(name))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)).add(orbit.target);camera.fov=name==='plan'?38:['living','dining','library','office'].includes(name)?65:48;camera.updateProjectionMatrix();orbit.update();setRoof(name!=='plan');
