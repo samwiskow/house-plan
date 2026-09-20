@@ -22,6 +22,7 @@ const hemisphere=new THREE.HemisphereLight('#fffcf1','#777765',1.05);scene.add(h
 const sun=new THREE.DirectionalLight('#fff1d0',2.15);
 sun.position.set(-14,30,-18);sun.target.position.set(13,0,9);scene.add(sun,sun.target);
 sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-30;sun.shadow.camera.right=30;sun.shadow.camera.top=30;sun.shadow.camera.bottom=-30;sun.shadow.camera.far=100;sun.shadow.normalBias=.045;sun.shadow.bias=-.0002;
+renderer.shadowMap.autoUpdate=false;renderer.shadowMap.needsUpdate=true;
 const building=new THREE.Group(), roofs=new THREE.Group(), ceilings=new THREE.Group(), furnishing=new THREE.Group(), outdoor=new THREE.Group(), lights=new THREE.Group();
 scene.add(building,roofs,ceilings,furnishing,outdoor,lights);
 const palette=model.palette;
@@ -378,18 +379,22 @@ const views={
   plan:{position:[13.575,35,9.21],target:[13.575,0,9.2],title:'The furnished plan',note:'Roof removed to see the layout. North is down; the courtyard opens south.'}
 };
 let currentView='overview',night=false,walking=false,roofOn=true;
+let renderRequested=true;
+const lastCameraPosition=new THREE.Vector3(Infinity,Infinity,Infinity),lastOrbitTarget=new THREE.Vector3(Infinity,Infinity,Infinity);
+function requestRender(){renderRequested=true;}
+orbit.addEventListener('change',requestRender);
 const keys=new Set();
-function setRoof(value){roofOn=value;roofs.visible=value;ceilings.visible=value;document.querySelector('#roof-toggle').textContent=value?'Roof on':'Roof off';document.querySelector('#roof-toggle').setAttribute('aria-pressed',String(value));}
-function setNight(value){night=value;document.body.classList.toggle('night',value);scene.background.set(value?'#222f38':'#e6e5dc');scene.fog.color.copy(scene.background);scene.environmentIntensity=value?.12:.42;hemisphere.intensity=value?.22:1.05;sun.intensity=value?.06:2.15;practical.forEach(l=>{l.visible=value;l.intensity=value?7:0;});taskLights.forEach(l=>{l.visible=value;l.intensity=value?3:0;});interiorFill.forEach(l=>l.intensity=value?8:5);document.querySelector('#light-toggle').textContent=value?'Evening':'Daylight';document.querySelector('#light-toggle').setAttribute('aria-pressed',String(value));}
-function setWalking(value){walking=value;orbit.enabled=!value;keys.clear();document.querySelector('#walk-toggle').textContent=value?'Stop walking':'Walk';document.querySelector('#walk-toggle').setAttribute('aria-pressed',String(value));if(value){if(camera.position.y>3)camera.position.set(17.8,1.65,17.4);camera.position.y=1.65;document.querySelector('#view-note').textContent='Drag to look. Use WASD or arrow keys to walk; click a door to open it. Escape stops walking.';}else{const direction=new THREE.Vector3();camera.getWorldDirection(direction);orbit.target.copy(camera.position).addScaledVector(direction,3);}}
+function setRoof(value){roofOn=value;roofs.visible=value;ceilings.visible=value;renderer.shadowMap.needsUpdate=true;requestRender();document.querySelector('#roof-toggle').textContent=value?'Roof on':'Roof off';document.querySelector('#roof-toggle').setAttribute('aria-pressed',String(value));}
+function setNight(value){night=value;document.body.classList.toggle('night',value);scene.background.set(value?'#222f38':'#e6e5dc');scene.fog.color.copy(scene.background);scene.environmentIntensity=value?.12:.42;hemisphere.intensity=value?.22:1.05;sun.intensity=value?.06:2.15;practical.forEach(l=>{l.visible=value;l.intensity=value?7:0;});taskLights.forEach(l=>{l.visible=value;l.intensity=value?3:0;});interiorFill.forEach(l=>l.intensity=value?8:5);requestRender();document.querySelector('#light-toggle').textContent=value?'Evening':'Daylight';document.querySelector('#light-toggle').setAttribute('aria-pressed',String(value));}
+function setWalking(value){walking=value;orbit.enabled=!value;keys.clear();requestRender();document.querySelector('#walk-toggle').textContent=value?'Stop walking':'Walk';document.querySelector('#walk-toggle').setAttribute('aria-pressed',String(value));if(value){if(camera.position.y>3)camera.position.set(17.8,1.65,17.4);camera.position.y=1.65;document.querySelector('#view-note').textContent='Drag to look. Use WASD or arrow keys to walk; click a door to open it. Escape stops walking.';}else{const direction=new THREE.Vector3();camera.getWorldDirection(direction);orbit.target.copy(camera.position).addScaledVector(direction,3);}}
 function setView(name){
-  const view=views[name];currentView=name;setWalking(false);camera.position.set(...view.position);orbit.target.set(...view.target);if(!['living','dining','library','office'].includes(name))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)).add(orbit.target);camera.fov=name==='plan'?38:['living','dining','library','office'].includes(name)?65:48;camera.updateProjectionMatrix();orbit.update();setRoof(name!=='plan');
+  const view=views[name];currentView=name;setWalking(false);camera.position.set(...view.position);orbit.target.set(...view.target);if(!['living','dining','library','office'].includes(name))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)).add(orbit.target);camera.fov=name==='plan'?38:['living','dining','library','office'].includes(name)?65:48;camera.updateProjectionMatrix();orbit.update();setRoof(name!=='plan');requestRender();
   document.querySelector('#view-title').textContent=view.title;document.querySelector('#view-note').textContent=view.note;
   document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));document.querySelector('#office-control').hidden=name!=='office';
 }
 function setOffice(mode){
   furnishing.children.filter(g=>g.userData.room==='O').forEach(g=>{g.traverse(o=>{if(o.geometry)o.geometry.dispose();});furnishing.remove(g);});
-  model.officeStates[mode].forEach(f=>makeFurniture(f));document.querySelector('#office-state').value=mode;
+  model.officeStates[mode].forEach(f=>makeFurniture(f));renderer.shadowMap.needsUpdate=true;requestRender();document.querySelector('#office-state').value=mode;
 }
 function canMove(x,z){
   if(x< -8||x>36||z< -12||z>28)return false;
@@ -398,22 +403,24 @@ function canMove(x,z){
 }
 let pointer=null;
 renderer.domElement.addEventListener('pointerdown',e=>{pointer={x:e.clientX,y:e.clientY,moved:0};});
-renderer.domElement.addEventListener('pointermove',e=>{if(!pointer)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;pointer.moved+=Math.abs(dx)+Math.abs(dy);pointer.x=e.clientX;pointer.y=e.clientY;if(walking){const angles=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');angles.y-=dx*.004;angles.x=THREE.MathUtils.clamp(angles.x-dy*.004,-1.35,1.35);camera.quaternion.setFromEuler(angles);}});
-renderer.domElement.addEventListener('pointerup',e=>{if(pointer&&pointer.moved<5){const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2(e.clientX/innerWidth*2-1,1-e.clientY/innerHeight*2),camera);const hit=ray.intersectObjects(building.children,true)[0];if(hit?.object.userData.door&&hit.distance<8){hit.object.userData.door.open=!hit.object.userData.door.open;}}pointer=null;});
+renderer.domElement.addEventListener('pointermove',e=>{if(!pointer)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;pointer.moved+=Math.abs(dx)+Math.abs(dy);pointer.x=e.clientX;pointer.y=e.clientY;if(walking){const angles=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');angles.y-=dx*.004;angles.x=THREE.MathUtils.clamp(angles.x-dy*.004,-1.35,1.35);camera.quaternion.setFromEuler(angles);requestRender();}});
+renderer.domElement.addEventListener('pointerup',e=>{if(pointer&&pointer.moved<5){const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2(e.clientX/innerWidth*2-1,1-e.clientY/innerHeight*2),camera);const hit=ray.intersectObjects(building.children,true)[0];if(hit?.object.userData.door&&hit.distance<8){hit.object.userData.door.open=!hit.object.userData.door.open;requestRender();}}pointer=null;});
 window.addEventListener('keydown',e=>{if(e.key==='Escape')setWalking(false);if(walking&&['w','a','s','d','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();keys.add(e.key);}});
 window.addEventListener('keyup',e=>keys.delete(e.key));window.addEventListener('blur',()=>keys.clear());
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
 document.querySelector('#roof-toggle').addEventListener('click',()=>setRoof(!roofOn));document.querySelector('#light-toggle').addEventListener('click',()=>setNight(!night));document.querySelector('#walk-toggle').addEventListener('click',()=>setWalking(!walking));document.querySelector('#office-state').addEventListener('change',e=>setOffice(e.target.value));
-window.addEventListener('resize',()=>{const old=Math.max(1,.95/camera.aspect);camera.aspect=innerWidth/innerHeight;if(!walking&&!['living','dining','library','office'].includes(currentView))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)/old).add(orbit.target);camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+window.addEventListener('resize',()=>{const old=Math.max(1,.95/camera.aspect);camera.aspect=innerWidth/innerHeight;if(!walking&&!['living','dining','library','office'].includes(currentView))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)/old).add(orbit.target);camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);requestRender();});
 const clock=new THREE.Clock();
 renderer.setAnimationLoop(()=>{
   const dt=Math.min(clock.getDelta(),.05);
-  doors.forEach(s=>{s.progress+=(Number(s.open)-s.progress)*Math.min(1,dt*8);if(s.sliding){s.group.position.copy(s.origin);s.group.position[s.data.vertical?'z':'x']+=s.data.width*s.progress*(s.data.kind==='pocket'?s.data.pocketDirection:.48);}else s.group.rotation.y=s.angle*s.progress;});
+  let animated=false;
+  doors.forEach(s=>{const previous=s.progress;s.progress+=(Number(s.open)-s.progress)*Math.min(1,dt*8);if(Math.abs(s.progress-previous)>.001){animated=true;renderer.shadowMap.needsUpdate=true;}if(s.sliding){s.group.position.copy(s.origin);s.group.position[s.data.vertical?'z':'x']+=s.data.width*s.progress*(s.data.kind==='pocket'?s.data.pocketDirection:.48);}else s.group.rotation.y=s.angle*s.progress;});
   if(walking){
     const forward=(keys.has('w')||keys.has('ArrowUp')?1:0)-(keys.has('s')||keys.has('ArrowDown')?1:0),side=(keys.has('d')||keys.has('ArrowRight')?1:0)-(keys.has('a')||keys.has('ArrowLeft')?1:0);
-    const direction=new THREE.Vector3();camera.getWorldDirection(direction);direction.y=0;direction.normalize();const right=new THREE.Vector3(-direction.z,0,direction.x),move=direction.multiplyScalar(forward).addScaledVector(right,side);if(move.lengthSq()>0)move.normalize().multiplyScalar(dt*2);if(canMove(camera.position.x+move.x,camera.position.z))camera.position.x+=move.x;if(canMove(camera.position.x,camera.position.z+move.z))camera.position.z+=move.z;
+    const direction=new THREE.Vector3();camera.getWorldDirection(direction);direction.y=0;direction.normalize();const right=new THREE.Vector3(-direction.z,0,direction.x),move=direction.multiplyScalar(forward).addScaledVector(right,side);if(move.lengthSq()>0){move.normalize().multiplyScalar(dt*2);if(canMove(camera.position.x+move.x,camera.position.z)){camera.position.x+=move.x;animated=true;}if(canMove(camera.position.x,camera.position.z+move.z)){camera.position.z+=move.z;animated=true;}}
   }else orbit.update();
-  renderer.render(scene,camera);
+  const cameraChanged=!camera.position.equals(lastCameraPosition)||!orbit.target.equals(lastOrbitTarget);
+  if(renderRequested||animated||cameraChanged){renderer.render(scene,camera);renderRequested=false;lastCameraPosition.copy(camera.position);lastOrbitTarget.copy(orbit.target);}
 });
 setView(new URLSearchParams(location.search).get('view')||'overview');
 document.querySelector('#status').textContent=`26 spaces · ${model.metadata.giaM2.toFixed(2)} m² internal envelope`;
