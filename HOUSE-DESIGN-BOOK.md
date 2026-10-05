@@ -49,6 +49,20 @@ over the main space and two smaller openings along the family hall. The existing
 library rooflight remains. These are concept openings, with product sizes, blinds,
 solar exposure and the PV layout still to coordinate.
 
+## Brief additions: 5 October 2026
+
+The user confirmed three further design preferences: genkan at the visitor and
+boot-room arrivals to keep outdoor footwear away from the clean interior;
+separate basin, bath / shower and WC areas for simultaneous family use; and
+shakkei, framing surrounding landscape through the garden and selected windows.
+Retain the original warm palette and house character. See
+[MATERIALS-BRIEF.md](MATERIALS-BRIEF.md#japanese-spatial-principles-confirmed-preference-5-october-2026)
+for requirements, proposed applications and checks still needed.
+
+These additions update the brief. Edition 02's PDF and browser model retain
+the previous geometry; the family bathroom layout needs a new study, and
+borrowed views need an actual site. A genkan floor step is not selected.
+
 ## Matters still open
 
 The roof and ceiling heights are carried-forward study dimensions. The low

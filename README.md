@@ -698,6 +698,13 @@ Python runtime as the rebuild command below. It does not regenerate concept 05.
 
 ## Agreed brief
 
+Further preferences confirmed on 5 October 2026: genkan at visitor and
+boot-room entrances; separate dry basin, bath / shower and WC areas for the
+family bathroom; and shakkei to frame useful scenery beyond the plot. See
+[MATERIALS-BRIEF.md](MATERIALS-BRIEF.md#japanese-spatial-principles-confirmed-preference-5-october-2026).
+These extend the brief; existing measured drawings, PDF and 3D model retain
+the earlier layout pending new studies.
+
 - Predominantly single-storey U around a sheltered courtyard, with a larger
   main garden. The H alternative was set aside because its arrival court was
   not a priority.

@@ -19,6 +19,76 @@ open decisions. It is not a product specification or construction document.
 The written decisions below take precedence over incidental details in the
 illustrations.
 
+## Japanese spatial principles: confirmed preference, 5 October 2026
+
+The user wants genkan, separate bathroom areas and shakkei to form part of the
+original design brief. Retain the warm Scandinavian / Japanese simplicity,
+French country texture, stone and timber, ivory, forest green and anti-grey
+palette. The principles below are confirmed preferences; their layout and
+construction remain to be designed. The current PDF and 3D model do not yet
+show these additions.
+
+### Genkan: keep outside dirt at the entrance
+
+Provide a clear boundary between outdoor footwear and the clean interior.
+Develop this at both the visitor entrance and the everyday boot-room entrance,
+so neither route needs shoes to be carried through the clean hall. Review
+courtyard / garden re-entry too, while retaining the continuous shared-room
+and garden-room floor.
+
+Propose an easy-clean arrival surface, a seat at the boundary, outdoor-shoe
+storage within reach and a dry place to stand in socks or indoor footwear.
+Keep wet coats and umbrellas on the arrival side. Test a family arriving
+together, a visitor changing shoes and access to storage without blocking doors.
+Use the existing warm buff floor, oak and ivory joinery direction.
+
+A level floor with a clear material boundary is the recommended starting point.
+A raised step is an open choice, not a requirement; check access for children,
+grandparents and anyone with limited mobility before selecting it.
+
+### Family bathroom: three separate areas
+
+Develop a dry area with two basins, an enclosed bath / shower room, and a
+separate enclosed WC. Retain the confirmed bath and generous separate shower.
+The purpose is simultaneous family use: someone can brush their teeth while
+another bathes and a third uses the toilet, with privacy for each activity.
+
+Propose access to the wet room and WC from a shared dry area or short lobby,
+without passing through an occupied private room. Keep basin access available
+when either private room is locked. Provide private changing space, dry towel
+storage and convenient handwashing after toilet use. Check these routes with
+all three areas occupied, including an adult helping a child bathe.
+
+This supersedes the single-room family bathroom arrangement as the target
+brief. The existing 3.03 x 2.68 m room has not been shown to fit three separate
+areas. Study partitions, doors and circulation first; record any extra area or
+impact on linen storage, equal child rooms and the parents' acoustic buffer.
+No room enlargement or adjacent-room change is selected by this preference.
+Coordinate drainage, waterproofing, ventilation and sound separation with the
+revised layout. Extending the principle to other bathrooms remains open.
+
+### Shakkei: borrow the surrounding landscape
+
+Compose selected views so the garden foreground connects visually with trees,
+landform or other useful scenery beyond the plot. A planted courtyard alone
+does not establish borrowed scenery. The actual site is still unknown, so no
+specific distant view is assumed.
+
+Start with seated views from dining and the garden room, where the selected
+plan has its strongest courtyard connection. Frame useful views with openings
+and planting; filter unwanted buildings and protect bedroom privacy. Assess
+seasonal foliage, mature planting height and the view from seated eye level.
+Retain the selected lounge position while checking its outer-facing views.
+
+For the next study, map real sightlines and show the garden foreground and
+borrowed background together. Coordinate window positions, planting, shading
+and lighting with those views before selecting changes.
+
+References for the principles:
+[genkan and footwear boundaries](https://www.japan-guide.com/e/e2001.html),
+[separate Japanese bathroom areas](https://blog.eu.toto.com/en/das-japanische-badezimmer-und-was-es-so-besonders-macht),
+and [shakkei architectural studies](https://www.shakkei.jp/en/).
+
 ## Agreed architecture and arrangement
 
 - **Baseline:** the single-storey U-shaped house, with concept 07 opening the
