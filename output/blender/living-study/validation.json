@@ -1,7 +1,11 @@
 {
   "retainedSourceObjects": 3098,
-  "furnitureCentresChecked": 13,
+  "unchangedFurnitureCentresChecked": 11,
   "chandelierShades": 6,
   "packedTextures": true,
-  "alternativesRetained": true
+  "alternativesRetained": true,
+  "gardenBifoldLeaves": 6,
+  "plantationShutterPanels": 8,
+  "gardenOpeningWidth": 5.8,
+  "coffeeTableClearanceAtLeast": 0.35
 }

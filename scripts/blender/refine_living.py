@@ -96,7 +96,14 @@ oatmeal=textured('Deep oatmeal woven upholstery','bdae95','terlenka',5,True)
 linen=textured('Cream linen upholstery','e4d7bd','terlenka',5,True)
 forest=textured('Forest green linen accent','34553e','terlenka',5,True)
 rust=textured('Muted tobacco accent','a27450','terlenka',5,True)
-rugmat=textured('Oatmeal flatwoven rug','d5c4a6','terlenka',3,True)
+rugmat=textured('Muted rust woven rug','994d3c','terlenka',3,True)
+panelpaint=material('Warm ivory painted panelling','d8cbb4',.66)
+shutterpaint=material('Ivory plantation shutters','eee4cf',.56)
+antique=textured('Aged oak dining table','8c603c','oak_veneer_02',1.2)
+n,l=antique.node_tree.nodes,antique.node_tree.links;p=n.get('Principled BSDF')
+base=p.inputs['Base Color'].links[0].from_socket
+mix=n.new('ShaderNodeMixRGB');mix.blend_type='MULTIPLY';mix.inputs[0].default_value=1;mix.inputs[2].default_value=(.47,.34,.22,1)
+l.new(base,mix.inputs[1]);l.new(mix.outputs[0],p.inputs['Base Color'])
 
 stone=material('Warm buff limestone-effect floor','d1c0a2',.74)
 n,l=stone.node_tree.nodes,stone.node_tree.links;p=n.get('Principled BSDF')
@@ -165,7 +172,7 @@ for o in list(bpy.data.objects):
         for mod in o.modifiers:
             if mod.type=='BEVEL':mod.width=.0003
 
-# The native walls and every measured opening remain in place.
+# Retain the measured source objects; the garden opening has a separate proposed replacement.
 for mat in list(bpy.data.materials):
     if mat.name=='ivory':
         for o in bpy.data.objects:
@@ -196,11 +203,11 @@ for side in (-1,1):
         y=-4.60+i*3.70/164
         curve('Rug fringe',[(3+side*1.75,y,.064),(3+side*(1.79+random.random()*.025),y+random.uniform(-.006,.006),.052)],.0013,linen)
 
-sofa=group('Detailed oatmeal sofa',(1.2,-2.45,0),math.pi/2)
-sofa['approved_footprint']=[.7,1.05,1,2.8]
+sofa=group('Oatmeal corner sofa',(1.2,-2.45,0),math.pi/2)
+sofa['proposed_plan_bounds']=[.7,1.05,2.25,2.8]
 box('Sofa upholstered base',(0,0,.29),(2.78,.98,.28),oatmeal,.09,sofa)
 box('Sofa back shell',(0,.37,.69),(2.75,.20,.60),oatmeal,.07,sofa)
-for x in (-1.29,1.29):box('Soft sofa arm',(x,0,.58),(.20,.98,.58),oatmeal,.09,sofa)
+for x in (-1.29,):box('Soft sofa arm',(x,0,.58),(.20,.98,.58),oatmeal,.09,sofa)
 for x in (-.84,0,.84):
     cushion('Seat cushion',(x,-.05,.49),(.82,.76,.20),oatmeal,sofa)
     seam('Seat piping',x,-.05,.565,.78,.71,oatmeal,sofa)
@@ -210,6 +217,15 @@ for x in (-1.16,1.16):
 for x,mat,angle in [(-.96,forest,.12),(.91,rust,-.18)]:
     o=cushion('Loose accent cushion',(x,.07,.79),(.40,.18,.40),mat,sofa,-.18);o.rotation_euler.y=angle
 
+box('Corner return upholstered base',(.91,-1.05,.29),(.98,1.35,.28),oatmeal,.09,sofa)
+box('Corner return back',(1.29,-.85,.69),(.20,1.72,.60),oatmeal,.07,sofa)
+box('Corner return end arm',(.91,-1.65,.58),(.98,.20,.58),oatmeal,.07,sofa)
+cushion('Corner return seat',(.89,-1.08,.49),(.80,1.13,.20),oatmeal,sofa)
+seam('Return seat piping',.89,-1.08,.565,.76,1.08,oatmeal,sofa)
+back=cushion('Corner return back cushion',(1.19,-.96,.78),(.23,1.05,.49),oatmeal,sofa)
+back.rotation_euler.y=.12
+for x in (.57,1.19):cylinder('Corner return oak foot',(x,-1.5,.04),(x,-1.5,.20),.042,oak,sofa,r2=.033)
+
 arm=group('Cream lounge armchair',(4.225,-1.075,0),0)
 arm['approved_footprint']=[3.8,.65,.85,.85]
 for x in (-.32,.32):
@@ -218,8 +234,8 @@ cushion('Cream chair seat',(0,-.02,.46),(.77,.76,.19),linen,arm)
 cushion('Cream chair back',(0,.29,.76),(.74,.20,.53),linen,arm,-.14)
 for x in (-.38,.38):box('Upholstered arm',(x,0,.58),(.09,.73,.24),linen,.035,arm)
 
-coffee=group('Low rounded oak coffee table',(3.1,-2.25,0))
-coffee['approved_footprint']=[2.5,1.85,1.2,.8]
+coffee=group('Low rounded oak coffee table',(3.25,-2.85,0))
+coffee['proposed_plan_bounds']=[2.65,2.45,1.2,.8]
 box('Solid oak coffee top',(0,0,.39),(1.20,.80,.045),oak,.022,coffee)
 for x in (-.46,.46):
     for y in (-.26,.26):cylinder('Coffee table leg',(x,y,.045),(x*.85,y*.85,.375),.035,oak,coffee,r2=.045)
@@ -234,13 +250,25 @@ for x in (-1.23,1.23):cylinder('Sideboard foot',(x,0,.04),(x,0,.16),.025,oak,med
 black=material('Television dark glass','151b18',.22,.15)
 box('Television',(6.49,-2.50,1.37),(.04,1.63,.94),black,.012)
 
-# Eight oak chairs and the table retain their measured centres and facing directions.
-dining=group('Oak dining table',(3.1,-6.6,0))
+# The table and chairs retain their measured centres and facing directions.
+dining=group('Antique-style oak dining table',(3.1,-6.6,0))
 dining['approved_footprint']=[1.7,6.05,2.8,1.1]
-box('Rounded oak dining top',(0,0,.755),(2.8,1.1,.045),oak,.022,dining)
+for j in range(5):
+    box('Aged oak tabletop plank',(0,-.44+j*.22,.755),(2.50,.219,.05),antique,.003,dining)
+for x in (-1.325,1.325):box('Breadboard table end',(x,0,.755),(.15,1.1,.05),antique,.004,dining)
+box('Antique table apron',(0,0,.655),(2.40,.77,.15),antique,.006,dining)
+profile=[(.04,.032),(.07,.044),(.10,.037),(.19,.028),(.32,.033),(.40,.057),(.45,.063),(.49,.042),(.52,.031),(.56,.045),(.59,.046),(.61,.040),(.72,.040)]
 for x in (-1.08,1.08):
-    for y in (-.37,.37):cylinder('Tapered dining leg',(x,y,.04),(x*.97,y*.96,.74),.04,oak,dining,r2=.052)
-box('Table apron',(0,0,.67),(2.38,.74,.12),oak,.008,dining)
+    for y in (-.37,.37):
+        verts=[];faces=[]
+        for h,r in profile:
+            for j in range(48):verts.append((x+r*math.cos(j*math.tau/48),y+r*math.sin(j*math.tau/48),h))
+        for k in range(len(profile)-1):
+            for j in range(48):faces.append((k*48+j,k*48+(j+1)%48,(k+1)*48+(j+1)%48,(k+1)*48+j))
+        faces.extend([tuple(reversed(range(48))),tuple((len(profile)-1)*48+j for j in range(48))])
+        mesh=bpy.data.meshes.new('Turned oak leg');mesh.from_pydata(verts,[],faces)
+        leg=bpy.data.objects.new('Turned antique table leg',mesh);col.objects.link(leg);leg.parent=dining;mesh.materials.append(antique)
+        for face in mesh.polygons:face.use_smooth=True
 
 def chair(x,z,angle):
     g=group('Detailed oak dining chair',(x,-z,0),angle)
@@ -277,26 +305,63 @@ for i in range(6):
     light=bpy.data.lights.new('Warm chandelier bulb','POINT');light.energy=5;light.color=(1,.76,.48);light.shadow_soft_size=.08
     o=bpy.data.objects.new(light.name,light);col.objects.link(o);o.location=(ex,ey,2.16)
 
-# Fitted window sills, skirting and curtains add scale without moving openings.
+# Shutter panels sit inside the existing window reveals with open louvres.
 for z,w in [(1.4,2.4),(5.8,2.2)]:
     box('Oak window sill',(.28,-z-w/2,.84),(.38,w+.13,.035),oak,.009)
-    cylinder('Bronze curtain rail',(.49,-z+.42,2.57),(.49,-z-w-.42,2.57),.012,bronze)
-    for zz in (z-.32,z+w-.13):
-        verts=[];faces=[]
-        for iz in range(33):
-            h=.075+iz*2.47/32
-            for j in range(49):
-                t=j/48;verts.append((.47+.035*math.sin(t*math.tau*5)+.012*math.sin(iz/8+t*2),-(zz+t*.48),h))
-        for iz in range(32):
-            for j in range(48):
-                a=iz*49+j;faces.append((a,a+1,a+50,a+49))
-        mesh=bpy.data.meshes.new('Linen curtain folds');mesh.from_pydata(verts,[],faces);o=bpy.data.objects.new('Natural linen curtain',mesh);col.objects.link(o);o.data.materials.append(linen)
-        for p in mesh.polygons:p.use_smooth=True
-        mod=o.modifiers.new('Fabric thickness','SOLIDIFY');mod.thickness=.001
+    for panel in range(4):
+        start=z+panel*w/4;end=start+w/4
+        frame=group('Plantation shutter panel',(.405,-(start+end)/2,0))
+        width=w/4-.006
+        for yy in (-width/2+.017,width/2-.017):box('Shutter stile',(0,yy,1.625),(.045,.034,1.51),shutterpaint,.002,frame)
+        for h in (.89,1.43,2.36):box('Shutter rail',(0,0,h),(.045,width-.068,.044),shutterpaint,.002,frame)
+        for j in range(21):
+            h=.963+j*.064
+            if abs(h-1.43)<.045:continue
+            slat=box('Plantation shutter louvre',(0,0,h),(.082,width-.072,.008),shutterpaint,.003,frame)
+            slat.rotation_euler.y=math.radians(20)
+        for a,b in ((.955,1.37),(1.49,2.275)):
+            box('Shutter tilt rod',(.055,0,(a+b)/2),(.011,.012,b-a),shutterpaint,.003,frame)
+
 for x in (.361,6.539):
     intervals=[(.35,9.3)] if x<1 else [(.35,3.95),(4.9,6.7),(9.1,9.3)]
-    for a,b in intervals:box('Ivory skirting',(x,-(a+b)/2,.097),(.025,b-a,.125),ivory,.003)
-for a,b in [(.35,1.8),(4,6.55)]:box('Garden wall skirting',((a+b)/2,-.365,.097),(b-a,.025,.125),ivory,.003)
+    for a,b in intervals:box('Ivory skirting',(x,-(a+b)/2,.097),(.025,b-a,.125),panelpaint,.003)
+
+def panelling(x,a,b,height):
+    depth=.018;front=x+(.022 if x<1 else -.022)
+    box('Painted wall panelling',(x,-(a+b)/2,(height+.15)/2),(depth,b-a,height-.15),panelpaint,.002)
+    box('Panel dado cap',(front,-(a+b)/2,height),(.045,b-a,.035),panelpaint,.003)
+    count=max(1,round((b-a)/.85));pitch=(b-a)/count
+    for i in range(count):
+        start=a+i*pitch+.095;end=a+(i+1)*pitch-.095
+        for zz in (start,end):box('Panel vertical moulding',(front,-zz,(height+.15)/2),(.015,.023,height-.33),panelpaint,.003)
+        for h in (.24,height-.09):box('Panel horizontal moulding',(front,-(start+end)/2,h),(.015,end-start,.023),panelpaint,.003)
+for a,b in ((.42,3.88),(4.97,6.62)):panelling(6.532,a,b,1.10)
+for a,b,h in ((.42,1.36,1.10),(1.40,3.8,.79),(3.84,5.76,1.10),(5.8,8,.79),(8.04,9.26,1.10)):panelling(.37,a,b,h)
+
+# The approved garden-door study replaces only the three source ground-floor wall sections.
+for name in ('g / stone','g / stone.002','g / stone.004','Living to terrace'):
+    hide_tree(bpy.data.objects[name])
+for x in (.275,6.625):box('Proposed garden wall return',(x,-.175,1.35),(.55,.35,2.7),ivory,.001)
+box('Proposed bifold head wall',(3.45,-.175,2.55),(5.8,.35,.30),ivory,.001)
+for x in (.575,6.325):box('Bifold outer jamb',(x,-.175,1.22),(.05,.105,2.36),bronze,.002)
+for h in (.055,2.375):box('Bifold continuous track',(3.45,-.175,h),(5.80,.105,.05),bronze,.002)
+glass=material('Bifold clear glazing','f1f6f4',.025)
+glass.node_tree.nodes.get('Principled BSDF').inputs['Transmission Weight'].default_value=1
+glass.node_tree.nodes.get('Principled BSDF').inputs['IOR'].default_value=1.45
+leafwidth=5.70/6
+for side in (0,1):
+    px=.60 if side==0 else 6.30;py=-.175
+    for index in range(3):
+        angle=math.radians((75 if index%2==0 else -75) if side==0 else (105 if index%2==0 else 255))
+        door=group('Garden bifold leaf',(px,py,0),angle)
+        for x in (.025,leafwidth-.025):box('Bifold leaf stile',(x,0,1.215),(.05,.065,2.27),bronze,.002,door)
+        for h in (.105,2.325):box('Bifold leaf rail',(leafwidth/2,0,h),(leafwidth-.10,.065,.05),bronze,.002,door)
+        box('Bifold glazing',(leafwidth/2,0,1.215),(leafwidth-.10,.018,2.17),glass,.0005,door)
+        for h in (.30,1.2,2.1):cylinder('Bifold hinge',(.025,.042,h-.035),(.025,.042,h+.035),.009,bronze,door)
+        if index==2:cylinder('Bifold bronze handle',(leafwidth-.075,-.052,1.05),(leafwidth-.075,-.052,1.18),.007,bronze,door)
+        px+=leafwidth*math.cos(angle);py+=leafwidth*math.sin(angle)
+scene['proposed_garden_opening_width']=5.8
+scene['proposed_garden_opening_head']=2.4
 
 # Simple styled objects are kept on existing furniture surfaces.
 def vase(name,x,y,z,height,radius,mat):
@@ -317,8 +382,8 @@ for i in range(5):
     for j in range(5):
         bpy.ops.mesh.primitive_uv_sphere_add(segments=12,ring_count=6,radius=1,location=(x+random.uniform(-.06,.06),y+random.uniform(-.05,.05),1.1+j*.065));o=link(bpy.context.object);o.name='Olive leaf';o.scale=(.045,.013,.006);o.rotation_euler=(.2,.4,random.random()*6);o.data.materials.append(leafm)
 book=material('Linen book cover','80734f',.9)
-box('Coffee-table book',(3.0,-2.26,.435),(.31,.23,.035),book,.003)
-vase('Small ceramic bowl',3.40,-2.23,.415,.065,.085,ceramic)
+box('Coffee-table book',(3.15,-2.86,.435),(.31,.23,.035),book,.003)
+vase('Small ceramic bowl',3.55,-2.83,.415,.065,.085,ceramic)
 
 # Kitchen joinery follows the brief where seen through the open divider.
 for x,w in [(6.85+i*.6167,.613) for i in range(6)]:
@@ -356,9 +421,6 @@ for old in list(bpy.data.objects):
     for m in foliage:mesh.materials.append(m)
     for face,index in zip(mesh.polygons,indices):face.material_index=index
 
-for x in (1.82,3.98):box('Garden slider jamb',(x,-.29,1.09),(.035,.07,2.13),bronze,.003)
-for h in (.055,2.135):box('Garden slider track',(2.9,-.29,h),(2.2,.07,.035),bronze,.003)
-
 for obj in scene.objects:
     if obj.type=='LIGHT' and 'soft ceiling light' in obj.name:obj.hide_render=True
 for name,position,target,power,size in [('Garden daylight',(2.9,.0,1.9),(2.9,-4,1.1),150,2),('West daylight',(.05,-2.6,1.8),(3.5,-2.6,1.0),180,2),('Dining daylight',(.05,-6.8,1.8),(3.5,-6.8,1),140,1.7)]:
@@ -375,13 +437,16 @@ scene.cycles.samples=args.samples;scene.cycles.use_denoising=True;scene.cycles.a
 scene.cycles.use_light_tree=True
 scene.view_settings.exposure=.15
 scene.view_settings.look='AgX - Medium High Contrast'
-scene['design_revision']='L01 living/dining realism benchmark 01'
+scene['design_revision']='L01 living/dining interior base 02'
 scene['style_source']='MATERIALS-BRIEF.md: agreed shared-space palette and supporting proposals'
-scene['scope_note']='G1 detailed furniture and finishes; G2 palette visible through the existing opening. Measured layout unchanged.'
+scene['scope_note']='G1 interior revision: corner sofa, moved coffee table and proposed 5.8 m garden bifolds. Source objects retained; source plan and browser not revised.'
+scene['units_note']='Metres. Source transforms retained; garden opening, sofa and coffee table revised as proposals.'
+notes=bpy.data.texts.get('READ ME - L-house study')
+notes.clear();notes.write((root/'scripts/blender/LIVING-STUDY.md').read_text())
 bpy.ops.wm.save_as_mainfile(filepath=str(out/'living-study.blend'),compress=True)
 scene.render.filepath=str(out/'living-dining.png');bpy.ops.render.render(write_still=True)
 camera.location=(5.2,-4.65,1.45);camera.rotation_euler=(Vector((1.65,-2.45,.95))-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.lens=30
 scene.render.filepath=str(out/'seating-detail.png');bpy.ops.render.render(write_still=True)
-report={'sourceModelSha256':hashlib.sha256((root/'viewer-l-house/model.json').read_bytes()).hexdigest(),'brief':'MATERIALS-BRIEF.md','objectsAdded':len(col.objects),'furnitureFootprints':{o.name:list(o['approved_footprint']) for o in col.objects if 'approved_footprint' in o},'samples':args.samples,'width':args.width,'renderer':'Cycles','device':scene.cycles.device,'textures':'Poly Haven CC0 oak_veneer_02 and terlenka'}
+report={'sourceModelSha256':hashlib.sha256((root/'viewer-l-house/model.json').read_bytes()).hexdigest(),'brief':'MATERIALS-BRIEF.md','objectsAdded':len(col.objects),'furnitureFootprints':{o.name:list(o['approved_footprint']) for o in col.objects if 'approved_footprint' in o},'proposedGardenOpening':{'width':5.8,'head':2.4,'leaves':6},'proposedFurniture':{o.name:list(o['proposed_plan_bounds']) for o in col.objects if 'proposed_plan_bounds' in o},'samples':args.samples,'width':args.width,'renderer':'Cycles','device':scene.cycles.device,'textures':'Poly Haven CC0 oak_veneer_02 and terlenka'}
 (out/'study-report.json').write_text(json.dumps(report,indent=2))
 print('LIVING_STUDY',json.dumps(report))
