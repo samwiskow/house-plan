@@ -164,6 +164,7 @@ function chair(x,z,w,d,base,parent,angle=0,stool=false){const g=new THREE.Group(
 function car(r,parent,base=0){const[x,z,w,d]=r;const group=new THREE.Group();parent.add(group);roundedBox([x+.12,z+.1,w-.24,d-.2],base+.25,base+.87,'#30473c',group,.14);roundedBox([x+1.25,z+.28,w-2.25,d-.56],base+.85,base+1.4,'#30473c',group,.15);box([x+1.34,z+.265,w-2.44,.025],base+.94,base+1.29,'#344844',group);box([x+1.34,z+d-.29,w-2.44,.025],base+.94,base+1.29,'#344844',group);for(const xx of [x+.95,x+w-1])for(const zz of [z+.1,z+d-.1]){cylinder(xx,base+.34,zz,.33,.19,'#292c24',group,Math.PI/2);cylinder(xx,base+.34,zz+(zz<z+d/2?-.105:.105),.19,.025,'bronze',group,Math.PI/2);}for(const zz of [z+.3,z+d-.65])box([x+w-.12,zz,.07,.35],base+.55,base+.68,'#f8ecd5',group);return group;}
 function furnish(it,parent){
  const[x,z,w,d]=it.r,n=it.name.toLowerCase(),base=model.levels[it.floor],g=new THREE.Group();g.name=it.name;g.userData.room=it.roomId;parent.add(g);const B=(r,lo,hi,m)=>box(r,base+lo,base+hi,m,g),R=(r,lo,hi,m)=>roundedBox(r,base+lo,base+hi,m,g);
+ const faceRoom=axis=>{const room=data.rooms.find(r=>r.id===it.roomId),i=axis==='x'?0:1;if(room.label[i]<it.r[i]+it.r[i+2]/2){g.rotation.y=Math.PI;g.position.set(2*x+w,0,2*z+d);}};
  const shadow=contactPatch(it.r,g);shadow.position.y=base+.045;
  let height=.9,solid=true;
  if(it.kind==='car'){car(it.r,g,base);height=1.5;}
@@ -172,7 +173,7 @@ function furnish(it,parent){
   const side=w>d;R(side?[x+.65,z+.06,w-.73,d-.12]:[x+.06,z+.65,w-.12,d-.73],.62,.69,'green');
   for(const q of [.12,.55])R(side?[x+.1,z+d*q,.43,d*.32]:[x+w*q,z+.1,w*.32,.43],.62,.78,'oatmeal');
   B(side?[x,z,.09,d]:[x,z,w,.09],.2,1.05,'oak');height=1.05;
- }else if(it.kind==='chair'){g.remove(shadow);let angle=0;if(n==='dining chair'){if(z>7)angle=Math.PI;if(x<1.5)angle=-Math.PI/2;if(x>4.3)angle=Math.PI/2;}if(n==='desk chair')angle=Math.PI;chair(x,z,w,d,base,g,angle,n.includes('island'));height=.95;
+ }else if(it.kind==='chair'){g.remove(shadow);let angle=0;if(n==='dining chair'){if(z>7)angle=Math.PI;if(x<1.5)angle=Math.PI/2;if(x>4.3)angle=-Math.PI/2;}if(n==='office chair')angle=officeState==='guest'?Math.PI:Math.PI/2;chair(x,z,w,d,base,g,angle,n.includes('island'));height=.95;
  }else if(it.kind==='sofa'){
   const along=d>w;R([x,z,w,d],.12,.34,'oak');R([x+.06,z+.06,w-.12,d-.12],.34,.57,'oatmeal');
   R(along?[x,z,.19,d]:[x,z+d-.19,w,.19],.38,.99,'green');
@@ -194,7 +195,7 @@ function furnish(it,parent){
   if(n.includes('island')){B([x+.06,z+.06,w-.12,d-.12],.08,height-.06,'oak');for(let i=0;i<4;i++)B([x+.1+i*(w-.2)/4,z+.06,.014,d-.12],.13,height-.12,'bronze');}
   else for(const xx of [x+.07,x+w-.12])for(const zz of [z+.07,z+d-.12])B([xx,zz,.05,.05],.04,height-.06,'oak');
   R([x,z,w,d],height-.06,height,n.includes('island')?'worktop':'oak');
-  if(n.includes('desk')||n.includes('worktop')){const along=w>d;B(along?[x+w*.2,z+.06,w*.55,.055]:[x+w-.07,z+d*.18,.055,d*.6],height+.12,height+.62,'#273b31');B([x+w*.4,z+d*.35,.15,.15],height,height+.16,'bronze');B([x+w*.2,z+d*.55,w*.6,d*.3],height,height+.025,'#3c4736');}
+  if(n.includes('desk')||n.includes('worktop')){const along=w>d;if(along)faceRoom('z');B(along?[x+w*.2,z+.06,w*.55,.055]:[x+w-.07,z+d*.18,.055,d*.6],height+.12,height+.62,'#273b31');B(along?[x+w*.4,z+d*.35,.15,.15]:[x+w*.65,z+d*.4,.15,.15],height,height+.16,'bronze');B(along?[x+w*.2,z+d*.55,w*.6,d*.3]:[x+w*.15,z+d*.2,w*.3,d*.6],height,height+.025,'#3c4736');}
  }else if(n.includes('divider')||n.includes('privacy return')){height=n.includes('privacy')?1.35:2.7;B(it.r,0,height,'ivory');}
  else if(n.includes('washer')||n.includes('dryer')){
   B(it.r,.02,.88,'ivory');cylinder(x+w/2,base+.46,z+d+.004,.22,.022,'bronze',g,Math.PI/2);cylinder(x+w/2,base+.46,z+d+.019,.18,.024,'#344742',g,Math.PI/2);B([x+.08,z+d,.2,.01],.74,.79,'#273b31');height=.88;
@@ -204,7 +205,7 @@ function furnish(it,parent){
  }else if(n.includes('dumbbell')){B(it.r,.1,.8,'#3b4433');for(let i=0;i<7;i++)cylinder(x+w/2,base+.9,z+.13+i*.27,.1,w*.8,'#292c24',g,0,Math.PI/2);height=1.05;
  }else if(n.includes('cylinder')){cylinder(x+w/2,base+1.05,z+d/2,Math.min(w,d)*.47,2,'ivory',g);height=2.05;
  }else if(n.includes('shelv')||n.includes('wardrobe')||n.includes('cupboard')||n.includes('storage')||n.includes('coats')){
-  height=n.includes('coats')?1.9:2.25;const along=w>d;
+  height=n.includes('coats')?1.9:2.25;const along=w>d;faceRoom(along?'z':'x');
   if(n.includes('wardrobe')||n.includes('cupboard')){B(it.r,.05,height,'oak');const count=Math.max(2,Math.round(Math.max(w,d)/.55));for(let i=1;i<count;i++)B(along?[x+w*i/count,z+d-.018,.012,.025]:[x+w-.018,z+d*i/count,.025,.012],.09,height-.06,'bronze');}
   else{for(let i=0;i<5;i++){B([x,z,w,d],.12+i*.46,.16+i*.46,'oak');if(i>0)for(let j=0;j<Math.floor(Math.max(w,d)/.18);j++)B(along?[x+.04+j*.18,z+.05,.12,d*.7]:[x+.05,z+.04+j*.18,w*.7,.12],.16+(i-1)*.46,.49+(i-1)*.46,j%3?'oatmeal':'green');}B(along?[x,z,w,.025]:[x,z,.025,d],.05,height,'darkOak');}
  }else if(n.includes('media')){B(it.r,.05,.42,'oak');B([x+w-.01,z+.5,.03,d-1],.82,1.9,'#172720');height=1.9;}
