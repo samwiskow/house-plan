@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>L-house | A home and garden</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../site/model-nav.css">
+  <script type="importmap">{"imports":{"three":"../viewer/vendor/three.module.js","three/addons/controls/OrbitControls.js":"../viewer/vendor/OrbitControls.js"}}</script>
+</head>
+<body>
+  <nav class="model-nav" aria-label="House models"><a href="../">All models</a><a href="../viewer/">Courtyard house</a><a href="../viewer-l-house/" aria-current="page">L-house</a></nav>
+  <main id="scene" aria-label="Interactive house model"></main>
+  <header><div><span class="eyebrow">L-HOUSE / DESIGN STUDY 01</span><h1>A home and garden</h1></div><a href="../output/pdf/l-house-design-booklet.pdf" target="_blank">Design booklet ↗</a></header>
+  <section id="controls" aria-label="Explore the house">
+    <label for="view">View</label><select id="view"><option value="overview">Whole plot</option><option value="arrival">Arrival</option><option value="garden">From the garden</option><option value="ground">Ground-floor plan</option><option value="first">First-floor plan</option><option value="living">Living and dining</option><option value="kitchen">Kitchen and pantry</option><option value="parents">Parents suite</option><option value="office">Office and guest room</option><option value="garage">Garage and gym</option></select>
+    <div class="fields"><label>Floors<select id="floor"><option value="all">Whole building</option><option value="ground">Ground floor</option><option value="first">First floor</option></select></label><label>Pantry<select id="pantry"><option value="default">Open passage</option><option value="enclosed">Enclosed</option></select></label></div>
+    <label id="office-field" hidden>Office use<select id="office"><option value="work">Work</option><option value="guest">Guest bed open</option></select></label>
+    <div class="buttons"><button id="roof" aria-pressed="true">Roofs on</button><button id="light" aria-pressed="false">Daylight</button><button id="walk" aria-pressed="false">Walk</button></div>
+    <p id="note" aria-live="polite">Loading the measured model…</p>
+    <div id="walking" hidden><div class="buttons"><button id="mouse-look">Mouse look</button><button id="door" disabled>Point at a door</button></div><p>Arrow keys move and turn. WASD moves. Drag to look. Space operates a door. Escape stops.</p></div>
+  </section>
+  <div id="aim" hidden aria-hidden="true">+</div>
+  <div id="touch-walk" hidden aria-label="Walk controls"><button data-key="ArrowLeft" aria-label="Turn left">↶</button><button data-key="ArrowUp" aria-label="Move forward">↑</button><button data-key="ArrowRight" aria-label="Turn right">↷</button><button data-key="ArrowDown" aria-label="Move backward">↓</button></div>
+  <footer><span id="status">Preparing the house…</span><span>Roof and windows proposed · Assumed 40 × 65 m plot</span></footer>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
