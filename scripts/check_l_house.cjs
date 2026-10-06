@@ -31,7 +31,8 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'tmp/l-house');
  assert(await page.evaluate(()=>document.activeElement===house.renderer.domElement),'Mouse look must keep keyboard input on the model');
  const lockedFrom=await page.evaluate(()=>house.camera.position.toArray());await page.keyboard.down('s');await page.waitForFunction(before=>Math.hypot(house.camera.position.x-before[0],house.camera.position.z-before[2])>.12,lockedFrom);await page.keyboard.up('s');
  await page.evaluate(()=>{house.setPose(9.4,6.75);house.camera.lookAt(10.825,1.5,6.75);house.requestRender();});await page.waitForFunction(()=>house.doorAt()?.data.id==='Kitchen to pantry');
- await page.mouse.down();await page.mouse.up();assert(!(await page.evaluate(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').open)),'Locked click must close the aimed pantry door');await page.waitForFunction(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').progress===0);
+ await page.evaluate(()=>{window.lockedClickEvents=[];for(const type of ['pointerdown','pointerup','click'])document.addEventListener(type,e=>lockedClickEvents.push({type,target:e.target.id||e.target.tagName}),{once:true,capture:true});});
+ await page.mouse.down();await page.mouse.up();const lockedClick=await page.evaluate(()=>({open:house.doors.find(s=>s.data.id==='Kitchen to pantry').open,aim:house.doorAt()?.data.id,locked:document.pointerLockElement?.tagName,events:lockedClickEvents}));assert(!lockedClick.open,'Locked click must close the aimed pantry door: '+JSON.stringify(lockedClick));await page.waitForFunction(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').progress===0);
  await page.keyboard.press('Space');await page.waitForFunction(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').progress===1);
  await page.keyboard.press('Escape');await page.waitForFunction(()=>!house.state.walking&&document.pointerLockElement===null);
  const stairs=await page.evaluate(()=>{

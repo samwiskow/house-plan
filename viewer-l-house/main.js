@@ -347,12 +347,13 @@ function doorAt(cursor=new THREE.Vector2()){
 }
 function toggleDoor(s){if(!s)return;s.open=!s.open;s.updatedAt=performance.now();requestRender();}
 function look(dx,dy){const e=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');e.y-=dx*.0038;e.x=THREE.MathUtils.clamp(e.x-dy*.0038,-1.25,1.25);camera.quaternion.setFromEuler(e);requestRender();}
-renderer.domElement.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointer={x:e.clientX,y:e.clientY,moved:0};if(document.pointerLockElement!==renderer.domElement)renderer.domElement.setPointerCapture(e.pointerId);renderer.domElement.focus({preventScroll:true});});
+renderer.domElement.addEventListener('pointerdown',e=>{if(e.button!==0||document.pointerLockElement===renderer.domElement)return;pointer={x:e.clientX,y:e.clientY,moved:0};renderer.domElement.setPointerCapture(e.pointerId);renderer.domElement.focus({preventScroll:true});});
 renderer.domElement.addEventListener('pointermove',e=>{if(!pointer||document.pointerLockElement)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;pointer.moved+=Math.abs(dx)+Math.abs(dy);pointer.x=e.clientX;pointer.y=e.clientY;if(walking)look(dx,dy);});
-renderer.domElement.addEventListener('pointerup',e=>{if(pointer&&pointer.moved<5){const r=renderer.domElement.getBoundingClientRect();toggleDoor(document.pointerLockElement===renderer.domElement?doorAt():doorAt(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1)));}pointer=null;});
+renderer.domElement.addEventListener('pointerup',e=>{if(pointer&&pointer.moved<5){const r=renderer.domElement.getBoundingClientRect();toggleDoor(doorAt(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1)));}pointer=null;});
 renderer.domElement.addEventListener('pointercancel',()=>pointer=null);
+renderer.domElement.addEventListener('click',()=>{if(walking&&document.pointerLockElement===renderer.domElement)toggleDoor(doorAt());});
 document.addEventListener('mousemove',e=>{if(walking&&document.pointerLockElement===renderer.domElement)look(e.movementX,e.movementY);});
-document.addEventListener('pointerlockchange',()=>{if(!document.pointerLockElement&&walking)setWalking(false);});
+document.addEventListener('pointerlockchange',()=>{pointer=null;if(!document.pointerLockElement&&walking)setWalking(false);});
 $('mouse-look').addEventListener('click',async()=>{renderer.domElement.focus({preventScroll:true});try{await renderer.domElement.requestPointerLock();}catch{$('note').textContent='Mouse look is unavailable. Drag to look while using the movement keys.';}});
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){setWalking(false);return;}if(!walking||e.target.closest('button,select,input,a')||e.ctrlKey||e.metaKey||e.altKey)return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d','W','A','S','D','Shift',' '].includes(e.key)){e.preventDefault();if(e.key===' '&&!e.repeat)toggleDoor(doorAt());else keys.add(e.key.toLowerCase());requestRender();}});
 window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>keys.clear());document.addEventListener('visibilitychange',()=>{if(document.hidden)keys.clear();});
