@@ -1,7 +1,7 @@
 {
   "sourceModelSha256": "3ec7b07375c890e8cad05389090741127261ff3ab701b416b053a47eb48f6908",
   "brief": "MATERIALS-BRIEF.md",
-  "objectsAdded": 1245,
+  "objectsAdded": 1288,
   "furnitureFootprints": {
     "French country trestle table": [
       1.7,
@@ -70,7 +70,7 @@
       4.1,
       3.65
     ],
-    "Botanical upholstered ottoman": [
+    "Oatmeal upholstered ottoman": [
       2.525,
       2.75,
       1.65,
@@ -83,6 +83,9 @@
       2.6
     ]
   },
+  "proposedCeilingHeight": 3.2,
+  "firstFloorCoordinated": false,
+  "sideGardenDoorClosed": true,
   "samples": 160,
   "width": 1800,
   "renderer": "Cycles",

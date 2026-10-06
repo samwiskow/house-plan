@@ -9,6 +9,12 @@
   "gardenOpeningWidth": 5.8,
   "ottomanClearanceAtLeast": 0.35,
   "gardenRouteWidthAtLeast": 1.2,
-  "largeArtworks": 2,
+  "coastalArtworks": 2,
+  "ceilingHeight": 3.2,
+  "firstFloorCoordinated": false,
+  "insetShutters": true,
+  "curtainPanels": 4,
+  "sideGardenDoorClosed": true,
+  "singleSofaBase": true,
   "stoveInstallationVerified": false
 }

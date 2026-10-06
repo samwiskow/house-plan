@@ -16,11 +16,20 @@
     {
       "file": "still-life.png",
       "prompt": "Use case: illustration-story. Asset type: portrait painting texture for large framed wall art in a French country room. Original antique oil still life: a broad cream stoneware jug with loose blue cornflowers, cream garden roses and leafy branches, on an old oak table against a deep muted olive background. Painterly textured canvas, subdued natural side light, atmospheric 19th century rustic French still life, warm ivory, smoky blue, sage and ochre. Portrait 4:5 composition. Painting fills image edge to edge; no frame, wall, room, text or signature."
+    },
+    {
+      "file": "coastal-landscape.png",
+      "prompt": "Use case: illustration-story. Asset type: original wall-art texture for a calm Cotswold-inspired country interior. A softly painted coastal landscape of pale sand dunes, marram grass and an open blue-green sea with a low horizon, gentle clouded sky, small distant headland. Quiet British coast, no buildings or people. Expressive oil brushwork on linen canvas, warm ivory, faded sea blue, sage dune grass, natural sand. Landscape 3:2. Painting fills the entire image; no frame, room, text or signature."
+    },
+    {
+      "file": "coastal-study.png",
+      "prompt": "Use case: illustration-story. Asset type: original portrait wall-art texture for a country interior. A painterly view down a coastal path between dune grasses towards pale sand, a quiet turquoise and slate-blue bay and a misty distant headland. Soft light, restrained palette of blue-green, warm ivory and sand, loose oil brushwork, calm British coast. Portrait 4:5. Painting only, edge to edge, no frame, room, text or signature."
     }
   ],
   "styleReferences": [
     "https://www.wmorrisandco.com/uk/the-unfinished-works/",
-    "https://www.lauraashleyusa.com/blogs/news-releases/laura-ashley-marks-70-years-with-prints-through-the-decades"
+    "https://www.lauraashleyusa.com/blogs/news-releases/laura-ashley-marks-70-years-with-prints-through-the-decades",
+    "https://www.cotswoldco.com/dining-room-furniture/dining-tables/"
   ],
   "note": "Original generated study textures and art; not selected commercial products. Blender views are rendered from geometry, not AI-retouched."
 }
