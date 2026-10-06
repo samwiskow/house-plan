@@ -9,6 +9,9 @@ const base=process.env.BASE_URL||'http://127.0.0.1:4193/';
   page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
   await page.goto(new URL('viewer-blender/',base).href);
   await page.waitForFunction(()=>window.blenderStudy,null,{timeout:120000});
+  const glazing=await page.evaluate(()=>{const panes=[];blenderStudy.model.traverse(o=>{if(o.isMesh&&o.material.transmission>0)panes.push(o.castShadow);});return panes;});
+  assert.ok(glazing.length>0,'Export must contain glazing');
+  assert.ok(glazing.every(casts=>!casts),'Glass must admit sunlight instead of casting solid shadows');
   for(const view of ['arrival','garden','living','kitchen','parents','office','ground','first']){
    await page.selectOption('#view',view);
    const visible=await page.evaluate(()=>Object.fromEntries(['g','a','u','o','Roofs','Ceilings'].map(n=>[n,blenderStudy.model.getObjectByName(n).visible])));
