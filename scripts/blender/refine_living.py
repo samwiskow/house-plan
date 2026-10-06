@@ -90,7 +90,15 @@ l.new(base,mix.inputs[1]);l.new(variation.outputs[0],mix.inputs[2]);l.new(mix.ou
 for remap in [node for node in n if node.type=='MAP_RANGE' and node!=variation]:
     remap.inputs['To Min'].default_value=.5;remap.inputs['To Max'].default_value=.7
 
-oatmeal=textured('Deep oatmeal woven upholstery','bdae95','terlenka',5,True)
+oatmeal=textured('Warm chalk brushed cotton','d4cfc4','terlenka',7,True)
+for node in oatmeal.node_tree.nodes:
+    if node.type=='NORMAL_MAP':node.inputs['Strength'].default_value=.12
+    if node.type=='VALTORGB':
+        base=colour('d4cfc4')
+        node.color_ramp.elements[0].color=(*(v*.78 for v in base),1)
+        node.color_ramp.elements[1].color=(*(min(v*1.06,1) for v in base),1)
+oatmeal.node_tree.nodes.get('Principled BSDF').inputs['Sheen Weight'].default_value=.18
+footstool_linen=textured('Plain oatmeal footstool linen','ded6c7','terlenka',3,True)
 linen=textured('Cream linen upholstery','e4d7bd','terlenka',5,True)
 panelpaint=material('Warm ivory painted panelling','d8cbb4',.66)
 shutterpaint=material('Ivory plantation shutters','eee4cf',.56)
@@ -107,6 +115,15 @@ coord=n.new('ShaderNodeTexCoord');l.new(coord.outputs['Object'],noise.inputs['Ve
 normal=p.inputs['Normal'].links[0].from_socket
 bump=n.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.18;bump.inputs['Distance'].default_value=.0008
 l.new(noise.outputs['Fac'],bump.inputs['Height']);l.new(normal,bump.inputs['Normal']);l.new(bump.outputs[0],p.inputs['Normal'])
+
+dining_oak=antique.copy();dining_oak.name='Weathered natural dining oak'
+n,l=dining_oak.node_tree.nodes,dining_oak.node_tree.links;p=n.get('Principled BSDF')
+base=p.inputs['Base Color'].links[0].from_socket
+hue=n.new('ShaderNodeHueSaturation');hue.inputs['Saturation'].default_value=.48;hue.inputs['Value'].default_value=.87
+l.new(base,hue.inputs['Color']);l.new(hue.outputs[0],p.inputs['Base Color'])
+for node in n:
+    if node.type=='MAP_RANGE':node.inputs['To Min'].default_value=.62;node.inputs['To Max'].default_value=.85
+    if node.type=='BUMP':node.inputs['Strength'].default_value=.25;node.inputs['Distance'].default_value=.0012
 
 def printed_fabric(name,file,scale):
     m=textured(name,'ded2b7','terlenka',5,True)
@@ -157,7 +174,16 @@ def cushion(name,loc,dim,mat,parent,tilt=0):
     bpy.context.view_layer.objects.active=o
     bpy.ops.object.modifier_apply(modifier=o.modifiers[0].name)
     for m in list(o.modifiers):o.modifiers.remove(m)
-    sub=o.modifiers.new('Soft cushion surface','SUBSURF');sub.levels=2
+    sub=o.modifiers.new('Soft cushion surface','SUBSURF');sub.levels=3
+    bpy.ops.object.modifier_apply(modifier=sub.name)
+    axis=min(range(3),key=lambda i:dim[i]);across=[i for i in range(3) if i!=axis]
+    for vertex in o.data.vertices:
+        q=[vertex.co[i]*2/dim[i] for i in range(3)]
+        fullness=(max(0,1-q[across[0]]**2)*max(0,1-q[across[1]]**2))**.65
+        vertex.co[axis]+=math.copysign(min(dim)*.21*fullness*abs(q[axis])**6,q[axis])
+        edge=abs(q[axis])**4*(1-fullness)
+        vertex.co[axis]+=.0035*edge*math.sin(q[across[0]]*19+q[across[1]]*13)
+    o.data.update()
     tex=bpy.data.textures.new(name+' cloth irregularity',type='CLOUDS');tex.noise_scale=.16;tex.noise_depth=1
     dis=o.modifiers.new('Small upholstery creases','DISPLACE');dis.texture=tex;dis.strength=.005;dis.mid_level=.5
     o.rotation_euler.x=tilt
@@ -242,38 +268,40 @@ for side in (-1,1):
 
 sofa=group('Large oatmeal corner sofa',(1.25,-3.075,0),math.pi/2)
 sofa['proposed_plan_bounds']=[.70,1.25,4.10,3.65]
-outline=[(-1.815,-.55),(.725,-.55),(.725,-3.55),(1.825,-3.55),(1.825,.55),(-1.815,.55)]
+outline=[(-1.811,-.546),(.729,-.546),(.729,-3.546),(1.821,-3.546),(1.821,.546),(-1.811,.546)]
 n=len(outline)
 mesh=bpy.data.meshes.new('Continuous L-shaped sofa base')
-mesh.from_pydata([(x,y,z) for z in (.15,.45) for x,y in outline],[],[tuple(reversed(range(n))),tuple(range(n,2*n))]+[(i,(i+1)%n,(i+1)%n+n,i+n) for i in range(n)])
+mesh.from_pydata([(x,y,z) for z in (.04,.295) for x,y in outline],[],[tuple(reversed(range(n))),tuple(range(n,2*n))]+[(i,(i+1)%n,(i+1)%n+n,i+n) for i in range(n)])
 base=bpy.data.objects.new('Sofa upholstered base',mesh);col.objects.link(base);base.parent=sofa;mesh.materials.append(oatmeal)
 mod=base.modifiers.new('Soft upholstered edges','BEVEL');mod.width=.07;mod.segments=4
 base.modifiers.new('Weighted corner normals','WEIGHTED_NORMAL')
-box('Sofa back shell',(0,.42,.73),(3.60,.22,.70),oatmeal,.075,sofa)
-box('Soft sofa arm',(-1.70,0,.61),(.24,1.10,.62),oatmeal,.10,sofa)
-for x in (-1.20,-.45,.30):
-    cushion('Seat cushion',(x,-.07,.50),(.72,.86,.21),oatmeal,sofa)
-    seam('Seat piping',x,-.07,.58,.68,.82,oatmeal,sofa)
-    cushion('Back cushion',(x,.30,.84),(.73,.25,.55),oatmeal,sofa,-.13)
+box('Sofa back shell',(0,.42,.335),(3.60,.22,.59),oatmeal,.055,sofa)
+box('Soft sofa arm',(-1.665,0,.34),(.30,1.10,.60),oatmeal,.065,sofa)
+cushion('Long main seat cushion',(-.435,-.07,.355),(2.23,.86,.18),oatmeal,sofa)
+seam('Seat piping',-.435,-.07,.355,2.233,.863,oatmeal,sofa)
+for i,x in enumerate((-1.20,-.45,.30)):
+    back=cushion('Back cushion',(x,.30,.635),(.73,.26,.42),oatmeal,sofa,-.15)
+    back.rotation_euler.y=(-.02,.015,-.01)[i]
 for x in (-1.56,0,1.56):
-    for y in (-.40,.40):cylinder('Oak sofa foot',(x,y,.04),(x,y,.20),.048,antique,sofa,r2=.037)
-box('Corner return back',(1.69,-1.565,.73),(.24,3.97,.70),oatmeal,.075,sofa)
-cushion('Corner joining seat',(1.10,-.10,.50),(.85,1.10,.21),oatmeal,sofa)
-seam('Corner seat piping',1.10,-.10,.58,.81,1.06,oatmeal,sofa)
-cushion('Corner main back cushion',(1.10,.30,.84),(.87,.25,.55),oatmeal,sofa,-.13)
-back=cushion('Corner side back cushion',(1.56,-.15,.84),(.25,.66,.55),oatmeal,sofa);back.rotation_euler.y=.12
-box('Corner return end arm',(1.275,-3.45,.61),(1.10,.20,.62),oatmeal,.09,sofa)
-for yy in (-1.05,-1.95,-2.85):
-    cushion('Corner return seat',(1.10,yy,.50),(.85,.86,.21),oatmeal,sofa)
-    seam('Return seat piping',1.10,yy,.58,.81,.82,oatmeal,sofa)
-    back=cushion('Corner return back cushion',(1.56,yy,.84),(.25,.88,.55),oatmeal,sofa);back.rotation_euler.y=.12
+    for y in (-.40,.40):cylinder('Oak sofa foot',(x,y,.015),(x,y,.065),.048,antique,sofa,r2=.037)
+box('Corner return back',(1.69,-1.565,.335),(.24,3.97,.59),oatmeal,.055,sofa)
+cushion('Corner joining seat',(1.10,-.10,.355),(.85,1.10,.18),oatmeal,sofa)
+seam('Corner seat piping',1.10,-.10,.355,.853,1.103,oatmeal,sofa)
+cushion('Corner main back cushion',(1.10,.30,.635),(.87,.26,.42),oatmeal,sofa,-.15)
+back=cushion('Corner side back cushion',(1.56,-.15,.635),(.26,.66,.42),oatmeal,sofa);back.rotation_euler.y=.12
+box('Corner return end arm',(1.275,-3.41,.34),(1.10,.28,.60),oatmeal,.065,sofa)
+cushion('Long return seat cushion',(1.10,-1.965,.355),(.85,2.59,.18),oatmeal,sofa)
+seam('Return seat piping',1.10,-1.965,.355,.853,2.593,oatmeal,sofa)
+for i,yy in enumerate((-1.05,-1.95,-2.85)):
+    back=cushion('Corner return back cushion',(1.56,yy,.635),(.26,.88,.42),oatmeal,sofa)
+    back.rotation_euler.y=.15;back.rotation_euler.x=(-.015,.02,-.01)[i]
 for x in (.91,1.61):
-    for y in (-1.7,-3.25):cylinder('Corner return oak foot',(x,y,.04),(x,y,.20),.048,antique,sofa,r2=.037)
+    for y in (-1.7,-3.25):cylinder('Corner return oak foot',(x,y,.015),(x,y,.065),.048,antique,sofa,r2=.037)
 ottoman=group('Oatmeal upholstered ottoman',(3.35,-3.30,0))
 ottoman['proposed_plan_bounds']=[2.525,2.75,1.65,1.10]
-box('Ottoman upholstered base',(0,0,.255),(1.63,1.08,.22),linen,.055,ottoman)
-cushion('Ottoman cushioned top',(0,0,.405),(1.65,1.10,.18),linen,ottoman)
-seam('Ottoman piped edge',0,0,.463,1.58,1.03,linen,ottoman)
+box('Ottoman upholstered base',(0,0,.225),(1.63,1.08,.20),footstool_linen,.055,ottoman)
+cushion('Ottoman cushioned top',(0,0,.355),(1.65,1.10,.18),footstool_linen,ottoman)
+seam('Ottoman piped edge',0,0,.355,1.653,1.103,footstool_linen,ottoman)
 for x in (-.65,.65):
     for y in (-.40,.40):
         cylinder('Ottoman turned foot',(x,y,.055),(x,y,.18),.044,antique,ottoman,r2=.035)
@@ -298,9 +326,9 @@ box('Television',(6.49,-2.50,1.37),(.04,1.63,.94),black,.012)
 dining=group('French country trestle table',(3.1,-6.6,0))
 dining['approved_footprint']=[1.7,6.05,2.8,1.1]
 for j in range(4):
-    box('Rustic oak tabletop plank',(0,-.4125+j*.275,.74),(2.50,.273,.08),antique,.008,dining)
-for x in (-1.325,1.325):box('Worn breadboard table end',(x,0,.74),(.15,1.10,.08),antique,.009,dining)
-box('Low oak trestle stretcher',(0,0,.23),(2.0,.12,.13),antique,.01,dining)
+    box('Rustic oak tabletop plank',(0,-.4125+j*.275,.74),(2.50,.273,.08),dining_oak,.008,dining)
+for x in (-1.325,1.325):box('Worn breadboard table end',(x,0,.74),(.15,1.10,.08),dining_oak,.009,dining)
+box('Low oak trestle stretcher',(0,0,.23),(2.0,.12,.13),dining_oak,.01,dining)
 profile=[(.04,.35),(.10,.43),(.16,.38),(.24,.17),(.39,.09),(.51,.16),(.60,.30),(.69,.36)]
 outline=[]
 for i in range(len(profile)-1):
@@ -312,11 +340,11 @@ for x in (-.89,.89):
     n=len(outline);verts=[(x+dx,y,z) for dx in (-.09,.09) for y,z in outline]
     faces=[tuple(reversed(range(n))),tuple(range(n,2*n))]+[(j,(j+1)%n,(j+1)%n+n,j+n) for j in range(n)]
     mesh=bpy.data.meshes.new('Shaped French trestle');mesh.from_pydata(verts,[],faces)
-    leg=bpy.data.objects.new('Shaped oak trestle support',mesh);col.objects.link(leg);leg.parent=dining;mesh.materials.append(antique)
+    leg=bpy.data.objects.new('Shaped oak trestle support',mesh);col.objects.link(leg);leg.parent=dining;mesh.materials.append(dining_oak)
     mod=leg.modifiers.new('Worn trestle edges','BEVEL');mod.width=.009;mod.segments=3
     leg.modifiers.new('Trestle corner normals','WEIGHTED_NORMAL')
-    box('Through-tenon end',(x*1.19,0,.23),(.07,.15,.15),antique,.006,dining)
-    cylinder('Dark oak fixing peg',(x,-.13,.23),(x,.13,.23),.013,antique,dining)
+    box('Through-tenon end',(x*1.19,0,.23),(.07,.15,.15),dining_oak,.006,dining)
+    cylinder('Dark oak fixing peg',(x,-.13,.23),(x,.13,.23),.013,dining_oak,dining)
 
 def chair(x,z,angle):
     g=group('French country ladder-back chair',(x,-z,0),angle)
@@ -607,7 +635,7 @@ scene.cycles.samples=args.samples;scene.cycles.use_denoising=True;scene.cycles.a
 scene.cycles.use_light_tree=True
 scene.view_settings.exposure=.15
 scene.view_settings.look='AgX - Medium High Contrast'
-scene['design_revision']='L01 living/dining interior base 04'
+scene['design_revision']='L01 living/dining interior base 05'
 scene['style_source']='MATERIALS-BRIEF.md: agreed shared-space palette and supporting proposals'
 scene['scope_note']='G1 coastal country interior: connected corner sofa, floral rug, plain ottoman, inset shutters and curtains, pale oak dining set. 3.2 m ceiling, 5.8 m bifolds, closed side door and burner location are proposals. Source plan and browser not revised.'
 scene['units_note']='Metres. Source transforms retained; garden opening, furniture and log-burner location revised as proposals.'

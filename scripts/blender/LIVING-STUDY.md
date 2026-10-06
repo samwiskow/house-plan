@@ -10,6 +10,14 @@ The current user direction uses warm ivory panelling around the room, recessed p
 
 Original generated botanical and floral textures take their direction from William Morris and Laura Ashley. These are original study patterns, not replicas or selected retail fabrics. The green floral print from the earlier ottoman is now used on the rug; the ottoman is plain woven linen. The living and dining floor uses matte natural oak planks, with staggered joints and subtle board colour variation. The kitchen retains the warm buff limestone-effect option. The detailed furniture is custom study geometry, not a selected retail product.
 
+## Furniture reference update
+
+The user's two room photographs guide the table's muted, weathered timber finish and the footstool's plain, tactile upholstery. They are visual references; their accessories, chairs and room layout are not copied into the study.
+
+The user identified their sofa as the Loaf Big Easy Corner Sofa, Extra Large Right Hand, in Milky Way Clever Cotton. [Loaf's current product page](https://loaf.com/products/big-easy-corner-sofa) was checked on 6 October 2026. Its broad arms, low body, long seat cushions and loose back cushions inform this custom model. The room keeps its larger 4.10 × 3.65 m sofa reservation; this is not an exact Loaf product model or fit test. The material is a visual cotton approximation, not a manufacturer fabric scan. The user chose to retain cream/oatmeal for this room.
+
+The table alone has a separate muted oak finish. The sofa uses fuller seat and back shapes with small cloth irregularities, broad arms and low feet. The plain footstool has a softly crowned top and fine piping. Existing room height, circulation, rug, curtains and panelling are retained.
+
 ## Deliverables
 
 - `output/blender/living-study/living-dining.png`: main room view towards the garden.
