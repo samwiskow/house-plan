@@ -96,8 +96,10 @@ const {chromium}=require('playwright');
  assert.equal(await page.evaluate(()=>{let open;house.scene.traverse(o=>{if(o.userData.door?.data.id==='D15')open=o.userData.door.open;});return open;}),true);
  const doorOpen=()=>page.evaluate(()=>{let open;house.scene.traverse(o=>{if(o.userData.door?.data.id==='D15')open=o.userData.door.open;});return open;});
  await page.waitForFunction(()=>document.querySelector('#door-hint').textContent==='Space — Close door');
- await page.waitForFunction(()=>{let settled=true;house.scene.traverse(o=>{const door=o.userData.door;if(door&&Math.abs(Number(door.open)-door.progress)>.001)settled=false;});return settled;});
- await page.screenshot({path:path.join(root,'tmp/pdfs/walkthrough-door.png'),timeout:60000});
+ if(!process.env.CI){
+  await page.waitForFunction(()=>{let settled=true;house.scene.traverse(o=>{const door=o.userData.door;if(door&&Math.abs(Number(door.open)-door.progress)>.001)settled=false;});return settled;});
+  await page.screenshot({path:path.join(root,'tmp/pdfs/walkthrough-door.png'),timeout:60000});
+ }
  await page.keyboard.down('Space');assert.equal(await doorOpen(),false);await page.keyboard.down('Space');assert.equal(await doorOpen(),false,'Holding Space must not toggle repeatedly');await page.keyboard.up('Space');
  await page.waitForFunction(()=>document.querySelector('#door-hint').textContent==='Space — Open door');
  await page.keyboard.press('Space');assert.equal(await doorOpen(),true);
@@ -105,11 +107,11 @@ const {chromium}=require('playwright');
  await page.evaluate(()=>{house.camera.position.set(18.1,1.65,23);house.camera.lookAt(18.1,1.1,18.225);});await page.keyboard.press('Space');assert.equal(await doorOpen(),true,'Distant door must not operate');
  await page.keyboard.press('Escape');const stopped=await pose();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');const inactive=await pose();assert(inactive.position.every((v,i)=>Math.abs(v-stopped.position[i])<1e-6)&&inactive.direction.every((v,i)=>Math.abs(v-stopped.direction[i])<1e-6),'Movement keys must be inactive after Escape');
  await page.getByRole('button',{name:'Whole house',exact:true}).click();
- await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-desktop.png'),timeout:60000});
- await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-mobile.png'),timeout:60000});
+ if(!process.env.CI)await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-desktop.png'),timeout:60000});
+ await page.setViewportSize({width:390,height:844});if(!process.env.CI)await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-mobile.png'),timeout:60000});
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false);
  await page.getByRole('button',{name:'Shared room',exact:true}).click();await page.getByRole('button',{name:'Walk',exact:true}).click();
- await page.screenshot({path:path.join(root,'tmp/pdfs/walkthrough-mobile.png'),timeout:60000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ if(!process.env.CI)await page.screenshot({path:path.join(root,'tmp/pdfs/walkthrough-mobile.png'),timeout:60000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  assert.deepEqual(errors,[]);console.log('Passed texture mapping and stone scale, rooflight rays, outdoor chair orientation, PDF download, local-only load, view controls, office states, day/evening, walking, arrow turning, combined movement, drag and locked mouse look, focus handling, Space door interaction, wall collision and mobile overflow checks');
  } finally { await browser.close(); }
 })();
