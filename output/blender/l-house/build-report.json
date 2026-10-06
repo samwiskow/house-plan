@@ -1,0 +1,94 @@
+{
+  "source": {
+    "modelSha256": "3ec7b07375c890e8cad05389090741127261ff3ab701b416b053a47eb48f6908",
+    "units": "metres",
+    "source": "L01 measured browser scene; individual objects retained before batching"
+  },
+  "objects": 3110,
+  "meshes": 2856,
+  "materials": 30,
+  "paintedInteriorFaces": 1162,
+  "closedGables": 7,
+  "renderer": "CYCLES",
+  "device": "GPU",
+  "cameras": {
+    "arrival": [
+      [
+        -13,
+        12,
+        39
+      ],
+      [
+        12,
+        2.8,
+        10
+      ],
+      30
+    ],
+    "garden": [
+      [
+        14,
+        7,
+        -15
+      ],
+      [
+        9,
+        3,
+        6
+      ],
+      28
+    ],
+    "living": [
+      [
+        3.35,
+        1.65,
+        8.75
+      ],
+      [
+        3.3,
+        1.3,
+        1
+      ],
+      22
+    ],
+    "kitchen": [
+      [
+        10.25,
+        1.65,
+        8.85
+      ],
+      [
+        8.1,
+        1.25,
+        5.7
+      ],
+      22
+    ],
+    "parents": [
+      [
+        5.6,
+        4.65,
+        3.9
+      ],
+      [
+        2.8,
+        4.2,
+        1.3
+      ],
+      24
+    ],
+    "office": [
+      [
+        21.95,
+        4.65,
+        19.75
+      ],
+      [
+        24.2,
+        4.15,
+        15.8
+      ],
+      23
+    ]
+  }
+}
