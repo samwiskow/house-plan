@@ -56,6 +56,18 @@ join the library opening, with matching roof openings, ceiling openings and
 lightwells. These remain a concept proposal with shading and product selection
 open.
 
+## Shared-space fidelity pass
+
+The kitchen, dining area, garden room and courtyard now have textures scaled in
+metres, refined furniture, framed cabinets, softer contact shadows and instanced
+planting. Thin glazing retains clear views through overlapping panes. Finishes
+and object details remain illustrative; the measured model is unchanged.
+
+[Fidelity review](FIDELITY-REVIEW.md) records matching before/after views,
+GPU measurements and verification. `node scripts/measure_viewer.cjs current`
+captures the four benchmark views at desktop and mobile viewport sizes and
+records the actual rendering backend in `tmp/fidelity/current/`.
+
 `python3 scripts/build_pages.py` stages the current scene and PDF in `tmp/pages`.
 GitHub Actions verifies geometry, the book manifest and browser behaviour before
 publishing that folder on a push to `main`. Pull requests run the same checks.
