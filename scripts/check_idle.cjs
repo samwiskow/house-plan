@@ -1,0 +1,7 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require('playwright');
+(async()=>{const local='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||(fs.existsSync(local)?local:undefined),args:process.env.CI?['--use-angle=swiftshader','--enable-unsafe-swiftshader']:['--enable-gpu']});try{const results=[];
+ for(const route of ['viewer','viewer-l-house']){const p=await browser.newPage();await p.addInitScript(()=>{window.frameCallbacks=0;const raf=window.requestAnimationFrame.bind(window);window.requestAnimationFrame=callback=>raf(time=>{window.frameCallbacks++;callback(time);});});
+ await p.goto(new URL(route+'/',process.env.BASE_URL||'http://127.0.0.1:4190/').href);await p.waitForFunction(()=>window.house);await p.waitForTimeout(1800);const start=await p.evaluate(()=>window.frameCallbacks);await p.waitForTimeout(1200);const callbacks=await p.evaluate(start=>window.frameCallbacks-start,start);results.push({route,idleCallbacks:callbacks});if(!process.env.MEASURE_ONLY)assert.equal(callbacks,0,'Idle model still runs animation callbacks');await p.close();}
+ const out=path.resolve(__dirname,'../tmp/performance',process.argv[2]||'idle');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'idle.json'),JSON.stringify(results,null,2));console.log(results);
+ }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

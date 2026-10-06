@@ -103,7 +103,7 @@ const {chromium}=require('playwright');
  await page.keyboard.down('Space');assert.equal(await doorOpen(),false);await page.keyboard.down('Space');assert.equal(await doorOpen(),false,'Holding Space must not toggle repeatedly');await page.keyboard.up('Space');
  await page.waitForFunction(()=>document.querySelector('#door-hint').textContent==='Space — Open door');
  await page.keyboard.press('Space');assert.equal(await doorOpen(),true);
- await page.evaluate(()=>house.camera.lookAt(18.1,1.65,24));await page.waitForFunction(()=>document.querySelector('#door-hint').hidden);await page.keyboard.press('Space');assert.equal(await doorOpen(),true,'Looking away must not operate the door');
+ await page.evaluate(()=>{house.camera.lookAt(18.1,1.65,24);house.requestRender();});await page.waitForFunction(()=>document.querySelector('#door-hint').hidden);await page.keyboard.press('Space');assert.equal(await doorOpen(),true,'Looking away must not operate the door');
  await page.evaluate(()=>{house.camera.position.set(18.1,1.65,23);house.camera.lookAt(18.1,1.1,18.225);});await page.keyboard.press('Space');assert.equal(await doorOpen(),true,'Distant door must not operate');
  await page.keyboard.press('Escape');const stopped=await pose();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');const inactive=await pose();assert(inactive.position.every((v,i)=>Math.abs(v-stopped.position[i])<1e-6)&&inactive.direction.every((v,i)=>Math.abs(v-stopped.direction[i])<1e-6),'Movement keys must be inactive after Escape');
  await page.getByRole('button',{name:'Whole house',exact:true}).click();

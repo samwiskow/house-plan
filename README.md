@@ -1,6 +1,20 @@
-# Current presentation: House Design Book 02
+# House models
 
-Explore the [live house model](https://samwiskow.github.io/house-plan/).
+Open the [model index](https://samwiskow.github.io/house-plan/) to compare:
+
+- [L-house](https://samwiskow.github.io/house-plan/viewer-l-house/): the two-storey
+  alternative, linked garage, proposed plot and two pantry layouts.
+- [Courtyard house](https://samwiskow.github.io/house-plan/viewer/): the earlier
+  single-storey design from House Design Book 02.
+
+Each model has its own page and a link to its design book. The index uses small
+static previews and loads no 3D scene until a model is selected.
+
+Run `python3 scripts/build_pages.py`, then serve `tmp/pages` on localhost to
+preview the exact site published by GitHub Pages. See
+[performance checks](site/PERFORMANCE.md) for the rendering changes and evidence.
+
+## Courtyard presentation: House Design Book 02
 
 Start with [HOUSE-DESIGN-BOOK.md](HOUSE-DESIGN-BOOK.md) for the consolidated
 16-page book and fresh accompanying 3D model. It supersedes the older

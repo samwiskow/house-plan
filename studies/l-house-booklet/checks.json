@@ -1,0 +1,127 @@
+{
+  "pages": [
+    "A generous plot, with a clear arrival",
+    "Drive in, park, and leave facing forward",
+    "Ground floor: daily life and two arrivals",
+    "First floor: family rooms and a private suite",
+    "Garage, gym and office remain usable together",
+    "Pantry choice: connected by default, enclosed if preferred",
+    "Parents suite: private route and a deep soaking tub",
+    "Family bathroom and stair assumptions",
+    "Review the plan first, then build the 3D alternative"
+  ],
+  "plan_source": {
+    "source": "/Users/sam/.codex/visualizations/2026/10/06/01a1109a-81af-74e3-9391-960ba3e67420/l-house-pantry-divider.html",
+    "sha256": "e44ce44bb647a7907042f3494521099e6d800fbd7145607a7f3d904f2b057881",
+    "date": "2026-10-06",
+    "status": "Accepted plan direction, dimensioned study; not construction design",
+    "pantry_default": "Short divider and open passage",
+    "pantry_alternative": "Earlier enclosed pantry"
+  },
+  "pdf": "/Users/sam/Projects/house-plan/.worktrees/codex-l-house-design-book/output/pdf/l-house-design-booklet.pdf",
+  "sha256": "e52c2882f96c6409da2ba8fa19c1bfa2b34bc9858272245746578b7d74270c77",
+  "plot": {
+    "width": 40,
+    "depth": 65,
+    "house_origin": [
+      6,
+      28
+    ],
+    "garden_depth": 28,
+    "gate": [
+      12.25,
+      18.25
+    ],
+    "terrace": [
+      [
+        6,
+        24
+      ],
+      [
+        22.2,
+        24
+      ],
+      [
+        22.2,
+        28
+      ],
+      [
+        6,
+        28
+      ]
+    ],
+    "forecourt": [
+      [
+        8.5,
+        44.8
+      ],
+      [
+        24.7,
+        44.8
+      ],
+      [
+        24.7,
+        58
+      ],
+      [
+        20,
+        62
+      ],
+      [
+        18.25,
+        65
+      ],
+      [
+        12.25,
+        65
+      ],
+      [
+        10,
+        62
+      ],
+      [
+        8.5,
+        58
+      ]
+    ],
+    "visitor_bays": [
+      [
+        2.8,
+        47.7,
+        5.7,
+        2.8
+      ],
+      [
+        2.8,
+        50.5,
+        5.7,
+        2.8
+      ]
+    ],
+    "vehicle_check": {
+      "assumed_body": [
+        5.1,
+        2.15
+      ],
+      "path_radii": [
+        7,
+        8
+      ],
+      "step_m": 0.1,
+      "poses": 728,
+      "failures": [],
+      "scope": "Illustrative tangent-body sweep; not Audi steering geometry or a highway access assessment. Arrival forward, reverse out of garage, then leave road access forward."
+    }
+  },
+  "external_area_m2": 571.5749999999999,
+  "footprint_m2": 310.99499999999995,
+  "geometry_sha256": "8c915215cc74f007f3dba5f15a57c9b57ab223d39ba603282b1427c2f608d400",
+  "checks": "Plan source retains tested geometry; proposed garden doors are separate opening proposals. Vehicle poses pass SAT intersection and gate-edge checks.",
+  "pdf_validation": {
+    "pages": 9,
+    "page_size": "A3 landscape",
+    "text_bounds": "pass",
+    "required_option_labels": "pass",
+    "vehicle_paving_check": "pass"
+  }
+}
