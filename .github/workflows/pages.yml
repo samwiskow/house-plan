@@ -46,6 +46,7 @@ jobs:
             sleep 1
           done
           NODE_PATH="$RUNNER_TEMP/house-checks/node_modules" node scripts/check_viewer.cjs
+          BASE_URL=http://127.0.0.1:4186/ NODE_PATH="$RUNNER_TEMP/house-checks/node_modules" node scripts/check_door_timing.cjs
           BASE_URL=http://127.0.0.1:4186/ NODE_PATH="$RUNNER_TEMP/house-checks/node_modules" node scripts/check_l_house.cjs
           BASE_URL=http://127.0.0.1:4186/ NODE_PATH="$RUNNER_TEMP/house-checks/node_modules" node scripts/check_site.cjs
           BASE_URL=http://127.0.0.1:4186/ NODE_PATH="$RUNNER_TEMP/house-checks/node_modules" node scripts/check_idle.cjs

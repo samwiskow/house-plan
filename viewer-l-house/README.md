@@ -42,6 +42,7 @@ compact soaking tub and large shower from the plan.
 python3 scripts/export_l_house.py
 node --check viewer-l-house/main.js
 node scripts/check_l_house.cjs
+node scripts/check_door_timing.cjs
 ```
 
 The browser check requires Playwright and Chrome. Set `CHROME_PATH` if Chrome is
@@ -56,7 +57,8 @@ The check compares both room/furniture layouts and source doors with the booklet
 It checks pantry passage/wall states, door collision, both stairs up and down,
 keyboard movement, upper-floor edges, guest-bed state, lighting, the PDF link,
 narrow-screen overflow, and local-only asset loading. It saves view images and
-results in `tmp/l-house/` for visual review.
+results in `tmp/l-house/` for visual review. The timing check inserts 250 ms
+frame delays to verify that doors finish on time without jumping after idle.
 
 ## Proposals and limits
 

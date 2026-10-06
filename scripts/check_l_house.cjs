@@ -31,7 +31,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'tmp/l-house');
  assert(await page.evaluate(()=>document.activeElement===house.renderer.domElement),'Mouse look must keep keyboard input on the model');
  const lockedFrom=await page.evaluate(()=>house.camera.position.toArray());await page.keyboard.down('s');await page.waitForFunction(before=>Math.hypot(house.camera.position.x-before[0],house.camera.position.z-before[2])>.12,lockedFrom);await page.keyboard.up('s');
  await page.evaluate(()=>{house.setPose(9.4,6.75);house.camera.lookAt(10.825,1.5,6.75);house.requestRender();});await page.waitForFunction(()=>house.doorAt()?.data.id==='Kitchen to pantry');
- await page.mouse.down();await page.mouse.up();await page.waitForFunction(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').progress===0);
+ await page.mouse.down();await page.mouse.up();assert(!(await page.evaluate(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').open)),'Locked click must close the aimed pantry door');await page.waitForFunction(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').progress===0);
  await page.keyboard.press('Space');await page.waitForFunction(()=>house.doors.find(s=>s.data.id==='Kitchen to pantry').progress===1);
  await page.keyboard.press('Escape');await page.waitForFunction(()=>!house.state.walking&&document.pointerLockElement===null);
  const stairs=await page.evaluate(()=>{
@@ -53,6 +53,6 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'tmp/l-house');
  const pdf=await page.request.get(base+'output/pdf/l-house-design-booklet.pdf');assert.equal(pdf.status(),200);
  for(const width of [390,320]){await page.setViewportSize({width,height:844});await page.waitForFunction(()=>Math.abs(house.camera.aspect-innerWidth/innerHeight)<.001);await page.locator('#view').selectOption('overview');assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));await page.screenshot({path:path.join(output,'mobile-'+width+'.png')});}
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
- fs.writeFileSync(path.join(output,'browser-checks.json'),JSON.stringify({rooms:33,sourceGeometry:'unchanged',stairs,errors,external,viewports:[1440,390,320],pantryOptions:'pass',doorCollision:'pass',walkControls:'pass',cutawayShadows:'pass',lockedMouseControls:'pass',officeGuest:'pass'},null,2));
+ fs.writeFileSync(path.join(output,'browser-checks.json'),JSON.stringify({rooms:33,sourceGeometry:'unchanged',stairs,errors,external,viewports:[process.env.CI?900:1440,390,320],pantryOptions:'pass',doorCollision:'pass',walkControls:'pass',cutawayShadows:'pass',lockedMouseControls:'pass',officeGuest:'pass'},null,2));
  console.log('Passed: plan agreement, views, pantry options, operating doors, cutaway shadows, locked mouse controls, both stairs up/down, walking, upper-floor edge, office guest state, lighting, PDF link, responsive controls, local-only assets.');
  }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

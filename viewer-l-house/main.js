@@ -223,7 +223,7 @@ const privacyMaterial=new THREE.MeshStandardMaterial({color:'#dbe6d2',transparen
 function addDoor(d,previous){
  const base=model.levels[d.floor],group=new THREE.Group();group.position.set(d.x,base,d.y);floorGroups[d.floor].add(group);group.name=d.id;
  const initial=['Front entrance','Boot to hall','Boot to link','Link to lobby','Proposed drive entrance','Hall to kitchen','Kitchen to laundry','Laundry to boot','Landing to dressing','Dressing to bedroom','Bedroom to ensuite','Lobby to workshop','Workshop to parking','Lobby to gym','Office','Kitchen divider','Living to terrace','Dining to terrace','Garage door'].includes(d.id);
- const state={data:d,group,open:previous?.open??initial,progress:previous?.progress??Number(initial),parts:[]};
+ const state={data:d,group,open:previous?.open??initial,progress:previous?.progress??Number(initial),updatedAt:previous?.updatedAt??performance.now(),parts:[]};
  const h=d.axis==='h',r=h?[0,-.022,d.w,.044]:[-.022,0,.044,d.w];
  if(d.style==='garage'){
   for(let i=0;i<5;i++){const part=new THREE.Group();box([-.025,0,.05,d.w],-.225,.225,'oak',part);group.add(part);state.parts.push(part);}
@@ -345,7 +345,7 @@ function doorAt(cursor=new THREE.Vector2()){
  for(const s of doors){if(!visibleObject(s.group))continue;const d=s.data,axis=d.axis==='h'?'z':'x',origin=ray.ray.origin,dir=ray.ray.direction;if(Math.abs(dir[axis])<.0001)continue;const distance=((axis==='x'?d.x:d.y)-origin[axis])/dir[axis];if(distance<0||distance>near+.04)continue;const p=ray.ray.at(distance,new THREE.Vector3()),along=d.axis==='h'?p.x-d.x:p.z-d.y,b=model.levels[d.floor];if(along>=0&&along<=d.w&&p.y>b&&p.y<b+2.3){result=s;near=distance;}}
  return result;
 }
-function toggleDoor(s){if(!s)return;s.open=!s.open;requestRender();}
+function toggleDoor(s){if(!s)return;s.open=!s.open;s.updatedAt=performance.now();requestRender();}
 function look(dx,dy){const e=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');e.y-=dx*.0038;e.x=THREE.MathUtils.clamp(e.x-dy*.0038,-1.25,1.25);camera.quaternion.setFromEuler(e);requestRender();}
 renderer.domElement.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointer={x:e.clientX,y:e.clientY,moved:0};if(document.pointerLockElement!==renderer.domElement)renderer.domElement.setPointerCapture(e.pointerId);renderer.domElement.focus({preventScroll:true});});
 renderer.domElement.addEventListener('pointermove',e=>{if(!pointer||document.pointerLockElement)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;pointer.moved+=Math.abs(dx)+Math.abs(dy);pointer.x=e.clientX;pointer.y=e.clientY;if(walking)look(dx,dy);});
@@ -361,7 +361,7 @@ $('door').addEventListener('click',()=>toggleDoor(doorAt()));$('view').addEventL
 orbit.addEventListener('change',requestRender);window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);requestRender();});
 rebuild();setView('overview');setNight(false);$('status').textContent='L01 · Measured plan · 33 rooms';
 function animate(now){framePending=false;const dt=Math.min((now-last)/1000,.06);last=now;let changed=false;
- for(const s of doors){const target=Number(s.open);if(Math.abs(s.progress-target)>.001){s.progress=THREE.MathUtils.damp(s.progress,target,10,dt);if(Math.abs(s.progress-target)<.001)s.progress=target;positionDoor(s);changed=true;}}
+ for(const s of doors){const target=Number(s.open);if(Math.abs(s.progress-target)>.001){const elapsed=Math.max(0,(now-s.updatedAt)/1000);s.updatedAt=now;s.progress=THREE.MathUtils.damp(s.progress,target,10,elapsed);if(Math.abs(s.progress-target)<.001)s.progress=target;positionDoor(s);changed=true;}}
  if(changed){renderer.shadowMap.needsUpdate=true;dirty=true;}
  if(walking){const turn=(keys.has('arrowleft')?1:0)-(keys.has('arrowright')?1:0);if(turn)look(-turn*dt*350,0);const f=(keys.has('w')||keys.has('arrowup')?1:0)-(keys.has('s')||keys.has('arrowdown')?1:0),s=(keys.has('d')?1:0)-(keys.has('a')?1:0);if(f||s){const direction=camera.getWorldDirection(new THREE.Vector3());direction.y=0;direction.normalize();const right=new THREE.Vector3(-direction.z,0,direction.x),v=direction.multiplyScalar(f).add(right.multiplyScalar(s)).normalize().multiplyScalar(dt*(keys.has('shift')?3.5:2.0));move(v.x,v.z);}activeDoor=doorAt();$('door').disabled=!activeDoor;$('door').textContent=activeDoor?(activeDoor.open?'Close door':'Open door'):'Point at a door';}
  else orbit.update();
