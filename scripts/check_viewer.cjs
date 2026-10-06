@@ -24,12 +24,31 @@ const {chromium}=require('playwright');
   const chairBacks=[];
   house.scene.traverse(o=>{
    if(!['Dining north','Dining south'].includes(o.userData.name))return;
-   const back=o.children.find(c=>c.isMesh&&c.geometry.parameters.height>.3&&c.position.y>.6);
+   let back;o.traverse(c=>{if(c.name==='Chair back')back=c;});
    const north=o.userData.name==='Dining north';
-   chairBacks.push(back&&Math.abs(back.position.z-(north?5.63:7.77))<.01);
+   chairBacks.push(back&&Math.abs(new THREE.Box3().setFromObject(back).getCenter(new THREE.Vector3()).z-(north?5.635:7.765))<.01);
   });
-  return {openings,chairBacks};
+  const mappedSurfaces=[],roofNormals=[],roofNames=new Set(house.model.roofSurfaces.map(r=>r.name));
+  house.scene.traverse(o=>{
+   if(!o.isMesh)return;
+   if(roofNames.has(o.name)){const normals=o.geometry.getAttribute('normal');roofNormals.push(Array.from({length:normals.count},(_,i)=>normals.getY(i)>.5).every(Boolean));}
+   const materials=Array.isArray(o.material)?o.material:[o.material];
+   if(!materials.some(m=>m.map))return;
+   const uv=o.geometry.getAttribute('uv');mappedSurfaces.push(Boolean(uv)&&Array.from(uv.array).every(Number.isFinite));
+  });
+  const wallSamples=[];
+  for(const wall of house.model.walls.filter(w=>w.material==='stone'&&w.rect[1]===0&&w.bottom===0)){
+   ray.set(new THREE.Vector3(wall.rect[0]+wall.rect[2]/2,Math.min(1,wall.top/2),-1),new THREE.Vector3(0,0,1));
+   const hit=ray.intersectObjects(house.scene.children,true).find(h=>h.object.isMesh&&h.point.z<.01);
+   if(hit?.uv)wallSamples.push([hit.point.x,hit.uv.x]);
+  }
+  return {openings,chairBacks,mappedSurfaces,wallSamples,roofNormals};
  });
+ assert(physical.roofNormals.length>6&&physical.roofNormals.every(Boolean),'Roof normals point inward and produce self-shadow artefacts');
+ assert(physical.mappedSurfaces.length>100&&physical.mappedSurfaces.every(Boolean),'Textured surface has missing or invalid UV coordinates');
+ assert(physical.wallSamples.length>1,'Missing wall samples');
+ const [firstX,firstU]=physical.wallSamples[0];
+ for(const [x,u] of physical.wallSamples)assert(Math.abs((u-firstU)-(x-firstX)/2.4)<.001,'Stone courses change scale or alignment across wall pieces');
  assert.equal(physical.openings.length,6);assert(physical.openings.every(Boolean),'Rooflight blocked by opaque roof or ceiling');
  assert.equal(physical.chairBacks.length,8);assert(physical.chairBacks.every(Boolean),'Outdoor dining chair faces away from table');
  const book=await page.request.get(new URL('output/pdf/house-design-book.pdf',baseURL).href);assert.equal(book.status(),200);assert.equal((await book.body()).subarray(0,4).toString(),'%PDF');
@@ -53,6 +72,6 @@ const {chromium}=require('playwright');
  await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-desktop.png'),timeout:60000});
  await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(root,'tmp/pdfs/viewer-mobile.png'),timeout:60000});
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false);
- assert.deepEqual(errors,[]);console.log('Passed rooflight rays, outdoor chair orientation, PDF download, local-only load, view controls, office states, day/evening, walking, door interaction, wall collision and mobile overflow checks');
+ assert.deepEqual(errors,[]);console.log('Passed texture mapping and stone scale, rooflight rays, outdoor chair orientation, PDF download, local-only load, view controls, office states, day/evening, walking, door interaction, wall collision and mobile overflow checks');
  } finally { await browser.close(); }
 })();

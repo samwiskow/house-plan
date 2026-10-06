@@ -1,0 +1,149 @@
+{
+  "deviceScaleFactor": 1,
+  "samples": [
+    {
+      "device": "desktop",
+      "viewport": {
+        "width": 1400,
+        "height": 1000
+      },
+      "view": "living",
+      "evening": false,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 1.7,
+      "p95Ms": 1.9,
+      "drawCalls": 479,
+      "triangles": 44308,
+      "geometries": 1504,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "desktop",
+      "viewport": {
+        "width": 1400,
+        "height": 1000
+      },
+      "view": "dining",
+      "evening": false,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 2.5,
+      "p95Ms": 4.9,
+      "drawCalls": 990,
+      "triangles": 51661,
+      "geometries": 1504,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "desktop",
+      "viewport": {
+        "width": 1400,
+        "height": 1000
+      },
+      "view": "dining",
+      "evening": true,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 3.2,
+      "p95Ms": 4.6,
+      "drawCalls": 990,
+      "triangles": 51661,
+      "geometries": 1504,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "desktop",
+      "viewport": {
+        "width": 1400,
+        "height": 1000
+      },
+      "view": "courtyard",
+      "evening": false,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 3.9,
+      "p95Ms": 6.2,
+      "drawCalls": 1492,
+      "triangles": 68995,
+      "geometries": 1509,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": "living",
+      "evening": false,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 1.8,
+      "p95Ms": 2.3,
+      "drawCalls": 292,
+      "triangles": 14144,
+      "geometries": 1479,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": "dining",
+      "evening": false,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 2.2,
+      "p95Ms": 3.5,
+      "drawCalls": 458,
+      "triangles": 37418,
+      "geometries": 1484,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": "dining",
+      "evening": true,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 3.3,
+      "p95Ms": 3.6,
+      "drawCalls": 458,
+      "triangles": 37418,
+      "geometries": 1484,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    },
+    {
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": "courtyard",
+      "evening": false,
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+      "medianMs": 3.9,
+      "p95Ms": 5.8,
+      "drawCalls": 1456,
+      "triangles": 67369,
+      "geometries": 1499,
+      "textures": 36,
+      "glError": 0,
+      "contextLost": false
+    }
+  ]
+}

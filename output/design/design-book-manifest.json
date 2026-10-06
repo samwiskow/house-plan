@@ -5,17 +5,17 @@
   "source_layout": "concept-24 snapshot / concept-25 whole-house proposal",
   "book": "output/pdf/house-design-book.pdf",
   "views": {
-    "arrival.png": "948493d4ca8903829fa84a666320066120b4f327a8394da17aa4f8bb06db2465",
-    "courtyard.png": "6e4c599fbe81fff449b12d6f390ab3475f1b442a89de62795732a8593448aa8f",
-    "dining.png": "8b66d3eebf248272de22d18381168d229767cb294c038696b460b9051ae14083",
-    "evening-court.png": "2a0ce6ec2ed7f9114a8a941eeeed45924c9f51f45bc2366cf0b918b5a722fc10",
-    "evening.png": "0e1cdee9c1763ef2d567a67a3ea1f105d295fb5f3118d27ce5ac722541a35d3c",
-    "garden.png": "182d72f097b2f0bb3f453e0062ccf572aa2ed09813b45a242c689044892d8f10",
-    "library.png": "9b3ff3596dacf74b700c3576018d4f285c07bec0e1f014b9cb84df61825311e4",
-    "living.png": "9b6d5c819cd07505c6c1d6dc0504819b859138f69415c3b2e11650a2b62695b4",
-    "office.png": "82dc303edd95b5fdf71771f42f5e1cb34afa3a9ab235d0e97e77595dabf25d56",
-    "overview.png": "b8ed40708f32f68636e010df2a6f7c221f1febfc52d0367465827b318d5af5a1",
-    "plan.png": "d1e1b5e2f3fef47f06668e797f6a82660f406148fb872ede400e3631087f3acf"
+    "arrival.png": "a8d7de4a8c31b10c5bb8677da11016226fcc5254b8310ede6ffca348d3ac1f88",
+    "courtyard.png": "3b55bde79b7f4acfaf5cce11ee10ab6744fdf877a02d873613ed7697fff0fc9c",
+    "dining.png": "c08d9adb33297fa3e90c527df83652b6ad60e107e1220db6a9ef7d39993a828c",
+    "evening-court.png": "662492184f794ed0e5d83ef443f853ebe67cc2f929d74a886ec5a9f6452229b9",
+    "evening.png": "cf5547ef87cadcb004ff1d20404d5e0686f89f1bb45e7118c5a847f40bbcc3f5",
+    "garden.png": "ccd722d63135a4c0b6c05b4a5157925a6d6cd11fe61ba6583bdeffef84c5d587",
+    "library.png": "2f8568ec77a96a02468a45d33b856479bcda0c92d6641cf0ce05d82b2142764f",
+    "living.png": "c6dbca4cfa2d7b458983b19c6b29cc9d157f2c9134fe63bb404cd7589911eb69",
+    "office.png": "175d060f97dedf6993c162855321e468b756be4a2170af006ec1e8fdde3ab60d",
+    "overview.png": "3b15c2702eab4d7ab80e3a83abf710cb5e111e9fbd2d5d0ebd7c8814ac18df4c",
+    "plan.png": "1cfe5541b80484703249a39d934b05108e4f73fd715564167af7252504c4c8c2"
   },
   "limitations": [
     "Concept design, not construction documentation",
