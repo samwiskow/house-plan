@@ -19,9 +19,13 @@ license; the scene makes no remote requests.
 
 Choose a view, drag to orbit and scroll to zoom. Roof off reveals the furnished
 layout. Office offers Professional, Personal and Night states. Daylight toggles
-to Evening. Walk uses drag to look and WASD / arrows to move; Escape stops.
-Click a nearby door to open / close it. Walking blocks walls and closed door
-openings, but furniture is not a collision obstacle. Use the measured plan
+to Evening. Walk uses ↑ / ↓ to move forward / back and ← / → to turn. WASD moves
+forward / back and sideways. Drag to look, or choose Mouse look for continuous
+mouse control; Escape stops walking and releases the cursor. The centre marker
+aims at nearby doors: an outline and Space prompt show which door will open /
+close. Holding Space toggles the door only once. You can also click a door within 3 metres.
+If mouse look is unavailable, drag and keyboard controls remain available.
+Walking blocks walls and closed door openings, but furniture is not a collision obstacle. Use the measured plan
 checks, not walking alone, to assess clearances.
 
 ## Rebuild

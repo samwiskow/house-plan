@@ -11,6 +11,7 @@ renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure=1;
 renderer.domElement.setAttribute('aria-label','3D model of the courtyard house. Choose a view or drag to explore.');
+renderer.domElement.tabIndex=0;
 document.querySelector('#scene').append(renderer.domElement);
 const scene=new THREE.Scene();
 scene.background=new THREE.Color('#e6e5dc');
@@ -513,7 +514,33 @@ orbit.addEventListener('change',requestRender);
 const keys=new Set();
 function setRoof(value){roofOn=value;roofs.visible=value;ceilings.visible=value;renderer.shadowMap.needsUpdate=true;requestRender();document.querySelector('#roof-toggle').textContent=value?'Roof on':'Roof off';document.querySelector('#roof-toggle').setAttribute('aria-pressed',String(value));}
 function setNight(value){night=value;document.body.classList.toggle('night',value);scene.background.set(value?'#222f38':'#e6e5dc');scene.fog.color.copy(scene.background);scene.environmentIntensity=value?.08:.55;hemisphere.intensity=value?.12:.65;sun.intensity=value?.04:2.6;lampMaterial.emissiveIntensity=value?1.2:0;practical.forEach(l=>{l.visible=value;l.intensity=value?10:0;});taskLights.forEach(l=>{l.visible=value;l.intensity=value?3:0;});interiorFill.forEach(l=>l.intensity=value?2:2.8);requestRender();document.querySelector('#light-toggle').textContent=value?'Evening':'Daylight';document.querySelector('#light-toggle').setAttribute('aria-pressed',String(value));}
-function setWalking(value){walking=value;orbit.enabled=!value;keys.clear();requestRender();document.querySelector('#walk-toggle').textContent=value?'Stop walking':'Walk';document.querySelector('#walk-toggle').setAttribute('aria-pressed',String(value));if(value){if(camera.position.y>3)camera.position.set(17.8,1.65,17.4);camera.position.y=1.65;document.querySelector('#view-note').textContent='Drag to look. Use WASD or arrow keys to walk; click a door to open it. Escape stops walking.';}else{const direction=new THREE.Vector3();camera.getWorldDirection(direction);orbit.target.copy(camera.position).addScaledVector(direction,3);}}
+const walkNote='↑ / ↓ walk · ← / → turn · WASD move · Drag to look · Space operates a nearby door · Escape stops.';
+const doorRay=new THREE.Raycaster(),doorOutline=new THREE.BoxHelper(undefined,0x92714e);
+scene.add(doorOutline);doorOutline.visible=false;
+let activeDoor=null;
+function updateDoorHint(){
+  const target=walking?doorAt(new THREE.Vector2()):null;
+  if(target!==activeDoor){activeDoor=target;doorOutline.visible=!!target;requestRender();}
+  const hint=document.querySelector('#door-hint'),label=target?`Space — ${target.open?'Close':'Open'} door`:'';
+  if(hint.textContent!==label){hint.textContent=label;hint.hidden=!target;}
+  if(target)doorOutline.setFromObject(target.group);
+}
+function setWalking(value){
+  walking=value;orbit.enabled=!value;keys.clear();pointer=null;requestRender();
+  document.querySelector('#walk-toggle').textContent=value?'Stop walking':'Walk';
+  document.querySelector('#walk-toggle').setAttribute('aria-pressed',String(value));
+  document.querySelector('#walk-controls').hidden=!value;document.querySelector('#walk-aim').hidden=!value;
+  if(value){
+    if(camera.position.y>3){camera.position.set(17.8,1.65,17.4);camera.lookAt(13.65,1.65,17.05);}
+    camera.position.y=1.65;
+    document.querySelector('#view-note').textContent=walkNote;renderer.domElement.focus({preventScroll:true});
+  }else{
+    if(document.pointerLockElement===renderer.domElement)document.exitPointerLock();
+    const direction=new THREE.Vector3();camera.getWorldDirection(direction);orbit.target.copy(camera.position).addScaledVector(direction,3);
+    document.querySelector('#view-note').textContent=views[currentView].note;
+  }
+  updateDoorHint();
+}
 function setView(name){
   const view=views[name];currentView=name;setWalking(false);camera.position.set(...view.position);orbit.target.set(...view.target);if(!['living','dining','library','office'].includes(name))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)).add(orbit.target);camera.fov=name==='plan'?38:['living','dining','library','office'].includes(name)?65:48;camera.updateProjectionMatrix();orbit.update();setRoof(name!=='plan');requestRender();
   document.querySelector('#view-title').textContent=view.title;document.querySelector('#view-note').textContent=view.note;
@@ -528,12 +555,68 @@ function canMove(x,z){
   if(model.walls.some(w=>w.bottom<1.5&&w.top>.2&&x>w.rect[0]-.18&&x<w.rect[0]+w.rect[2]+.18&&z>w.rect[1]-.18&&z<w.rect[1]+w.rect[3]+.18))return false;
   return !doors.some(({data:d,open})=>!open&&(d.vertical?Math.abs(x-d.x)<.2&&z>d.y-.12&&z<d.y+d.width+.12:Math.abs(z-d.y)<.2&&x>d.x-.12&&x<d.x+d.width+.12));
 }
+function doorAt(cursor){
+  scene.updateMatrixWorld(true);camera.updateWorldMatrix(true,false);doorRay.setFromCamera(cursor,camera);
+  const hit=doorRay.intersectObjects(building.children,true)[0];
+  let target=hit?.distance<=3?hit.object.userData.door:null,nearest=Math.min(3,hit?.distance??Infinity);
+  for(const state of doors){
+    const d=state.data,axis=d.vertical?'x':'z',origin=doorRay.ray.origin,direction=doorRay.ray.direction;
+    if(Math.abs(direction[axis])<.0001)continue;
+    const distance=((d.vertical?d.x:d.y)-origin[axis])/direction[axis];
+    if(distance<0||distance>3||distance>nearest+.06)continue;
+    const point=doorRay.ray.at(distance,new THREE.Vector3()),along=d.vertical?point.z-d.y:point.x-d.x;
+    if(along<0||along>d.width||point.y<.03||point.y>2.15)continue;
+    target=state;nearest=distance;
+  }
+  return target;
+}
+function toggleDoor(door){if(door){door.open=!door.open;requestRender();updateDoorHint();}}
+function look(dx,dy){
+  const angles=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');
+  angles.y-=dx*.004;angles.x=THREE.MathUtils.clamp(angles.x-dy*.004,-1.35,1.35);
+  camera.quaternion.setFromEuler(angles);requestRender();
+}
 let pointer=null;
-renderer.domElement.addEventListener('pointerdown',e=>{pointer={x:e.clientX,y:e.clientY,moved:0};});
-renderer.domElement.addEventListener('pointermove',e=>{if(!pointer)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;pointer.moved+=Math.abs(dx)+Math.abs(dy);pointer.x=e.clientX;pointer.y=e.clientY;if(walking){const angles=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');angles.y-=dx*.004;angles.x=THREE.MathUtils.clamp(angles.x-dy*.004,-1.35,1.35);camera.quaternion.setFromEuler(angles);requestRender();}});
-renderer.domElement.addEventListener('pointerup',e=>{if(pointer&&pointer.moved<5){const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2(e.clientX/innerWidth*2-1,1-e.clientY/innerHeight*2),camera);const hit=ray.intersectObjects(building.children,true)[0];if(hit?.object.userData.door&&hit.distance<8){hit.object.userData.door.open=!hit.object.userData.door.open;requestRender();}}pointer=null;});
-window.addEventListener('keydown',e=>{if(e.key==='Escape')setWalking(false);if(walking&&['w','a','s','d','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();keys.add(e.key);}});
-window.addEventListener('keyup',e=>keys.delete(e.key));window.addEventListener('blur',()=>keys.clear());
+renderer.domElement.addEventListener('pointerdown',e=>{
+  if(e.button!==0||document.pointerLockElement===renderer.domElement)return;
+  pointer={x:e.clientX,y:e.clientY,moved:0};renderer.domElement.setPointerCapture(e.pointerId);
+});
+renderer.domElement.addEventListener('pointermove',e=>{
+  if(!pointer)return;
+  const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;pointer.moved+=Math.abs(dx)+Math.abs(dy);pointer.x=e.clientX;pointer.y=e.clientY;
+  if(walking)look(dx,dy);
+});
+renderer.domElement.addEventListener('pointerup',e=>{
+  if(pointer&&pointer.moved<5){const rect=renderer.domElement.getBoundingClientRect();toggleDoor(doorAt(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,1-(e.clientY-rect.top)/rect.height*2)));}
+  pointer=null;
+});
+renderer.domElement.addEventListener('lostpointercapture',()=>pointer=null);
+renderer.domElement.addEventListener('click',()=>{if(walking&&document.pointerLockElement===renderer.domElement)toggleDoor(doorAt(new THREE.Vector2()));});
+document.addEventListener('mousemove',e=>{if(walking&&document.pointerLockElement===renderer.domElement)look(e.movementX,e.movementY);});
+document.addEventListener('pointerlockchange',()=>{
+  const locked=document.pointerLockElement===renderer.domElement;
+  document.querySelector('#mouse-look').setAttribute('aria-pressed',String(locked));
+  document.querySelector('#mouse-look').textContent=locked?'Mouse look on':'Mouse look';
+  pointer=null;keys.clear();
+  if(locked&&!walking)document.exitPointerLock();
+  else if(!locked&&walking)setWalking(false);
+});
+function mouseLookUnavailable(){if(walking)document.querySelector('#view-note').textContent=`Mouse look is unavailable. ${walkNote}`;}
+document.addEventListener('pointerlockerror',mouseLookUnavailable);
+document.querySelector('#mouse-look').addEventListener('click',async()=>{
+  if(!walking)return;
+  renderer.domElement.focus({preventScroll:true});
+  try{await renderer.domElement.requestPointerLock();}catch{mouseLookUnavailable();}
+});
+window.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){setWalking(false);return;}
+  if(!walking||e.target.closest?.('button,select,input,textarea,a')||e.ctrlKey||e.metaKey||e.altKey)return;
+  if(e.code==='Space'){e.preventDefault();if(!e.repeat)toggleDoor(doorAt(new THREE.Vector2()));return;}
+  if(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){e.preventDefault();keys.add(e.code);}
+});
+document.addEventListener('focusin',()=>keys.clear());
+window.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',()=>{keys.clear();pointer=null;});
+
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
 document.querySelector('#roof-toggle').addEventListener('click',()=>setRoof(!roofOn));document.querySelector('#light-toggle').addEventListener('click',()=>setNight(!night));document.querySelector('#walk-toggle').addEventListener('click',()=>setWalking(!walking));document.querySelector('#office-state').addEventListener('change',e=>setOffice(e.target.value));
 window.addEventListener('resize',()=>{const old=Math.max(1,.95/camera.aspect);camera.aspect=innerWidth/innerHeight;if(!walking&&!['living','dining','library','office'].includes(currentView))camera.position.sub(orbit.target).multiplyScalar(Math.max(1,.95/camera.aspect)/old).add(orbit.target);camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);requestRender();});
@@ -543,8 +626,11 @@ renderer.setAnimationLoop(()=>{
   let animated=false;
   doors.forEach(s=>{const previous=s.progress;s.progress+=(Number(s.open)-s.progress)*Math.min(1,dt*8);if(Math.abs(s.progress-previous)>.001){animated=true;renderer.shadowMap.needsUpdate=true;}if(s.sliding){s.group.position.copy(s.origin);s.group.position[s.data.vertical?'z':'x']+=s.data.width*s.progress*(s.data.kind==='pocket'?s.data.pocketDirection:.48);}else s.group.rotation.y=s.angle*s.progress;});
   if(walking){
-    const forward=(keys.has('w')||keys.has('ArrowUp')?1:0)-(keys.has('s')||keys.has('ArrowDown')?1:0),side=(keys.has('d')||keys.has('ArrowRight')?1:0)-(keys.has('a')||keys.has('ArrowLeft')?1:0);
+    const turn=(keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0);
+    if(turn){camera.rotateOnWorldAxis(new THREE.Vector3(0,1,0),turn*dt*1.4);animated=true;}
+    const forward=(keys.has('KeyW')||keys.has('ArrowUp')?1:0)-(keys.has('KeyS')||keys.has('ArrowDown')?1:0),side=(keys.has('KeyD')?1:0)-(keys.has('KeyA')?1:0);
     const direction=new THREE.Vector3();camera.getWorldDirection(direction);direction.y=0;direction.normalize();const right=new THREE.Vector3(-direction.z,0,direction.x),move=direction.multiplyScalar(forward).addScaledVector(right,side);if(move.lengthSq()>0){move.normalize().multiplyScalar(dt*2);if(canMove(camera.position.x+move.x,camera.position.z)){camera.position.x+=move.x;animated=true;}if(canMove(camera.position.x,camera.position.z+move.z)){camera.position.z+=move.z;animated=true;}}
+    updateDoorHint();
   }else orbit.update();
   const cameraChanged=!camera.position.equals(lastCameraPosition)||!orbit.target.equals(lastOrbitTarget);
   if(renderRequested||animated||cameraChanged){renderer.render(scene,camera);renderRequested=false;lastCameraPosition.copy(camera.position);lastOrbitTarget.copy(orbit.target);}
