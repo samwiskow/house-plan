@@ -34,7 +34,7 @@ levels={'g':0,'a':0,'u':3,'o':3}
 def openings(data,floor):
     out=[]
     for d in data['doors']:
-        if d['floor']==floor:out.append((d,0,2.15))
+        if levels[d['floor']]==levels[floor]:out.append((d,0,2.15))
     for f,x,z,axis,w in data['openings']:
         if f==floor:out.append((dict(x=x,y=z,axis=axis,w=w),0,2.3 if f=='a' and w>3 else 2.4))
     for win in windows:

@@ -226,6 +226,7 @@ function addDoor(d,previous){
  const initial=['Front entrance','Boot to hall','Boot to link','Link to lobby','Proposed drive entrance','Hall to kitchen','Kitchen to laundry','Laundry to boot','Landing to dressing','Dressing to bedroom','Bedroom to ensuite','Lobby to workshop','Workshop to parking','Lobby to gym','Office','Kitchen divider','Living to terrace','Dining to terrace','Garage door'].includes(d.id);
  const state={data:d,group,open:previous?.open??initial,progress:previous?.progress??Number(initial),updatedAt:previous?.updatedAt??performance.now(),parts:[]};
  const h=d.axis==='h',r=h?[0,-.022,d.w,.044]:[-.022,0,.044,d.w];
+ if(d.id==='Link to lobby')box([d.x-.175,d.y,.35,d.w],base,base+.025,'oak',floorGroups[d.floor]);
  if(d.style==='garage'){
   for(let i=0;i<5;i++){const part=new THREE.Group();box([-.025,0,.05,d.w],-.225,.225,'oak',part);group.add(part);state.parts.push(part);}
  }else if(d.style==='telescopic'){
