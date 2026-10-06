@@ -96,6 +96,7 @@ const {chromium}=require('playwright');
  assert.equal(await page.evaluate(()=>{let open;house.scene.traverse(o=>{if(o.userData.door?.data.id==='D15')open=o.userData.door.open;});return open;}),true);
  const doorOpen=()=>page.evaluate(()=>{let open;house.scene.traverse(o=>{if(o.userData.door?.data.id==='D15')open=o.userData.door.open;});return open;});
  await page.waitForFunction(()=>document.querySelector('#door-hint').textContent==='Space — Close door');
+ await page.waitForFunction(()=>{let settled=true;house.scene.traverse(o=>{const door=o.userData.door;if(door&&Math.abs(Number(door.open)-door.progress)>.001)settled=false;});return settled;});
  await page.screenshot({path:path.join(root,'tmp/pdfs/walkthrough-door.png'),timeout:60000});
  await page.keyboard.down('Space');assert.equal(await doorOpen(),false);await page.keyboard.down('Space');assert.equal(await doorOpen(),false,'Holding Space must not toggle repeatedly');await page.keyboard.up('Space');
  await page.waitForFunction(()=>document.querySelector('#door-hint').textContent==='Space — Open door');
