@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-07",
+  "status": "User selected 1B, 2A, 4B, Belfast sink and curved solid-oak stool direction. Enclosed pantry with utility connecting door approved for render study. Exact tap open.",
+  "asset_cost": 0,
+  "sections": [
+    [
+      "Cabinet fronts & island",
+      "Warm ivory perimeter; dark oak island supersedes forest green.",
+      [
+        {
+          "code": "1A",
+          "title": "Simple Shaker",
+          "image": "https://www.devolkitchens.com/cdn/shop/files/the-real-shaker-kitchen-kentish-town-kitchen-01.jpg?v=1787128165&width=1920",
+          "source": "https://www.devolkitchens.com/pages/kentish-town-kitchen",
+          "text": "A slim frame and flat centre panel. Use this plain door shape across the cabinets, island and concealed pantry door.",
+          "detail": "deVOL Kentish Town \u00b7 door-profile reference",
+          "recommended": false,
+          "selected": false
+        },
+        {
+          "code": "1B",
+          "title": "Moulded country",
+          "image": "https://www.neptune.com/cdn/shop/files/3-Neptune-Chichester-white-townhouse-kitchen_1080x1080.webp?v=1786444167",
+          "source": "https://www.neptune.com/products/chichester-kitchen",
+          "text": "A moulded inner edge and more visible cabinet detail. Closer to the French dining chairs, but busier beside the room panelling.",
+          "detail": "Neptune Chichester \u00b7 door-profile reference",
+          "recommended": false,
+          "selected": true
+        }
+      ]
+    ],
+    [
+      "Worktop & splashback",
+      "Use the same surface on the island and perimeter. Both references have a matte finish; final colour needs a physical sample.",
+      [
+        {
+          "code": "2A",
+          "title": "Quiet off-white stone effect",
+          "image": "https://assetstools.cosentino.com/api/v1/bynder/color/RLM/tablahd/RLM-fullslab.jpg?auto=format&h=900&q=75&w=1200",
+          "source": "https://www.cosentino.com/usa/colors/dekton/albarium",
+          "text": "Quiet pale surface appearance selected. Shaped countertop edge replaces the previous simple 20 mm proposal; material and construction remain open.",
+          "detail": "Cosentino Dekton Albarium \u00b7 surface reference",
+          "recommended": false,
+          "selected": true
+        },
+        {
+          "code": "2B",
+          "title": "Warm travertine effect",
+          "image": "https://assetstools.cosentino.com/api/v1/bynder/color/RCK/tablahd/RCK-fullslab.jpg?auto=format&h=900&q=75&w=1200",
+          "source": "https://www.cosentino.com/usa/colors/dekton/marmorio/",
+          "text": "Marmorio brings warmer buff colour and fine lines. Use a matching splashback, and check the pattern beside the oak floor.",
+          "detail": "Cosentino Dekton Marmorio \u00b7 surface reference",
+          "recommended": false,
+          "selected": false
+        }
+      ]
+    ],
+    [
+      "Island stools",
+      "Two distinct shapes. Final seat height and number of stools will be checked against the measured island and walking routes.",
+      [
+        {
+          "code": "3A",
+          "title": "Oak & woven rush",
+          "image": "https://www.neptune.com/cdn/shop/files/neptune-stools-wycombe-bar-stool-37179967766685_1024x.png?v=1719224785",
+          "source": "https://www.neptune.com/products/wycombe-bar-stool",
+          "text": "A straight oak frame and woven rush seat. The natural texture relates to the cane dining chairs without repeating their curved shape.",
+          "detail": "Neptune Wycombe \u00b7 stool reference",
+          "recommended": false,
+          "selected": false
+        },
+        {
+          "code": "3B",
+          "title": "Oak & woven rattan",
+          "image": "https://www.neptune.com/cdn/shop/files/neptune-stools-default-tilbury-rattan-bar-stool-tilbury-rattan-bar-stool-72889958826367_1024x.jpg?v=1736927242",
+          "source": "https://www.neptune.com/products/tilbury-rattan-bar-stool",
+          "text": "A broad woven back and seat. More visible woven texture links this option to your earlier rattan reference.",
+          "detail": "Neptune Tilbury \u00b7 stool reference",
+          "recommended": false,
+          "selected": false
+        }
+      ]
+    ],
+    [
+      "Kitchen lighting",
+      "The dining chandelier stays. Test kitchen lighting with the divider open and closed.",
+      [
+        {
+          "code": "4A",
+          "title": "Discreet task & ambient light",
+          "image": "diagram",
+          "source": null,
+          "text": "Small ceiling task lights and concealed light beneath shelves or wall cabinets. Keep the view towards the dining chandelier clear.",
+          "detail": "Design diagram \u00b7 based on the house brief",
+          "recommended": false,
+          "selected": false
+        },
+        {
+          "code": "4B",
+          "title": "Milk-glass pendants",
+          "image": "https://www.devolkitchens.co.uk/cdn/shop/files/light-pendant-milk-glass-07.jpg?crop=center&height=1800&v=1774523840&width=1440",
+          "source": "https://www.devolkitchens.co.uk/products/milk-glass-pendant-light",
+          "text": "Test two small milk-glass pendants above the island, with separate task lighting. Check their size and spacing beside the dining chandelier.",
+          "detail": "deVOL Milk Glass \u00b7 shape and material reference",
+          "recommended": false,
+          "selected": true
+        }
+      ]
+    ],
+    [
+      "Sink, tap & handles",
+      "Compare these as detail sets. The metal colour in the model will be muted warm bronze; catalogue brass is a shape reference.",
+      [
+        {
+          "code": "5A",
+          "title": "Farmhouse sink & bridge tap",
+          "image": [
+            "https://www.devolkitchens.co.uk/cdn/shop/files/affbde33-8c57-43fe-b946-578394a5ee33_6d4e9d1c-22de-4a54-96fa-064fb57ac8ce.jpg?v=1768212002&width=3200",
+            "https://www.devolkitchens.co.uk/cdn/shop/files/kitchen-catalogue-taps-ionian-aged-brass.jpg?v=1764673300&width=3200"
+          ],
+          "source": "https://www.devolkitchens.co.uk/kitchens/shaker-kitchen/catalogue/sinks-taps",
+          "text": "White ceramic apron-front sink, a deck-mounted bridge tap, small round door knobs and cup pulls on drawers.",
+          "detail": "Villeroy & Boch Farmhouse 60 + deVOL Ionian \u00b7 references",
+          "recommended": false,
+          "selected": false,
+          "selection_note": "Sink only; tap remains open"
+        },
+        {
+          "code": "5B",
+          "title": "Undermount sink & wall taps",
+          "image": [
+            "https://www.devolkitchens.co.uk/cdn/shop/files/caad91f8-d1f2-4479-b548-df6f20235c6d_c1705479-50e7-4cf3-98e8-796a61d832e2.jpg?v=1768396123&width=3200",
+            "https://www.devolkitchens.co.uk/cdn/shop/files/kitchen-catalogue-taps-mayan-aged-brass.jpg?v=1764673298&width=3200"
+          ],
+          "source": "https://www.devolkitchens.co.uk/kitchens/shaker-kitchen/catalogue/sinks-taps",
+          "text": "A white ceramic bowl beneath a continuous worktop edge, wall-mounted taps and plain short handles. This needs a suitable solid wall behind the sink.",
+          "detail": "Villeroy & Boch Cisterna 60c + deVOL Mayan \u00b7 references",
+          "recommended": false,
+          "selected": false
+        }
+      ]
+    ]
+  ],
+  "selected": {
+    "cabinet": "1B",
+    "surface_appearance": "2A",
+    "lighting": "4B",
+    "sink": "Belfast-style",
+    "stools": "Curved timber back, shaped solid wooden seat, splayed legs and foot rails; user OKA reference",
+    "tap": null,
+    "island": "Dark oak, framed panels, substantial corner posts, shaped countertop edge",
+    "pantry": "Option D enclosed with kitchen and utility doors",
+    "floor": "Pale oak herringbone reference",
+    "cabinet_extent": "No cabinets around the sink window. Tall fridge and pantry bank closed to 3.2 m test ceiling."
+  },
+  "reference_notes": {
+    "island_size": "Image label 3.2 x 1.4 m is reference only; render retains 2.4 x 1.0 m pending clearance review.",
+    "tap": "Single lever pull-out rinse is provisional; image labels Quooker. No exact product selected.",
+    "appliances": "Induction hob placeholder; reference image contains gas hob and ovens, not treated as an appliance selection.",
+    "splashback": "Strongly veined image retained as reference; previously selected quiet 2A surface remains in study.",
+    "cabinetry": "Warmer ivory from latest image; breakfast cupboard remains a reference for the next cabinet layout pass.",
+    "wrap_storage": "350 mm-deep return cupboards; approx 1.05 m closed-front gap beside island. No occupied-use or door-swing validation.",
+    "concealed_door": "Matching paired cabinet fronts applied to one concealed door leaf; rails and top storage aligned with adjacent cupboard. No separate architrave. Plain blind-corner return; hinge and swing details still to be resolved."
+  }
+}

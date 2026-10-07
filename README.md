@@ -14,6 +14,25 @@ Run `python3 scripts/build_pages.py`, then serve `tmp/pages` on localhost to
 preview the exact site published by GitHub Pages. See
 [performance checks](site/PERFORMANCE.md) for the rendering changes and evidence.
 
+## L-house combined interior study
+
+The latest [room review](output/design/kitchen-selections/combined.html) brings
+kitchen, dining and living into one Blender scene. It includes the enclosed
+pantry, concealed kitchen door, glass divider, olive sofa, faded patterned rug,
+pale oak dining furniture, continuous parquet and full-height garden curtains.
+
+Serve the review locally:
+
+```sh
+python3 -m http.server 4195 --bind 127.0.0.1 --directory output/design/kitchen-selections
+```
+
+Open `http://127.0.0.1:4195/combined.html`. See the
+[build instructions and design limits](scripts/blender/COMBINED-ROOM.md).
+The scripts, textures, renders and review pages are tracked. The licensed table
+source and composite `.blend` files stay local. This study does not change the
+published browser model or the measured house plan.
+
 ## Courtyard presentation: House Design Book 02
 
 Start with [HOUSE-DESIGN-BOOK.md](HOUSE-DESIGN-BOOK.md) for the consolidated
