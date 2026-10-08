@@ -33,6 +33,7 @@ jobs:
           git diff --exit-code -- viewer/model.json
           python scripts/check_design_book.py
           python scripts/export_l_house.py
+          python scripts/check_suite.py
           git diff --exit-code -- viewer-l-house/model.json
       - name: Stage public presentation
         run: python scripts/build_pages.py

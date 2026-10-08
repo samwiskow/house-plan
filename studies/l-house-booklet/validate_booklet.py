@@ -1,5 +1,6 @@
 import runpy, json, math
 from pathlib import Path
+runpy.run_path('scripts/check_suite.py')
 M=runpy.run_path('studies/l-house-booklet/build_booklet.py')
 def inside(x,y,p):
  c=False
@@ -30,6 +31,9 @@ with pdfplumber.open('output/pdf/l-house-design-booklet.pdf') as pdf:
  assert 'ENCLOSED PANTRY' in pdf.pages[5].extract_text()
  assert '1.05 m' in pdf.pages[5].extract_text()
  assert '571.58' in pdf.pages[8].extract_text()
+ assert 'Private suite gallery' in pdf.pages[3].extract_text()
+ assert '1.43 m' in pdf.pages[6].extract_text()
+ assert 'separate access and garden light' in pdf.pages[6].extract_text()
 
 checks_path=Path('studies/l-house-booklet/checks.json')
 checks=json.loads(checks_path.read_text())

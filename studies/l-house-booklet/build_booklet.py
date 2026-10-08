@@ -22,7 +22,7 @@ LAWN=HexColor('#ecf1df'); TREE=HexColor('#b8caa0'); PAVE=HexColor('#efe3ce')
 BLUE=HexColor('#276c80'); ORANGE=HexColor('#a85e30'); GRID=HexColor('#b4aa96')
 W,H=420,297
 C=canvas.Canvas(str(OUT),pagesize=(W*mm,H*mm),pageCompression=1)
-C.setTitle('L-house - Plot and floor-plan review, Edition L01')
+C.setTitle('L-house - Plot and floor-plan review, Edition L01.1')
 C.setAuthor('House design study')
 PAGE=0; audit={'pages':[],'plan_source':DATA['provenance']}
 
@@ -57,7 +57,7 @@ def page(title,sub):
     PAGE+=1
     rect(0,0,W,H,PAPER,None)
     txt(18,15,'L-HOUSE  /  DESIGN REVIEW',9,MUTED,True)
-    txt(402,15,'L01  |  06 OCT 2026',9,MUTED,align='right')
+    txt(402,15,'L01.1  |  08 OCT 2026',9,MUTED,align='right')
     txt(18,29,title,23,INK,True);txt(18,39,sub,10,MUTED)
     line(18,45,402,45)
     line(18,280,402,280)
@@ -164,6 +164,15 @@ def draw_plan(P,data,floors,labels=True,guest=False):
         P.line(10.75,13,12.55,13,ORANGE,.75,[2,2]);P.line(13.4,11.95,13.4,14.45,ORANGE,.75,[2,2])
     for d in data['doors']:
         if d['floor'] in floors:draw_door(P,d)
+    if 'u' in floors:
+        for win in DATA['suiteDaylight']['windows']:
+            x,y,w=win['x'],win['y'],win['w'];h=win['axis']=='h'
+            gap(P,x,y,win['axis'],w)
+            for off in [-.10,.10]:
+                P.line(x if h else x+off,y+off if h else y,x+w if h else x+off,y+off if h else y+w,BLUE,.7)
+        for rooflight in DATA['suiteDaylight']['rooflights']:
+            x,y,w,h=rooflight['r']
+            for a,b in zip(box(x,y,w,h),box(x,y,w,h)[1:]+box(x,y,w,h)[:1]):P.line(*a,*b,BLUE,.6,[2,2])
     if 'g' in floors or 'u' in floors:stairs(P,8.2,11.15)
     if 'a' in floors or 'o' in floors:stairs(P,19.05,13.35)
     if 'g' in floors:
@@ -313,12 +322,12 @@ y=note(237,y+3,158,'Pantry default','The short partition separates the dry stora
 para(22,251,192,'Blue marks show sliding or proposed doors. Orange dashed lines mark the footwear boundaries. Room codes match the schedule. Doors and furniture use the reviewed study geometry.',9,MUTED)
 para(237,y,158,'Garden doors proposed for review: a 2.20 m sliding opening from living to the main terrace, and a 950 mm outward-opening door beside dining to the sheltered terrace. Other windows follow plan approval.',9.5)
 
-page('First floor: family rooms and a private suite','Main house  |  1:100 on A3 at 100%  |  Approved room boundaries retained')
+page('First floor: family rooms and a private suite','Main house  |  1:100 on A3 at 100%  |  Approved separate suite gallery')
 P=Plan(22,66,[-.8,-.8,17,16.2],100);draw_plan(P,D,['u']);P.dim(0,-.45,16.2,-.45,'16.20 m');P.dim(-.45,0,-.45,14.8,'14.80 m');P.bar(0,16,5)
 y=schedule(D,'u',222,60,173)
-y=note(222,y+2,173,'Parents retain their own route','Landing > dressing room > bedroom > private ensuite. The bedroom and ensuite doors slide into wall pockets. The landing door stays hinged.')
+y=note(222,y+2,173,'Separate suite access','Landing > private gallery > separate bedroom, dressing and bathroom doors. The gallery stops at the rectangular bedroom. Dressing is not a through-route.')
 y=note(222,y,173,'Equal child-room provision','The three rooms are each about 18.5 m². Each keeps the same bed-frame, desk and wardrobe allowance. The family WC, wet room and dry basins can be used separately.')
-para(22,251,180,'Both floor plans share the same stair position. Pocket-door cavities are shown in blue. Window positions are not fixed at this stage.',9,MUTED)
+para(22,251,180,'Both floors keep the same stair. Blue double lines mark suite windows; dashed boxes mark rooflight zones. The bedroom garden window is 2.00 m wide; the gallery window is 0.90 m wide.',9,MUTED)
 
 page('Garage, gym and office remain usable together','Garage ground floor and office first floor  |  1:100 on A3 at 100%  |  No upper bridge to the house')
 P=Plan(25,62,[18,3.5,26.8,22],100);draw_plan(P,D,['a']);P.dim(18.7,21.65,25.9,21.65,'7.20 m');P.dim(18.15,7.3,18.15,21.2,'13.90 m');P.label(22.3,22,'GROUND FLOOR',9)
@@ -340,14 +349,17 @@ para(20,y,208,'The kitchen door has a cabinet-style face and opens into the kitc
 y=note(266,203,132,'Enclosed option retained','This restores the full dividing wall and the earlier pantry shelving. The pantry opens directly from the kitchen; the utility keeps its kitchen and boot-room doors.')
 para(266,y,132,'Trade-off: shopping reaches the pantry through the kitchen. There is no connecting pantry / utility door in this retained option.',10)
 
-page('Parents suite: private route and a deep soaking tub','Suite 1:75  |  Ensuite detail 1:40  |  Room boundaries unchanged')
-P=Plan(22,65,[-.2,-.3,7.2,10.9],75);draw_plan(P,D,['u']);P.route(D['paths']['suite'][0]);P.route(D['paths']['suite'][1]);P.dim(4.16,7,5.89,7,'1.73 m');P.bar(0,11,3)
-Q=Plan(156,65,[0,4.3,3.5,10.05],40);draw_plan(Q,D,['u']);Q.dim(1.35,8.18,2.35,8.18,'1.00 m');Q.label(.775,7.55,'Tub',8,bg=True);Q.label(1.85,9.15,'3.00 x 1.50 m shower',8,bg=True)
-y=note(281,61,115,'A clear view into the room','The WC sits behind a short return wall. Two basins are opposite. The far end is a full-width shower, with two fixed screens and a central entry.')
-y=note(281,y,115,'Compact bath, generous shower','The tub space is 1.10 x 0.85 m. A manufacturer size reference is 1.05 x 0.75 m, with 0.60 m internal depth. Comfort, getting in and out, filled weight and drainage remain product checks.')
-y=note(281,y,115,'Two pocket doors','The bedroom and ensuite openings each retain 900 mm width with a 1.00 m adjacent pocket reservation. Keep plumbing and fixings out of the cavities.')
-para(281,y,115,'Size reference only, not a product selection:<br/><link href="https://www.omnitub.co.uk/products/omnitub-solo-1050x-750mm-small-rectangular-deep-bath" color="#276c80">Omnitub Solo 1050 x 750 mm</link><br/>Manufacturer dimensions checked 6 October 2026.',8.5,MUTED)
-para(22,248,235,'Dressing room: 1.73 m between closed wardrobe fronts; 0.50 m open drawers leave about 1.23 m. The landing entry remains a hinged door. The same door positions are used in the full plan and these details.',9.5)
+page('Parents suite: separate access and garden light','Suite 1:75  |  Bathroom detail 1:40  |  Same external suite boundary')
+P=Plan(22,65,[-.2,-.3,7.2,10.9],75);draw_plan(P,D,['u'])
+for route in D['paths']['suite']:P.route(route)
+P.dim(4.1,4.46,4.1,5.89,'1.43 m');P.dim(5.45,9.5,6.55,9.5,'1.10 m');P.dim(.35,-.05,6.55,-.05,'6.20 m');P.bar(0,11,3)
+Q=Plan(143,65,[0,6.2,5.5,10.05],40);draw_plan(Q,D,['u']);Q.dim(1.35,8.7,2.35,8.7,'1.00 m');Q.label(.775,7.95,'Tub',8,bg=True);Q.label(1.85,9.15,'3.00 x 1.50 m shower',8,bg=True)
+y=note(304,61,92,'Bathroom features retained','Two basins, compact soaking tub, screened WC and a 3.00 x 1.50 m shower. Two fixed screens retain a 1.00 m central entry.')
+y=note(304,y,92,'Three separate room doors','All openings are 900 mm. The bedroom has a wall pocket; dressing and bathroom doors open into their rooms. Hardware remains provisional.')
+y=note(304,y,92,'Natural light','A 2.00 m bedroom garden window and 0.90 m gallery window. Four dashed rooflight zones serve dressing, bathroom and gallery. Roof openings and light wells need design.')
+para(143,177,141,'Bathroom: 4.95 x 3.20 m. Tub allowance: 0.85 x 1.10 m. Vanity: 1.50 x 0.55 m. Filled weight, entry, waterproofing and drainage remain product and construction checks.',9.5)
+para(143,211,141,'The window widths and rooflight zones carry the approved daylight direction. Window sill heights, roof slopes, trimmers and light wells remain provisional.',9.5)
+para(22,248,262,'Dressing: 4.95 x 2.75 m with 660 mm-deep wardrobes on three sides. Clear aisle: 1.43 m; one 0.50 m open drawer leaves 0.93 m. Bedroom: 6.20 x 3.30 m with 1.00 m at the bed foot.',9.5)
 
 page('Family bathroom and stair assumptions','Family bathroom 1:50  |  Stair diagram 1:50  |  Heights remain design assumptions')
 P=Plan(23,65,[10.6,4.8,16.5,11.1],50);draw_plan(P,D,['u']);P.route(D['paths']['bath'][0]);P.route(D['paths']['bath'][1]);P.route(D['paths']['bath'][2]);P.bar(10.8,11.25,3)
@@ -371,7 +383,7 @@ y=note(316,y,80,'Section assumptions','Floor to floor: 3.00 m. Floor zone: 300 m
 para(183,189,213,'The drawing explains the assumed stair rise and run. Final headroom needs the roof, beams, landings and floor openings to be designed together. It is not a verified building-regulation section.',10.5)
 para(183,224,213,'The next design stage will establish roof shapes, windows and structure, then build the approved plan in 3D. Detailed services routes must also be reworked for two storeys.',10.5)
 
-page('Review the plan first, then build the 3D alternative','Area summary, retained brief and decisions  |  This booklet is the approval stage for the floor plan')
+page('Approved suite direction for the next 3D model','Area summary, retained brief and decisions  |  L01.1 suite revision, 8 October 2026')
 footprint=area(D['house'])+area(D['garage'])+area(D['plant'])+2.5*2.4
 external=footprint+area(D['house'])+area(D['office'])
 rows=[('Proposed plot','2,600 m²'),('Rear garden strip before terrace / planting','1,120 m²'),('House external floor area, both floors',f'{2*area(D["house"]):.2f} m²'),('Garage, gym, workshop and stair footprint',f'{area(D["garage"]):.2f} m²'),('Office external floor area',f'{area(D["office"]):.2f} m²'),('Plant and enclosed link footprints',f'{area(D["plant"])+6:.2f} m²'),('Total building footprint',f'{footprint+1e-8:.2f} m²'),('Total external floor envelopes',f'{external+1e-8:.2f} m²')]
@@ -379,13 +391,13 @@ y=62
 for a,b in rows:
     txt(20,y,a,10);txt(210,y,b,10,align='right',bold=True);line(20,y+3,210,y+3,GRID,.3);y+=12
 para(20,y+4,190,'External areas include walls and stairs. Room schedules use clear room polygons, so the totals differ. These are study measurements, not certified floor areas. The garden strip is not a net lawn-area claim.',9.5,MUTED)
-y=note(238,61,158,'Review now','Plot proportions and garden depth; the arrival court and visitor spaces; both floor plans; garage and office use; and the default pantry arrangement. The enclosed pantry remains a documented alternative.')
+y=note(238,61,158,'Approved suite revision','Keep the rectangular parents bedroom, separate gallery, enlarged U-shaped dressing room and retained bathroom fittings. Add the two garden windows and four rooflight zones shown on page 07.')
 y=note(238,y,158,'Carry into the next stage','Warm stone, timber and ivory; no grey finish palette. Retain footwear boundaries, separate family bathroom uses, landscape views, wet underfloor heating, active cooling and solar contribution.')
 y=note(238,y,158,'Resolve after floor-plan approval','Roof and window design, stair headroom, structure above the garage opening, bathroom and plant routes, ventilation, and a real-site car-turning check. The former courtyard vault and glazed garden-room roof are not resolved by this two-storey plan.')
-para(20,235,190,'Evidence: shared geometry for full plans and details; two pantry snapshots; earlier furniture, door and walking checks; and a new plot-level illustrative vehicle sweep. No 3D model or published baseline is changed.',9.5)
-para(238,y,158,'Sequence: approve or revise this booklet, then establish the vertical design and create the furnished 3D alternative. The existing courtyard model stays available for comparison.',10.5)
+para(20,235,190,'Full plans and room details share the same revised geometry. Suite routes have new sampled footprint checks; older layout checks apply to the original source only. Later kitchen / living render studies remain separate inputs for the next coordinated model.',9.5)
+para(238,y,158,'Next: establish the vertical design and update the furnished 3D model. Coordinate the later selected kitchen and living studies with this suite. The existing courtyard model stays available for comparison.',10.5)
 assert PAGE==9
 C.save()
-audit.update({'pdf':str(OUT),'sha256':hashlib.sha256(OUT.read_bytes()).hexdigest(),'plot':SITE,'external_area_m2':external,'footprint_m2':footprint,'geometry_sha256':hashlib.sha256((HERE/'plans.json').read_bytes()).hexdigest(),'checks':'Plan source retains tested geometry; proposed garden doors are separate opening proposals. Vehicle poses pass SAT intersection and gate-edge checks.'})
+audit.update({'pdf':str(OUT),'sha256':hashlib.sha256(OUT.read_bytes()).hexdigest(),'plot':SITE,'external_area_m2':external,'footprint_m2':footprint,'geometry_sha256':hashlib.sha256((HERE/'plans.json').read_bytes()).hexdigest(),'checks':'L01.1 approved suite revision; prior checks apply to the original study. Suite validation is recorded separately. Vehicle poses pass SAT intersection and gate-edge checks.'})
 (HERE/'checks.json').write_text(json.dumps(audit,indent=2))
 print(f'Created {OUT}\n{PAGE} pages; {SITE["vehicle_check"]["poses"]} clear vehicle poses; external floors {external+1e-8:.2f} m²')

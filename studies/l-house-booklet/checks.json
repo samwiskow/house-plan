@@ -6,9 +6,9 @@
     "First floor: family rooms and a private suite",
     "Garage, gym and office remain usable together",
     "Pantry choice: connected by default, enclosed if preferred",
-    "Parents suite: private route and a deep soaking tub",
+    "Parents suite: separate access and garden light",
     "Family bathroom and stair assumptions",
-    "Review the plan first, then build the 3D alternative"
+    "Approved suite direction for the next 3D model"
   ],
   "plan_source": {
     "source": "/Users/sam/.codex/visualizations/2026/10/06/01a1109a-81af-74e3-9391-960ba3e67420/l-house-pantry-divider.html",
@@ -16,10 +16,17 @@
     "date": "2026-10-06",
     "status": "Accepted plan direction, dimensioned study; not construction design",
     "pantry_default": "Short divider and open passage",
-    "pantry_alternative": "Earlier enclosed pantry"
+    "pantry_alternative": "Earlier enclosed pantry",
+    "suite_revision": {
+      "source": "/Users/sam/.codex/visualizations/2026/10/08/01a11ad7-50b8-76c0-854e-1dc19df34ecb/family-wing-suite.html",
+      "sha256": "3a3613f8262e76619637e61653f51441087b13e487c98035a56c71068e3bc318",
+      "date": "2026-10-08",
+      "status": "User approved rectangular bedroom and separate gallery arrangement",
+      "revision": "L01.1"
+    }
   },
-  "pdf": "/Users/sam/Projects/house-plan/.worktrees/codex-l-house-design-book/output/pdf/l-house-design-booklet.pdf",
-  "sha256": "e52c2882f96c6409da2ba8fa19c1bfa2b34bc9858272245746578b7d74270c77",
+  "pdf": "/Users/sam/Projects/house-plan/.worktrees/codex-parents-suite-gallery/output/pdf/l-house-design-booklet.pdf",
+  "sha256": "a493f46eeb4134a7dce24d50351b5eac127de24c0968e8ef0f383f16c736b800",
   "plot": {
     "width": 40,
     "depth": 65,
@@ -115,8 +122,8 @@
   },
   "external_area_m2": 571.5749999999999,
   "footprint_m2": 310.99499999999995,
-  "geometry_sha256": "8c915215cc74f007f3dba5f15a57c9b57ab223d39ba603282b1427c2f608d400",
-  "checks": "Plan source retains tested geometry; proposed garden doors are separate opening proposals. Vehicle poses pass SAT intersection and gate-edge checks.",
+  "geometry_sha256": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
+  "checks": "L01.1 approved suite revision; prior checks apply to the original study. Suite validation is recorded separately. Vehicle poses pass SAT intersection and gate-edge checks.",
   "pdf_validation": {
     "pages": 9,
     "page_size": "A3 landscape",
