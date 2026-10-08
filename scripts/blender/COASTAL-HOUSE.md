@@ -83,7 +83,7 @@ blender --background --disable-autoexec --python-exit-code 1 \
   --width 1600 --samples 64 --export \
   --views arrival garden coastal-plot ground-cutaway first-cutaway \
   parents-bedroom suite-gallery dressing bathroom bathroom-vanity \
-  family-bedroom library gym office combined-room terrace
+  family-bedroom library gym office guest-room bathroom-shower rooflights combined-room terrace
 blender --background --disable-autoexec --python-exit-code 1 \
   --python scripts/blender/check_coastal_house.py
 python3 scripts/blender/build_coastal_gallery.py
@@ -106,8 +106,29 @@ camera presets, cutaways, local-only requests and a 390 px phone viewport.
 
 These checks do not establish construction compliance, occupied furniture use,
 structural support, roof drainage, product fit, waterproofing, coastal exposure
-performance or services design. The four rooflight rectangles are still the
-approved plan zones. Their glazing and trimmers are modelling allowances.
+performance or services design. Three rooflights retain the source plan zones. Gallery rooflight G1 moves 1.15 m
+toward the bedroom so its glazing and a 100 mm surrounding allowance stay on one
+roof plane. Glazing, trimmers and flashings remain modelling allowances.
 The shared-room furniture retains the earlier tight route; chair, stool and
 appliance operation needs further design. No surveyed coast or daylight analysis
 is claimed.
+
+## Interior review corrections
+
+The parents bathroom window moves from the shower to the west wall above the
+bath. Its opening is 1.30 m wide and 1.35 m high, with a 1.05 m sill above the
+structural floor datum. The custom timber ofuro allowance is 1.10 x 0.85 x 0.74 m,
+with 43 mm walls, a 610 mm deep well, an internal seat, waste, overflow and wall
+spout. Its form follows [Bartok Design's square hinoki tub](https://www.bartokdesign.com/japan/7-custom_ofuro/square_tub_for_canada.php).
+These are model dimensions, not a selected product specification.
+
+Each fixed shower glass panel has an overhead head and hand shower behind it.
+The two independent mixer/diverter controls sit at the centre of the rear wall.
+The 1.00 m central glass opening remains clear.
+
+Inset louvred shutters occupy all five windows in the office, library and guest
+bedroom. The office bookcase moves along the east wall to clear the window.
+The U5 bed turns onto the solid west wall. Headboard panels now follow bed
+position and orientation, and the geometry check tests every bed headboard and
+panel against window openings. It also checks shutter reveal depth and extent,
+paired shower fittings, the bath window, tub depth and rooflight plane clearance.

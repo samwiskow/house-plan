@@ -1725,10 +1725,10 @@
       "floor": "u",
       "name": "Small double frame",
       "r": [
-        8.25,
-        5.3999999999999995,
-        1.3,
-        2.05
+        6.85,
+        6.1,
+        2.05,
+        1.3
       ],
       "kind": "bed",
       "roomId": "U5"
@@ -2086,7 +2086,7 @@
       "name": "Office shelves",
       "r": [
         24.95,
-        17,
+        18.25,
         0.4,
         2.1
       ],
@@ -3251,9 +3251,9 @@
       "floor": "u",
       "axis": "v",
       "x": 0.175,
-      "y": 8.65,
-      "w": 0.8,
-      "sill": 1.45,
+      "y": 6.75,
+      "w": 1.3,
+      "sill": 1.05,
       "head": 2.4,
       "private": true
     },
@@ -3309,11 +3309,11 @@
       "roomId": "UG",
       "r": [
         5.6,
-        6.05,
+        4.9,
         0.7,
         0.7
       ],
-      "status": "Plan zone; roof opening and light well require design"
+      "status": "Shifted 1.15 m toward bedroom to clear the valley, including flashing"
     },
     {
       "id": "G2",
@@ -3328,6 +3328,17 @@
       "status": "Plan zone; roof opening and light well require design"
     }
   ],
+  "interior_revision": {
+    "bath": "Custom hinoki-style ofuro allowance, 1100 x 850 x 740 mm; 610 mm internal depth",
+    "bath_reference": "https://www.bartokdesign.com/japan/7-custom_ofuro/square_tub_for_canada.php",
+    "shower": "Two overhead and hand shower stations behind the fixed glass; independent central controls",
+    "shutters": [
+      "G5",
+      "G7",
+      "O4"
+    ],
+    "bed": "U5 head moved to solid west wall; all headboards checked against windows"
+  },
   "site": {
     "width": 40,
     "depth": 65,

@@ -1,6 +1,6 @@
 {
-  "meshes": 194,
-  "triangles": 4377953,
+  "meshes": 198,
+  "triangles": 4510633,
   "views": [
     "arrival",
     "garden",
@@ -11,8 +11,11 @@
     "suite-gallery",
     "dressing",
     "bathroom",
+    "bathroom-shower",
     "bathroom-vanity",
     "family-bedroom",
+    "guest-room",
+    "rooflights",
     "library",
     "gym",
     "office",
@@ -141,7 +144,7 @@
       "part": "walls"
     }
   ],
-  "glbSha256": "7b3666177c430e3532df53c5e4f19bad2fd321c29e21fe45b815a4bf9f32bad0",
+  "glbSha256": "22e5d997faf53c1d2d1c8b9d4bb71ef5fda7afeb6ce73cb627f8faf0d5567933",
   "errors": [],
   "externalRequests": [],
   "phoneWidth": 390,

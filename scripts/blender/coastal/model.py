@@ -71,8 +71,26 @@ def load():
     for name,x,y,axis,w in option['doors']:
         data['doors'].append(dict(id=name,floor='g',x=x,y=y,axis=axis,w=w,side=-1,style='door'))
     data['doors'].append(dict(id='Garden bifolds',floor='g',x=.55,y=.175,axis='h',w=5.8,side=1,style='bifold'))
-    data['windows'] = old['windows']
-    data['rooflights'] = plans['suiteDaylight']['rooflights']
+    data['windows'] = copy.deepcopy(old['windows'])
+    for window in data['windows']:
+        if window['floor']=='u' and window['axis']=='v' and window['x']==.175 and window['y']==8.65:
+            window.update(y=6.75,w=1.3,sill=1.05,head=2.4)
+    data['rooflights'] = copy.deepcopy(plans['suiteDaylight']['rooflights'])
+    for rooflight in data['rooflights']:
+        if rooflight['id']=='G1':
+            rooflight['r'][1]=4.9
+            rooflight['status']='Shifted 1.15 m toward bedroom to clear the valley, including flashing'
+    for item in data['furniture']:
+        if item['roomId']=='U5' and item['kind']=='bed':
+            item['r']=[6.85,6.1,2.05,1.3]
+        if item['roomId']=='O4' and item['name']=='Office shelves':
+            item['r'][1]=18.25
+    data['interior_revision']={
+        'bath':'Custom hinoki-style ofuro allowance, 1100 x 850 x 740 mm; 610 mm internal depth',
+        'bath_reference':'https://www.bartokdesign.com/japan/7-custom_ofuro/square_tub_for_canada.php',
+        'shower':'Two overhead and hand shower stations behind the fixed glass; independent central controls',
+        'shutters':['G5','G7','O4'],
+        'bed':'U5 head moved to solid west wall; all headboards checked against windows'}
     data['site'] = site
     data['levels'] = LEVELS
     data['heights'] = HEIGHTS

@@ -1,12 +1,5 @@
 """Small fittings executed in the house builder namespace."""
 col=cols['u','furniture']
-for room,x,y,w in [('U1',2.45,.385,1.95),('U4',1.9,10.13,1.3),('U5',8.25,5.37,1.3),('U6',13.2,10.88,1.3)]:
-    z=LEVELS['u']
-    box(room+' headboard wall panel',(x+w/2,-y,z+1.30),(w+.20,.025,2.45),ivory,.015)
-    for j in range(10):box(room+' panel flute',(x-.07+j*(w+.14)/9,-y-.02,z+1.30),(.018,.018,2.35),wood,.004)
-    for xx in [x-.24,x+w+.23]:
-        cyl(room+' reading light rose',(xx,-y-.035,z+1.20),.055,.025,metal)
-        tube(room+' reading light arm',[(xx,-y-.07,z+1.2),(xx,-y-.16,z+1.13)],.012,metal)
 for x,y,w,d in [(1.2,1.0,4.45,2.2),(.9,10.45,2.85,2.6),(7.3,5.6,2.8,2.6),(12.4,11.25,2.85,2.7)]:
     pb('Low woven bedroom rug',[x,y,w,d],3.541,3.548,fabric,.014)
 for x,y in [(1.25,1.65),(5.8,1.45)]:
@@ -15,9 +8,6 @@ col=cols['u','furniture']
 for x in [2.325,3.075]:
     box('Ensuite bronze mirror frame',(x,-6.726,5.14),(.65,.024,.98),metal,.035)
     box('Ensuite mirror surface',(x,-6.749,5.14),(.60,.018,.93),mirror,.032)
-for x in [2.63]:
-    tube('Double shower riser',[(x,-9.84,4.6),(x,-9.84,5.75),(x,-9.55,5.75)],.011,metal)
-    cyl('Double shower rain head',(x,-9.55,5.72),.105,.025,metal)
 for y in [8.60,8.81,9.02]:
     pb('Shower limestone shelf',[.365,y,.12,.17],4.8,4.825,stone2)
     cyl('Shower bottle',(.42,-y-.08,4.91),.024,.16,olive)

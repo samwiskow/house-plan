@@ -1,5 +1,16 @@
 {
   "revision": "L01.1 coastal coordinated study",
+  "interior_revision": {
+    "bath": "Custom hinoki-style ofuro allowance, 1100 x 850 x 740 mm; 610 mm internal depth",
+    "bath_reference": "https://www.bartokdesign.com/japan/7-custom_ofuro/square_tub_for_canada.php",
+    "shower": "Two overhead and hand shower stations behind the fixed glass; independent central controls",
+    "shutters": [
+      "G5",
+      "G7",
+      "O4"
+    ],
+    "bed": "U5 head moved to solid west wall; all headboards checked against windows"
+  },
   "source_hashes": {
     "studies/l-house-booklet/plans.json": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
     "studies/l-house-booklet/site.json": "f098a249162ec9a72ab3ed31d60349801ceb906380d06299d0c51cc534207300",
@@ -86,11 +97,11 @@
       "roomId": "UG",
       "r": [
         5.6,
-        6.05,
+        4.9,
         0.7,
         0.7
       ],
-      "status": "Plan zone; roof opening and light well require design"
+      "status": "Shifted 1.15 m toward bedroom to clear the valley, including flashing"
     },
     {
       "id": "G2",
@@ -3507,7 +3518,7 @@
         0,
         6.7,
         0.35,
-        1.9500000000000002
+        0.04999999999999982
       ],
       "lo": 3.5,
       "hi": 6.2
@@ -3521,6 +3532,28 @@
         0.5999999999999996
       ],
       "lo": 3.5,
+      "hi": 6.2
+    },
+    {
+      "floor": "u",
+      "r": [
+        0,
+        6.75,
+        0.35,
+        1.3000000000000007
+      ],
+      "lo": 3.5,
+      "hi": 4.55
+    },
+    {
+      "floor": "u",
+      "r": [
+        0,
+        6.75,
+        0.35,
+        1.3000000000000007
+      ],
+      "lo": 5.9,
       "hi": 6.2
     },
     {
@@ -3592,6 +3625,17 @@
     {
       "floor": "u",
       "r": [
+        0,
+        8.05,
+        0.35,
+        1.8499999999999996
+      ],
+      "lo": 3.5,
+      "hi": 6.2
+    },
+    {
+      "floor": "u",
+      "r": [
         5.3,
         8.2,
         0.15000000000000036,
@@ -3647,28 +3691,6 @@
     {
       "floor": "u",
       "r": [
-        0,
-        8.65,
-        0.35,
-        0.7999999999999989
-      ],
-      "lo": 3.5,
-      "hi": 4.95
-    },
-    {
-      "floor": "u",
-      "r": [
-        0,
-        8.65,
-        0.35,
-        0.7999999999999989
-      ],
-      "lo": 5.9,
-      "hi": 6.2
-    },
-    {
-      "floor": "u",
-      "r": [
         15.85,
         8.9,
         0.34999999999999964,
@@ -3695,17 +3717,6 @@
         9.3,
         1.200000000000001,
         0.14999999999999858
-      ],
-      "lo": 3.5,
-      "hi": 6.2
-    },
-    {
-      "floor": "u",
-      "r": [
-        0,
-        9.45,
-        0.35,
-        0.45000000000000107
       ],
       "lo": 3.5,
       "hi": 6.2
@@ -5724,7 +5735,7 @@
         2.15,
         1.65
       ],
-      "objects": 12
+      "objects": 27
     },
     {
       "name": "Guest wardrobe",
@@ -5856,7 +5867,7 @@
         1.95,
         2.15
       ],
-      "objects": 12
+      "objects": 27
     },
     {
       "name": "Bedside",
@@ -5928,7 +5939,7 @@
         3,
         1.5
       ],
-      "objects": 5
+      "objects": 66
     },
     {
       "name": "Double vanity",
@@ -5964,7 +5975,7 @@
         0.85,
         1.1
       ],
-      "objects": 5
+      "objects": 20
     },
     {
       "name": "Shower screen left",
@@ -6036,7 +6047,7 @@
         1.3,
         2.05
       ],
-      "objects": 12
+      "objects": 27
     },
     {
       "name": "Desk",
@@ -6079,12 +6090,12 @@
       "room": "U5",
       "floor": "u",
       "r": [
-        8.25,
-        5.3999999999999995,
-        1.3,
-        2.05
+        6.85,
+        6.1,
+        2.05,
+        1.3
       ],
-      "objects": 12
+      "objects": 27
     },
     {
       "name": "Desk",
@@ -6132,7 +6143,7 @@
         1.3,
         2.05
       ],
-      "objects": 12
+      "objects": 27
     },
     {
       "name": "Desk",
@@ -6440,7 +6451,7 @@
       "floor": "o",
       "r": [
         24.95,
-        17,
+        18.25,
         0.4,
         2.1
       ],
@@ -6574,6 +6585,20 @@
       18,
       "all"
     ],
+    "bathroom-shower": [
+      [
+        1.85,
+        -7.0,
+        5.12
+      ],
+      [
+        1.85,
+        -9.65,
+        4.95
+      ],
+      21,
+      "all"
+    ],
     "bathroom-vanity": [
       [
         1.4,
@@ -6600,6 +6625,34 @@
         4.55
       ],
       24,
+      "all"
+    ],
+    "guest-room": [
+      [
+        3.95,
+        -11.95,
+        1.64
+      ],
+      [
+        1.9,
+        -13.5,
+        0.95
+      ],
+      21,
+      "all"
+    ],
+    "rooflights": [
+      [
+        12.5,
+        -0.7,
+        13.1
+      ],
+      [
+        4.4,
+        -6.6,
+        7.0
+      ],
+      47,
       "all"
     ],
     "library": [
@@ -6673,7 +6726,7 @@
       "all"
     ]
   },
-  "objects": 11878,
+  "objects": 12562,
   "limits": [
     "Unsurveyed plot; illustrative coast, planting and daylight.",
     "Proposed floor zone and roof structure require design.",

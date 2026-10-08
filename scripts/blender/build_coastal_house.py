@@ -104,6 +104,10 @@ flower=mat('Coastal | muted lavender',(.30,.24,.37),.95)
 glass=mat('Coastal | clear glazing',(.92,.97,.96),.035)
 glass.node_tree.nodes['Principled BSDF'].inputs['Transmission Weight'].default_value=1
 glass.node_tree.nodes['Principled BSDF'].inputs['IOR'].default_value=1.45
+hinoki=mat('Coastal | pale hinoki timber',(.65,.48,.28),.42,noise=.12,scale=9)
+n=hinoki.node_tree.nodes;l=hinoki.node_tree.links
+coord=n.new('ShaderNodeTexCoord');grain=n.new('ShaderNodeVectorMath');grain.operation='MULTIPLY';grain.inputs[1].default_value=(5,5,.18)
+l.new(coord.outputs['Generated'],grain.inputs[0]);l.new(grain.outputs[0],next(node for node in n if node.type=='TEX_NOISE').inputs['Vector'])
 mirror=mat('Coastal | mirror',(.8,.82,.8),.06,1)
 
 
@@ -234,6 +238,28 @@ for f,base in LEVELS.items():
             wb('Double glazing',i*pw+pw/2,(lo+hi)/2,pw-.07,hi-lo-.12,.018,glass)
             wb('Window lower casement',i*pw+pw/2,lo+.095,pw-.075,.04,.09,black)
         wb('Stone window sill',w/2,lo-.035,w+.09,.05,.40,stone2)
+        for side in [-1,1]:
+            room=next((r for r in data['rooms'] if r['floor']==f and r['id'] in data['interior_revision']['shutters'] and inside(x+w/2 if horizontal else x+side*.2,y+side*.2 if horizontal else y+w/2,r['p'])),None)
+            if not room:continue
+            shutter_id=room['id']+f' {x:g} {y:g}'
+            def shutter(n,u,z,ww,hh,depth=.028,tilt=0):
+                o=box(room['id']+' inset shutter '+n,(u,0,z),(ww,depth,hh),ivory,.003)
+                o.rotation_euler.x=tilt
+                transform=Matrix.Translation((x,-y-side*.113,0)) if horizontal else Matrix.Translation((x+side*.113,-y,0))@Matrix.Rotation(-math.pi/2,4,'Z')
+                o.matrix_world=transform@Matrix.Translation((u,0,z))@Matrix.Rotation(tilt,4,'X')
+                o['shutter_id']=shutter_id;o['window_axis']=d['axis'];o['window_origin']=[x,y];o['window_span']=[w,lo,hi]
+                return o
+            panels=math.ceil((w-.13)/.65);pw=(w-.13)/panels;bottom=lo+.075;top=hi-.075
+            for i in range(panels):
+                start=.065+i*pw
+                for u in [start+.019,start+pw-.019]:shutter('stile',u,(bottom+top)/2,.034,top-bottom)
+                for zz in [bottom+.024,top-.024]:shutter('rail',start+pw/2,zz,pw-.016,.045)
+                count=math.floor((top-bottom-.12)/.060);pitch=(top-bottom-.12)/count
+                for j in range(count):shutter('louvre',start+pw/2,bottom+.06+(j+.5)*pitch,pw-.084,.008,.060,math.radians(35))
+                shutter('tilt rod',start+pw/2,(bottom+top)/2,.011,top-bottom-.15,.011)
+                for zz in [bottom+.15,top-.15]:
+                    o=shutter('hinge',start+.01,zz,.012,.055,.012);o.data.materials[0]=metal
+
     for d in data['doors']:
         if d['floor']!=f or d['style']=='bifold' or d['id'] in [q[0] for q in json.loads((ROOT/'output/design/kitchen-selections/boot-room-option.json').read_text())['doors']]:continue
         x,y,w=d['x'],d['y'],d['w'];h=2.3 if f=='g' else 2.15;horizontal=d['axis']=='h'
@@ -443,6 +469,11 @@ for f in data['furniture']:
         mod=o.modifiers.new('Soft cloth folds','SUBSURF');mod.levels=2
         o.modifiers.new('Duvet loft','SOLIDIFY').thickness=.035
         bedbox('folded throw',(bw/2,-bd+.37,.672),(bw-.02,.55,.045),blue if floor=='u' else olive,.02)
+        bedbox('headboard wall panel',(bw/2,.11,1.26),(bw+.20,.025,2.45),ivory,.015)
+        for j in range(10):bedbox('panel flute',(-.07+j*(bw+.14)/9,.09,1.26),(.018,.018,2.35),wood,.004)
+        for xx in [-.24,bw+.23]:
+            o=cyl(name+' reading light rose',(0,0,0),.055,.025,metal);o.rotation_euler.x=math.pi/2;o.location=(xx,.075,1.16);o.parent=parent
+            o=tube(name+' reading light arm',[(xx,.06,1.16),(xx,-.06,1.09)],.012,metal);o.parent=parent
         parent.location=(x,-y,z)
         if along_x:parent.rotation_euler.z=math.pi/2;parent.location.y=-y-d
     elif kind=='table':
@@ -480,17 +511,55 @@ for f in data['furniture']:
             bw=w/max(1,round(w/.6));pb(name+' drawer',[x+i*bw+.014,y+d-.035,bw-.028,.027],z+.33,z+.75,wood,.006)
             tube('Vanity handle',[(x+i*bw+.12,-y-d-.001,z+.68),(x+(i+1)*bw-.12,-y-d-.001,z+.68)],.008,metal)
     elif kind=='bath' or (kind=='wet' and lc=='bath'):
-        bowl(name,x+w/2,y+d/2,z+.61,w-.025,d-.025,.49)
-        pb(name+' recessed base',[x+w*.32,y+d*.32,w*.36,d*.36],z,z+.15,white,.045)
-        faucet(x+w*.85,y+d*.23,z+.64)
+        if f['roomId']=='U3':
+            pb('Ofuro recessed feet',[x+.09,y+.09,w-.18,d-.18],z,z+.07,hinoki,.008)
+            pb('Ofuro solid bottom',[x,y,w,d],z+.07,z+.13,hinoki,.007)
+            for r in [[x,y,.043,d],[x+w-.043,y,.043,d],[x+.043,y,w-.086,.043],[x+.043,y+d-.043,w-.086,.043]]:
+                pb('Ofuro 43 mm timber wall',r,z+.13,z+.74,hinoki,.008)
+            pb('Ofuro internal seat',[x+.043,y+.043,w-.086,.24],z+.13,z+.30,hinoki,.008)
+            for yy in [y+.02,y+d-.02]:
+                for xx in [x+.09,x+w-.09]:
+                    for zz in [z+.22,z+.60]:
+                        o=cyl('Ofuro wooden dowel',(0,0,0),.009,.012,wood,12);o.rotation_euler.x=math.pi/2;o.location=(xx,-yy,zz)
+            cyl('Ofuro flush waste',(x+w*.62,-y-d*.68,z+.132),.024,.003,metal)
+            pb('Ofuro overflow slot',[x+w-.045,y+d*.60,.004,.09],z+.655,z+.672,metal,.001)
+            tube('Ofuro wall spout',[(x+.035,-y-.60,z+.87),(x+.21,-y-.60,z+.87),(x+.21,-y-.60,z+.83)],.015,metal)
+            pb('Ofuro mixer plate',[x+.002,y+.74,.016,.13],z+.81,z+.94,metal,.012)
+            tube('Ofuro mixer lever',[(x+.025,-y-.80,z+.87),(x+.075,-y-.80,z+.91)],.008,metal)
+        else:
+            bowl(name,x+w/2,y+d/2,z+.61,w-.025,d-.025,.49)
+            pb(name+' recessed base',[x+w*.32,y+d*.32,w*.36,d*.36],z,z+.15,white,.045)
+            faucet(x+w*.85,y+d*.23,z+.64)
     elif kind=='wet':
         pb(name+' flush stone tray',f['r'],z,z+.026,stone2,.01)
         pb(name+' linear drain',[x+.1,y+d-.08,w-.2,.025],z+.027,z+.030,metal,.001)
-        headx=x+w*.33;yy=y+d-.05
-        tube(name+' riser',[(headx,-yy,z+1.0),(headx,-yy,z+2.18),(headx,-yy+.28,z+2.18)],.012,metal)
-        cyl(name+' rainfall head',(headx,-yy+.28,z+2.16),.105,.022,metal)
-        pb(name+' mixer',[headx-.12,yy-.02,.24,.05],z+1.02,z+1.07,metal)
-        if f['roomId']!='U3':pb(name+' fixed screen',[x,y+d*.65,.015,d*.35],z,z+2.05,glass,.001)
+        if f['roomId']=='U3':
+            for side,xx in [('left',x+.50),('right',x+w-.50)]:
+                tag='Ensuite '+side
+                tube(tag+' overhead arm',[(xx,-y-d+.045,z+2.24),(xx,-y-d+.50,z+2.24)],.014,metal)
+                cyl(tag+' overhead shower',(xx,-y-d+.50,z+2.215),.135,.035,metal,48)
+                cyl(tag+' spray face',(xx,-y-d+.50,z+2.195),.121,.004,black,48)
+                for i in range(18):
+                    t=i*math.tau/18;cyl(tag+' spray nozzle',(xx+.085*math.cos(t),-y-d+.50+.085*math.sin(t),z+2.191),.003,.005,white,8)
+                hx=xx+(.23 if side=='left' else -.23);wy=-y-d+.07
+                tube(tag+' handset rail',[(hx,wy,z+.94),(hx,wy,z+1.73)],.009,metal)
+                for zz in [.98,1.68]:tube(tag+' rail fixing',[(hx,wy-.03,z+zz),(hx,wy+.015,z+zz)],.018,metal)
+                tube(tag+' handset grip',[(hx,wy+.035,z+1.40),(hx,wy+.095,z+1.59)],.018,metal)
+                o=cyl(tag+' hand shower',(0,0,0),.048,.022,metal,32);o.rotation_euler.x=math.radians(65);o.location=(hx,wy+.106,z+1.63)
+                points=[(hx+.14*math.sin(t),wy+.035,z+1.4-.77*math.sin(t/2)) for t in [i*math.pi/28 for i in range(29)]]
+                points.extend([(hx,wy+.035,z+.72),(hx,wy+.015,z+1.00)])
+                tube(tag+' flexible hand hose',points,.007,metal)
+                cx=x+w/2+(-.15 if side=='left' else .15)
+                pb(tag+' central control plate',[cx-.075,y+d-.028,.15,.018],z+1.02,z+1.27,metal,.012)
+                for zz in [1.08,1.21]:
+                    o=cyl(tag+' central control',(0,0,0),.026,.03,metal);o.rotation_euler.x=math.pi/2;o.location=(cx,-y-d+.055,z+zz)
+                    tube(tag+' control lever',[(cx,-y-d+.075,z+zz),(cx+.036,-y-d+.075,z+zz+.016)],.006,metal)
+        else:
+            headx=x+w*.33;yy=y+d-.05
+            tube(name+' riser',[(headx,-yy,z+1.0),(headx,-yy,z+2.18),(headx,-yy+.28,z+2.18)],.012,metal)
+            cyl(name+' rainfall head',(headx,-yy+.28,z+2.16),.105,.022,metal)
+            pb(name+' mixer',[headx-.12,yy-.02,.24,.05],z+1.02,z+1.07,metal)
+            pb(name+' fixed screen',[x,y+d*.65,.015,d*.35],z,z+2.05,glass,.001)
     elif kind=='car':
         pb('Car sculpted lower body',[x+.10,y+.08,w-.20,d-.16],z+.28,z+.78,blue,.20)
         pb('Car passenger cabin',[x+1.35,y+.22,w-2.45,d-.44],z+.75,z+1.42,black,.22)
@@ -545,7 +614,7 @@ for f in data['furniture']:
     for o in made:o['room_id']=f['roomId'];o['furniture_source']=name
     furniture_records.append(dict(name=name,room=f['roomId'],floor=floor,r=f['r'],objects=len(made)))
 
-for room in [r for r in data['rooms'] if r['id'] in ['U1','U4','U5','U6','G5']]:
+for room in [r for r in data['rooms'] if r['id'] in ['U1','U4','U5','U6']]:
     floor=room['floor'];col=cols[floor,'furniture'];base=LEVELS[floor]
     for d in [d for d in data['windows'] if d['floor']==floor and d['axis']=='h' and any(inside(d['x']+d['w']/2,d['y']+dy,room['p']) for dy in [-.2,.2])]:
         yy=d['y']+(.22 if d['y']<8 else -.22)
@@ -689,8 +758,11 @@ views={
  'suite-gallery':([6.0,-9.70,5.10],[5.95,-3.4,4.95],22,'all'),
  'dressing':([4.94,-5.17,5.10],[.9,-5.1,4.7],22,'all'),
  'bathroom':([3.29,-7.70,5.14],[1.10,-8.05,4.70],18,'all'),
+ 'bathroom-shower':([1.85,-7.0,5.12],[1.85,-9.65,4.95],21,'all'),
  'bathroom-vanity':([1.40,-8.00,5.10],[2.90,-6.83,4.85],22,'all'),
  'family-bedroom':([10.6,-9.13,5.12],[8.2,-6.2,4.55],24,'all'),
+ 'guest-room':([3.95,-11.95,1.64],[1.9,-13.5,.95],21,'all'),
+ 'rooflights':([12.5,-.7,13.1],[4.4,-6.6,7.0],47,'all'),
  'library':([7.7,-11.6,1.65],[5.8,-13.3,1.15],22,'all'),
  'gym':([24.8,-11.15,1.65],[20.5,-8.7,1.0],24,'all'),
  'office':([19.6,-19.8,4.65],[24.6,-15.3,4.0],23,'all'),
@@ -714,7 +786,7 @@ scene['plot']='Assumed 40 x 65 m coastal plot. Shoreline and planting are illust
 for text in list(bpy.data.texts):bpy.data.texts.remove(text)
 notes=bpy.data.texts.new('READ ME - coastal house')
 notes.write(scene['section']+'\n'+scene['plot']+'\nMeasured source: studies/l-house-booklet/plans.json L01.1. Option D pantry and combined room furniture retained. All parts carry level and part tags. Upper suite doors are shown open. Bedroom door is in its pocket. Burner stays in hidden OPTION collection. Local licensed composite: do not publish raw blend or GLB. Floor topping is 40 mm above the structural level; finish relief is up to 25 mm. See geometry-checks.json for tested scope.')
-report={'revision':scene['revision'],'source_hashes':data['source_hashes'],'interior_source_sha256':source_hash,'levels':LEVELS,'ceiling_datum_heights':HEIGHTS,'finished_clear_heights':{f:round(h-.04,2) for f,h in HEIGHTS.items()},'stairs':data['stairs'],'rooflights':data['rooflights'],'rooms':data['rooms'],'wall_solids':wall_records,'furniture':furniture_records,'views':views,'objects':len(scene.objects),'limits':['Unsurveyed plot; illustrative coast, planting and daylight.','Proposed floor zone and roof structure require design.','Burner stored as hidden option because its vertical flue conflicts with the gallery.','Product specifications, services and occupied-use checks are not construction approval.']}
+report={'revision':scene['revision'],'interior_revision':data['interior_revision'],'source_hashes':data['source_hashes'],'interior_source_sha256':source_hash,'levels':LEVELS,'ceiling_datum_heights':HEIGHTS,'finished_clear_heights':{f:round(h-.04,2) for f,h in HEIGHTS.items()},'stairs':data['stairs'],'rooflights':data['rooflights'],'rooms':data['rooms'],'wall_solids':wall_records,'furniture':furniture_records,'views':views,'objects':len(scene.objects),'limits':['Unsurveyed plot; illustrative coast, planting and daylight.','Proposed floor zone and roof structure require design.','Burner stored as hidden option because its vertical flue conflicts with the gallery.','Product specifications, services and occupied-use checks are not construction approval.']}
 (O/'model-report.json').write_text(json.dumps(report,indent=2))
 (O/'coordinated-plan.json').write_text(json.dumps(data,indent=2))
 bpy.ops.file.pack_all();bpy.ops.wm.save_as_mainfile(filepath=str(O/'coastal-house.blend'),compress=True)
