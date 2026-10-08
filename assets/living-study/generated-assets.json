@@ -1,0 +1,35 @@
+{
+  "method": "Built-in image_gen",
+  "assets": [
+    {
+      "file": "botanical.png",
+      "prompt": "Use case: stylized-concept. Asset type: seamless square fabric texture for a native Blender interior, flat albedo map. Original Arts and Crafts botanical repeat inspired by William Morris: elegant interlocking curved stems, acanthus leaves, small cream flowers and restrained ochre seed heads, very dark forest green and indigo ground, sage and warm ivory leaves. Dense sophisticated hand block printed textile, small woven linen grain, muted heritage colours. Full bleed seamless pattern, evenly lit flat scan, no fabric folds, no perspective, no room, no lettering, no logos. This is a new original pattern, not a reproduction of a named product."
+    },
+    {
+      "file": "floral.png",
+      "prompt": "Use case: stylized-concept. Asset type: seamless square fabric texture for a Blender interior, flat albedo. Original romantic English cottage floral inspired by Laura Ashley: delicate scattered blue hydrangea and meadow-flower bouquets, sage foliage, warm ivory ground, softly faded blue and tiny ochre accents, refined vintage chintz cotton print. Medium-small repeat with airy spaces, subtle woven surface. Full bleed seamless repeating square, flat even scan, no folds, no perspective, no room, no borders, no lettering, no logo, no reproduction of a specific commercial print."
+    },
+    {
+      "file": "landscape.png",
+      "prompt": "Use case: illustration-story. Asset type: landscape wall-art texture for a framed picture in a Blender French country interior. Original antique oil painting of a quiet English river winding through wooded pasture under a softly clouded sky, distant rolling hills, painterly brushwork and canvas grain. Muted moss green, deep blue-green, warm cream clouds, ochre pasture. Romantic 19th-century landscape feeling, restrained atmospheric depth, no figures, no buildings. Landscape 3:2 composition. Painting only fills entire image, no frame, no wall, no room, no lettering or signature."
+    },
+    {
+      "file": "still-life.png",
+      "prompt": "Use case: illustration-story. Asset type: portrait painting texture for large framed wall art in a French country room. Original antique oil still life: a broad cream stoneware jug with loose blue cornflowers, cream garden roses and leafy branches, on an old oak table against a deep muted olive background. Painterly textured canvas, subdued natural side light, atmospheric 19th century rustic French still life, warm ivory, smoky blue, sage and ochre. Portrait 4:5 composition. Painting fills image edge to edge; no frame, wall, room, text or signature."
+    },
+    {
+      "file": "coastal-landscape.png",
+      "prompt": "Use case: illustration-story. Asset type: original wall-art texture for a calm Cotswold-inspired country interior. A softly painted coastal landscape of pale sand dunes, marram grass and an open blue-green sea with a low horizon, gentle clouded sky, small distant headland. Quiet British coast, no buildings or people. Expressive oil brushwork on linen canvas, warm ivory, faded sea blue, sage dune grass, natural sand. Landscape 3:2. Painting fills the entire image; no frame, room, text or signature."
+    },
+    {
+      "file": "coastal-study.png",
+      "prompt": "Use case: illustration-story. Asset type: original portrait wall-art texture for a country interior. A painterly view down a coastal path between dune grasses towards pale sand, a quiet turquoise and slate-blue bay and a misty distant headland. Soft light, restrained palette of blue-green, warm ivory and sand, loose oil brushwork, calm British coast. Portrait 4:5. Painting only, edge to edge, no frame, room, text or signature."
+    }
+  ],
+  "styleReferences": [
+    "https://www.wmorrisandco.com/uk/the-unfinished-works/",
+    "https://www.lauraashleyusa.com/blogs/news-releases/laura-ashley-marks-70-years-with-prints-through-the-decades",
+    "https://www.cotswoldco.com/dining-room-furniture/dining-tables/"
+  ],
+  "note": "Original generated study textures and art; not selected commercial products. Blender views are rendered from geometry, not AI-retouched."
+}

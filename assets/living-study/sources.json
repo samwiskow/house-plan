@@ -1,0 +1,30 @@
+{
+  "oak_veneer_02": {
+    "diff": {
+      "file": "oak_veneer_02_diff.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_diff_2k.jpg"
+    },
+    "nor_gl": {
+      "file": "oak_veneer_02_nor_gl.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_nor_gl_2k.jpg"
+    },
+    "rough": {
+      "file": "oak_veneer_02_rough.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_rough_2k.jpg"
+    }
+  },
+  "terlenka": {
+    "diff": {
+      "file": "terlenka_diff.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/terlenka/terlenka_diff_2k.jpg"
+    },
+    "nor_gl": {
+      "file": "terlenka_nor_gl.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/terlenka/terlenka_nor_gl_2k.jpg"
+    },
+    "rough": {
+      "file": "terlenka_rough.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/terlenka/terlenka_rough_2k.jpg"
+    }
+  }
+}

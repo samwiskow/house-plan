@@ -1,0 +1,37 @@
+{
+  "route_plan_m": [
+    [
+      5.95,
+      9.3
+    ],
+    [
+      5.95,
+      7.6
+    ],
+    [
+      5.95,
+      6.61
+    ],
+    [
+      4.8,
+      6.61
+    ],
+    [
+      4.8,
+      5.3
+    ],
+    [
+      5.2,
+      5.3
+    ],
+    [
+      5.2,
+      4.4
+    ]
+  ],
+  "radius_m": 0.3,
+  "sample_interval_m": 0.02,
+  "minimum_obstacle_gap_m": 0.31,
+  "closest": "Approved cane dining chair 08",
+  "scope": "400 mm chair pull-out boxes, sofa bounding box, table, ottoman, media cabinet and hearth. Doors closed; no person or appliance simulation. Ten millimetre margin at the tightest sampled point is not a generous route."
+}

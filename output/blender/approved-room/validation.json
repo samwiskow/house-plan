@@ -1,0 +1,30 @@
+{
+  "revision": "Approved furniture direction - 7 October 2026",
+  "base_sha256": "1dd922a5f8b953e285b5ca8c0c191877237f4e719a85e88824c8423c9c395cf4",
+  "source_objects_unchanged": 3098,
+  "dining_chairs": 8,
+  "fixed_upholstered_seats": true,
+  "table_m": [
+    2.44,
+    1.09,
+    0.773
+  ],
+  "square_footstool_m": [
+    1.25,
+    1.25
+  ],
+  "sofa_footstool_clearance_m": 0.429,
+  "sofa_cabinet_route_m": 1.227,
+  "ceiling_m": 3.2,
+  "packed_textures": true,
+  "first_floor_coordinated": false,
+  "asset_cost": 0,
+  "source_table": "https://www.blendkit.com/asset-gallery-detail/6f6bf86f-e227-42ba-a3eb-646081d93a0d/",
+  "source_license": "BlenderKit Royalty Free; editable scene stays local",
+  "website_changed": false,
+  "views": [
+    "living-dining.png",
+    "hearth-dining.png",
+    "seating-detail.png"
+  ]
+}

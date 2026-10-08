@@ -1,0 +1,18 @@
+{
+  "downloaded": "2026-10-07",
+  "cost": 0,
+  "file": "vendor/monastery-free.blend",
+  "sha256": "5fa288a3a1cad19dd6c44499794f7955a5952dc7c609e074793fed47c48eef8e",
+  "author": "Floris Smit",
+  "asset": "Wooden monastery table",
+  "url": "https://www.blendkit.com/asset-gallery-detail/6f6bf86f-e227-42ba-a3eb-646081d93a0d/",
+  "license": "BlenderKit Royalty Free",
+  "license_url": "https://www.blendkit.com/docs/licenses/",
+  "distribution": "Local study only; raw model and composite blend excluded from Git",
+  "references_only": [
+    "https://3dsky.org/3dmodels/show/restoration_hardware_17th_c_monastery_rectangular_dining_table",
+    "https://www.cotswoldco.com/living-room-furniture/dining-chairs/camille-limewash-oak-rattan-chair/",
+    "https://www.renderhub.com/miraz01/french-cane-chair",
+    "https://greatcatalog.net/en/frankof-lagos-corner-4seat-m2714.html"
+  ]
+}

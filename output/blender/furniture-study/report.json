@@ -1,0 +1,49 @@
+{
+  "cost": 0,
+  "scope": "Isolated furniture study; house scene unchanged",
+  "renderer": "Cycles",
+  "source_table": "https://www.blendkit.com/asset-gallery-detail/6f6bf86f-e227-42ba-a3eb-646081d93a0d/",
+  "table_license": "BlenderKit royalty-free; source and editable study kept local",
+  "custom_models": [
+    "Cane chair",
+    "Square footstool",
+    "Corner sofa adapted from existing custom study",
+    "Media cabinet proposal"
+  ],
+  "sofa_note": "Approved custom sofa; no downloaded Frankof or Loaf product model",
+  "dimensions_m": {
+    "table": [
+      2.44,
+      1.09,
+      0.773
+    ],
+    "chair": [
+      0.54,
+      0.578,
+      0.957
+    ],
+    "sofa": [
+      3.65,
+      4.11,
+      0.836
+    ],
+    "footstool": [
+      1.25,
+      1.25,
+      0.495
+    ],
+    "media-cabinet": [
+      2.14,
+      0.483,
+      0.647
+    ]
+  },
+  "renders": [
+    "table.png",
+    "chair.png",
+    "sofa.png",
+    "footstool.png",
+    "media-cabinet.png"
+  ],
+  "chair_seat": "Fixed upholstery wrapped into the timber frame"
+}

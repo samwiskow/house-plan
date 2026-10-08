@@ -1,0 +1,234 @@
+{
+  "source_sha256": "3244be4684ef842ce8b8a4170f14ced3db9a2182120130860ab50c19e938ad52",
+  "ceiling_m": 3.2,
+  "first_floor_coordinated": false,
+  "placements": {
+    "dining_group_south_m": 0.6,
+    "island_east_m": 0.075,
+    "island_north_m": 0.1
+  },
+  "clearances_m": {
+    "island_to_sink_front": 1.06,
+    "island_to_pantry_front": 0.933,
+    "island_west_side": 0.9,
+    "behind_stool_geometry": 0.635,
+    "dining_chair_to_sofa": 1.113,
+    "dining_chair_to_sofa_after_400mm_pullout": 0.713,
+    "east_dining_route_after_400mm_pullout": 1.003,
+    "rear_dining_chair_after_400mm_pullout": 0.503,
+    "folded_divider_clear_opening": 2.141
+  },
+  "footprints": {
+    "01 Table": [
+      [
+        1.7406,
+        4.4594
+      ],
+      [
+        -7.745,
+        -6.655
+      ],
+      [
+        0.0395,
+        0.8205
+      ]
+    ],
+    "03 Corner sofa": [
+      [
+        0.7,
+        4.8101
+      ],
+      [
+        -4.89,
+        -1.2401
+      ],
+      [
+        0.0395,
+        0.9031
+      ]
+    ],
+    "04 Square footstool": [
+      [
+        2.7252,
+        3.9754
+      ],
+      [
+        -4.0248,
+        -2.7747
+      ],
+      [
+        0.0674,
+        0.5633
+      ]
+    ],
+    "05 Media cabinet proposal": [
+      [
+        6.037,
+        6.52
+      ],
+      [
+        -3.57,
+        -1.43
+      ],
+      [
+        0.0395,
+        0.687
+      ]
+    ],
+    "K02 - dark oak island": [
+      [
+        7.6,
+        10.0
+      ],
+      [
+        -8.1,
+        -7.1
+      ],
+      [
+        0.04,
+        0.9818
+      ]
+    ],
+    "K09 - curved oak stools": [
+      [
+        7.8395,
+        9.7605
+      ],
+      [
+        -8.6655,
+        -8.1345
+      ],
+      [
+        0.0397,
+        1.0195
+      ]
+    ],
+    "Approved cane dining chair 01": [
+      [
+        1.87,
+        2.43
+      ],
+      [
+        -6.581,
+        -6.0029
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 02": [
+      [
+        1.87,
+        2.43
+      ],
+      [
+        -8.3971,
+        -7.819
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 03": [
+      [
+        2.72,
+        3.28
+      ],
+      [
+        -6.581,
+        -6.0029
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 04": [
+      [
+        2.72,
+        3.28
+      ],
+      [
+        -8.3971,
+        -7.819
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 05": [
+      [
+        3.57,
+        4.13
+      ],
+      [
+        -6.581,
+        -6.0029
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 06": [
+      [
+        3.57,
+        4.13
+      ],
+      [
+        -8.3971,
+        -7.819
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 07": [
+      [
+        1.0529,
+        1.631
+      ],
+      [
+        -7.48,
+        -6.92
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ],
+    "Approved cane dining chair 08": [
+      [
+        4.569,
+        5.1471
+      ],
+      [
+        -7.48,
+        -6.92
+      ],
+      [
+        0.0385,
+        0.9965
+      ]
+    ]
+  },
+  "divider": "Four glazed folding leaves; frame 1 open, frame 60 closed; mechanisms and stove installation require detailed design",
+  "screen": "1.17 m partial oak screen; 500+ mm clear of sofa",
+  "not_resolved": [
+    "Through-route behind occupied island stools",
+    "Pantry door swing with people or cabinet doors open",
+    "Access to high cupboards",
+    "Construction and first-floor level"
+  ],
+  "views": [
+    "dining-kitchen-open.png",
+    "dining-kitchen-closed.png",
+    "kitchen-dining.png",
+    "living-dining-kitchen.png",
+    "arrival-living.png"
+  ]
+}

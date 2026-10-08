@@ -4,3 +4,12 @@ __pycache__/
 .venv/
 tmp/
 .worktrees/
+
+assets/furniture-study/vendor/
+output/blender/furniture-study/*.blend
+
+output/blender/approved-room/*.blend
+
+output/blender/kitchen-study/*.blend
+
+output/blender/combined-room/*.blend

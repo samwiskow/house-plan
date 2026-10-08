@@ -1,0 +1,94 @@
+{
+  "sourceModelSha256": "3ec7b07375c890e8cad05389090741127261ff3ab701b416b053a47eb48f6908",
+  "brief": "MATERIALS-BRIEF.md",
+  "objectsAdded": 1280,
+  "furnitureFootprints": {
+    "French country trestle table": [
+      1.7,
+      6.05,
+      2.8,
+      1.1
+    ],
+    "French country ladder-back chair": [
+      1.9,
+      5.45,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.001": [
+      1.9,
+      7.25,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.002": [
+      2.75,
+      5.45,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.003": [
+      2.75,
+      7.25,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.004": [
+      3.5999999999999996,
+      5.45,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.005": [
+      3.5999999999999996,
+      7.25,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.006": [
+      1.1,
+      6.35,
+      0.5,
+      0.5
+    ],
+    "French country ladder-back chair.007": [
+      4.6,
+      6.35,
+      0.5,
+      0.5
+    ]
+  },
+  "proposedGardenOpening": {
+    "width": 5.8,
+    "head": 2.4,
+    "leaves": 6
+  },
+  "proposedFurniture": {
+    "Large oatmeal corner sofa": [
+      0.7,
+      1.25,
+      4.1,
+      3.65
+    ],
+    "Oatmeal upholstered ottoman": [
+      2.525,
+      2.75,
+      1.65,
+      1.1
+    ],
+    "French country media cabinet": [
+      6.115,
+      1.2,
+      0.39,
+      2.6
+    ]
+  },
+  "proposedCeilingHeight": 3.2,
+  "firstFloorCoordinated": false,
+  "sideGardenDoorClosed": true,
+  "samples": 160,
+  "width": 1800,
+  "renderer": "Cycles",
+  "device": "GPU",
+  "textures": "Poly Haven CC0 oak_veneer_02 and terlenka; original generated textiles and art"
+}

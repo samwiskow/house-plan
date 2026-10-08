@@ -1,0 +1,25 @@
+{
+  "layout": "D enclosed pantry with connecting door",
+  "base_sha256": "90b047fe72d61a628ee69c46cc13f896d4f423b9666a809e10e9935996ffda2f",
+  "areas_m2": {
+    "G2": 20.699999999999992,
+    "G3": 4.500000000000007,
+    "G4": 11.572499999999991,
+    "G10": 10.45750000000001
+  },
+  "asset_cost": 0,
+  "stools": "Custom curved oak stools based on user reference; not an exact retail model",
+  "tap": "provisional single lever pull-out rinse",
+  "first_floor_coordinated": false,
+  "pantry_wall_storage_depth_m": 0.35,
+  "island_to_storage_face_m": 1.055,
+  "upper_cabinets": "Tall fridge and pantry bank to 3.2 m; no cupboards around sink window",
+  "views": [
+    "island-study.png",
+    "cabinet-study.png",
+    "stool-study.png",
+    "pendant-study.png",
+    "kitchen-room.png",
+    "pantry-utility.png"
+  ]
+}
