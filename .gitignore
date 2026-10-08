@@ -13,3 +13,11 @@ output/blender/approved-room/*.blend
 output/blender/kitchen-study/*.blend
 
 output/blender/combined-room/*.blend
+
+output/blender/room-tour/*.blend
+output/blender/room-tour/frames/
+output/blender/room-tour/preview/
+output/blender/room-tour/benchmark-*.png
+output/blender/room-tour/kitchen-preview.*
+output/blender/room-tour/preview-report.json
+output/blender/room-tour/render-report.json
