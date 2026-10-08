@@ -1,7 +1,7 @@
 {
-  "scene_sha256": "f945335099b0d642e3bc6dbf4341c05498a49c117d0e72cdfe8d07d638d42959",
-  "room_ceiling_rays": 2366,
-  "furniture_meshes_checked": 1390,
+  "scene_sha256": "b5511c72532f97a437a7e3858016b11589b3f8d967cdbe3f5e629f13bc20a818",
+  "room_ceiling_rays": 2363,
+  "furniture_meshes_checked": 1371,
   "furniture_fit_failures": [],
   "source_hashes": {
     "studies/l-house-booklet/plans.json": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
@@ -44,8 +44,42 @@
       1.35
     ],
     "paired_overhead_hand_shower_stations": 2,
-    "independent_central_control_sets": 2
+    "independent_central_wall_control_sets": 2,
+    "stair_window_clear_rays": 6,
+    "integrated_lower_stair_storage_modules": 5,
+    "concealed_pantry_leaf": true,
+    "kitchen_cabinet_gap_blocked_rays": 9,
+    "pantry_area_m2": 6.655,
+    "pocket_doors_inside_wall": [
+      "Guest shower",
+      "Gallery to bedroom",
+      "Gallery to ensuite",
+      "Gallery to dressing",
+      "Office shower room",
+      "Utility \u2192 pantry"
+    ],
+    "stone_service_rooms": [
+      "G4",
+      "G10"
+    ],
+    "continuous_parquet": [
+      "G2 continuous herringbone",
+      "G3 continuous herringbone",
+      "Kitchen pantry continuous threshold"
+    ],
+    "roof_pitch_seams": 389,
+    "swapped_stair_flights": true,
+    "under_stair_storage_clear": true,
+    "service_route_samples": 401,
+    "service_route_failures": [],
+    "shower_door_sweep_component_checks": 637,
+    "golden_hour_environment_sha256": "7aaae9d4174438a196d7b573c1b01919c01bf98d1185f1b09e03ba50ad4b564b",
+    "sun_pixel_1024x512": [
+      190,
+      275
+    ],
+    "single_physical_sky_sun_elevation_degrees": 7
   },
   "units": "metres",
-  "scope": "Source equality, structural ceiling rays, furniture bounds within room outlines (31 mm tolerance), opaque opening rays, stair headroom and 700 mm nominal suite routes with modelled doors open. No construction or occupied-use certification."
+  "scope": "Source equality, structural ceiling rays, furniture bounds within room outlines (31 mm tolerance), opaque opening rays, stair headroom, pocket fit, roof seam direction, shower door swing and 700 mm nominal suite and service routes with modelled doors open. No construction or occupied-use certification."
 }

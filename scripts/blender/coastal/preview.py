@@ -1,5 +1,6 @@
 """Export the local browser scene with explicit Blender material fallbacks."""
 import bpy
+import math
 
 
 def export_preview(path):
@@ -49,3 +50,18 @@ def export_preview(path):
                 if link=='OBJECT':slot.material=material
             if isinstance(temporary,bpy.types.Mesh):bpy.data.meshes.remove(temporary)
             else:bpy.data.curves.remove(temporary)
+
+
+def export_environment(path):
+    scene=bpy.context.scene
+    hidden=[(obj,obj.hide_render) for obj in scene.objects]
+    settings=(scene.camera,scene.render.resolution_x,scene.render.resolution_y,scene.render.filepath,scene.render.image_settings.file_format,scene.cycles.samples)
+    camera=bpy.data.cameras.new('Golden hour environment');camera.type='PANO';camera.panorama_type='EQUIRECTANGULAR'
+    obj=bpy.data.objects.new(camera.name,camera);scene.collection.objects.link(obj);obj.rotation_euler=(math.pi/2,0,-math.pi/2);scene.camera=obj
+    for other,_ in hidden:other.hide_render=True
+    scene.render.resolution_x=1024;scene.render.resolution_y=512;scene.render.image_settings.file_format='HDR';scene.render.filepath=str(path);scene.cycles.samples=4
+    try:bpy.ops.render.render(write_still=True)
+    finally:
+        for other,value in hidden:other.hide_render=value
+        scene.camera,scene.render.resolution_x,scene.render.resolution_y,scene.render.filepath,scene.render.image_settings.file_format,scene.cycles.samples=settings
+        bpy.data.objects.remove(obj,do_unlink=True);bpy.data.cameras.remove(camera)

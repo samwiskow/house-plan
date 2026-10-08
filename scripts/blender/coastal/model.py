@@ -75,6 +75,7 @@ def load():
     for window in data['windows']:
         if window['floor']=='u' and window['axis']=='v' and window['x']==.175 and window['y']==8.65:
             window.update(y=6.75,w=1.3,sill=1.05,head=2.4)
+    data['windows'].append(dict(floor='g',axis='h',x=8.35,y=14.625,w=2.1,sill=.45,head=3.08,private=False,id='Stair picture window'))
     data['rooflights'] = copy.deepcopy(plans['suiteDaylight']['rooflights'])
     for rooflight in data['rooflights']:
         if rooflight['id']=='G1':
@@ -88,17 +89,47 @@ def load():
     data['interior_revision']={
         'bath':'Custom hinoki-style ofuro allowance, 1100 x 850 x 740 mm; 610 mm internal depth',
         'bath_reference':'https://www.bartokdesign.com/japan/7-custom_ofuro/square_tub_for_canada.php',
-        'shower':'Two overhead and hand shower stations behind the fixed glass; independent central controls',
+        'shower':'Two overhead and hand shower stations behind the fixed glass; independent central controls on the real rear wall and hinged glass door',
         'shutters':['G5','G7','O4'],
         'bed':'U5 head moved to solid west wall; all headboards checked against windows'}
+    for room in data['rooms']:
+        if room['id']=='G2':room['p']=[[6.85,5.35],[11.35,5.35],[11.35,7.85],[11.7,7.85],[11.7,9.3],[6.7,9.3],[6.7,6.7],[6.85,6.7]]
+        if room['id']=='G3':room.update(name='Walk-in pantry',p=[[11.5,5.35],[13.3,5.35],[13.3,9.3],[11.85,9.3],[11.85,8.0],[11.5,8.0]],label=[12.4,7.5])
+    data['doors']=[d for d in data['doors'] if d['id']!='Kitchen → utility']
+    pocket_slides={'Gallery to bedroom':-1,'Gallery to dressing':-1,'Gallery to ensuite':1,'Guest shower':1,'Office shower room':1,'Kitchen → pantry':-1,'Utility → pantry':1}
+    for door in data['doors']:
+        if door['id']=='Hall to kitchen':door.update(x=9.85,w=.95,side=1)
+        if door['id']=='Boot to link':door['side']=1
+        if door['id']=='Gallery to dressing':door['y']=4.76
+        if door['id'] in pocket_slides:door.update(style='pocket',slide=pocket_slides[door['id']],pocketLength=door['w']+.03)
+        if door['id']=='Kitchen → pantry':door['style']='concealed'
+    for opening in data['openings']:
+        if opening[:3]==['g',8.2,11.075]:opening[4]=2.4
+        if opening[:3]==['u',9.6,11.075]:opening[1]=8.2
+    data['openings'].append(['g',10.675,11.15,'v',3.3])
+    for item in data['furniture']:
+        if item['name']=='Shower screen left':item['r']=[.35,8.52,1.0,.01]
+        if item['name']=='Shower screen right':item['r']=[2.35,8.52,1.0,.01]
+    data['finish_revision']={'palette':'Warm ivory, natural oak, linen, pale limestone and muted blue accents',
+        'lighting':'Golden hour: 7 degree sun, physical multiple-scattering sky and dim warm lamps',
+        'stair_window_m':[2.1,2.63],
+        'pantry_door':'Concealed cabinet-front door; closed in kitchen views and open in pantry view',
+        'reference_models':['modern_arm_chair_01','wooden_bowl_01','vintage_electric_kettle'],
+        'stone_rooms':['G4','G10'],'continuous_parquet':['G1','G2','G3'],
+        'pantry_area_m2':round(area(next(r['p'] for r in data['rooms'] if r['id']=='G3')),3),
+        'fridge':'Two 600 mm integrated fridge/freezer columns in a recessed bank; generic appliance allowance',
+        'stair':'Swapped house flights, open east side, integrated storage under lower flight and large stair window',
+        'roof_reference':'https://www.vmzinc.com/en-gb/standing-seam-vmzinc',
+        'roof':'Standing-seam zinc appearance; 430 mm panel spacing, 25 mm seams running down each pitch',
+        'shower':'Two wall-mounted rain heads, handsets, central wall controls and a 1 m glass door'}
     data['site'] = site
     data['levels'] = LEVELS
     data['heights'] = HEIGHTS
     data['source_hashes'] = {p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths}
     data['shells'] = {'g':[data['house'],rect(16.2,11.35,2.5,2.4)],'u':[data['house']],
                       'a':[data['garage'],data['plant']],'o':[data['office']]}
-    data['stairs'] = [dict(id='House stair',floor='g',upper='u',r=[8.2,11.15,2.4,3.3],risers=18,going=.2875,rise=3.5/18),
-                      dict(id='Garage stair',floor='a',upper='o',r=[19.05,13.35,2.4,3.5],risers=16,going=.30,rise=3/16)]
+    data['stairs'] = [dict(id='House stair',floor='g',upper='u',r=[8.2,11.15,2.4,3.3],risers=18,going=.2875,rise=3.5/18,lower_side=1),
+                      dict(id='Garage stair',floor='a',upper='o',r=[19.05,13.35,2.4,3.5],risers=16,going=.30,rise=3/16,lower_side=0)]
     return data
 
 
@@ -109,7 +140,7 @@ def openings(data, floor):
             out.append(dict(d,lo=0,hi=2.4 if d['style']=='bifold' else (2.3 if floor=='g' else 2.15)))
     for f,x,y,axis,w in data['openings']:
         if f==floor:
-            out.append(dict(id='Passage',x=x,y=y,axis=axis,w=w,lo=0,hi=3.2 if floor=='g' and x==6.625 else 2.4))
+            out.append(dict(id='Passage',x=x,y=y,axis=axis,w=w,lo=0,hi=3.2 if floor=='g' and (x==6.625 or (axis=='v' and x==10.675) or (axis=='h' and y==11.075 and x==8.2)) else 2.4))
     out.extend(dict(w,lo=w['sill'],hi=w['head'],id='Window') for w in data['windows'] if w['floor']==floor)
     return out
 
@@ -121,6 +152,11 @@ def walls(data, floor):
     for d in openings(data,floor):
         r = [d['x'],d['y']-.2,d['w'],.4] if d['axis']=='h' else [d['x']-.2,d['y'],.4,d['w']]
         gaps.append((r,d['lo'],d['hi']))
+    for door in data['doors']:
+        if door['floor']!=floor or door['style']!='pocket':continue
+        length=door['w']+.03;start=(door['x'] if door['axis']=='h' else door['y'])+(door['w'] if door['slide']>0 else -length)
+        r=[start,door['y']-.05,length,.10] if door['axis']=='h' else [door['x']-.05,start,.10,length]
+        gaps.append((r,0,2.34 if floor=='g' else 2.19))
     xs=sorted({round(x,7) for p in shell+rooms+[rect(*r) for r,_,_ in gaps] for x,y in p})
     ys=sorted({round(y,7) for p in shell+rooms+[rect(*r) for r,_,_ in gaps] for x,y in p})
     rows=[]

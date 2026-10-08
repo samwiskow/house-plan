@@ -1,12 +1,12 @@
 """Small fittings executed in the house builder namespace."""
 col=cols['u','furniture']
-for x,y,w,d in [(1.2,1.0,4.45,2.2),(.9,10.45,2.85,2.6),(7.3,5.6,2.8,2.6),(12.4,11.25,2.85,2.7)]:
+for x,y,w,d in [(.65,.65,5.2,2.55),(.9,10.45,2.85,2.6),(7.3,5.6,2.8,2.6),(12.4,11.25,2.85,2.7)]:
     pb('Low woven bedroom rug',[x,y,w,d],3.541,3.548,fabric,.014)
 for x,y in [(1.25,1.65),(5.8,1.45)]:
     cyl('Bedroom ceramic vase',(x,-y,3.72),.09,.34,stone2)
 col=cols['u','furniture']
 for x in [2.325,3.075]:
-    box('Ensuite bronze mirror frame',(x,-6.726,5.14),(.65,.024,.98),metal,.035)
+    box('Ensuite oak mirror frame',(x,-6.726,5.14),(.65,.024,.98),wood,.035)
     box('Ensuite mirror surface',(x,-6.749,5.14),(.60,.018,.93),mirror,.032)
 for y in [8.60,8.81,9.02]:
     pb('Shower limestone shelf',[.365,y,.12,.17],4.8,4.825,stone2)

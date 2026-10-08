@@ -1,0 +1,101 @@
+[
+  {
+    "id": "modern_arm_chair_01",
+    "source": "https://polyhaven.com/a/modern_arm_chair_01",
+    "license": "CC0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "1k",
+    "files": {
+      "modern_arm_chair_01_1k.gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/modern_arm_chair_01/modern_arm_chair_01_1k.gltf",
+        "md5": "a5ce303bc2962fe98b733fcdfa5a842b"
+      },
+      "textures/modern_arm_chair_01_pillow_nor_gl_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_arm_chair_01/modern_arm_chair_01_pillow_nor_gl_1k.jpg",
+        "md5": "6804f34108fcc755f0c84dd3c638270c"
+      },
+      "textures/modern_arm_chair_01_legs_nor_gl_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_arm_chair_01/modern_arm_chair_01_legs_nor_gl_1k.jpg",
+        "md5": "7cece7eccf75588af5b5df9b095d2c97"
+      },
+      "textures/modern_arm_chair_01_pillow_arm_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_arm_chair_01/modern_arm_chair_01_pillow_arm_1k.jpg",
+        "md5": "772495ddbf26ca3de4b31298f10113b9"
+      },
+      "textures/modern_arm_chair_01_legs_diff_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_arm_chair_01/modern_arm_chair_01_legs_diff_1k.jpg",
+        "md5": "778f1897e07ff81b2bc338f3d463ad1f"
+      },
+      "textures/modern_arm_chair_01_legs_arm_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_arm_chair_01/modern_arm_chair_01_legs_arm_1k.jpg",
+        "md5": "9c69cb001df175bddf6d1c2436567fb7"
+      },
+      "modern_arm_chair_01.bin": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modern_arm_chair_01/modern_arm_chair_01.bin",
+        "md5": "5a8f2ea1c79ea484140e484b2a621670"
+      },
+      "textures/modern_arm_chair_01_pillow_diff_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_arm_chair_01/modern_arm_chair_01_pillow_diff_1k.jpg",
+        "md5": "2e4f64c633c3cb1656ad3eabdb3f0607"
+      }
+    }
+  },
+  {
+    "id": "wooden_bowl_01",
+    "source": "https://polyhaven.com/a/wooden_bowl_01",
+    "license": "CC0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "1k",
+    "files": {
+      "wooden_bowl_01_1k.gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_bowl_01/wooden_bowl_01_1k.gltf",
+        "md5": "d4fa6acadbae81c8f66f346381b11582"
+      },
+      "textures/wooden_bowl_01_diff_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_bowl_01/wooden_bowl_01_diff_1k.jpg",
+        "md5": "64626044995a55e0525dbf8ad1388914"
+      },
+      "wooden_bowl_01.bin": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_bowl_01/wooden_bowl_01.bin",
+        "md5": "ab8f522a5b859d901de1eed742f275bd"
+      },
+      "textures/wooden_bowl_01_nor_gl_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_bowl_01/wooden_bowl_01_nor_gl_1k.jpg",
+        "md5": "ba2691b4cc8cfdbbd8ff5c5ae9bfadbc"
+      },
+      "textures/wooden_bowl_01_arm_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_bowl_01/wooden_bowl_01_arm_1k.jpg",
+        "md5": "3bdbd9a9f73108f6a6b6c9a248aa1eb9"
+      }
+    }
+  },
+  {
+    "id": "vintage_electric_kettle",
+    "source": "https://polyhaven.com/a/vintage_electric_kettle",
+    "license": "CC0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "1k",
+    "files": {
+      "vintage_electric_kettle_1k.gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/vintage_electric_kettle/vintage_electric_kettle_1k.gltf",
+        "md5": "2b916b831d913ba1785a8b08ab2f0f61"
+      },
+      "textures/vintage_electric_kettle_nor_gl_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_electric_kettle/vintage_electric_kettle_nor_gl_1k.jpg",
+        "md5": "a8d86ddd33e47a4781105f66582e4b7c"
+      },
+      "textures/vintage_electric_kettle_diff_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_electric_kettle/vintage_electric_kettle_diff_1k.jpg",
+        "md5": "758b520b36cd419442d06fa5ea2b4924"
+      },
+      "textures/vintage_electric_kettle_arm_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_electric_kettle/vintage_electric_kettle_arm_1k.jpg",
+        "md5": "3b2f4b53442fa5d3fac05da5c529aeb8"
+      },
+      "vintage_electric_kettle.bin": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_electric_kettle/vintage_electric_kettle.bin",
+        "md5": "3e817b9bd20bad65c016e5464ee03bc3"
+      }
+    }
+  }
+]

@@ -77,9 +77,13 @@ for side,expected_x in [('left',.85),('right',2.85)]:
     hand=bounds(scene.objects['Ensuite '+side+' hand shower'])
     assert abs((overhead[0]+overhead[1])/2-expected_x)<1e-5
     assert hand[4]>4.9 and hand[5]<5.4
-    control=bounds(scene.objects['Ensuite '+side+' central control plate'])
-    assert 1.60<control[0]<control[1]<2.10 and control[2]>9.8
-revision_checks={'rooflights_on_one_plane_with_100mm_margin':planar_lights,'bed_headboards_clear_of_windows':sorted(headboards),'inset_shutter_windows':sorted(shutter_windows),'inset_shutter_parts':shutter_parts,'ofuro_internal_depth_m':.61,'bath_window_size_m':[window['w'],round(window['head']-window['sill'],3)],'paired_overhead_hand_shower_stations':2,'independent_central_control_sets':2}
+    control=bounds(scene.objects['Ensuite '+side+' central wall control plate'])
+    cx=(control[0]+control[1])/2;cy=(control[2]+control[3])/2
+    assert 1.4<cx<2.3 and 9.8<cy<9.9
+    arm=bounds(scene.objects['Ensuite '+side+' overhead arm']);assert arm[5]-arm[4]<.05 and arm[3]>9.8
+    assert not any('control return' in obj.name for obj in scene.objects)
+    assert math.hypot(cx-expected_x,cy-(overhead[2]+overhead[3])/2)>.75
+revision_checks={'rooflights_on_one_plane_with_100mm_margin':planar_lights,'bed_headboards_clear_of_windows':sorted(headboards),'inset_shutter_windows':sorted(shutter_windows),'inset_shutter_parts':shutter_parts,'ofuro_internal_depth_m':.61,'bath_window_size_m':[window['w'],round(window['head']-window['sill'],3)],'paired_overhead_hand_shower_stations':2,'independent_central_wall_control_sets':2}
 
 verts=[];faces=[]
 for obj in scene.objects:
@@ -114,7 +118,7 @@ for s in data['stairs']:
     x,y,w,d=s['r'];half=s['risers']//2;rise=s['rise'];run=(half-1)*s['going'];upper=LEVELS[s['upper']]
     for side in [0,1]:
         for i in range(half-1):
-            z=.04+((i+1)*rise if side==0 else upper/2+(half-1-i)*rise)
+            z=.04+((i+1)*rise if side==s['lower_side'] else upper/2+(half-1-i)*rise)
             hit=bvh.ray_cast(Vector((x+.5+side*1.4,-y-(i+.5)*s['going'],z+.05)),Vector((0,0,1)),10)
             clear=hit[3]+.05 if hit[0] is not None else 10
             assert clear>=2,(s['id'],i,clear);headroom.append(clear)
@@ -159,7 +163,8 @@ for obj in scene.objects:
         if p.z>base+HEIGHTS[room['floor']]+.01:
             fit_failures.append((room_id,obj.name,'above ceiling'));break
 fit_failures=list(dict.fromkeys(fit_failures))
-result={'scene_sha256':hashlib.sha256((O/'coastal-house.blend').read_bytes()).hexdigest(),'room_ceiling_rays':ceiling_samples,'furniture_meshes_checked':fit_objects,'furniture_fit_failures':fit_failures,'source_hashes':data['source_hashes'],'preserved_rooms':len(original['rooms'])-3,'rooflight_clear_rays':roof_rays,'stair_headroom_samples':len(headroom),'minimum_stair_headroom_m':round(min(headroom),3),'suite_route_samples':route_samples,'suite_route_failures':route_failures,'packed_textures':True,'interior_revision_checks':revision_checks,'units':'metres','scope':'Source equality, structural ceiling rays, furniture bounds within room outlines (31 mm tolerance), opaque opening rays, stair headroom and 700 mm nominal suite routes with modelled doors open. No construction or occupied-use certification.'}
+exec(compile((Path(__file__).parent/'coastal/finish_checks.py').read_text(),'finish_checks.py','exec'))
+result={'scene_sha256':hashlib.sha256((O/'coastal-house.blend').read_bytes()).hexdigest(),'room_ceiling_rays':ceiling_samples,'furniture_meshes_checked':fit_objects,'furniture_fit_failures':fit_failures,'source_hashes':data['source_hashes'],'preserved_rooms':len(original['rooms'])-3,'rooflight_clear_rays':roof_rays,'stair_headroom_samples':len(headroom),'minimum_stair_headroom_m':round(min(headroom),3),'suite_route_samples':route_samples,'suite_route_failures':route_failures,'packed_textures':True,'interior_revision_checks':revision_checks,'units':'metres','scope':'Source equality, structural ceiling rays, furniture bounds within room outlines (31 mm tolerance), opaque opening rays, stair headroom, pocket fit, roof seam direction, shower door swing and 700 mm nominal suite and service routes with modelled doors open. No construction or occupied-use certification.'}
 (O/'geometry-checks.json').write_text(json.dumps(result,indent=2))
 print(json.dumps(result,indent=2))
 assert not route_failures,route_failures[:10]

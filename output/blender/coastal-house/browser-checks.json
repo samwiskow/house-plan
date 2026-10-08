@@ -1,6 +1,6 @@
 {
-  "meshes": 198,
-  "triangles": 4510633,
+  "meshes": 238,
+  "triangles": 4968868,
   "views": [
     "arrival",
     "garden",
@@ -20,7 +20,15 @@
     "gym",
     "office",
     "combined-room",
-    "terrace"
+    "entrance-hall",
+    "under-stair",
+    "pantry",
+    "kitchen-storage",
+    "utility",
+    "bathroom-shower-closed",
+    "terrace",
+    "sea-sunset",
+    "coffee-station"
   ],
   "groups": [
     {
@@ -72,6 +80,11 @@
       "name": "VIEW_|_g_|_openings",
       "level": "g",
       "part": "openings"
+    },
+    {
+      "name": "VIEW_|_g_|_pantry-door",
+      "level": "g",
+      "part": "pantry-door"
     },
     {
       "name": "VIEW_|_g_|_walls",
@@ -139,12 +152,45 @@
       "part": "openings"
     },
     {
+      "name": "VIEW_|_u_|_shower-door",
+      "level": "u",
+      "part": "shower-door"
+    },
+    {
       "name": "VIEW_|_u_|_walls",
       "level": "u",
       "part": "walls"
     }
   ],
-  "glbSha256": "22e5d997faf53c1d2d1c8b9d4bb71ef5fda7afeb6ce73cb627f8faf0d5567933",
+  "showerDoorPoses": {
+    "closed": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "open": [
+      0,
+      0.7071067094802856,
+      0,
+      0.7071068286895752
+    ]
+  },
+  "pantryDoorPoses": {
+    "closed": [
+      0,
+      -0.7071067094802856,
+      0,
+      0.7071068286895752
+    ],
+    "open": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "glbSha256": "9b03ec6ecd55dcf19cfd2f699f543f8fdc0e6b34327d3db1e98648f0e7bba6a0",
   "errors": [],
   "externalRequests": [],
   "phoneWidth": 390,

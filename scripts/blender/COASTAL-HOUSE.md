@@ -1,6 +1,6 @@
 # Coastal whole-house model
 
-The coordinated model uses the L01.1 measured plan, the selected Option D pantry,
+The coordinated model uses the L01.1 measured plan, a revised full kitchen-depth pantry based on Option D,
 and the approved combined kitchen, dining and living scene. The earlier courtyard
 house is not a geometry source. The measured source files and earlier Blender
 scenes remain unchanged.
@@ -58,7 +58,7 @@ through occupied space.
 ## Model detail
 
 The approved room scene supplies the original furniture, kitchen joinery,
-continuous parquet, linen curtains and four folding divider leaves. New rooms
+parquet material, linen curtains and four folding divider leaves. New rooms
 include beds with bedding and supports, framed joinery, library books, bathroom
 fittings, mirrors, towels, desks and monitors, gym equipment, workshop tools and
 plant reservations. Separate collections and object tags identify levels, walls,
@@ -83,7 +83,9 @@ blender --background --disable-autoexec --python-exit-code 1 \
   --width 1600 --samples 64 --export \
   --views arrival garden coastal-plot ground-cutaway first-cutaway \
   parents-bedroom suite-gallery dressing bathroom bathroom-vanity \
-  family-bedroom library gym office guest-room bathroom-shower rooflights combined-room terrace
+  family-bedroom library gym office guest-room bathroom-shower rooflights combined-room terrace \
+  entrance-hall under-stair pantry kitchen-storage utility bathroom-shower-closed \
+  sea-sunset coffee-station
 blender --background --disable-autoexec --python-exit-code 1 \
   --python scripts/blender/check_coastal_house.py
 python3 scripts/blender/build_coastal_gallery.py
@@ -109,8 +111,9 @@ structural support, roof drainage, product fit, waterproofing, coastal exposure
 performance or services design. Three rooflights retain the source plan zones. Gallery rooflight G1 moves 1.15 m
 toward the bedroom so its glazing and a 100 mm surrounding allowance stay on one
 roof plane. Glazing, trimmers and flashings remain modelling allowances.
-The shared-room furniture retains the earlier tight route; chair, stool and
-appliance operation needs further design. No surveyed coast or daylight analysis
+The shared-room furniture retains the earlier layout. The new kitchen route is
+checked at a nominal 700 mm width; occupied chair, stool and appliance use still
+needs product-specific design. No surveyed coast or daylight analysis
 is claimed.
 
 ## Interior review corrections
@@ -123,8 +126,10 @@ spout. Its form follows [Bartok Design's square hinoki tub](https://www.bartokde
 These are model dimensions, not a selected product specification.
 
 Each fixed shower glass panel has an overhead head and hand shower behind it.
-The two independent mixer/diverter controls sit at the centre of the rear wall.
-The 1.00 m central glass opening remains clear.
+Each station has a wall-mounted 350 mm rain head on an extended arm and a hand shower. The two independent
+mixer/diverter controls sit between the showers on the real rear wall, away from
+the rain heads. There are no control pedestals. The enclosure front is all glass. A hinged glass door closes the central opening.
+Both open and closed door views are available in the gallery and browser model.
 
 Inset louvred shutters occupy all five windows in the office, library and guest
 bedroom. The office bookcase moves along the east wall to clear the window.
@@ -132,3 +137,68 @@ The U5 bed turns onto the solid west wall. Headboard panels now follow bed
 position and orientation, and the geometry check tests every bed headboard and
 panel against window openings. It also checks shutter reveal depth and extent,
 paired shower fittings, the bath window, tub depth and rooflight plane clearance.
+
+
+## Warm interior and service-room revision
+
+The finish scheme uses natural oak, warm ivory, pale limestone, woven rugs and
+linen, with muted blue accents. Bedrooms have upholstered headboards, shaped
+bedding, framed art and rugs. The parents bedroom includes a reading chair,
+side table and full-height linen curtains. The bathroom combines an oak vanity
+body and mirror frames with blue drawer fronts and pale stone.
+
+The pantry extends through the full kitchen depth, from plan Y 5.35 to 9.30 m.
+Its net area is 6.655 m², with an east worktop, drawers and open shelving. A small
+recess on its west side accommodates two generic 600 mm fridge/freezer columns.
+The hall-to-kitchen opening moves to X 9.85 m and opens into the hall. The old
+fridge position becomes an oven and storage tower. The utility outline stays
+unchanged. Kitchen and pantry share the same continuous herringbone layout and
+threshold. The boot room and utility use honed stone floors. The boot-to-link door opens
+into the link to keep the route past the coat cupboard clear.
+
+Six doors retract into modelled wall pockets: the three suite doors, guest and
+office shower rooms, and the utility-to-pantry door. The kitchen-to-pantry leaf
+is concealed in the cabinet front, closed by default and open in the pantry view.
+A matching full-height infill closes the narrow joint beside the fridge bank. The house stair's lower flight is now
+on the east side and its upper flight on the west. Open guards face the entrance
+hall. Five integrated storage modules fit below the lower flight and face the hall.
+A bench remains below the upper flight. A 2.10 × 2.63 m stair window brings
+daylight through the stair volume.
+The garage stair remains in its original arrangement.
+
+The metal roof uses 430 mm panels with 25 mm standing seams running down each
+roof pitch, plus ridge and valley flashings. These visual dimensions follow
+[VMZINC's standing-seam guidance](https://www.vmzinc.com/en-gb/standing-seam-vmzinc).
+The roof is a model allowance, not a specified coastal roofing system.
+
+Additional checks cover the pantry outline, matching floor materials, pocket
+leaf fit inside wall cores, stair direction, under-stair cabinet clearance,
+700 mm service routes, roof seam direction and the shower door's 0–90° swing
+against adjacent fittings. The browser check verifies both shower door poses.
+
+
+## Golden hour and everyday objects
+
+The scene uses a single multiple-scattering sky with a visible 7° sun. A matching
+HDR environment is generated for the browser, with its sun direction aligned to
+the native scene. Interior lamps use lower output and warm light. Interior stills
+use 0.6 stops more exposure than exteriors to retain detail in the rooms. The
+setting is illustrative, with no surveyed site orientation or dated solar claim.
+A sloping sand beach, low dunes and rippled water extend beyond the garden.
+
+[Poly Haven's CC0 licence](https://polyhaven.com/license) covers the imported
+[armchair](https://polyhaven.com/a/modern_arm_chair_01),
+[wooden bowl](https://polyhaven.com/a/wooden_bowl_01) and
+[kettle](https://polyhaven.com/a/vintage_electric_kettle).
+The chairs retain the source mesh and surface detail, with neutral upholstery
+for this scheme. Download URLs and checksums are in `assets/coastal-study/sources.json`.
+The available vintage bed models did not fit the supplied bedroom references;
+the measured upholstered beds remain custom geometry. The compact espresso
+machine is also custom geometry, using the form of a domestic machine such as
+[the Sage Bambino](https://www.sageappliances.com/en-gb/product/bes450) as a reference.
+It is not an exact product model.
+
+Stoneware plates and mugs, clear water glasses, cutlery, napkins, fruit, books and
+post add signs of daily use. Fabric weave, subtle stone roughness, brushed metal
+and the water surface respond differently to the same light. The kitchen and
+pantry walking routes remain clear with the concealed pantry door open.

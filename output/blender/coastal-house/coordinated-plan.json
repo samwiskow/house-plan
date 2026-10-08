@@ -43,14 +43,14 @@
         ],
         [
           11.35,
-          8
+          7.85
         ],
         [
-          13.3,
-          8
+          11.7,
+          7.85
         ],
         [
-          13.3,
+          11.7,
           9.3
         ],
         [
@@ -75,7 +75,7 @@
     {
       "id": "G3",
       "floor": "g",
-      "name": "Pantry / utility",
+      "name": "Walk-in pantry",
       "p": [
         [
           11.5,
@@ -87,17 +87,25 @@
         ],
         [
           13.3,
-          7.85
+          9.3
+        ],
+        [
+          11.85,
+          9.3
+        ],
+        [
+          11.85,
+          8.0
         ],
         [
           11.5,
-          7.85
+          8.0
         ]
       ],
       "dimensions": "L-shaped \u00b7 short divider \u00b7 1.05 m passage",
       "label": [
-        13.1,
-        6.8
+        12.4,
+        7.5
       ]
     },
     {
@@ -1618,9 +1626,9 @@
       "name": "Shower screen left",
       "r": [
         0.35,
-        8.38,
-        1,
-        0.02
+        8.52,
+        1.0,
+        0.01
       ],
       "kind": "glass",
       "roomId": "U3"
@@ -1630,9 +1638,9 @@
       "name": "Shower screen right",
       "r": [
         2.35,
-        8.38,
-        1,
-        0.02
+        8.52,
+        1.0,
+        0.01
       ],
       "kind": "glass",
       "roomId": "U3"
@@ -2158,7 +2166,7 @@
       "y": 12,
       "axis": "v",
       "w": 0.9,
-      "side": -1,
+      "side": 1,
       "style": "door"
     },
     {
@@ -2184,11 +2192,11 @@
     {
       "floor": "g",
       "id": "Hall to kitchen",
-      "x": 11.15,
+      "x": 9.85,
       "y": 9.375,
       "axis": "h",
-      "w": 0.9,
-      "side": -1,
+      "w": 0.95,
+      "side": 1,
       "style": "door"
     },
     {
@@ -2209,7 +2217,9 @@
       "axis": "v",
       "w": 0.8,
       "side": -1,
-      "style": "door"
+      "style": "pocket",
+      "slide": 1,
+      "pocketLength": 0.8300000000000001
     },
     {
       "floor": "g",
@@ -2250,7 +2260,8 @@
       "w": 0.9,
       "side": -1,
       "style": "pocket",
-      "pocketLength": 1
+      "pocketLength": 0.93,
+      "slide": -1
     },
     {
       "floor": "u",
@@ -2260,17 +2271,21 @@
       "axis": "v",
       "w": 0.9,
       "side": -1,
-      "style": "door"
+      "style": "pocket",
+      "slide": 1,
+      "pocketLength": 0.93
     },
     {
       "floor": "u",
       "id": "Gallery to dressing",
       "x": 5.375,
-      "y": 4.725,
+      "y": 4.76,
       "axis": "v",
       "w": 0.9,
       "side": -1,
-      "style": "door"
+      "style": "pocket",
+      "slide": -1,
+      "pocketLength": 0.93
     },
     {
       "floor": "u",
@@ -2390,7 +2405,9 @@
       "axis": "v",
       "w": 0.85,
       "side": 1,
-      "style": "door"
+      "style": "pocket",
+      "slide": 1,
+      "pocketLength": 0.88
     },
     {
       "floor": "o",
@@ -2420,7 +2437,9 @@
       "axis": "v",
       "w": 0.9,
       "side": -1,
-      "style": "door"
+      "style": "concealed",
+      "slide": -1,
+      "pocketLength": 0.93
     },
     {
       "id": "Utility \u2192 pantry",
@@ -2430,17 +2449,9 @@
       "axis": "v",
       "w": 1.05,
       "side": -1,
-      "style": "door"
-    },
-    {
-      "id": "Kitchen \u2192 utility",
-      "floor": "g",
-      "x": 13.375,
-      "y": 8.2,
-      "axis": "v",
-      "w": 0.9,
-      "side": -1,
-      "style": "door"
+      "style": "pocket",
+      "slide": 1,
+      "pocketLength": 1.08
     },
     {
       "id": "Boot \u2192 utility",
@@ -2483,11 +2494,11 @@
       8.2,
       11.075,
       "h",
-      1
+      2.4
     ],
     [
       "u",
-      9.6,
+      8.2,
       11.075,
       "h",
       1
@@ -2510,6 +2521,13 @@
       "a",
       18.875,
       17.25,
+      "v",
+      3.3
+    ],
+    [
+      "g",
+      10.675,
+      11.15,
       "v",
       3.3
     ]
@@ -3276,6 +3294,17 @@
       "sill": 0.85,
       "head": 2.4,
       "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "h",
+      "x": 8.35,
+      "y": 14.625,
+      "w": 2.1,
+      "sill": 0.45,
+      "head": 3.08,
+      "private": false,
+      "id": "Stair picture window"
     }
   ],
   "rooflights": [
@@ -3331,13 +3360,42 @@
   "interior_revision": {
     "bath": "Custom hinoki-style ofuro allowance, 1100 x 850 x 740 mm; 610 mm internal depth",
     "bath_reference": "https://www.bartokdesign.com/japan/7-custom_ofuro/square_tub_for_canada.php",
-    "shower": "Two overhead and hand shower stations behind the fixed glass; independent central controls",
+    "shower": "Two overhead and hand shower stations behind the fixed glass; independent central controls on the real rear wall and hinged glass door",
     "shutters": [
       "G5",
       "G7",
       "O4"
     ],
     "bed": "U5 head moved to solid west wall; all headboards checked against windows"
+  },
+  "finish_revision": {
+    "palette": "Warm ivory, natural oak, linen, pale limestone and muted blue accents",
+    "lighting": "Golden hour: 7 degree sun, physical multiple-scattering sky and dim warm lamps",
+    "stair_window_m": [
+      2.1,
+      2.63
+    ],
+    "pantry_door": "Concealed cabinet-front door; closed in kitchen views and open in pantry view",
+    "reference_models": [
+      "modern_arm_chair_01",
+      "wooden_bowl_01",
+      "vintage_electric_kettle"
+    ],
+    "stone_rooms": [
+      "G4",
+      "G10"
+    ],
+    "continuous_parquet": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "pantry_area_m2": 6.655,
+    "fridge": "Two 600 mm integrated fridge/freezer columns in a recessed bank; generic appliance allowance",
+    "stair": "Swapped house flights, open east side, integrated storage under lower flight and large stair window",
+    "roof_reference": "https://www.vmzinc.com/en-gb/standing-seam-vmzinc",
+    "roof": "Standing-seam zinc appearance; 430 mm panel spacing, 25 mm seams running down each pitch",
+    "shower": "Two wall-mounted rain heads, handsets, central wall controls and a 1 m glass door"
   },
   "site": {
     "width": 40,
@@ -3597,7 +3655,8 @@
       ],
       "risers": 18,
       "going": 0.2875,
-      "rise": 0.19444444444444445
+      "rise": 0.19444444444444445,
+      "lower_side": 1
     },
     {
       "id": "Garage stair",
@@ -3611,7 +3670,8 @@
       ],
       "risers": 16,
       "going": 0.3,
-      "rise": 0.1875
+      "rise": 0.1875,
+      "lower_side": 0
     }
   ]
 }

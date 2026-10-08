@@ -28,7 +28,7 @@ scene=bpy.context.scene;scene.frame_set(1);bpy.context.view_layer.update()
 bpy.context.preferences.filepaths.save_version=0
 keep=set()
 for c in bpy.data.collections:
-    selected=c.name in ['01 Table','03 Corner sofa','04 Square footstool','05 Media cabinet proposal','Combined rooms - glazed divider and screen'] or c.name.startswith('Approved cane dining chair') or c.name.startswith(('K01','K02','K03','K04','K06','K09','K10'))
+    selected=c.name in ['01 Table','03 Corner sofa','04 Square footstool','05 Media cabinet proposal','Combined rooms - glazed divider and screen'] or c.name.startswith('Approved cane dining chair') or c.name.startswith(('K01','K02','K03','K04','K09'))
     if selected:
         keep.update(o for o in c.all_objects if not o.hide_render)
 living=bpy.data.collections['Living study - detailed furniture and finishes']
@@ -47,6 +47,19 @@ for c in bpy.data.collections:
     c.hide_render=False;c.hide_viewport=False
 for o in scene.objects:
     o.hide_set(False);o['level']='g';o['part']='interior';o['provenance']='Approved combined-room study'
+
+fridge_parts=[o for o in list(scene.objects) if 'fridge' in o.name.lower()]
+for i in range(2):
+    transform=Matrix.Translation((11.32,-8.35-i*.6,0))@Matrix.Rotation(-math.pi/2,4,'Z')@Matrix.Diagonal((.75,.7/.62,1,1))@Matrix.Translation((-10.55,5.68,0))
+    for old in fridge_parts:
+        if 'ceiling closure' in old.name.lower():continue
+        new=old.copy();new.data=old.data.copy();old.users_collection[0].objects.link(new)
+        new.name='Double fridge '+str(i+1)+' '+old.name;new.matrix_world=transform@old.matrix_world
+        new['appliance']='double fridge';new['appliance_column']=i+1
+for old in fridge_parts:bpy.data.objects.remove(old,do_unlink=True)
+for obj in scene.objects:
+    if obj.name.startswith('Opposite dry food shelf'):
+        obj.location.y-=1.45;obj.scale.x*=1.42/1.78;obj.location.x+=.18
 
 
 def collection(name,level,part):
@@ -76,25 +89,28 @@ def mat(name,color,rough=.6,metal=0,noise=0,scale=40):
     n=m.node_tree.nodes;l=m.node_tree.links;s=n.get('Principled BSDF')
     s.inputs['Base Color'].default_value=(*color,1);s.inputs['Roughness'].default_value=rough;s.inputs['Metallic'].default_value=metal
     if noise:
-        t=n.new('ShaderNodeTexNoise');t.inputs['Scale'].default_value=scale;t.inputs['Detail'].default_value=3
+        t=n.new('ShaderNodeTexNoise');coord=n.new('ShaderNodeTexCoord');l.new(coord.outputs['Object'],t.inputs['Vector']);t.inputs['Scale'].default_value=scale;t.inputs['Detail'].default_value=3
         ramp=n.new('ShaderNodeValToRGB');ramp.color_ramp.elements[0].color=(*(v*(1-noise) for v in color),1);ramp.color_ramp.elements[1].color=(*(min(1,v*(1+noise)) for v in color),1)
         l.new(t.outputs['Fac'],ramp.inputs[0]);l.new(ramp.outputs[0],s.inputs['Base Color'])
-        b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.3;b.inputs['Distance'].default_value=.018 if scale<10 else .001
+        b=n.new('ShaderNodeBump');b.inputs['Strength'].default_value=.3;b.inputs['Distance'].default_value=.003 if scale<10 else .0006
         l.new(t.outputs['Fac'],b.inputs['Height']);l.new(b.outputs[0],s.inputs['Normal'])
     return m
 
-ivory=mat('Coastal | lime plaster',(.74,.70,.62),.85,noise=.06)
+ivory=mat('Coastal | lime plaster',(.79,.76,.69),.85,noise=.06)
 stone=mat('Coastal | warm rubble limestone',(.42,.39,.31),.9,noise=.36,scale=9)
-stone2=mat('Coastal | pale paving',(.52,.48,.39),.88,noise=.19,scale=55)
+stone2=mat('Coastal | pale paving',(.52,.48,.39),.62,noise=.065,scale=55)
 oak=mat('Coastal | weathered oak',(.34,.26,.17),.65,noise=.22,scale=7)
 wood=bpy.data.materials.get('Combined pale natural dining oak') or oak
-fabric=mat('Coastal | oatmeal linen',(.63,.59,.49),.93,noise=.1,scale=210)
+fabric=mat('Coastal | oatmeal linen',(.69,.65,.56),.93,noise=.1,scale=210)
 white=mat('Coastal | cotton and porcelain',(.85,.83,.76),.45,noise=.04)
 olive=mat('Coastal | olive textile',(.15,.19,.095),.9,noise=.16,scale=180)
 blue=mat('Coastal | slate blue textile',(.19,.29,.32),.85,noise=.14,scale=150)
 metal=mat('Coastal | patinated bronze',(.16,.13,.09),.32,.75)
 black=mat('Coastal | graphite',(.035,.044,.045),.5,.35)
-roofmat=mat('Coastal | zinc roof',(.14,.17,.18),.52,.65,noise=.16,scale=70)
+roofmat=mat('Coastal | zinc roof',(.20,.23,.24),.48,.65,noise=.055,scale=70)
+bluepaint=mat('Coastal | muted blue cabinetry',(.105,.18,.23),.54)
+linen=mat('Coastal | soft ivory bed linen',(.81,.78,.71),.92,noise=.055,scale=230)
+parquetmat=bpy.data.materials['K01 pale oak herringbone']
 soil=mat('Coastal | shingle and soil',(.21,.18,.12),1,noise=.5,scale=90)
 grassmat=mat('Coastal | short meadow',(.22,.285,.12),1,noise=.4,scale=30)
 leaf=mat('Coastal | salt wind foliage',(.13,.21,.09),.85)
@@ -174,6 +190,25 @@ def light(name,pos,target,power,size,color=(1,.89,.72)):
     o=bpy.data.objects.new(name,d);lightcol.objects.link(o);o.location=pos;o.rotation_euler=(Vector(target)-o.location).to_track_quat('-Z','Y').to_euler();return o
 
 
+def parquet(poly,name,base):
+    vs=[];fs=[];uvs=[];root2=math.sqrt(.5);rand=random.Random(19)
+    for i in range(-20,21):
+        for j in range(-90,91):
+            ox=(6*i-j)*.12;oy=(4*i+j)*.12
+            for x,y,w,h in [(ox,oy,.60,.12),(ox+.60,oy,.12,.60)]:
+                p=[(9+(px-py)*root2,7+(px+py)*root2) for px,py in [(x+.001,y+.001),(x+w-.001,y+.001),(x+w-.001,y+h-.001),(x+.001,y+h-.001)]]
+                for cell in cells([poly],[]):
+                    q=p
+                    for fn in [lambda xx,yy:xx-cell[0],lambda xx,yy:cell[0]+cell[2]-xx,lambda xx,yy:yy-cell[1],lambda xx,yy:cell[1]+cell[3]-yy]:q=clip(q,fn) if q else []
+                    if not q:continue
+                    k=len(vs);vs.extend((px,-py,base+.0395) for px,py in q);fs.append(tuple(reversed(range(k,k+len(q)))));u0=rand.random();v0=rand.random()
+                    for px,py in q:
+                        rx=((px-9)+(py-7))*root2-x;ry=((py-7)-(px-9))*root2-y;uvs.append((u0+(rx if w>h else ry),v0+(ry if w>h else rx)))
+    o=mesh(name,vs,fs,parquetmat);uv=o.data.uv_layers.new(name='Physical oak grain')
+    for loop in o.data.loops:uv.data[loop.index].uv=uvs[loop.vertex_index]
+    o['floor_finish']='continuous kitchen parquet'
+
+
 wall_records=[]
 for f,base in LEVELS.items():
     col=cols[f,'walls']
@@ -189,9 +224,11 @@ for f,base in LEVELS.items():
     holes=[rect(*s['r']) for s in data['stairs'] if s['upper']==f]
     for r in cells(data['shells'][f],holes):
         pb(f'{f} floor slab',r,base-(.26 if f in ['u','o'] else .20),base+.025,stone2,0)
-    for room in [r for r in data['rooms'] if r['floor']==f and r['id'] not in ['G1','G2','G9','U12','A3','O3']]:
-        wet=any(s in room['name'].lower() for s in ['bath','shower','ensuite','basin','wc','garage','plant','gym'])
-        if wet:
+    for room in [r for r in data['rooms'] if r['floor']==f and r['id'] not in ['G1','U12','A3','O3']]:
+        wet=any(s in room['name'].lower() for s in ['bath','shower','ensuite','basin','wc','garage','plant','gym','boot','utility'])
+        if room['id'] in ['G2','G3']:
+            parquet(room['p'],room['id']+' continuous herringbone',base)
+        elif wet:
             surface(room['id']+' stone floor',room['p'],base+.04,stone2)
             x0=min(x for x,y in room['p']);x1=max(x for x,y in room['p']);y0=min(y for x,y in room['p']);y1=max(y for x,y in room['p'])
             for x in range(math.floor(x0/.6),math.ceil(x1/.6)):
@@ -208,7 +245,11 @@ for f,base in LEVELS.items():
                 x,y,w,d=r;step=.18
                 for i in range(math.ceil(w/step)):
                     bw=min(step,w-i*step)-.003
-                    if bw>0:pb(room['id']+' oak board',[x+i*step+.0015,y+.0015,bw,d-.003],base+.033,base+.0395,wood,.001)
+                    if bw>0:
+                        o=pb(room['id']+' oak board',[x+i*step+.0015,y+.0015,bw,d-.003],base+.033,base+.0395,parquetmat,.001)
+                        uv=o.data.uv_layers.new(name='Physical oak grain');offset=rng.random()*3
+                        for loop in o.data.loops:
+                            p=o.data.vertices[loop.vertex_index].co;uv.data[loop.index].uv=(-p.y+offset,p.x+offset)
     col=cols[f,'ceilings']
     for room in [r for r in data['rooms'] if r['floor']==f and r['id'] not in ['G9','A3']]:
         pieces=[room['p']]
@@ -219,7 +260,7 @@ for f,base in LEVELS.items():
             ceiling.modifiers[-1].offset=1
     for room in [r for r in data['rooms'] if r['floor']==f and r['id'] not in ['G9','U12','A3','O3']]:
         x,y=room['label'];z=base+HEIGHTS[f]-.065
-        light(room['id']+' soft room light',(x,-y,z),(x,-y,base),65 if f=='u' else 90,1.1)
+        light(room['id']+' soft room light',(x,-y,z-.035),(x,-y,base),14 if f=='u' else 18,.36,(1,.79,.57))
         col=cols[f,'furniture'];shade=cyl(room['id']+' linen ceiling shade',(x,-y,z+.01),.21,.085,fabric);shade['part']='ceilings'
 
 # Joinery follows each measured opening; the detailed garden and pantry doors are retained.
@@ -261,14 +302,20 @@ for f,base in LEVELS.items():
                     o=shutter('hinge',start+.01,zz,.012,.055,.012);o.data.materials[0]=metal
 
     for d in data['doors']:
-        if d['floor']!=f or d['style']=='bifold' or d['id'] in [q[0] for q in json.loads((ROOT/'output/design/kitchen-selections/boot-room-option.json').read_text())['doors']]:continue
+        if d['floor']!=f or d['style']=='bifold':continue
         x,y,w=d['x'],d['y'],d['w'];h=2.3 if f=='g' else 2.15;horizontal=d['axis']=='h'
         for u in [.025,w-.025]:
             pb(d['id']+' jamb',[x+u-.025,y-.085,.05,.17] if horizontal else [x-.085,y+u-.025,.17,.05],base,base+h,wood)
         pb(d['id']+' head',[x,y-.085,w,.17] if horizontal else [x-.085,y,.17,w],base+h-.05,base+h,wood)
         parent=bpy.data.objects.new(d['id']+' hinge',None);col.objects.link(parent);parent.location=(x,-y,base+.04);parent['opening_id']=d['id'];parent['level']=f;parent['part']='openings'
-        if d['style']=='pocket':
-            parent.location.x-=w+.03;angle=0
+        if d['style']=='concealed':
+            parent.location.x=11.035;parent.rotation_euler.z=-math.pi/2;parent['part']='pantry-door';parent['door_type']='pantry'
+        elif d['style']=='pocket':
+            shift=(w+.03)*d['slide']
+            if horizontal:parent.location.x+=shift
+            else:parent.location.y-=shift
+            parent.rotation_euler.z=0 if horizontal else -math.pi/2
+            parent['pocket']=True;parent['pocket_slide']=d['slide'];angle=parent.rotation_euler.z
         else:
             angle=-d['side']*math.pi/2
         def doorpart(n,pos,dim,m):
@@ -276,8 +323,9 @@ for f,base in LEVELS.items():
         doorpart('framed leaf',(w/2,0,h/2-.06),(w-.07,.044,h-.12),ivory)
         for z,hh in [(.49,.66),(1.45,.92)]:doorpart('recessed field',(w/2,-.026,z),(w-.23,.012,hh),fabric)
         for z in [.12,.90,1.99]:doorpart('oak rail',(w/2,-.036,z),(w-.16,.015,.035),wood)
-        doorpart('bronze lever',(w-.15,-.065,1.02),(.12,.04,.018),metal)
-        if d['style']!='pocket':
+        if d['style']=='pocket':doorpart('flush pocket pull',(w-.12,-.023,1.02),(.035,.003,.11),metal)
+        else:doorpart('bronze lever',(w-.15,-.065,1.02),(.12,.04,.018),metal)
+        if d['style'] not in ['pocket','concealed']:
             parent.rotation_euler.z=angle if horizontal else (-math.pi/2+(-math.pi/2 if d['side']<0 else math.pi/2))
         parent['closed_angle']=0 if horizontal else -math.pi/2
         parent['open_angle']=parent.rotation_euler.z
@@ -295,22 +343,22 @@ for s in data['stairs']:
     x,y,w,d=s['r'];half=s['risers']//2;run=(half-1)*s['going'];mid=LEVELS[s['upper']]/2;rise=s['rise'];base=.04
     for side in [0,1]:
         for i in range(half-1):
-            z=(i+1)*rise if side==0 else mid+(half-1-i)*rise
+            z=(i+1)*rise if side==s['lower_side'] else mid+(half-1-i)*rise
             r=[x+side*1.4,y+i*s['going'],1,s['going']]
             o=pb(s['id']+' closed tread',r,base+z-rise,base+z,wood,.004);o['stair_id']=s['id']
             pb(s['id']+' tread nosing',[r[0],r[1]-.018,1,.035],base+z-.018,base+z+.002,oak,.006)
         xx=x+1 if side==0 else x+1.4
         pts=[]
         for i in range(2*(half-1)+1):
-            yy=y+i*s['going']/2;z=(1+i/2)*rise if side==0 else LEVELS[s['upper']]-(i/2)*rise
+            yy=y+i*s['going']/2;z=(1+i/2)*rise if side==s['lower_side'] else LEVELS[s['upper']]-(i/2)*rise
             tube(s['id']+' baluster',[(xx,-yy,base+z-.02),(xx,-yy,base+z+.90)],.012,metal);pts.append((xx,-yy,base+z+.91))
         tube(s['id']+' oak handrail',pts,.026,wood)
     pb(s['id']+' half landing',[x,y+run,2.4,d-run],base+mid-.16,base+mid,wood)
     tube(s['id']+' landing rail',[(x+1,-y-run-.48,base+mid+.91),(x+1.4,-y-run-.48,base+mid+.91)],.026,wood)
     for i in range(6):
-        xx=x+.08+i*.23
+        xx=x+s['lower_side']*1.4+.08+i*.16
         tube(s['id']+' upper guard',[(xx,-y-.01,LEVELS[s['upper']]+.04),(xx,-y-.01,LEVELS[s['upper']]+1.04)],.014,metal)
-    tube(s['id']+' top guard rail',[(x,-y-.01,LEVELS[s['upper']]+1.04),(x+1.35,-y-.01,LEVELS[s['upper']]+1.04)],.026,wood)
+    tube(s['id']+' top guard rail',[(x+s['lower_side']*1.4,-y-.01,LEVELS[s['upper']]+1.04),(x+s['lower_side']*1.4+1,-y-.01,LEVELS[s['upper']]+1.04)],.026,wood)
 
 # Roof planes share valley edges. Each light well removes the ceiling and roof skin.
 col=roofcol
@@ -319,13 +367,21 @@ for poly,fn,name in roofs():
     if name=='House':
         for r in data['rooflights']:pieces=[q for p in pieces for q in subtract_rect(p,r['r'])]
     for i,piece in enumerate(pieces):surface(name+' zinc roof',piece,fn,roofmat,.16)
-    for k in range(math.floor(min(x for x,y in poly)/.43),math.ceil(max(x for x,y in poly)/.43)):
-        x=k*.43;segments=clip(poly,lambda xx,yy:xx-x)
-        segments=clip(segments,lambda xx,yy:x+.014-xx) if segments else []
-        pieces=[segments] if segments else []
+    cx=sum(p[0] for p in poly)/len(poly);cy=sum(p[1] for p in poly)/len(poly)
+    dx=(fn(cx+.001,cy)-fn(cx-.001,cy))/.002;dy=(fn(cx,cy+.001)-fn(cx,cy-.001))/.002
+    across=1 if abs(dx)>abs(dy) else 0
+    for k in range(math.floor(min(p[across] for p in poly)/.43),math.ceil(max(p[across] for p in poly)/.43)):
+        line=k*.43;q=clip(poly,lambda xx,yy:(yy if across else xx)-line)
+        q=clip(q,lambda xx,yy:line+.009-(yy if across else xx)) if q else []
+        if name=='House' and min(p[0] for p in poly)>=3.45 and min(p[1] for p in poly)>=4.82:
+            q=clip(q,lambda xx,yy:((3.45+3.63/5.08*abs(yy-9.9)-xx) if across else (xx-3.45-3.63/5.08*abs(yy-9.9)))-.15*math.sqrt(1+(3.63/5.08)**2)) if q else []
+        pieces=[q] if q else []
         if name=='House':
-            for r in data['rooflights']:pieces=[q for p in pieces for q in subtract_rect(p,r['r'])]
-        for q in pieces:surface(name+' standing seam',q,lambda xx,yy:fn(xx,yy)+.025,roofmat,.025)
+            for r in data['rooflights']:
+                xx,yy,ww,dd=r['r'];pieces=[q for p in pieces for q in subtract_rect(p,[xx-.07,yy-.07,ww+.14,dd+.14])]
+        for q in pieces:
+            seam=surface(name+' standing seam',q,lambda xx,yy:fn(xx,yy)+.025,roofmat,.025)
+            seam['pitch_gradient']=[dx,dy];seam['seam_across_axis']=across;seam['panel_spacing']=.43;seam['seam_height']=.025
 for poly,base,fn in [(data['house'],6.2,roof_height),(data['office'],5.7,lambda x,y:5.9+1.85*(1-abs(x-22.3)/3.75)),(rect(18.7,7.3,7.2,4.15),2.7,lambda x,y:2.9+1.1*(1-abs(x-22.3)/3.75)),(rect(16.2,11.35,2.5,2.4),3.2,lambda x,y:3.65-(y-11.23)*.07),(data['plant'],2.7,lambda x,y:3.10-(y-4.03)*.035),(rect(18.7,20.8,7.2,.4),2.7,lambda x,y:3.1-(y-20.8)*.16)]:
     for a0,a1 in zip(poly,poly[1:]+poly[:1]):
         steps=max(2,math.ceil(math.dist(a0,a1)/.14));profile=[]
@@ -449,31 +505,34 @@ for f in data['furniture']:
         parent=bpy.data.objects.new(name,None);col.objects.link(parent)
         def bedbox(n,pos,dim,m,bevel=.03):
             o=box(name+' '+n,pos,dim,m,bevel);o.parent=parent;return o
-        bedbox('oak base',(bw/2,-bd/2,.26),(bw-.035,bd-.035,.30),wood,.035)
+        bedbox('oak base',(bw/2,-bd/2,.26),(bw-.035,bd-.035,.30),fabric,.10)
         bedbox('piped mattress',(bw/2,-bd/2,.49),(bw-.09,bd-.07,.23),white,.075)
-        bedbox('linen headboard',(bw/2,-.055,.75),(bw-.04,.11,1.25),fabric,.04)
+        bedbox('linen headboard',(bw/2,-.055,.75),(bw-.04,.15,1.25),fabric,.075)
         for xx in [.07,bw-.07]:
             for yy in [.12,bd-.12]:o=cyl(name+' bed foot',(xx,-yy,.08),.04,.16,wood);o.parent=parent
         for xx in [bw*.28,bw*.72]:
-            o=bedbox('piped pillow',(xx,-.39,.675),(bw*.40,.50,.15),white,.068);o.rotation_euler.z=.035 if xx<bw/2 else -.035
-        vs=[];fs=[];N=26;M=32
-        for j in range(M+1):
-            yy=.64+(bd-.67)*j/M
-            for i in range(N+1):
-                xx=.025+(bw-.05)*i/N;zz=.635+.012*math.sin(xx*29+yy*7)+.007*math.sin(yy*32)
-                vs.append((xx,-yy,zz))
-        for j in range(M):
-            for i in range(N):k=j*(N+1)+i;fs.append((k,k+1,k+N+2,k+N+1))
-        o=mesh(name+' draped duvet',vs,fs,fabric);o.parent=parent
-        for face in o.data.polygons:face.use_smooth=True
-        mod=o.modifiers.new('Soft cloth folds','SUBSURF');mod.levels=2
-        o.modifiers.new('Duvet loft','SOLIDIFY').thickness=.035
-        bedbox('folded throw',(bw/2,-bd+.37,.672),(bw-.02,.55,.045),blue if floor=='u' else olive,.02)
-        bedbox('headboard wall panel',(bw/2,.11,1.26),(bw+.20,.025,2.45),ivory,.015)
-        for j in range(10):bedbox('panel flute',(-.07+j*(bw+.14)/9,.09,1.26),(.018,.018,2.35),wood,.004)
-        for xx in [-.24,bw+.23]:
-            o=cyl(name+' reading light rose',(0,0,0),.055,.025,metal);o.rotation_euler.x=math.pi/2;o.location=(xx,.075,1.16);o.parent=parent
-            o=tube(name+' reading light arm',[(xx,.06,1.16),(xx,-.06,1.09)],.012,metal);o.parent=parent
+            o=bedbox('piped pillow',(xx,-.39,.675),(bw*.40,.50,.17),linen,.075);o.rotation_euler.z=.035 if xx<bw/2 else -.035
+        def bedcloth(label,start,end,material,offset=0):
+            vs=[];fs=[];N=32;M=28
+            for j in range(M+1):
+                yy=start+(end-start)*j/M
+                for i in range(N+1):
+                    xx=-.035+(bw+.07)*i/N
+                    drop=.29*min(1,max(0,1-xx/.12,1-(bw-xx)/.12,(yy-bd+.14)/.21))
+                    zz=.66-drop+offset+.009*math.sin(xx*18+yy*7)+.006*math.sin(yy*24)
+                    vs.append((xx,-yy,zz))
+            for j in range(M):
+                for i in range(N):k=j*(N+1)+i;fs.append((k,k+1,k+N+2,k+N+1))
+            o=mesh(name+' '+label,vs,fs,material);o.parent=parent
+            for face in o.data.polygons:face.use_smooth=True
+            mod=o.modifiers.new('Soft cloth folds','SUBSURF');mod.levels=2
+            o.modifiers.new('Cloth loft','SOLIDIFY').thickness=.022
+        bedcloth('draped duvet',.62,bd+.07,linen)
+        bedcloth('soft woven throw',bd-.68,bd-.12,fabric,.028)
+        bedbox('linen lumbar cushion',(bw/2,-.67,.75),(bw*.62,.25,.19),blue if f['roomId']=='U1' else fabric,.09)
+        bedbox('framed quiet landscape',(bw/2,.105,1.94),(bw*.70,.025,.68),wood,.009)
+        bedbox('warm ivory artwork',(bw/2,.087,1.94),(bw*.70-.035,.012,.645),ivory,.006)
+        art=mesh(name+' quiet blue horizon',[(bw*.16,.079,1.65),(bw*.84,.079,1.65),(bw*.84,.079,1.82),(bw*.62,.079,1.86),(bw*.43,.079,1.78),(bw*.16,.079,1.83)],[(0,1,2,3,4,5)],blue);art.parent=parent
         parent.location=(x,-y,z)
         if along_x:parent.rotation_euler.z=math.pi/2;parent.location.y=-y-d
     elif kind=='table':
@@ -508,7 +567,7 @@ for f in data['furniture']:
             faucet(xx,y+.045,z+.88)
             box(name+' mirror',(xx,-y-.024,z+1.60),(min(.6,w/count-.04),.018,.9),mirror,.018)
         for i in range(max(1,round(w/.6))):
-            bw=w/max(1,round(w/.6));pb(name+' drawer',[x+i*bw+.014,y+d-.035,bw-.028,.027],z+.33,z+.75,wood,.006)
+            bw=w/max(1,round(w/.6));pb(name+' drawer',[x+i*bw+.014,y+d-.035,bw-.028,.027],z+.33,z+.75,bluepaint if f['roomId']=='U3' else wood,.006)
             tube('Vanity handle',[(x+i*bw+.12,-y-d-.001,z+.68),(x+(i+1)*bw-.12,-y-d-.001,z+.68)],.008,metal)
     elif kind=='bath' or (kind=='wet' and lc=='bath'):
         if f['roomId']=='U3':
@@ -536,11 +595,12 @@ for f in data['furniture']:
         if f['roomId']=='U3':
             for side,xx in [('left',x+.50),('right',x+w-.50)]:
                 tag='Ensuite '+side
-                tube(tag+' overhead arm',[(xx,-y-d+.045,z+2.24),(xx,-y-d+.50,z+2.24)],.014,metal)
-                cyl(tag+' overhead shower',(xx,-y-d+.50,z+2.215),.135,.035,metal,48)
-                cyl(tag+' spray face',(xx,-y-d+.50,z+2.195),.121,.004,black,48)
+                tube(tag+' overhead arm',[(xx,-y-d+.018,z+2.24),(xx,-y-.90,z+2.24)],.018,metal)
+                o=cyl(tag+' wall shower flange',(0,0,0),.045,.012,metal);o.rotation_euler.x=math.pi/2;o.location=(xx,-y-d+.022,z+2.24)
+                cyl(tag+' overhead shower',(xx,-y-.90,z+2.215),.175,.035,metal,48)
+                cyl(tag+' spray face',(xx,-y-.90,z+2.195),.161,.004,black,48)
                 for i in range(18):
-                    t=i*math.tau/18;cyl(tag+' spray nozzle',(xx+.085*math.cos(t),-y-d+.50+.085*math.sin(t),z+2.191),.003,.005,white,8)
+                    t=i*math.tau/18;cyl(tag+' spray nozzle',(xx+.085*math.cos(t),-y-.90+.085*math.sin(t),z+2.191),.003,.005,white,8)
                 hx=xx+(.23 if side=='left' else -.23);wy=-y-d+.07
                 tube(tag+' handset rail',[(hx,wy,z+.94),(hx,wy,z+1.73)],.009,metal)
                 for zz in [.98,1.68]:tube(tag+' rail fixing',[(hx,wy-.03,z+zz),(hx,wy+.015,z+zz)],.018,metal)
@@ -549,11 +609,11 @@ for f in data['furniture']:
                 points=[(hx+.14*math.sin(t),wy+.035,z+1.4-.77*math.sin(t/2)) for t in [i*math.pi/28 for i in range(29)]]
                 points.extend([(hx,wy+.035,z+.72),(hx,wy+.015,z+1.00)])
                 tube(tag+' flexible hand hose',points,.007,metal)
-                cx=x+w/2+(-.15 if side=='left' else .15)
-                pb(tag+' central control plate',[cx-.075,y+d-.028,.15,.018],z+1.02,z+1.27,metal,.012)
+                cx=1.63 if side=='left' else 2.07;wy=-y-d+.042
+                box(tag+' central wall control plate',(cx,wy,z+1.145),(.16,.018,.28),metal,.009)
                 for zz in [1.08,1.21]:
-                    o=cyl(tag+' central control',(0,0,0),.026,.03,metal);o.rotation_euler.x=math.pi/2;o.location=(cx,-y-d+.055,z+zz)
-                    tube(tag+' control lever',[(cx,-y-d+.075,z+zz),(cx+.036,-y-d+.075,z+zz+.016)],.006,metal)
+                    o=cyl(tag+' wall control',(0,0,0),.026,.03,metal);o.rotation_euler.x=math.pi/2;o.location=(cx,wy+.024,z+zz)
+                    tube(tag+' wall control lever',[(cx,wy+.043,z+zz),(cx+.036,wy+.043,z+zz+.016)],.006,metal)
         else:
             headx=x+w*.33;yy=y+d-.05
             tube(name+' riser',[(headx,-yy,z+1.0),(headx,-yy,z+2.18),(headx,-yy+.28,z+2.18)],.012,metal)
@@ -634,9 +694,9 @@ def sitepoly(poly):return [[x-origin[0],y-origin[1]] for x,y in poly]
 def sitebox(name,r,lo,hi,m):return pb(name,[r[0]-origin[0],r[1]-origin[1],r[2],r[3]],lo,hi,m)
 plot=sitepoly(rect(0,0,40,65))
 surface('Assumed plot - 40 x 65 m',plot,-.12,grassmat,.15)
-surface('Coastal land beyond plot',rect(-200,-160,400,220),-.32,grassmat)
-sea=mat('Coastal | sea',(.085,.24,.29),.20,.15,noise=.18,scale=1.4)
-surface('Sea beyond assumed dune edge',rect(-350,-500,700,435),-.65,sea)
+surface('Coastal land beyond plot',rect(-2000,-40,4000,2040),-.32,grassmat)
+sea=mat('Coastal | sea',(.055,.15,.17),.15,.05,noise=.08,scale=.35)
+surface('Sea beyond assumed dune edge',rect(-2000,-2500,4000,2443),-.65,sea)
 forecourt=sitepoly(data['site']['forecourt']);surface('Permeable arrival court',forecourt,-.055,soil,.08)
 for r in data['site']['visitor_bays']:sitebox('Visitor parking',r,-.07,-.045,soil)
 terraces=[rect(.0,-4,16.2,4),rect(6.9,0,9.3,5),rect(16.2,9.5,2.5,2.0),rect(9.5,14.8,3.3,2.1)]
@@ -741,13 +801,16 @@ for x,y in [(1,-4.6),(5.0,-4.6),(15.6,4.4),(10.2,15.5)]:
 
 detail_path=Path(__file__).parent/'coastal/details.py'
 exec(compile(detail_path.read_text(),str(detail_path),'exec'))
+revision_path=Path(__file__).parent/'coastal/finish_details.py'
+exec(compile(revision_path.read_text(),str(revision_path),'exec'))
+lived_path=Path(__file__).parent/'coastal/lived_details.py'
+exec(compile(lived_path.read_text(),str(lived_path),'exec'))
 
 scene.world=bpy.data.worlds.new('Coastal daylight');scene.world.use_nodes=True
 n=scene.world.node_tree.nodes;l=scene.world.node_tree.links
-sky=n.new('ShaderNodeTexSky');sky.sky_type='MULTIPLE_SCATTERING';sky.sun_elevation=math.radians(32);sky.sun_rotation=math.radians(125);sky.sun_disc=False
-l.new(sky.outputs['Color'],n['Background'].inputs['Color']);n['Background'].inputs['Strength'].default_value=.10
-sun=bpy.data.lights.new('Coastal afternoon sun','SUN');sun.energy=2.4;sun.angle=math.radians(3);sun.color=(1,.91,.80)
-o=bpy.data.objects.new(sun.name,sun);lightcol.objects.link(o);o.rotation_euler=(math.radians(27),math.radians(-26),math.radians(-32))
+sky=n.new('ShaderNodeTexSky');sky.sky_type='MULTIPLE_SCATTERING';sky.sun_elevation=math.radians(7);sky.sun_rotation=math.radians(337);sky.sun_disc=True;sky.sun_size=math.radians(.53)
+l.new(sky.outputs['Color'],n['Background'].inputs['Color']);n['Background'].inputs['Strength'].default_value=.22
+scene.world.name='Coastal golden hour'
 views={
  'arrival':([-16,-42,14],[11,-10,3],36,'all'),
  'garden':([24,22,12],[10,-6,3.5],35,'all'),
@@ -767,7 +830,15 @@ views={
  'gym':([24.8,-11.15,1.65],[20.5,-8.7,1.0],24,'all'),
  'office':([19.6,-19.8,4.65],[24.6,-15.3,4.0],23,'all'),
  'combined-room':([1.2,-8.65,1.65],[8.4,-6.65,1.35],23,'all'),
- 'terrace':([19,7,3.1],[9.3,-1.5,1.3],30,'all')}
+ 'entrance-hall':([12.0,-10.65,1.70],[9.55,-13.2,1.48],21,'all'),
+ 'under-stair':([9.0,-10.35,1.62],[8.8,-12.9,1.05],22,'all'),
+ 'pantry':([12.00,-8.62,1.67],[12.4,-5.55,1.35],19,'all'),
+ 'kitchen-storage':([7.3,-8.9,1.68],[11.4,-7.7,1.40],23,'all'),
+ 'utility':([14.45,-9.6,1.65],[14.65,-6.1,1.15],22,'all'),
+ 'bathroom-shower-closed':([1.85,-7.0,5.12],[1.85,-9.65,4.95],21,'all'),
+ 'terrace':([19,7,3.1],[9.3,-1.5,1.3],30,'all'),
+ 'sea-sunset':([15,2.5,2.0],[-20,85,2.5],32,'all'),
+ 'coffee-station':([12.0,-8.55,1.60],[12.99,-8.02,1.14],30,'all')}
 cameras={}
 for name,(pos,target,lens,mode) in views.items():
     d=bpy.data.cameras.new(name);d.lens=lens;d.clip_start=.035;d.clip_end=1500
@@ -779,22 +850,26 @@ prefs.compute_device_type='METAL';prefs.get_devices()
 for d in prefs.devices:d.use=d.type=='METAL'
 scene.cycles.device='GPU' if any(d.type=='METAL' for d in prefs.devices) else 'CPU'
 scene.render.resolution_x=a.width;scene.render.resolution_y=round(a.width*2/3);scene.render.resolution_percentage=100;scene.render.image_settings.file_format='PNG'
-scene.view_settings.view_transform='AgX';scene.view_settings.look='AgX - Medium High Contrast';scene.view_settings.exposure=.4
+scene.view_settings.view_transform='AgX';scene.view_settings.look='AgX - Medium Low Contrast';scene.view_settings.exposure=.4
 scene['revision']='L01.1 coastal coordinated study';scene['source_hashes']=json.dumps(data['source_hashes']);scene['interior_source_sha256']=source_hash
 scene['section']='House ceiling datum 3.20 m; first floor datum 3.50 m. Finished clear heights 3.16 m and 2.66 m with 40 mm floor finishes. Garage retains 3.00 m floor-to-floor.'
 scene['plot']='Assumed 40 x 65 m coastal plot. Shoreline and planting are illustrative.'
 for text in list(bpy.data.texts):bpy.data.texts.remove(text)
 notes=bpy.data.texts.new('READ ME - coastal house')
-notes.write(scene['section']+'\n'+scene['plot']+'\nMeasured source: studies/l-house-booklet/plans.json L01.1. Option D pantry and combined room furniture retained. All parts carry level and part tags. Upper suite doors are shown open. Bedroom door is in its pocket. Burner stays in hidden OPTION collection. Local licensed composite: do not publish raw blend or GLB. Floor topping is 40 mm above the structural level; finish relief is up to 25 mm. See geometry-checks.json for tested scope.')
-report={'revision':scene['revision'],'interior_revision':data['interior_revision'],'source_hashes':data['source_hashes'],'interior_source_sha256':source_hash,'levels':LEVELS,'ceiling_datum_heights':HEIGHTS,'finished_clear_heights':{f:round(h-.04,2) for f,h in HEIGHTS.items()},'stairs':data['stairs'],'rooflights':data['rooflights'],'rooms':data['rooms'],'wall_solids':wall_records,'furniture':furniture_records,'views':views,'objects':len(scene.objects),'limits':['Unsurveyed plot; illustrative coast, planting and daylight.','Proposed floor zone and roof structure require design.','Burner stored as hidden option because its vertical flue conflicts with the gallery.','Product specifications, services and occupied-use checks are not construction approval.']}
+notes.write(scene['section']+'\n'+scene['plot']+'\nMeasured source: studies/l-house-booklet/plans.json L01.1. Full kitchen-depth pantry with recessed double fridge. Approved combined-room furniture retained. All parts carry level and part tags. Upper suite doors are shown open. Six pocket doors are retracted. The concealed pantry door is closed. House stair flights are swapped; storage sits under the lower flight. Burner stays in hidden OPTION collection. Local licensed composite: do not publish raw blend or GLB. Floor topping is 40 mm above the structural level; finish relief is up to 25 mm. See geometry-checks.json for tested scope.')
+report={'revision':scene['revision'],'finish_revision':data['finish_revision'],'interior_revision':data['interior_revision'],'source_hashes':data['source_hashes'],'interior_source_sha256':source_hash,'levels':LEVELS,'ceiling_datum_heights':HEIGHTS,'finished_clear_heights':{f:round(h-.04,2) for f,h in HEIGHTS.items()},'stairs':data['stairs'],'rooflights':data['rooflights'],'rooms':data['rooms'],'wall_solids':wall_records,'furniture':furniture_records,'views':views,'objects':len(scene.objects),'limits':['Unsurveyed plot; illustrative coast, planting and daylight.','Proposed floor zone and roof structure require design.','Burner stored as hidden option because its vertical flue conflicts with the gallery.','Product specifications, services and occupied-use checks are not construction approval.']}
 (O/'model-report.json').write_text(json.dumps(report,indent=2))
 (O/'coordinated-plan.json').write_text(json.dumps(data,indent=2))
 bpy.ops.file.pack_all();bpy.ops.wm.save_as_mainfile(filepath=str(O/'coastal-house.blend'),compress=True)
 if a.export:
-    from preview import export_preview
+    from preview import export_preview,export_environment
+    export_environment(O/'coastal-golden-hour.hdr')
     export_preview(O/'coastal-house.glb')
 for name in a.views:
+    shower_door.rotation_euler.z=0 if name=='bathroom-shower-closed' else math.pi/2
+    bpy.data.objects['Kitchen → pantry hinge'].rotation_euler.z=0 if name=='pantry' else -math.pi/2
     mode=views[name][3]
+    scene.view_settings.exposure=.4 if name in ['arrival','garden','coastal-plot','ground-cutaway','first-cutaway','rooflights','terrace','sea-sunset'] else 1.0
     for o in scene.objects:
         if o.type in ['CAMERA','LIGHT']:continue
         f=o.get('level','g');part=o.get('part','interior')
