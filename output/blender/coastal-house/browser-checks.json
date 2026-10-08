@@ -1,0 +1,149 @@
+{
+  "meshes": 194,
+  "triangles": 4377953,
+  "views": [
+    "arrival",
+    "garden",
+    "coastal-plot",
+    "ground-cutaway",
+    "first-cutaway",
+    "parents-bedroom",
+    "suite-gallery",
+    "dressing",
+    "bathroom",
+    "bathroom-vanity",
+    "family-bedroom",
+    "library",
+    "gym",
+    "office",
+    "combined-room",
+    "terrace"
+  ],
+  "groups": [
+    {
+      "name": "VIEW_|_a_|_ceilings",
+      "level": "a",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_a_|_floors",
+      "level": "a",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_a_|_furniture",
+      "level": "a",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_a_|_openings",
+      "level": "a",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_a_|_walls",
+      "level": "a",
+      "part": "walls"
+    },
+    {
+      "name": "VIEW_|_g_|_ceilings",
+      "level": "g",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_g_|_floors",
+      "level": "g",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_g_|_furniture",
+      "level": "g",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_g_|_interior",
+      "level": "g",
+      "part": "interior"
+    },
+    {
+      "name": "VIEW_|_g_|_openings",
+      "level": "g",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_g_|_walls",
+      "level": "g",
+      "part": "walls"
+    },
+    {
+      "name": "VIEW_|_o_|_ceilings",
+      "level": "o",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_o_|_floors",
+      "level": "o",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_o_|_furniture",
+      "level": "o",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_o_|_openings",
+      "level": "o",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_o_|_walls",
+      "level": "o",
+      "part": "walls"
+    },
+    {
+      "name": "VIEW_|_roof_|_roof",
+      "level": "roof",
+      "part": "roof"
+    },
+    {
+      "name": "VIEW_|_site_|_site",
+      "level": "site",
+      "part": "site"
+    },
+    {
+      "name": "VIEW_|_stairs_|_stairs",
+      "level": "stairs",
+      "part": "stairs"
+    },
+    {
+      "name": "VIEW_|_u_|_ceilings",
+      "level": "u",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_u_|_floors",
+      "level": "u",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_u_|_furniture",
+      "level": "u",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_u_|_openings",
+      "level": "u",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_u_|_walls",
+      "level": "u",
+      "part": "walls"
+    }
+  ],
+  "glbSha256": "7b3666177c430e3532df53c5e4f19bad2fd321c29e21fe45b815a4bf9f32bad0",
+  "errors": [],
+  "externalRequests": [],
+  "phoneWidth": 390,
+  "overflow": false
+}

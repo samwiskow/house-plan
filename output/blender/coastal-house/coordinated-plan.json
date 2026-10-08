@@ -1,0 +1,3606 @@
+{
+  "rooms": [
+    {
+      "id": "G1",
+      "floor": "g",
+      "name": "Living and dining",
+      "p": [
+        [
+          0.35,
+          0.35
+        ],
+        [
+          6.55,
+          0.35
+        ],
+        [
+          6.55,
+          9.299999999999999
+        ],
+        [
+          0.35,
+          9.299999999999999
+        ]
+      ],
+      "dimensions": "6.20 \u00d7 8.95",
+      "label": [
+        3.45,
+        4.5
+      ]
+    },
+    {
+      "id": "G2",
+      "floor": "g",
+      "name": "Kitchen",
+      "p": [
+        [
+          6.85,
+          5.35
+        ],
+        [
+          11.35,
+          5.35
+        ],
+        [
+          11.35,
+          8
+        ],
+        [
+          13.3,
+          8
+        ],
+        [
+          13.3,
+          9.3
+        ],
+        [
+          6.7,
+          9.3
+        ],
+        [
+          6.7,
+          6.7
+        ],
+        [
+          6.85,
+          6.7
+        ]
+      ],
+      "dimensions": "L-shaped",
+      "label": [
+        9.65,
+        8.8
+      ]
+    },
+    {
+      "id": "G3",
+      "floor": "g",
+      "name": "Pantry / utility",
+      "p": [
+        [
+          11.5,
+          5.35
+        ],
+        [
+          13.3,
+          5.35
+        ],
+        [
+          13.3,
+          7.85
+        ],
+        [
+          11.5,
+          7.85
+        ]
+      ],
+      "dimensions": "L-shaped \u00b7 short divider \u00b7 1.05 m passage",
+      "label": [
+        13.1,
+        6.8
+      ]
+    },
+    {
+      "id": "G5",
+      "floor": "g",
+      "name": "Guest bedroom",
+      "p": [
+        [
+          2.2,
+          9.45
+        ],
+        [
+          4.25,
+          9.45
+        ],
+        [
+          4.25,
+          14.45
+        ],
+        [
+          0.35,
+          14.45
+        ],
+        [
+          0.35,
+          11.7
+        ],
+        [
+          2.2,
+          11.7
+        ]
+      ],
+      "dimensions": "L-shaped",
+      "label": [
+        3.25,
+        11.35
+      ]
+    },
+    {
+      "id": "G6",
+      "floor": "g",
+      "name": "Guest shower room",
+      "p": [
+        [
+          0.35,
+          9.45
+        ],
+        [
+          2.05,
+          9.45
+        ],
+        [
+          2.05,
+          11.549999999999999
+        ],
+        [
+          0.35,
+          11.549999999999999
+        ]
+      ],
+      "dimensions": "1.70 \u00d7 2.10",
+      "label": [
+        1.2,
+        10.6
+      ]
+    },
+    {
+      "id": "G7",
+      "floor": "g",
+      "name": "Library / snug",
+      "p": [
+        [
+          4.4,
+          11.15
+        ],
+        [
+          8.05,
+          11.15
+        ],
+        [
+          8.05,
+          14.45
+        ],
+        [
+          4.4,
+          14.45
+        ]
+      ],
+      "dimensions": "3.65 \u00d7 3.30",
+      "label": [
+        6.15,
+        12.65
+      ]
+    },
+    {
+      "id": "G8",
+      "floor": "g",
+      "name": "Hall and visitor arrival",
+      "p": [
+        [
+          4.4,
+          9.45
+        ],
+        [
+          12.55,
+          9.45
+        ],
+        [
+          12.55,
+          14.45
+        ],
+        [
+          10.75,
+          14.45
+        ],
+        [
+          10.75,
+          11
+        ],
+        [
+          4.4,
+          11
+        ]
+      ],
+      "dimensions": "1.55 hall; 1.80 entrance width",
+      "label": [
+        7,
+        10.2
+      ]
+    },
+    {
+      "id": "G9",
+      "floor": "g",
+      "name": "House stair",
+      "p": [
+        [
+          8.2,
+          11.15
+        ],
+        [
+          10.6,
+          11.15
+        ],
+        [
+          10.6,
+          14.45
+        ],
+        [
+          8.2,
+          14.45
+        ]
+      ],
+      "dimensions": "2.40 \u00d7 3.30",
+      "label": [
+        9.4,
+        13.9
+      ]
+    },
+    {
+      "id": "G10",
+      "floor": "g",
+      "name": "Boot room",
+      "p": [
+        [
+          14.3,
+          10.8
+        ],
+        [
+          15.85,
+          10.8
+        ],
+        [
+          15.85,
+          14.45
+        ],
+        [
+          12.7,
+          14.45
+        ],
+        [
+          12.7,
+          11.45
+        ],
+        [
+          14.3,
+          11.45
+        ]
+      ],
+      "dimensions": "L-shaped",
+      "label": [
+        14.3,
+        13.3
+      ]
+    },
+    {
+      "id": "G11",
+      "floor": "g",
+      "name": "Visitor WC",
+      "p": [
+        [
+          12.7,
+          9.45
+        ],
+        [
+          14.149999999999999,
+          9.45
+        ],
+        [
+          14.149999999999999,
+          11.299999999999999
+        ],
+        [
+          12.7,
+          11.299999999999999
+        ]
+      ],
+      "dimensions": "1.45 \u00d7 1.85",
+      "label": [
+        13.4,
+        10.6
+      ]
+    },
+    {
+      "id": "L",
+      "floor": "g",
+      "name": "Enclosed link",
+      "p": [
+        [
+          16.2,
+          11.65
+        ],
+        [
+          18.7,
+          11.65
+        ],
+        [
+          18.7,
+          13.450000000000001
+        ],
+        [
+          16.2,
+          13.450000000000001
+        ]
+      ],
+      "dimensions": "2.50 \u00d7 1.80 clear",
+      "label": [
+        17.45,
+        12.45
+      ]
+    },
+    {
+      "id": "U1",
+      "floor": "u",
+      "name": "Parents\u2019 bedroom",
+      "p": [
+        [
+          0.35,
+          0.35
+        ],
+        [
+          6.55,
+          0.35
+        ],
+        [
+          6.55,
+          3.65
+        ],
+        [
+          0.35,
+          3.65
+        ]
+      ],
+      "dimensions": "6.20 \u00d7 3.30",
+      "label": [
+        2.9,
+        3.05
+      ]
+    },
+    {
+      "id": "U2",
+      "floor": "u",
+      "name": "Dressing room",
+      "p": [
+        [
+          0.35,
+          3.8
+        ],
+        [
+          5.3,
+          3.8
+        ],
+        [
+          5.3,
+          6.55
+        ],
+        [
+          0.35,
+          6.55
+        ]
+      ],
+      "dimensions": "4.95 \u00d7 2.75",
+      "label": [
+        3.4,
+        5.65
+      ]
+    },
+    {
+      "id": "U3",
+      "floor": "u",
+      "name": "Parents\u2019 ensuite",
+      "p": [
+        [
+          0.35,
+          6.7
+        ],
+        [
+          5.3,
+          6.7
+        ],
+        [
+          5.3,
+          9.9
+        ],
+        [
+          0.35,
+          9.9
+        ]
+      ],
+      "dimensions": "4.95 \u00d7 3.20",
+      "label": [
+        4.1,
+        7.45
+      ]
+    },
+    {
+      "id": "UG",
+      "floor": "u",
+      "name": "Private suite gallery",
+      "p": [
+        [
+          5.45,
+          3.8
+        ],
+        [
+          6.55,
+          3.8
+        ],
+        [
+          6.55,
+          9.9
+        ],
+        [
+          5.45,
+          9.9
+        ]
+      ],
+      "dimensions": "1.10 \u00d7 6.10",
+      "label": [
+        5.75,
+        6.9
+      ]
+    },
+    {
+      "id": "U4",
+      "floor": "u",
+      "name": "Child 1",
+      "p": [
+        [
+          0.35,
+          10.05
+        ],
+        [
+          4.55,
+          10.05
+        ],
+        [
+          4.55,
+          14.450000000000001
+        ],
+        [
+          0.35,
+          14.450000000000001
+        ]
+      ],
+      "dimensions": "4.20 \u00d7 4.40",
+      "label": [
+        2.55,
+        13.8
+      ]
+    },
+    {
+      "id": "U5",
+      "floor": "u",
+      "name": "Child 2",
+      "p": [
+        [
+          6.7,
+          5.35
+        ],
+        [
+          11.100000000000001,
+          5.35
+        ],
+        [
+          11.100000000000001,
+          9.55
+        ],
+        [
+          6.7,
+          9.55
+        ]
+      ],
+      "dimensions": "4.40 \u00d7 4.20",
+      "label": [
+        8.9,
+        9.15
+      ]
+    },
+    {
+      "id": "U6",
+      "floor": "u",
+      "name": "Child 3",
+      "p": [
+        [
+          10.75,
+          10.825
+        ],
+        [
+          15.85,
+          10.825
+        ],
+        [
+          15.85,
+          14.45
+        ],
+        [
+          10.75,
+          14.45
+        ]
+      ],
+      "dimensions": "5.10 \u00d7 3.625",
+      "label": [
+        14.25,
+        13.8
+      ]
+    },
+    {
+      "id": "U7",
+      "floor": "u",
+      "name": "Family WC",
+      "p": [
+        [
+          11.25,
+          5.35
+        ],
+        [
+          12.85,
+          5.35
+        ],
+        [
+          12.85,
+          7.55
+        ],
+        [
+          11.25,
+          7.55
+        ]
+      ],
+      "dimensions": "1.60 \u00d7 2.20",
+      "label": [
+        12.05,
+        6.9
+      ]
+    },
+    {
+      "id": "U8",
+      "floor": "u",
+      "name": "Bath and separate shower",
+      "p": [
+        [
+          13,
+          5.35
+        ],
+        [
+          15.85,
+          5.35
+        ],
+        [
+          15.85,
+          8.25
+        ],
+        [
+          13,
+          8.25
+        ]
+      ],
+      "dimensions": "2.85 \u00d7 2.90",
+      "label": [
+        14.45,
+        7.7
+      ]
+    },
+    {
+      "id": "U9",
+      "floor": "u",
+      "name": "Shared dry basin area",
+      "p": [
+        [
+          11.25,
+          7.7
+        ],
+        [
+          12.85,
+          7.7
+        ],
+        [
+          12.85,
+          8.4
+        ],
+        [
+          15.85,
+          8.4
+        ],
+        [
+          15.85,
+          10.675
+        ],
+        [
+          12.3,
+          10.675
+        ],
+        [
+          12.3,
+          9.3
+        ],
+        [
+          11.25,
+          9.3
+        ]
+      ],
+      "dimensions": "L-shaped",
+      "label": [
+        14.4,
+        9.1
+      ]
+    },
+    {
+      "id": "U10",
+      "floor": "u",
+      "name": "Landing",
+      "p": [
+        [
+          4.7,
+          10.05
+        ],
+        [
+          6.7,
+          10.05
+        ],
+        [
+          6.7,
+          9.7
+        ],
+        [
+          11.1,
+          9.7
+        ],
+        [
+          11.1,
+          9.45
+        ],
+        [
+          12.15,
+          9.45
+        ],
+        [
+          12.15,
+          10.675
+        ],
+        [
+          11.1,
+          10.675
+        ],
+        [
+          11.1,
+          11
+        ],
+        [
+          4.7,
+          11
+        ]
+      ],
+      "dimensions": "0.95\u20131.30 route width",
+      "label": [
+        7,
+        10.45
+      ]
+    },
+    {
+      "id": "U11",
+      "floor": "u",
+      "name": "Linen / household storage",
+      "p": [
+        [
+          4.9,
+          11.15
+        ],
+        [
+          8.05,
+          11.15
+        ],
+        [
+          8.05,
+          14.45
+        ],
+        [
+          4.9,
+          14.45
+        ]
+      ],
+      "dimensions": "3.15 \u00d7 3.30",
+      "label": [
+        6.5,
+        13.5
+      ]
+    },
+    {
+      "id": "U12",
+      "floor": "u",
+      "name": "House stair",
+      "p": [
+        [
+          8.2,
+          11.15
+        ],
+        [
+          10.6,
+          11.15
+        ],
+        [
+          10.6,
+          14.45
+        ],
+        [
+          8.2,
+          14.45
+        ]
+      ],
+      "dimensions": "2.40 \u00d7 3.30",
+      "label": [
+        9.4,
+        13.9
+      ]
+    },
+    {
+      "id": "A1",
+      "floor": "a",
+      "name": "Gym",
+      "p": [
+        [
+          19.05,
+          7.65
+        ],
+        [
+          25.55,
+          7.65
+        ],
+        [
+          25.55,
+          11.65
+        ],
+        [
+          19.05,
+          11.65
+        ]
+      ],
+      "dimensions": "6.50 \u00d7 4.00",
+      "label": [
+        22.8,
+        9.65
+      ]
+    },
+    {
+      "id": "A2",
+      "floor": "a",
+      "name": "Garage lobby",
+      "p": [
+        [
+          19.05,
+          11.8
+        ],
+        [
+          25.55,
+          11.8
+        ],
+        [
+          25.55,
+          13.200000000000001
+        ],
+        [
+          19.05,
+          13.200000000000001
+        ]
+      ],
+      "dimensions": "6.50 \u00d7 1.40",
+      "label": [
+        21.8,
+        12.55
+      ]
+    },
+    {
+      "id": "A3",
+      "floor": "a",
+      "name": "Garage stair",
+      "p": [
+        [
+          19.05,
+          13.35
+        ],
+        [
+          21.45,
+          13.35
+        ],
+        [
+          21.45,
+          16.85
+        ],
+        [
+          19.05,
+          16.85
+        ]
+      ],
+      "dimensions": "2.40 \u00d7 3.50",
+      "label": [
+        20.25,
+        16.3
+      ]
+    },
+    {
+      "id": "A4",
+      "floor": "a",
+      "name": "Car bay",
+      "p": [
+        [
+          19.05,
+          17
+        ],
+        [
+          25.55,
+          17
+        ],
+        [
+          25.55,
+          20.85
+        ],
+        [
+          19.05,
+          20.85
+        ]
+      ],
+      "dimensions": "6.50 \u00d7 3.85",
+      "label": [
+        22.3,
+        20.45
+      ]
+    },
+    {
+      "id": "A5",
+      "floor": "a",
+      "name": "Workshop / storage",
+      "p": [
+        [
+          21.6,
+          13.35
+        ],
+        [
+          25.55,
+          13.35
+        ],
+        [
+          25.55,
+          16.85
+        ],
+        [
+          21.6,
+          16.85
+        ]
+      ],
+      "dimensions": "3.95 \u00d7 3.50",
+      "label": [
+        23.55,
+        15.45
+      ]
+    },
+    {
+      "id": "A6",
+      "floor": "a",
+      "name": "Plant reservation",
+      "p": [
+        [
+          22.55,
+          4.5
+        ],
+        [
+          25.55,
+          4.5
+        ],
+        [
+          25.55,
+          7.3
+        ],
+        [
+          22.55,
+          7.3
+        ]
+      ],
+      "dimensions": "3.00 \u00d7 2.80",
+      "label": [
+        24.1,
+        6.75
+      ]
+    },
+    {
+      "id": "O1",
+      "floor": "o",
+      "name": "Office landing",
+      "p": [
+        [
+          19.05,
+          11.8
+        ],
+        [
+          23.1,
+          11.8
+        ],
+        [
+          23.1,
+          13.200000000000001
+        ],
+        [
+          19.05,
+          13.200000000000001
+        ]
+      ],
+      "dimensions": "4.05 \u00d7 1.40",
+      "label": [
+        21.15,
+        12.55
+      ]
+    },
+    {
+      "id": "O2",
+      "floor": "o",
+      "name": "Guest shower / WC",
+      "p": [
+        [
+          23.25,
+          11.8
+        ],
+        [
+          25.55,
+          11.8
+        ],
+        [
+          25.55,
+          14
+        ],
+        [
+          23.25,
+          14
+        ]
+      ],
+      "dimensions": "2.30 \u00d7 2.20",
+      "label": [
+        24.4,
+        13.45
+      ]
+    },
+    {
+      "id": "O3",
+      "floor": "o",
+      "name": "Garage stair",
+      "p": [
+        [
+          19.05,
+          13.35
+        ],
+        [
+          21.45,
+          13.35
+        ],
+        [
+          21.45,
+          16.85
+        ],
+        [
+          19.05,
+          16.85
+        ]
+      ],
+      "dimensions": "2.40 \u00d7 3.50",
+      "label": [
+        20.25,
+        16.3
+      ]
+    },
+    {
+      "id": "O4",
+      "floor": "o",
+      "name": "Work, gaming and guest bed",
+      "p": [
+        [
+          21.6,
+          13.35
+        ],
+        [
+          23.1,
+          13.35
+        ],
+        [
+          23.1,
+          14.15
+        ],
+        [
+          25.55,
+          14.15
+        ],
+        [
+          25.55,
+          20.45
+        ],
+        [
+          19.05,
+          20.45
+        ],
+        [
+          19.05,
+          17
+        ],
+        [
+          21.6,
+          17
+        ]
+      ],
+      "dimensions": "L-shaped",
+      "label": [
+        23.8,
+        18.7
+      ]
+    },
+    {
+      "id": "G4",
+      "floor": "g",
+      "name": "Utility",
+      "p": [
+        [
+          13.45,
+          5.35
+        ],
+        [
+          15.85,
+          5.35
+        ],
+        [
+          15.85,
+          10.65
+        ],
+        [
+          14.3,
+          10.65
+        ],
+        [
+          14.3,
+          9.3
+        ],
+        [
+          13.45,
+          9.3
+        ]
+      ],
+      "label": [
+        14.65,
+        7
+      ]
+    }
+  ],
+  "furniture": [
+    {
+      "floor": "g",
+      "name": "Sofa",
+      "r": [
+        0.7,
+        1.05,
+        1,
+        2.8
+      ],
+      "kind": "sofa",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Media cabinet",
+      "r": [
+        5.9,
+        1.1,
+        0.4,
+        2.8
+      ],
+      "kind": "block",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Coffee table",
+      "r": [
+        2.5,
+        1.85,
+        1.2,
+        0.8
+      ],
+      "kind": "table",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Armchair",
+      "r": [
+        3.8,
+        0.65,
+        0.85,
+        0.85
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining table: eight seats",
+      "r": [
+        1.7,
+        6.05,
+        2.8,
+        1.1
+      ],
+      "kind": "table",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        1.9,
+        5.45,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        1.9,
+        7.25,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        2.75,
+        5.45,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        2.75,
+        7.25,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        3.5999999999999996,
+        5.45,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        3.5999999999999996,
+        7.25,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        1.1,
+        6.35,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Dining chair",
+      "r": [
+        4.6,
+        6.35,
+        0.5,
+        0.5
+      ],
+      "kind": "chair",
+      "roomId": "G1"
+    },
+    {
+      "floor": "g",
+      "name": "Kitchen cabinets",
+      "r": [
+        6.85,
+        5.35,
+        3.7,
+        0.65
+      ],
+      "kind": "block",
+      "roomId": "G2"
+    },
+    {
+      "floor": "g",
+      "name": "Island",
+      "r": [
+        7.525,
+        7.2,
+        2.4,
+        1
+      ],
+      "kind": "table",
+      "roomId": "G2"
+    },
+    {
+      "floor": "g",
+      "name": "Island seat",
+      "r": [
+        7.875,
+        8.35,
+        0.45,
+        0.45
+      ],
+      "kind": "chair",
+      "roomId": "G2"
+    },
+    {
+      "floor": "g",
+      "name": "Island seat",
+      "r": [
+        8.925,
+        8.35,
+        0.45,
+        0.45
+      ],
+      "kind": "chair",
+      "roomId": "G2"
+    },
+    {
+      "floor": "g",
+      "name": "Washer",
+      "r": [
+        13,
+        5.4,
+        0.65,
+        0.65
+      ],
+      "kind": "block",
+      "roomId": "G3"
+    },
+    {
+      "floor": "g",
+      "name": "Dryer",
+      "r": [
+        13.75,
+        5.4,
+        0.65,
+        0.65
+      ],
+      "kind": "block",
+      "roomId": "G3"
+    },
+    {
+      "floor": "g",
+      "name": "Laundry sink",
+      "r": [
+        14.5,
+        5.4,
+        0.75,
+        0.65
+      ],
+      "kind": "basin",
+      "roomId": "G3"
+    },
+    {
+      "floor": "g",
+      "name": "Drying / folding",
+      "r": [
+        15.25,
+        6.2,
+        0.6,
+        2
+      ],
+      "kind": "block",
+      "roomId": "G3"
+    },
+    {
+      "floor": "g",
+      "name": "Guest bed frame",
+      "r": [
+        0.65,
+        12.25,
+        2.15,
+        1.65
+      ],
+      "kind": "bed",
+      "roomId": "G5"
+    },
+    {
+      "floor": "g",
+      "name": "Guest wardrobe",
+      "r": [
+        3.65,
+        12.45,
+        0.6,
+        1.7
+      ],
+      "kind": "block",
+      "roomId": "G5"
+    },
+    {
+      "floor": "g",
+      "name": "Guest shower",
+      "r": [
+        0.35,
+        9.45,
+        0.85,
+        1
+      ],
+      "kind": "wet",
+      "roomId": "G6"
+    },
+    {
+      "floor": "g",
+      "name": "Guest WC",
+      "r": [
+        0.4,
+        10.75,
+        0.7,
+        0.65
+      ],
+      "kind": "wc",
+      "roomId": "G6"
+    },
+    {
+      "floor": "g",
+      "name": "Guest basin",
+      "r": [
+        1.55,
+        10.95,
+        0.5,
+        0.4
+      ],
+      "kind": "basin",
+      "roomId": "G6"
+    },
+    {
+      "floor": "g",
+      "name": "Library shelves",
+      "r": [
+        4.4,
+        11.15,
+        0.3,
+        3.3
+      ],
+      "kind": "block",
+      "roomId": "G7"
+    },
+    {
+      "floor": "g",
+      "name": "Library sofa",
+      "r": [
+        5.25,
+        13.5,
+        2.4,
+        0.9
+      ],
+      "kind": "sofa",
+      "roomId": "G7"
+    },
+    {
+      "floor": "g",
+      "name": "Reading chair",
+      "r": [
+        7.05,
+        11.5,
+        0.8,
+        0.8
+      ],
+      "kind": "chair",
+      "roomId": "G7"
+    },
+    {
+      "floor": "g",
+      "name": "Visitor shoe bench",
+      "r": [
+        10.75,
+        13.45,
+        0.35,
+        0.85
+      ],
+      "kind": "block",
+      "roomId": "G8"
+    },
+    {
+      "floor": "g",
+      "name": "Boot bench",
+      "r": [
+        13.6,
+        13.6,
+        1.8,
+        0.45
+      ],
+      "kind": "block",
+      "roomId": "G10"
+    },
+    {
+      "floor": "g",
+      "name": "Coats / shoes",
+      "r": [
+        13,
+        11.45,
+        1.5,
+        0.45
+      ],
+      "kind": "block",
+      "roomId": "G10"
+    },
+    {
+      "floor": "g",
+      "name": "Visitor WC",
+      "r": [
+        13.35,
+        9.5,
+        0.65,
+        0.75
+      ],
+      "kind": "wc",
+      "roomId": "G11"
+    },
+    {
+      "floor": "g",
+      "name": "Visitor basin",
+      "r": [
+        13.65,
+        10.8,
+        0.45,
+        0.4
+      ],
+      "kind": "basin",
+      "roomId": "G11"
+    },
+    {
+      "floor": "u",
+      "name": "Super king frame",
+      "r": [
+        2.45,
+        0.5,
+        1.95,
+        2.15
+      ],
+      "kind": "bed",
+      "roomId": "U1"
+    },
+    {
+      "floor": "u",
+      "name": "Bedside",
+      "r": [
+        1.9,
+        0.5,
+        0.4,
+        0.4
+      ],
+      "kind": "block",
+      "roomId": "U1"
+    },
+    {
+      "floor": "u",
+      "name": "Bedside",
+      "r": [
+        4.55,
+        0.5,
+        0.4,
+        0.4
+      ],
+      "kind": "block",
+      "roomId": "U1"
+    },
+    {
+      "floor": "u",
+      "name": "Wardrobe back",
+      "r": [
+        0.35,
+        3.8,
+        0.66,
+        2.75
+      ],
+      "kind": "block",
+      "roomId": "U2"
+    },
+    {
+      "floor": "u",
+      "name": "Wardrobe garden side",
+      "r": [
+        1.01,
+        3.8,
+        4.19,
+        0.66
+      ],
+      "kind": "block",
+      "roomId": "U2"
+    },
+    {
+      "floor": "u",
+      "name": "Wardrobe bathroom side",
+      "r": [
+        1.01,
+        5.89,
+        4.19,
+        0.66
+      ],
+      "kind": "block",
+      "roomId": "U2"
+    },
+    {
+      "floor": "u",
+      "name": "Ensuite shower",
+      "r": [
+        0.35,
+        8.4,
+        3,
+        1.5
+      ],
+      "kind": "wet",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "Double vanity",
+      "r": [
+        1.95,
+        6.7,
+        1.5,
+        0.55
+      ],
+      "kind": "basin",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "Ensuite WC",
+      "r": [
+        4.1,
+        9,
+        0.7,
+        0.75
+      ],
+      "kind": "wc",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "Soaking tub allowance",
+      "r": [
+        0.35,
+        6.7,
+        0.85,
+        1.1
+      ],
+      "kind": "bath",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "Shower screen left",
+      "r": [
+        0.35,
+        8.38,
+        1,
+        0.02
+      ],
+      "kind": "glass",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "Shower screen right",
+      "r": [
+        2.35,
+        8.38,
+        1,
+        0.02
+      ],
+      "kind": "glass",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "WC privacy return side",
+      "r": [
+        3.5,
+        8.4,
+        0.15,
+        1.5
+      ],
+      "kind": "block",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "WC privacy return left",
+      "r": [
+        3.5,
+        8.25,
+        0.6,
+        0.15
+      ],
+      "kind": "block",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "WC privacy return right",
+      "r": [
+        4.9,
+        8.25,
+        0.4,
+        0.15
+      ],
+      "kind": "block",
+      "roomId": "U3"
+    },
+    {
+      "floor": "u",
+      "name": "Small double frame",
+      "r": [
+        1.9,
+        10.25,
+        1.3,
+        2.05
+      ],
+      "kind": "bed",
+      "roomId": "U4"
+    },
+    {
+      "floor": "u",
+      "name": "Desk",
+      "r": [
+        0.5,
+        13.8,
+        1.4,
+        0.65
+      ],
+      "kind": "table",
+      "roomId": "U4"
+    },
+    {
+      "floor": "u",
+      "name": "Desk chair",
+      "r": [
+        0.95,
+        13.100000000000001,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "roomId": "U4"
+    },
+    {
+      "floor": "u",
+      "name": "Wardrobe",
+      "r": [
+        3.95,
+        12.4,
+        0.6,
+        1.8
+      ],
+      "kind": "block",
+      "roomId": "U4"
+    },
+    {
+      "floor": "u",
+      "name": "Small double frame",
+      "r": [
+        8.25,
+        5.3999999999999995,
+        1.3,
+        2.05
+      ],
+      "kind": "bed",
+      "roomId": "U5"
+    },
+    {
+      "floor": "u",
+      "name": "Desk",
+      "r": [
+        6.8500000000000005,
+        8.899999999999999,
+        1.4,
+        0.65
+      ],
+      "kind": "table",
+      "roomId": "U5"
+    },
+    {
+      "floor": "u",
+      "name": "Desk chair",
+      "r": [
+        7.3,
+        8.2,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "roomId": "U5"
+    },
+    {
+      "floor": "u",
+      "name": "Wardrobe",
+      "r": [
+        10.5,
+        5.55,
+        0.6,
+        1.8
+      ],
+      "kind": "block",
+      "roomId": "U5"
+    },
+    {
+      "floor": "u",
+      "name": "Small double frame",
+      "r": [
+        13.2,
+        11.025,
+        1.3,
+        2.05
+      ],
+      "kind": "bed",
+      "roomId": "U6"
+    },
+    {
+      "floor": "u",
+      "name": "Desk",
+      "r": [
+        10.9,
+        13.65,
+        1.4,
+        0.65
+      ],
+      "kind": "table",
+      "roomId": "U6"
+    },
+    {
+      "floor": "u",
+      "name": "Desk chair",
+      "r": [
+        11.35,
+        12.85,
+        0.65,
+        0.65
+      ],
+      "kind": "chair",
+      "roomId": "U6"
+    },
+    {
+      "floor": "u",
+      "name": "Wardrobe",
+      "r": [
+        15.25,
+        11.025,
+        0.6,
+        1.8
+      ],
+      "kind": "block",
+      "roomId": "U6"
+    },
+    {
+      "floor": "u",
+      "name": "Family WC",
+      "r": [
+        11.4,
+        5.5,
+        0.7,
+        0.75
+      ],
+      "kind": "wc",
+      "roomId": "U7"
+    },
+    {
+      "floor": "u",
+      "name": "Hand basin",
+      "r": [
+        12.35,
+        5.5,
+        0.4,
+        0.45
+      ],
+      "kind": "basin",
+      "roomId": "U7"
+    },
+    {
+      "floor": "u",
+      "name": "Bath",
+      "r": [
+        13.05,
+        5.4,
+        0.75,
+        1.7
+      ],
+      "kind": "wet",
+      "roomId": "U8"
+    },
+    {
+      "floor": "u",
+      "name": "Family shower",
+      "r": [
+        14.6,
+        5.35,
+        1.2,
+        1.2
+      ],
+      "kind": "wet",
+      "roomId": "U8"
+    },
+    {
+      "floor": "u",
+      "name": "Two basins",
+      "r": [
+        14,
+        9.954,
+        1.8,
+        0.55
+      ],
+      "kind": "basin",
+      "roomId": "U9"
+    },
+    {
+      "floor": "u",
+      "name": "Linen shelves",
+      "r": [
+        4.9,
+        12.2,
+        0.45,
+        2.25
+      ],
+      "kind": "block",
+      "roomId": "U11"
+    },
+    {
+      "floor": "u",
+      "name": "Household storage",
+      "r": [
+        7.5,
+        12.2,
+        0.55,
+        2.25
+      ],
+      "kind": "block",
+      "roomId": "U11"
+    },
+    {
+      "floor": "a",
+      "name": "Rack / cables",
+      "r": [
+        19.35,
+        7.9,
+        2.4,
+        1.1
+      ],
+      "kind": "block",
+      "roomId": "A1"
+    },
+    {
+      "floor": "a",
+      "name": "Bench",
+      "r": [
+        20.4,
+        9.15,
+        1.5,
+        0.7
+      ],
+      "kind": "block",
+      "roomId": "A1"
+    },
+    {
+      "floor": "a",
+      "name": "Treadmill",
+      "r": [
+        19.35,
+        10.35,
+        2.05,
+        1
+      ],
+      "kind": "block",
+      "roomId": "A1"
+    },
+    {
+      "floor": "a",
+      "name": "Dumbbells",
+      "r": [
+        24.95,
+        8.1,
+        0.4,
+        2
+      ],
+      "kind": "block",
+      "roomId": "A1"
+    },
+    {
+      "floor": "a",
+      "name": "Car allowance: 5.10 \u00d7 2.15 m",
+      "r": [
+        19.9,
+        17.85,
+        5.1,
+        2.15
+      ],
+      "kind": "car",
+      "roomId": "A4"
+    },
+    {
+      "floor": "a",
+      "name": "Workbench",
+      "r": [
+        24.9,
+        13.35,
+        0.65,
+        2.4
+      ],
+      "kind": "block",
+      "roomId": "A5"
+    },
+    {
+      "floor": "a",
+      "name": "Workshop shelving",
+      "r": [
+        21.6,
+        13.35,
+        0.5,
+        1.8
+      ],
+      "kind": "block",
+      "roomId": "A5"
+    },
+    {
+      "floor": "a",
+      "name": "Cylinder reservation",
+      "r": [
+        22.7,
+        4.65,
+        0.9,
+        0.9
+      ],
+      "kind": "block",
+      "roomId": "A6"
+    },
+    {
+      "floor": "a",
+      "name": "Ventilation reservation",
+      "r": [
+        24.65,
+        4.65,
+        0.65,
+        0.85
+      ],
+      "kind": "block",
+      "roomId": "A6"
+    },
+    {
+      "floor": "a",
+      "name": "Controls",
+      "r": [
+        22.7,
+        6.7,
+        0.8,
+        0.45
+      ],
+      "kind": "block",
+      "roomId": "A6"
+    },
+    {
+      "floor": "o",
+      "name": "Guest shower",
+      "r": [
+        24.45,
+        11.8,
+        1.1,
+        1.1
+      ],
+      "kind": "wet",
+      "roomId": "O2"
+    },
+    {
+      "floor": "o",
+      "name": "Guest WC",
+      "r": [
+        23.35,
+        13.15,
+        0.65,
+        0.75
+      ],
+      "kind": "wc",
+      "roomId": "O2"
+    },
+    {
+      "floor": "o",
+      "name": "Guest basin",
+      "r": [
+        24.65,
+        13.5,
+        0.75,
+        0.45
+      ],
+      "kind": "basin",
+      "roomId": "O2"
+    },
+    {
+      "floor": "o",
+      "name": "Professional worktop",
+      "r": [
+        23.55,
+        14.35,
+        1.6,
+        0.75
+      ],
+      "kind": "table",
+      "roomId": "O4"
+    },
+    {
+      "floor": "o",
+      "name": "Gaming worktop",
+      "r": [
+        24.4,
+        15.1,
+        0.75,
+        1.55
+      ],
+      "kind": "table",
+      "roomId": "O4"
+    },
+    {
+      "floor": "o",
+      "name": "Office shelves",
+      "r": [
+        24.95,
+        17,
+        0.4,
+        2.1
+      ],
+      "kind": "block",
+      "roomId": "O4"
+    },
+    {
+      "floor": "g",
+      "name": "Pantry landing counter",
+      "r": [
+        10.9,
+        5.35,
+        0.6,
+        0.8
+      ],
+      "kind": "block",
+      "roomId": "G3"
+    },
+    {
+      "floor": "g",
+      "name": "Dry food cupboards",
+      "r": [
+        11.5,
+        5.35,
+        1.05,
+        0.6
+      ],
+      "kind": "block",
+      "roomId": "G3"
+    },
+    {
+      "floor": "g",
+      "name": "Pantry / utility divider",
+      "r": [
+        12.55,
+        5.35,
+        0.15,
+        1.05
+      ],
+      "kind": "block",
+      "roomId": "G3"
+    }
+  ],
+  "doors": [
+    {
+      "floor": "g",
+      "id": "Front entrance",
+      "x": 11.3,
+      "y": 14.625,
+      "axis": "h",
+      "w": 0.95,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Boot to hall",
+      "x": 12.625,
+      "y": 12.05,
+      "axis": "v",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Boot to link",
+      "x": 16.025,
+      "y": 12,
+      "axis": "v",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Link to lobby",
+      "x": 18.875,
+      "y": 12,
+      "axis": "v",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Proposed drive entrance",
+      "x": 17.2,
+      "y": 13.6,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "proposed"
+    },
+    {
+      "floor": "g",
+      "id": "Hall to kitchen",
+      "x": 11.15,
+      "y": 9.375,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Guest bedroom",
+      "x": 4.325,
+      "y": 9.7,
+      "axis": "v",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Guest shower",
+      "x": 2.125,
+      "y": 9.7,
+      "axis": "v",
+      "w": 0.8,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Library",
+      "x": 5.1,
+      "y": 11.075,
+      "axis": "h",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "g",
+      "id": "Visitor WC",
+      "x": 12.625,
+      "y": 10.35,
+      "axis": "v",
+      "w": 0.8,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Landing to gallery",
+      "x": 5.5,
+      "y": 9.975,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Gallery to bedroom",
+      "x": 5.5,
+      "y": 3.725,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "pocket",
+      "pocketLength": 1
+    },
+    {
+      "floor": "u",
+      "id": "Gallery to ensuite",
+      "x": 5.375,
+      "y": 7.3,
+      "axis": "v",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Gallery to dressing",
+      "x": 5.375,
+      "y": 4.725,
+      "axis": "v",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Child 1",
+      "x": 4.625,
+      "y": 10.1,
+      "axis": "v",
+      "w": 0.85,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Child 2",
+      "x": 9.7,
+      "y": 9.625,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Child 3",
+      "x": 11.2,
+      "y": 10.75,
+      "axis": "h",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Family basin area",
+      "x": 12.225,
+      "y": 9.5,
+      "axis": "v",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Family WC",
+      "x": 11.45,
+      "y": 7.625,
+      "axis": "h",
+      "w": 0.8,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Bath / shower",
+      "x": 13.05,
+      "y": 8.325,
+      "axis": "h",
+      "w": 0.85,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "u",
+      "id": "Linen / storage",
+      "x": 5.7,
+      "y": 11.075,
+      "axis": "h",
+      "w": 0.85,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "a",
+      "id": "Lobby to gym",
+      "x": 23.8,
+      "y": 11.725,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "a",
+      "id": "Lobby to workshop",
+      "x": 22.1,
+      "y": 13.275,
+      "axis": "h",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "a",
+      "id": "Gym to plant",
+      "x": 23.8,
+      "y": 7.475,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "floor": "a",
+      "id": "Plant service door",
+      "x": 25.725,
+      "y": 5.85,
+      "axis": "v",
+      "w": 1,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "o",
+      "id": "Office shower room",
+      "x": 23.175,
+      "y": 12.05,
+      "axis": "v",
+      "w": 0.85,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "o",
+      "id": "Office",
+      "x": 21.85,
+      "y": 13.275,
+      "axis": "h",
+      "w": 0.9,
+      "side": 1,
+      "style": "door"
+    },
+    {
+      "floor": "a",
+      "id": "Workshop to parking",
+      "x": 22.5,
+      "y": 16.925,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "id": "Kitchen \u2192 pantry",
+      "floor": "g",
+      "x": 11.425,
+      "y": 6.4,
+      "axis": "v",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "id": "Utility \u2192 pantry",
+      "floor": "g",
+      "x": 13.375,
+      "y": 6.325,
+      "axis": "v",
+      "w": 1.05,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "id": "Kitchen \u2192 utility",
+      "floor": "g",
+      "x": 13.375,
+      "y": 8.2,
+      "axis": "v",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "id": "Boot \u2192 utility",
+      "floor": "g",
+      "x": 14.7,
+      "y": 10.725,
+      "axis": "h",
+      "w": 0.9,
+      "side": -1,
+      "style": "door"
+    },
+    {
+      "id": "Garden bifolds",
+      "floor": "g",
+      "x": 0.55,
+      "y": 0.175,
+      "axis": "h",
+      "w": 5.8,
+      "side": 1,
+      "style": "bifold"
+    }
+  ],
+  "openings": [
+    [
+      "g",
+      6.625,
+      6.7,
+      "v",
+      2.4
+    ],
+    [
+      "g",
+      4.65,
+      9.375,
+      "h",
+      1.6
+    ],
+    [
+      "g",
+      8.2,
+      11.075,
+      "h",
+      1
+    ],
+    [
+      "u",
+      9.6,
+      11.075,
+      "h",
+      1
+    ],
+    [
+      "a",
+      19.05,
+      13.275,
+      "h",
+      1
+    ],
+    [
+      "o",
+      20.45,
+      13.275,
+      "h",
+      1
+    ],
+    [
+      "a",
+      18.875,
+      17.25,
+      "v",
+      3.3
+    ]
+  ],
+  "house": [
+    [
+      0,
+      0
+    ],
+    [
+      6.9,
+      0
+    ],
+    [
+      6.9,
+      5
+    ],
+    [
+      16.2,
+      5
+    ],
+    [
+      16.2,
+      14.8
+    ],
+    [
+      0,
+      14.8
+    ]
+  ],
+  "garage": [
+    [
+      18.7,
+      7.3
+    ],
+    [
+      25.9,
+      7.3
+    ],
+    [
+      25.9,
+      21.2
+    ],
+    [
+      18.7,
+      21.2
+    ]
+  ],
+  "plant": [
+    [
+      22.2,
+      4.15
+    ],
+    [
+      25.9,
+      4.15
+    ],
+    [
+      25.9,
+      7.300000000000001
+    ],
+    [
+      22.2,
+      7.300000000000001
+    ]
+  ],
+  "office": [
+    [
+      18.7,
+      11.45
+    ],
+    [
+      25.9,
+      11.45
+    ],
+    [
+      25.9,
+      20.799999999999997
+    ],
+    [
+      18.7,
+      20.799999999999997
+    ]
+  ],
+  "checks": [
+    "All dimensions are new study proposals in metres. The accepted rough sketch was not scaled.",
+    "House: 16.20 \u00d7 14.80 m bounding size; L-shaped footprint 193.26 m\u00b2. Two full house floors: 386.52 m\u00b2 external area.",
+    "Approved suite revision, 8 October 2026: rectangular 6.20 \u00d7 3.30 m bedroom, 4.95 \u00d7 2.75 m dressing room, 4.95 \u00d7 3.20 m bathroom, and separate 1.10 m clear gallery within the existing suite envelope. Other room boundaries remain unchanged.",
+    "Long-side garage study: 7.20 \u00d7 13.90 m ground floor. The extra 400 mm at the front adds 2.88 m\u00b2 and gives a 3.85 m-wide parking bay. The office floor above stays unchanged; the new strip needs a low roof or floor-edge detail.",
+    "External floor envelopes: 568.70 m\u00b2 with the earlier end-door garage; 571.58 m\u00b2 with the long-side proposal. These include garage, stairs, plant and link, and are not certified floor-area measurements.",
+    "The building width stays 25.90 m. The house-facing garage door uses a provisional 6.00 m approach in the arrival forecourt, forward of the house and clear of the link. Site fit and vehicle turning are untested.",
+    "Suite doors: 900 mm gallery openings to bedroom, dressing and ensuite. Bedroom uses a 1.00 m pocket to the left of the opening; dressing and ensuite doors open into their rooms. Door construction and seals remain to design.",
+    "External walls: 350 mm; ordinary partitions: 150 mm; link side walls: 300 mm. These are layout allowances, not specified wall constructions.",
+    "Three child rooms: 18.5 m\u00b2 each, to rounding. Each has the same 1.30 \u00d7 2.05 m bed frame, 1.40 m desk and 1.80 m wardrobe allowance. Room shapes differ.",
+    "Parents: landing \u2192 private gallery \u2192 separate bedroom, dressing and ensuite doors. U-shaped wardrobes are 660 mm deep; 1.43 m between closed fronts, or 0.93 m with one 0.50 m drawer open. Bedroom foot clearance is 1.00 m.",
+    "Ensuite: compact soaking tub allowance 0.85 \u00d7 1.10 m, two basins in a 1.50 \u00d7 0.55 m vanity, screened WC, and retained 3.00 \u00d7 1.50 m shower with two fixed screens and 1.00 m central entrance. Full-length bath alternative is not carried into this revision.",
+    "Kitchen proposal: 2.40 m clear opening to dining. Two telescoping panels retract north into a 1.30 \u00d7 0.30 m pocket reservation. This is a space allowance, not a selected system. The divider closes only the kitchen\u2013dining opening; other room doors remain separate.",
+    "Opening the kitchen wall needs structural review beneath the retained first floor. The pocket requires a suitable lintel, panel system and wall construction. Closed side clearances beside the island are about 0.83 m; the main cabinet-to-island aisle remains 1.20 m.",
+    "Pantry / utility: a full-height partition projects 1.05 m from the rear wall and leaves a 1.05 m open passage. It divides the dry pantry and laundry zones. The pantry counter is shortened by 450 mm to fit the 150 mm partition. The 900 mm concealed kitchen door opens into the kitchen; shopping also travels boot room \u2192 utility \u2192 pantry.",
+    "The short partition gives visual separation. Full separation of laundry sound and moisture would need a closing door and suitable ventilation. The earlier separate pantry remains selectable.",
+    "Family use: separate WC, separate bath / shower room, and shared dry basins. WC has its own hand basin. Dry changing space remains inside the wet room.",
+    "Office: both desks remain fixed in work, gaming and guest states. Sofa-bed allowance is 2.20 \u00d7 1.90 m open. A 0.80 m approach at the foot reaches both sleeper positions.",
+    "Car allowance: 5.10 \u00d7 2.15 m including provisional mirrors. Long-side proposal: 0.85 m on each long side, 0.55 m at the nose and 0.85 m at the garage-door end. The 3.30 m door aligns with the car; no turn inside the garage is assumed. Actual A7 doors, tailgate and external turning need checking.",
+    "Gym: 26.0 m\u00b2, exceeding the retained 24.0 m\u00b2 brief. Existing rack, bench, dumbbell and treadmill body sizes are carried forward. A separate 2.20 \u00d7 1.35 m treadmill rear zone is shown.",
+    "Both stairs: assumed 3.00 m floor-to-floor; 16 rises of 187.5 mm; 270 mm going; two 1.00 m clear flights; 1.00 m half landing. Full opening above both flights is reserved.",
+    "Stair slope: 34.8\u00b0. A full stair opening and 2.70 m upper-storey clear ceiling height are assumed. Final headroom, roof, structure, guarding, handrails, door ratings and compliance are not verified.",
+    "Plant location is a proposal behind the gym. The reservation includes equipment and service space, but pipe routes, cooling, ventilation and plant sizing are unresolved.",
+    "The first-floor office has a full-height storey assumption. Roof form and support over the car opening remain to be designed.",
+    "Long-side proposal: workshop moves beside the stair, with its own lobby entrance and a door to parking. Gym, plant and office stair remain usable with the car parked. The new vehicle opening needs structural design beneath the office.",
+    "Ground-floor visitor and boot arrivals have shoe benches and marked footwear boundaries. No level change is assumed.",
+    "The earlier sixteen layout checks apply to the original study only. This revised suite has separate sampled 700 mm route checks; product use, occupied door swings and construction compliance remain unverified.",
+    "Approved daylight direction: 2.00 m-wide bedroom garden window, 0.90 m-wide gallery garden window, and four rooflight zones (dressing, bathroom and two gallery zones). Sills, roof openings, wells, beams and drainage remain provisional.",
+    "The published courtyard model is unchanged. This study is for plan review before model replacement."
+  ],
+  "paths": {
+    "link": [
+      [
+        [
+          17.65,
+          14.6
+        ],
+        [
+          17.65,
+          12.45
+        ],
+        [
+          15.25,
+          12.45
+        ],
+        [
+          14.8,
+          13.15
+        ],
+        [
+          14,
+          13.15
+        ]
+      ],
+      [
+        [
+          19.5,
+          12.45
+        ],
+        [
+          17.8,
+          12.45
+        ]
+      ]
+    ],
+    "ground": [
+      [
+        [
+          11.8,
+          15.3
+        ],
+        [
+          11.8,
+          13
+        ],
+        [
+          11.8,
+          10.3
+        ],
+        [
+          8.6,
+          10.3
+        ],
+        [
+          8.6,
+          11.2
+        ]
+      ],
+      [
+        [
+          14.3,
+          13.15
+        ],
+        [
+          13.6,
+          13.15
+        ],
+        [
+          13,
+          12.5
+        ],
+        [
+          12,
+          12.5
+        ],
+        [
+          12,
+          10.3
+        ]
+      ]
+    ],
+    "suite": [
+      [
+        [
+          5.95,
+          10.5
+        ],
+        [
+          5.95,
+          3.05
+        ],
+        [
+          4.8,
+          3.05
+        ]
+      ],
+      [
+        [
+          5.95,
+          10.5
+        ],
+        [
+          5.95,
+          5.175
+        ],
+        [
+          2.7,
+          5.175
+        ]
+      ],
+      [
+        [
+          5.95,
+          10.5
+        ],
+        [
+          5.95,
+          7.75
+        ],
+        [
+          2.0,
+          7.75
+        ]
+      ]
+    ],
+    "bath": [
+      [
+        [
+          11.75,
+          10
+        ],
+        [
+          12.7,
+          10
+        ],
+        [
+          13,
+          9.1
+        ],
+        [
+          13.6,
+          9.1
+        ]
+      ],
+      [
+        [
+          13,
+          9.1
+        ],
+        [
+          12.1,
+          8.75
+        ],
+        [
+          11.85,
+          8.1
+        ],
+        [
+          11.85,
+          7.25
+        ]
+      ],
+      [
+        [
+          13.6,
+          9.1
+        ],
+        [
+          13.5,
+          8.05
+        ],
+        [
+          14.15,
+          7.3
+        ]
+      ]
+    ],
+    "garage": [
+      [
+        [
+          18.4,
+          12.45
+        ],
+        [
+          19.7,
+          12.45
+        ],
+        [
+          19.7,
+          13.35
+        ]
+      ],
+      [
+        [
+          21.8,
+          12.5
+        ],
+        [
+          24.25,
+          12.5
+        ],
+        [
+          24.25,
+          10.5
+        ],
+        [
+          24,
+          8.5
+        ],
+        [
+          24.25,
+          7.1
+        ]
+      ],
+      [
+        [
+          22.55,
+          13
+        ],
+        [
+          22.55,
+          14
+        ],
+        [
+          23,
+          15.5
+        ],
+        [
+          23,
+          17.4
+        ],
+        [
+          19.5,
+          17.4
+        ],
+        [
+          19.5,
+          20.4
+        ]
+      ]
+    ],
+    "office": [
+      [
+        [
+          20.9,
+          13.15
+        ],
+        [
+          20.9,
+          12.45
+        ],
+        [
+          22.3,
+          12.45
+        ],
+        [
+          22.3,
+          13.8
+        ],
+        [
+          22.3,
+          16.9
+        ],
+        [
+          22.15,
+          16.9
+        ],
+        [
+          22.15,
+          19.6
+        ]
+      ],
+      [
+        [
+          20.9,
+          12.45
+        ],
+        [
+          23.7,
+          12.45
+        ]
+      ]
+    ],
+    "ensuite": [
+      [
+        [
+          5.95,
+          7.75
+        ],
+        [
+          2.0,
+          7.75
+        ],
+        [
+          1.85,
+          9.05
+        ]
+      ],
+      [
+        [
+          2.0,
+          7.75
+        ],
+        [
+          0.775,
+          7.95
+        ]
+      ],
+      [
+        [
+          4.5,
+          7.75
+        ],
+        [
+          4.5,
+          8.65
+        ]
+      ]
+    ],
+    "kitchen": [
+      [
+        [
+          15.15,
+          10.5
+        ],
+        [
+          15.15,
+          9
+        ],
+        [
+          14.4,
+          8
+        ],
+        [
+          14.4,
+          7.1
+        ],
+        [
+          12.05,
+          6.95
+        ]
+      ],
+      [
+        [
+          12.05,
+          6.95
+        ],
+        [
+          11.3,
+          6.8
+        ],
+        [
+          10.4,
+          6.8
+        ]
+      ]
+    ]
+  },
+  "optionState": {
+    "pantryState": "combined",
+    "dividerState": "open",
+    "garageState": "side",
+    "tubState": "soaking"
+  },
+  "barriers": [
+    [
+      6.55,
+      5.4,
+      0.3,
+      1.3
+    ]
+  ],
+  "windows": [
+    {
+      "floor": "g",
+      "axis": "v",
+      "x": 0.175,
+      "y": 1.4,
+      "w": 2.4,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "v",
+      "x": 0.175,
+      "y": 5.8,
+      "w": 2.2,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "h",
+      "x": 0.9,
+      "y": 14.625,
+      "w": 2.8,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "h",
+      "x": 5.0,
+      "y": 14.625,
+      "w": 2.3,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "h",
+      "x": 7.1,
+      "y": 5.175,
+      "w": 3.2,
+      "sill": 1.2,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "v",
+      "x": 16.025,
+      "y": 6.3,
+      "w": 2,
+      "sill": 1.2,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "g",
+      "axis": "v",
+      "x": 16.025,
+      "y": 13.25,
+      "w": 0.95,
+      "sill": 1.2,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 0.9,
+      "y": 14.625,
+      "w": 2.8,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 5.1,
+      "y": 14.625,
+      "w": 2.4,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 12,
+      "y": 14.625,
+      "w": 3,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 7.2,
+      "y": 5.175,
+      "w": 3.2,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 11.65,
+      "y": 5.175,
+      "w": 0.8,
+      "sill": 1.5,
+      "head": 2.4,
+      "private": true
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 13.65,
+      "y": 5.175,
+      "w": 1.6,
+      "sill": 1.5,
+      "head": 2.4,
+      "private": true
+    },
+    {
+      "floor": "u",
+      "axis": "v",
+      "x": 16.025,
+      "y": 8.9,
+      "w": 1.4,
+      "sill": 1.4,
+      "head": 2.4,
+      "private": true
+    },
+    {
+      "floor": "u",
+      "axis": "v",
+      "x": 16.025,
+      "y": 11.4,
+      "w": 2.2,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "a",
+      "axis": "v",
+      "x": 18.875,
+      "y": 8.1,
+      "w": 2.4,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "a",
+      "axis": "v",
+      "x": 25.725,
+      "y": 8.1,
+      "w": 2.4,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "a",
+      "axis": "v",
+      "x": 25.725,
+      "y": 14,
+      "w": 1.8,
+      "sill": 1.2,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "o",
+      "axis": "v",
+      "x": 25.725,
+      "y": 15.1,
+      "w": 3,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "o",
+      "axis": "h",
+      "x": 21.8,
+      "y": 20.625,
+      "w": 2.6,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "o",
+      "axis": "v",
+      "x": 18.875,
+      "y": 18,
+      "w": 1.9,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "o",
+      "axis": "h",
+      "x": 23.9,
+      "y": 11.625,
+      "w": 1,
+      "sill": 1.5,
+      "head": 2.4,
+      "private": true
+    },
+    {
+      "floor": "u",
+      "axis": "v",
+      "x": 0.175,
+      "y": 1.05,
+      "w": 2.4,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 0.9,
+      "y": 0.175,
+      "w": 0.9,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "h",
+      "x": 5.15,
+      "y": 0.175,
+      "w": 0.9,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "v",
+      "x": 0.175,
+      "y": 8.65,
+      "w": 0.8,
+      "sill": 1.45,
+      "head": 2.4,
+      "private": true
+    },
+    {
+      "floor": "u",
+      "axis": "v",
+      "x": 6.725,
+      "y": 1.2,
+      "w": 2.0,
+      "sill": 0.6,
+      "head": 2.4,
+      "private": false
+    },
+    {
+      "floor": "u",
+      "axis": "v",
+      "x": 6.725,
+      "y": 3.9,
+      "w": 0.9,
+      "sill": 0.85,
+      "head": 2.4,
+      "private": false
+    }
+  ],
+  "rooflights": [
+    {
+      "id": "R1",
+      "floor": "u",
+      "roomId": "U2",
+      "r": [
+        1.95,
+        4.67,
+        1,
+        1
+      ],
+      "status": "Plan zone; roof opening and light well require design"
+    },
+    {
+      "id": "R2",
+      "floor": "u",
+      "roomId": "U3",
+      "r": [
+        1.8,
+        7.4,
+        1,
+        0.75
+      ],
+      "status": "Plan zone; roof opening and light well require design"
+    },
+    {
+      "id": "G1",
+      "floor": "u",
+      "roomId": "UG",
+      "r": [
+        5.6,
+        6.05,
+        0.7,
+        0.7
+      ],
+      "status": "Plan zone; roof opening and light well require design"
+    },
+    {
+      "id": "G2",
+      "floor": "u",
+      "roomId": "UG",
+      "r": [
+        5.6,
+        8.75,
+        0.7,
+        0.7
+      ],
+      "status": "Plan zone; roof opening and light well require design"
+    }
+  ],
+  "site": {
+    "width": 40,
+    "depth": 65,
+    "house_origin": [
+      6,
+      28
+    ],
+    "garden_depth": 28,
+    "gate": [
+      12.25,
+      18.25
+    ],
+    "terrace": [
+      [
+        6,
+        24
+      ],
+      [
+        22.2,
+        24
+      ],
+      [
+        22.2,
+        28
+      ],
+      [
+        6,
+        28
+      ]
+    ],
+    "forecourt": [
+      [
+        8.5,
+        44.8
+      ],
+      [
+        24.7,
+        44.8
+      ],
+      [
+        24.7,
+        58
+      ],
+      [
+        20,
+        62
+      ],
+      [
+        18.25,
+        65
+      ],
+      [
+        12.25,
+        65
+      ],
+      [
+        10,
+        62
+      ],
+      [
+        8.5,
+        58
+      ]
+    ],
+    "visitor_bays": [
+      [
+        2.8,
+        47.7,
+        5.7,
+        2.8
+      ],
+      [
+        2.8,
+        50.5,
+        5.7,
+        2.8
+      ]
+    ],
+    "vehicle_check": {
+      "assumed_body": [
+        5.1,
+        2.15
+      ],
+      "path_radii": [
+        7,
+        8
+      ],
+      "step_m": 0.1,
+      "poses": 728,
+      "failures": [],
+      "scope": "Illustrative tangent-body sweep; not Audi steering geometry or a highway access assessment. Arrival forward, reverse out of garage, then leave road access forward."
+    }
+  },
+  "levels": {
+    "g": 0,
+    "u": 3.5,
+    "a": 0,
+    "o": 3.0
+  },
+  "heights": {
+    "g": 3.2,
+    "u": 2.7,
+    "a": 2.7,
+    "o": 2.7
+  },
+  "source_hashes": {
+    "studies/l-house-booklet/plans.json": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
+    "studies/l-house-booklet/site.json": "f098a249162ec9a72ab3ed31d60349801ceb906380d06299d0c51cc534207300",
+    "output/design/kitchen-selections/boot-room-option.json": "ee27ebba714a9ffa54fb8ee9e929d3ce3f7263f8d59b8dd71c305fa7e90045e7",
+    "viewer-l-house/model.json": "39a11d55ea27c27a99c8bf4859fb16d19fef20f6264f3bf927b2c2bd113aa7d8"
+  },
+  "shells": {
+    "g": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          6.9,
+          0
+        ],
+        [
+          6.9,
+          5
+        ],
+        [
+          16.2,
+          5
+        ],
+        [
+          16.2,
+          14.8
+        ],
+        [
+          0,
+          14.8
+        ]
+      ],
+      [
+        [
+          16.2,
+          11.35
+        ],
+        [
+          18.7,
+          11.35
+        ],
+        [
+          18.7,
+          13.75
+        ],
+        [
+          16.2,
+          13.75
+        ]
+      ]
+    ],
+    "u": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          6.9,
+          0
+        ],
+        [
+          6.9,
+          5
+        ],
+        [
+          16.2,
+          5
+        ],
+        [
+          16.2,
+          14.8
+        ],
+        [
+          0,
+          14.8
+        ]
+      ]
+    ],
+    "a": [
+      [
+        [
+          18.7,
+          7.3
+        ],
+        [
+          25.9,
+          7.3
+        ],
+        [
+          25.9,
+          21.2
+        ],
+        [
+          18.7,
+          21.2
+        ]
+      ],
+      [
+        [
+          22.2,
+          4.15
+        ],
+        [
+          25.9,
+          4.15
+        ],
+        [
+          25.9,
+          7.300000000000001
+        ],
+        [
+          22.2,
+          7.300000000000001
+        ]
+      ]
+    ],
+    "o": [
+      [
+        [
+          18.7,
+          11.45
+        ],
+        [
+          25.9,
+          11.45
+        ],
+        [
+          25.9,
+          20.799999999999997
+        ],
+        [
+          18.7,
+          20.799999999999997
+        ]
+      ]
+    ]
+  },
+  "stairs": [
+    {
+      "id": "House stair",
+      "floor": "g",
+      "upper": "u",
+      "r": [
+        8.2,
+        11.15,
+        2.4,
+        3.3
+      ],
+      "risers": 18,
+      "going": 0.2875,
+      "rise": 0.19444444444444445
+    },
+    {
+      "id": "Garage stair",
+      "floor": "a",
+      "upper": "o",
+      "r": [
+        19.05,
+        13.35,
+        2.4,
+        3.5
+      ],
+      "risers": 16,
+      "going": 0.3,
+      "rise": 0.1875
+    }
+  ]
+}

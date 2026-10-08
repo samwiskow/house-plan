@@ -1,0 +1,21 @@
+{
+  "scene_sha256": "1619305803c5f24d68e1d273d5553821e17c722a55d479e73d56b765ae7c6327",
+  "room_ceiling_rays": 2366,
+  "furniture_meshes_checked": 1265,
+  "furniture_fit_failures": [],
+  "source_hashes": {
+    "studies/l-house-booklet/plans.json": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
+    "studies/l-house-booklet/site.json": "f098a249162ec9a72ab3ed31d60349801ceb906380d06299d0c51cc534207300",
+    "output/design/kitchen-selections/boot-room-option.json": "ee27ebba714a9ffa54fb8ee9e929d3ce3f7263f8d59b8dd71c305fa7e90045e7",
+    "viewer-l-house/model.json": "39a11d55ea27c27a99c8bf4859fb16d19fef20f6264f3bf927b2c2bd113aa7d8"
+  },
+  "preserved_rooms": 31,
+  "rooflight_clear_rays": 20,
+  "stair_headroom_samples": 30,
+  "minimum_stair_headroom_m": 2.847,
+  "suite_route_samples": 533,
+  "suite_route_failures": [],
+  "packed_textures": true,
+  "units": "metres",
+  "scope": "Source equality, structural ceiling rays, furniture bounds within room outlines (31 mm tolerance), opaque opening rays, stair headroom and 700 mm nominal suite routes with modelled doors open. No construction or occupied-use certification."
+}
