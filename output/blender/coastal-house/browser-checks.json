@@ -1,0 +1,198 @@
+{
+  "meshes": 238,
+  "triangles": 4968868,
+  "views": [
+    "arrival",
+    "garden",
+    "coastal-plot",
+    "ground-cutaway",
+    "first-cutaway",
+    "parents-bedroom",
+    "suite-gallery",
+    "dressing",
+    "bathroom",
+    "bathroom-shower",
+    "bathroom-vanity",
+    "family-bedroom",
+    "guest-room",
+    "rooflights",
+    "library",
+    "gym",
+    "office",
+    "combined-room",
+    "entrance-hall",
+    "under-stair",
+    "pantry",
+    "kitchen-storage",
+    "utility",
+    "bathroom-shower-closed",
+    "terrace",
+    "sea-sunset",
+    "coffee-station"
+  ],
+  "groups": [
+    {
+      "name": "VIEW_|_a_|_ceilings",
+      "level": "a",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_a_|_floors",
+      "level": "a",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_a_|_furniture",
+      "level": "a",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_a_|_openings",
+      "level": "a",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_a_|_walls",
+      "level": "a",
+      "part": "walls"
+    },
+    {
+      "name": "VIEW_|_g_|_ceilings",
+      "level": "g",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_g_|_floors",
+      "level": "g",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_g_|_furniture",
+      "level": "g",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_g_|_interior",
+      "level": "g",
+      "part": "interior"
+    },
+    {
+      "name": "VIEW_|_g_|_openings",
+      "level": "g",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_g_|_pantry-door",
+      "level": "g",
+      "part": "pantry-door"
+    },
+    {
+      "name": "VIEW_|_g_|_walls",
+      "level": "g",
+      "part": "walls"
+    },
+    {
+      "name": "VIEW_|_o_|_ceilings",
+      "level": "o",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_o_|_floors",
+      "level": "o",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_o_|_furniture",
+      "level": "o",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_o_|_openings",
+      "level": "o",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_o_|_walls",
+      "level": "o",
+      "part": "walls"
+    },
+    {
+      "name": "VIEW_|_roof_|_roof",
+      "level": "roof",
+      "part": "roof"
+    },
+    {
+      "name": "VIEW_|_site_|_site",
+      "level": "site",
+      "part": "site"
+    },
+    {
+      "name": "VIEW_|_stairs_|_stairs",
+      "level": "stairs",
+      "part": "stairs"
+    },
+    {
+      "name": "VIEW_|_u_|_ceilings",
+      "level": "u",
+      "part": "ceilings"
+    },
+    {
+      "name": "VIEW_|_u_|_floors",
+      "level": "u",
+      "part": "floors"
+    },
+    {
+      "name": "VIEW_|_u_|_furniture",
+      "level": "u",
+      "part": "furniture"
+    },
+    {
+      "name": "VIEW_|_u_|_openings",
+      "level": "u",
+      "part": "openings"
+    },
+    {
+      "name": "VIEW_|_u_|_shower-door",
+      "level": "u",
+      "part": "shower-door"
+    },
+    {
+      "name": "VIEW_|_u_|_walls",
+      "level": "u",
+      "part": "walls"
+    }
+  ],
+  "showerDoorPoses": {
+    "closed": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "open": [
+      0,
+      0.7071067094802856,
+      0,
+      0.7071068286895752
+    ]
+  },
+  "pantryDoorPoses": {
+    "closed": [
+      0,
+      -0.7071067094802856,
+      0,
+      0.7071068286895752
+    ],
+    "open": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "glbSha256": "9b03ec6ecd55dcf19cfd2f699f543f8fdc0e6b34327d3db1e98648f0e7bba6a0",
+  "errors": [],
+  "externalRequests": [],
+  "phoneWidth": 390,
+  "overflow": false
+}
