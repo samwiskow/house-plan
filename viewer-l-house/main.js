@@ -223,7 +223,7 @@ function addWindow(win){const parent=floorGroups[win.floor],base=model.levels[wi
 const privacyMaterial=new THREE.MeshStandardMaterial({color:'#dbe6d2',transparent:true,opacity:.68,roughness:.75,side:THREE.DoubleSide});
 function addDoor(d,previous){
  const base=model.levels[d.floor],group=new THREE.Group();group.position.set(d.x,base,d.y);floorGroups[d.floor].add(group);group.name=d.id;
- const initial=['Front entrance','Boot to hall','Boot to link','Link to lobby','Proposed drive entrance','Hall to kitchen','Kitchen to laundry','Laundry to boot','Landing to dressing','Dressing to bedroom','Bedroom to ensuite','Lobby to workshop','Workshop to parking','Lobby to gym','Office','Kitchen divider','Living to terrace','Dining to terrace','Garage door'].includes(d.id);
+ const initial=['Front entrance','Boot to hall','Boot to link','Link to lobby','Proposed drive entrance','Hall to kitchen','Kitchen to laundry','Laundry to boot','Landing to gallery','Gallery to bedroom','Gallery to dressing','Gallery to ensuite','Lobby to workshop','Workshop to parking','Lobby to gym','Office','Kitchen divider','Living to terrace','Dining to terrace','Garage door'].includes(d.id);
  const state={data:d,group,open:previous?.open??initial,progress:previous?.progress??Number(initial),updatedAt:previous?.updatedAt??performance.now(),parts:[]};
  const h=d.axis==='h',r=h?[0,-.022,d.w,.044]:[-.022,0,.044,d.w];
  if(d.id==='Link to lobby')box([d.x-.175,d.y,.35,d.w],base,base+.025,'oak',floorGroups[d.floor]);
@@ -312,7 +312,7 @@ const views={
  first:{p:[24,34,28],t:[12,3,10],note:'First-floor cutaway. All four family bedrooms and the office remain upstairs.',floor:'first'},
  living:{p:[3.3,1.65,8.35],t:[3.2,1.3,2],note:'Living and dining, looking towards the main garden. Eye height 1.65 m.',floor:'all',inside:true},
  kitchen:{p:[10.35,1.65,8.7],t:[8.0,1.2,5.8],note:'The kitchen divider and concealed pantry door can be opened. Pantry choice is below.',floor:'all',inside:true},
- parents:{p:[5.3,4.65,3.75],t:[2.9,4.25,1.6],note:'Bedroom, dressing room and private ensuite. Two doors slide into wall pockets.',floor:'all',inside:true},
+ parents:{p:[5.1,4.65,3.05],t:[2.9,4.25,1.6],note:'Rectangular bedroom with garden window. The gallery gives separate access to dressing and bathroom. Rooflight zones await roof design.',floor:'all',inside:true},
  office:{p:[22.15,4.65,19.7],t:[24.0,4.0,15.5],note:'Both desks remain in place when the guest bed opens.',floor:'all',inside:true},
  garage:{p:[29,17,25],t:[22.3,0,14],note:'Garage cutaway: workshop, gym and office stair stay usable with the car parked.',floor:'ground'}
 };
@@ -362,7 +362,7 @@ window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addE
 for(const button of document.querySelectorAll('[data-key]')){button.addEventListener('pointerdown',e=>{e.preventDefault();keys.add(button.dataset.key.toLowerCase());requestRender();button.setPointerCapture(e.pointerId);});for(const event of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(event,()=>keys.delete(button.dataset.key.toLowerCase()));}
 $('door').addEventListener('click',()=>toggleDoor(doorAt()));$('view').addEventListener('change',e=>setView(e.target.value));$('floor').addEventListener('change',e=>setFloor(e.target.value));$('pantry').addEventListener('change',e=>setPantry(e.target.value));$('office').addEventListener('change',e=>setOffice(e.target.value));$('roof').addEventListener('click',()=>setRoof(!(roofOn&&floorMode==='all')));$('light').addEventListener('click',()=>setNight(!night));$('walk').addEventListener('click',()=>setWalking(!walking));
 orbit.addEventListener('change',requestRender);window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);requestRender();});
-rebuild();setView('overview');setNight(false);$('status').textContent='L01 · Measured plan · 33 rooms';
+rebuild();setView('overview');setNight(false);$('status').textContent=`L01.1 · Measured plan · ${data.rooms.length} rooms`;
 function animate(now){framePending=false;const dt=Math.min((now-last)/1000,.06);last=now;let changed=false;
  for(const s of doors){const target=Number(s.open);if(Math.abs(s.progress-target)>.001){const elapsed=Math.max(0,(now-s.updatedAt)/1000);s.updatedAt=now;s.progress=THREE.MathUtils.damp(s.progress,target,10,elapsed);if(Math.abs(s.progress-target)<.001)s.progress=target;positionDoor(s);changed=true;}}
  if(changed){renderer.shadowMap.needsUpdate=true;dirty=true;}

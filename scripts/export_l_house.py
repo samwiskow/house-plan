@@ -21,14 +21,13 @@ windows=[
  window('g','h',.9,14.625,2.8),window('g','h',5.0,14.625,2.3),
  window('g','h',7.1,5.175,3.2,1.2),window('g','v',16.025,6.3,2,1.2),
  window('g','v',16.025,13.25,.95,1.2),
- window('u','v',.175,1.05,2.8),window('u','h',.9,.175,.9),window('u','h',5.15,.175,.9),
- window('u','v',.175,5.9,1.2,1.45,2.4,True),window('u','v',.175,8.65,.8,1.45,2.4,True),
  window('u','h',.9,14.625,2.8),window('u','h',5.1,14.625,2.4),window('u','h',12,14.625,3),
  window('u','h',7.2,5.175,3.2),window('u','h',11.65,5.175,.8,1.5,2.4,True),
  window('u','h',13.65,5.175,1.6,1.5,2.4,True),window('u','v',16.025,8.9,1.4,1.4,2.4,True),window('u','v',16.025,11.4,2.2),
  window('a','v',18.875,8.1,2.4),window('a','v',25.725,8.1,2.4),window('a','v',25.725,14,1.8,1.2),
  window('o','v',25.725,15.1,3),window('o','h',21.8,20.625,2.6),window('o','v',18.875,18,1.9),window('o','h',23.9,11.625,1,1.5,2.4,True),
 ]
+windows.extend(plans['suiteDaylight']['windows'])
 levels={'g':0,'a':0,'u':3,'o':3}
 
 def openings(data,floor):
@@ -83,8 +82,9 @@ for key in ['default','enclosed']:
     for floor in ['g','u','a','o']:
         source_rooms=[r for r in json.loads(SOURCE.read_text())[key]['rooms'] if r['floor']==floor]
         assert source_rooms==[r for r in data['rooms'] if r['floor']==floor]
-model=dict(name='L-house',revision='L01 browser study',units='metres',levels=levels,
+model=dict(name='L-house',revision='L01.1 approved suite study',units='metres',levels=levels,
     sourceHash=hashlib.sha256(SOURCE.read_bytes()).hexdigest(),default=plans['default'],enclosed=plans['enclosed'],site=site,windows=windows,
+    rooflights=plans['suiteDaylight']['rooflights'],
     stairs=[dict(id='house',x=8.2,z=11.15),dict(id='garage',x=19.05,z=13.35)],
     assumptions=['Roof forms and windows are proposals.','The 40 x 65 m plot and north-side road are assumed.','Floor to floor 3.00 m; clear ceiling 2.70 m.','Furniture and finishes are illustrative.'])
 OUT=ROOT/'viewer-l-house/model.json';OUT.write_text(json.dumps(model,separators=(',',':'))+'\n')

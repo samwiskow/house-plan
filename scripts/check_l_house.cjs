@@ -14,7 +14,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'tmp/l-house');
   const T=await import('../viewer/vendor/three.module.js');house.scene.updateMatrixWorld(true);
   const hit=(origin,direction)=>new T.Raycaster(new T.Vector3(...origin),new T.Vector3(...direction)).intersectObjects(house.scene.children,true).find(h=>!h.object.material.transparent);
   const shelf=(origin,direction)=>hit(origin,direction).point.toArray();
-  return {officeBack:shelf([24,5.17,18],[1,0,0]),storageBack:shelf([6.8,5.17,13],[1,0,0]),libraryBack:shelf([5.5,2.17,12],[-1,0,0]),dressingFront:hit([4.8,4,7.25],[1,0,0]).object.material.metalness,diningLeft:shelf([3.1,.8,6.6],[-1,0,0]),diningRight:shelf([3.1,.8,6.6],[1,0,0]),deskChairBack:shelf([1.1,3.8,13.8],[0,0,-1]),deskMonitor:shelf([1.2,4,13],[0,0,1]),gamingKeyboard:shelf([24.6,4,15.8],[0,-1,0])};
+  return {officeBack:shelf([24,5.17,18],[1,0,0]),storageBack:shelf([6.8,5.17,13],[1,0,0]),libraryBack:shelf([5.5,2.17,12],[-1,0,0]),dressingFront:hit([3.11,4,5.175],[0,0,-1]).object.material.metalness,diningLeft:shelf([3.1,.8,6.6],[-1,0,0]),diningRight:shelf([3.1,.8,6.6],[1,0,0]),deskChairBack:shelf([1.1,3.8,13.8],[0,0,-1]),deskMonitor:shelf([1.2,4,13],[0,0,1]),gamingKeyboard:shelf([24.6,4,15.8],[0,-1,0])};
  });
  assert(Math.abs(furniture.officeBack[0]-25.325)<.002,'Office shelves must open into the room');assert(Math.abs(furniture.storageBack[0]-8.025)<.002,'Household shelves must open into the room');assert(Math.abs(furniture.libraryBack[0]-4.425)<.002,'Library shelves must keep facing the room');
  assert(furniture.dressingFront>.5,'Dressing wardrobe doors must face the aisle');assert(furniture.diningLeft[0]<1.2&&furniture.diningRight[0]>5,'Dining end-chair backs must be away from the table');assert(furniture.deskChairBack[2]<13.2,'Bedroom desk chair must face the desk: '+JSON.stringify(furniture));assert(furniture.deskMonitor[2]>14.3,'Bedroom monitor must sit behind the keyboard');assert(furniture.gamingKeyboard[1]>3.77,'Gaming keyboard must face the chair across the worktop');
@@ -28,6 +28,18 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'tmp/l-house');
   assert(Math.abs(passage.inside-19.4)<.02&&Math.abs(passage.outside-17.6)<.02,'Open garage-link door must allow passage both ways: '+JSON.stringify(passage));assert(!passage.jamb,'Garage-link jamb must remain solid');assert(Math.abs(passage.floor-.025)<.001,'Garage threshold must join the two finished floors');
  }
  await page.evaluate(()=>{house.setPantry('default');house.setView('overview');});
+ for(const option of ['default','enclosed']){
+  await page.locator('#pantry').selectOption(option);
+  assert(await page.evaluate(()=>{
+   for(const route of house.model[house.state.pantry].paths.suite){
+    for(const [i,a] of route.slice(0,-1).entries()){
+     const b=route[i+1],steps=Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/.05);
+     for(let j=0;j<=steps;j++)if(!house.canMove(a[0]+(b[0]-a[0])*j/steps,a[1]+(b[1]-a[1])*j/steps,3))return false;
+    }
+   }return true;
+  }),'Gallery routes must reach all three rooms in '+option);
+ }
+ await page.locator('#pantry').selectOption('default');
  for(const view of Object.keys(await page.evaluate(()=>house.views))){await page.locator('#view').selectOption(view);await page.waitForTimeout(220);await page.screenshot({path:path.join(output,view+'.png')});}
  await page.locator('#view').selectOption('first');assert(await page.evaluate(()=>{const g=house.scene.getObjectByName('Stairs');for(let p=g;p;p=p.parent)if(!p.visible)return false;return g.children.length>0;}),'First floor hides stairs');
  for(const view of ['ground','first']){await page.locator('#view').selectOption(view);await page.waitForFunction(()=>!house.renderer.shadowMap.needsUpdate);assert(await page.evaluate(()=>{house.setWalking(true);return house.renderer.shadowMap.needsUpdate;}),'Walking from a cutaway must refresh roof shadows');await page.waitForFunction(()=>!house.renderer.shadowMap.needsUpdate);await page.keyboard.press('Escape');}
@@ -73,6 +85,6 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'tmp/l-house');
  const pdf=await page.request.get(base+'output/pdf/l-house-design-booklet.pdf');assert.equal(pdf.status(),200);
  for(const width of [390,320]){await page.setViewportSize({width,height:844});await page.waitForFunction(()=>Math.abs(house.camera.aspect-innerWidth/innerHeight)<.001);await page.locator('#view').selectOption('overview');assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));await page.screenshot({path:path.join(output,'mobile-'+width+'.png')});}
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
- fs.writeFileSync(path.join(output,'browser-checks.json'),JSON.stringify({rooms:33,sourceGeometry:'unchanged',furnitureFacing:furniture,stairs,errors,external,viewports:[process.env.CI?900:1440,390,320],pantryOptions:'pass',garageLink:'pass',doorCollision:'pass',walkControls:'pass',cutawayShadows:'pass',lockedMouseControls:'pass',officeGuest:'pass'},null,2));
+ fs.writeFileSync(path.join(output,'browser-checks.json'),JSON.stringify({rooms:source.default.rooms.length,sourceGeometry:'matches L01.1 measured plan',furnitureFacing:furniture,stairs,errors,external,viewports:[process.env.CI?900:1440,390,320],pantryOptions:'pass',garageLink:'pass',doorCollision:'pass',walkControls:'pass',cutawayShadows:'pass',lockedMouseControls:'pass',officeGuest:'pass'},null,2));
  console.log('Passed: plan agreement, views, pantry options, operating doors, cutaway shadows, locked mouse controls, both stairs up/down, walking, upper-floor edge, office guest state, lighting, PDF link, responsive controls, local-only assets.');
  }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

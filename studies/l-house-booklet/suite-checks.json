@@ -1,0 +1,28 @@
+{
+  "source_sha256": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
+  "options": {
+    "default": {
+      "700mm_route_samples": 533,
+      "routes": [
+        "bedroom",
+        "dressing",
+        "bathroom",
+        "shower",
+        "WC"
+      ],
+      "doors": "Open; occupied use and hardware not validated"
+    },
+    "enclosed": {
+      "700mm_route_samples": 533,
+      "routes": [
+        "bedroom",
+        "dressing",
+        "bathroom",
+        "shower",
+        "WC"
+      ],
+      "doors": "Open; occupied use and hardware not validated"
+    }
+  },
+  "limits": "Sampled plan footprint screening only. No occupied use, daylight, roof, services or construction validation."
+}

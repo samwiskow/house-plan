@@ -372,17 +372,17 @@
           ],
           [
             6.55,
-            4.6499999999999995
+            3.65
           ],
           [
             0.35,
-            4.6499999999999995
+            3.65
           ]
         ],
-        "dimensions": "6.20 \u00d7 4.30",
+        "dimensions": "6.20 \u00d7 3.30",
         "label": [
-          3.45,
-          3.95
+          2.9,
+          3.05
         ]
       },
       {
@@ -391,26 +391,26 @@
         "name": "Dressing room",
         "p": [
           [
-            3.5,
-            4.8
+            0.35,
+            3.8
           ],
           [
-            6.55,
-            4.8
+            5.3,
+            3.8
           ],
           [
-            6.55,
-            9.899999999999999
+            5.3,
+            6.55
           ],
           [
-            3.5,
-            9.899999999999999
+            0.35,
+            6.55
           ]
         ],
-        "dimensions": "3.05 \u00d7 5.10",
+        "dimensions": "4.95 \u00d7 2.75",
         "label": [
-          5.05,
-          7.75
+          3.4,
+          5.65
         ]
       },
       {
@@ -420,25 +420,53 @@
         "p": [
           [
             0.35,
-            4.8
+            6.7
           ],
           [
-            3.35,
-            4.8
+            5.3,
+            6.7
           ],
           [
-            3.35,
-            9.899999999999999
+            5.3,
+            9.9
           ],
           [
             0.35,
-            9.899999999999999
+            9.9
           ]
         ],
-        "dimensions": "3.00 \u00d7 5.10",
+        "dimensions": "4.95 \u00d7 3.20",
         "label": [
-          2.05,
-          5.9
+          4.1,
+          7.45
+        ]
+      },
+      {
+        "id": "UG",
+        "floor": "u",
+        "name": "Private suite gallery",
+        "p": [
+          [
+            5.45,
+            3.8
+          ],
+          [
+            6.55,
+            3.8
+          ],
+          [
+            6.55,
+            9.9
+          ],
+          [
+            5.45,
+            9.9
+          ]
+        ],
+        "dimensions": "1.10 \u00d7 6.10",
+        "label": [
+          5.75,
+          6.9
         ]
       },
       {
@@ -1444,7 +1472,7 @@
         "name": "Super king frame",
         "r": [
           2.45,
-          1,
+          0.5,
           1.95,
           2.15
         ],
@@ -1456,9 +1484,9 @@
         "name": "Bedside",
         "r": [
           1.9,
-          1.05,
-          0.45,
-          0.45
+          0.5,
+          0.4,
+          0.4
         ],
         "kind": "block",
         "roomId": "U1"
@@ -1467,34 +1495,46 @@
         "floor": "u",
         "name": "Bedside",
         "r": [
-          4.5,
-          1.05,
-          0.45,
-          0.45
+          4.55,
+          0.5,
+          0.4,
+          0.4
         ],
         "kind": "block",
         "roomId": "U1"
       },
       {
         "floor": "u",
-        "name": "Wardrobe",
+        "name": "Wardrobe back",
         "r": [
-          3.5,
-          5.65,
+          0.35,
+          3.8,
           0.66,
-          3.2
+          2.75
         ],
         "kind": "block",
         "roomId": "U2"
       },
       {
         "floor": "u",
-        "name": "Wardrobe",
+        "name": "Wardrobe garden side",
         "r": [
+          1.01,
+          3.8,
+          4.19,
+          0.66
+        ],
+        "kind": "block",
+        "roomId": "U2"
+      },
+      {
+        "floor": "u",
+        "name": "Wardrobe bathroom side",
+        "r": [
+          1.01,
           5.89,
-          5.65,
-          0.66,
-          3.2
+          4.19,
+          0.66
         ],
         "kind": "block",
         "roomId": "U2"
@@ -1515,10 +1555,10 @@
         "floor": "u",
         "name": "Double vanity",
         "r": [
-          2.8,
-          4.95,
-          0.55,
-          1.5
+          1.95,
+          6.7,
+          1.5,
+          0.55
         ],
         "kind": "basin",
         "roomId": "U3"
@@ -1527,8 +1567,8 @@
         "floor": "u",
         "name": "Ensuite WC",
         "r": [
-          0.5,
-          5,
+          4.1,
+          9,
           0.7,
           0.75
         ],
@@ -1540,7 +1580,7 @@
         "name": "Soaking tub allowance",
         "r": [
           0.35,
-          7,
+          6.7,
           0.85,
           1.1
         ],
@@ -1569,6 +1609,42 @@
           0.02
         ],
         "kind": "glass",
+        "roomId": "U3"
+      },
+      {
+        "floor": "u",
+        "name": "WC privacy return side",
+        "r": [
+          3.5,
+          8.4,
+          0.15,
+          1.5
+        ],
+        "kind": "block",
+        "roomId": "U3"
+      },
+      {
+        "floor": "u",
+        "name": "WC privacy return left",
+        "r": [
+          3.5,
+          8.25,
+          0.6,
+          0.15
+        ],
+        "kind": "block",
+        "roomId": "U3"
+      },
+      {
+        "floor": "u",
+        "name": "WC privacy return right",
+        "r": [
+          4.9,
+          8.25,
+          0.4,
+          0.15
+        ],
+        "kind": "block",
         "roomId": "U3"
       },
       {
@@ -1992,18 +2068,6 @@
         "roomId": "O4"
       },
       {
-        "floor": "u",
-        "name": "WC privacy return",
-        "r": [
-          1.35,
-          4.8,
-          0.1,
-          1.35
-        ],
-        "kind": "block",
-        "roomId": "U3"
-      },
-      {
         "floor": "g",
         "name": "Pantry landing counter",
         "r": [
@@ -2173,8 +2237,8 @@
       },
       {
         "floor": "u",
-        "id": "Landing to dressing",
-        "x": 5.05,
+        "id": "Landing to gallery",
+        "x": 5.5,
         "y": 9.975,
         "axis": "h",
         "w": 0.9,
@@ -2183,9 +2247,9 @@
       },
       {
         "floor": "u",
-        "id": "Dressing to bedroom",
-        "x": 5.05,
-        "y": 4.725,
+        "id": "Gallery to bedroom",
+        "x": 5.5,
+        "y": 3.725,
         "axis": "h",
         "w": 0.9,
         "side": -1,
@@ -2194,14 +2258,23 @@
       },
       {
         "floor": "u",
-        "id": "Bedroom to ensuite",
-        "x": 2.05,
-        "y": 4.725,
-        "axis": "h",
+        "id": "Gallery to ensuite",
+        "x": 5.375,
+        "y": 7.3,
+        "axis": "v",
         "w": 0.9,
-        "side": 1,
-        "style": "pocket",
-        "pocketLength": 1
+        "side": -1,
+        "style": "door"
+      },
+      {
+        "floor": "u",
+        "id": "Gallery to dressing",
+        "x": 5.375,
+        "y": 4.725,
+        "axis": "v",
+        "w": 0.9,
+        "side": -1,
+        "style": "door"
       },
       {
         "floor": "u",
@@ -2478,15 +2551,15 @@
     "checks": [
       "All dimensions are new study proposals in metres. The accepted rough sketch was not scaled.",
       "House: 16.20 \u00d7 14.80 m bounding size; L-shaped footprint 193.26 m\u00b2. Two full house floors: 386.52 m\u00b2 external area.",
-      "House first-floor rooms and office layout are retained as approved. The ensuite changes are fittings within the existing 3.00 \u00d7 5.10 m room.",
+      "Approved suite revision, 8 October 2026: rectangular 6.20 \u00d7 3.30 m bedroom, 4.95 \u00d7 2.75 m dressing room, 4.95 \u00d7 3.20 m bathroom, and separate 1.10 m clear gallery within the existing suite envelope. Other room boundaries remain unchanged.",
       "Long-side garage study: 7.20 \u00d7 13.90 m ground floor. The extra 400 mm at the front adds 2.88 m\u00b2 and gives a 3.85 m-wide parking bay. The office floor above stays unchanged; the new strip needs a low roof or floor-edge detail.",
       "External floor envelopes: 568.70 m\u00b2 with the earlier end-door garage; 571.58 m\u00b2 with the long-side proposal. These include garage, stairs, plant and link, and are not certified floor-area measurements.",
       "The building width stays 25.90 m. The house-facing garage door uses a provisional 6.00 m approach in the arrival forecourt, forward of the house and clear of the link. Site fit and vehicle turning are untested.",
-      "Suite pocket doors: dressing to bedroom and bedroom to ensuite. Each has a 1.00 m wall pocket beside the existing 900 mm opening. Landing to dressing stays hinged. Pocket construction, sound seals and wet-side finishes need design; keep plumbing and fixings out of the cavities.",
+      "Suite doors: 900 mm gallery openings to bedroom, dressing and ensuite. Bedroom uses a 1.00 m pocket to the left of the opening; dressing and ensuite doors open into their rooms. Door construction and seals remain to design.",
       "External walls: 350 mm; ordinary partitions: 150 mm; link side walls: 300 mm. These are layout allowances, not specified wall constructions.",
       "Three child rooms: 18.5 m\u00b2 each, to rounding. Each has the same 1.30 \u00d7 2.05 m bed frame, 1.40 m desk and 1.80 m wardrobe allowance. Room shapes differ.",
-      "Parents: landing \u2192 dressing \u2192 bedroom \u2192 private ensuite. The closed wardrobe fronts have 1.73 m between them; 0.50 m open drawers leave 1.23 m.",
-      "Ensuite: compact soaking tub allowance 1.10 \u00d7 0.85 m on the left, or a 1.80 \u00d7 0.85 m full-length bath on the right. Two basins move to the right wall; a short return wall screens the WC. Both options retain the 3.00 \u00d7 1.50 m shower with a 1.00 m central entrance. Product comfort, access, filled load and drainage remain open.",
+      "Parents: landing \u2192 private gallery \u2192 separate bedroom, dressing and ensuite doors. U-shaped wardrobes are 660 mm deep; 1.43 m between closed fronts, or 0.93 m with one 0.50 m drawer open. Bedroom foot clearance is 1.00 m.",
+      "Ensuite: compact soaking tub allowance 0.85 \u00d7 1.10 m, two basins in a 1.50 \u00d7 0.55 m vanity, screened WC, and retained 3.00 \u00d7 1.50 m shower with two fixed screens and 1.00 m central entrance. Full-length bath alternative is not carried into this revision.",
       "Kitchen proposal: 2.40 m clear opening to dining. Two telescoping panels retract north into a 1.30 \u00d7 0.30 m pocket reservation. This is a space allowance, not a selected system. The divider closes only the kitchen\u2013dining opening; other room doors remain separate.",
       "Opening the kitchen wall needs structural review beneath the retained first floor. The pocket requires a suitable lintel, panel system and wall construction. Closed side clearances beside the island are about 0.83 m; the main cabinet-to-island aisle remains 1.20 m.",
       "Pantry / utility: a full-height partition projects 1.05 m from the rear wall and leaves a 1.05 m open passage. It divides the dry pantry and laundry zones. The pantry counter is shortened by 450 mm to fit the 150 mm partition. The 900 mm concealed kitchen door opens into the kitchen; shopping also travels boot room \u2192 utility \u2192 pantry.",
@@ -2501,8 +2574,8 @@
       "The first-floor office has a full-height storey assumption. Roof form and support over the car opening remain to be designed.",
       "Long-side proposal: workshop moves beside the stair, with its own lobby entrance and a door to parking. Gym, plant and office stair remain usable with the car parked. The new vehicle opening needs structural design beneath the office.",
       "Ground-floor visitor and boot arrivals have shoe benches and marked footwear boundaries. No level change is assumed.",
-      "Sixteen layout combinations passed the sampled furniture-fit, door-swing and 700 mm walking-envelope checks on a 50 mm grid. Washer and dryer front-opening reservations are included. Approved upper-floor room boundaries and door opening positions are retained; two suite doors now slide into pockets. These checks do not establish vehicle swept paths, building compliance or product fit.",
-      "Windows, landscape views, sunlight and structure are not fixed. The previous single-storey vault and glazed garden-room roof need a separate decision for this two-storey alternative.",
+      "The earlier sixteen layout checks apply to the original study only. This revised suite has separate sampled 700 mm route checks; product use, occupied door swings and construction compliance remain unverified.",
+      "Approved daylight direction: 2.00 m-wide bedroom garden window, 0.90 m-wide gallery garden window, and four rooflight zones (dressing, bathroom and two gallery zones). Sills, roof openings, wells, beams and drainage remain provisional.",
       "The published courtyard model is unchanged. This study is for plan review before model replacement."
     ],
     "paths": {
@@ -2589,46 +2662,44 @@
       "suite": [
         [
           [
-            5.5,
-            10.45
+            5.95,
+            10.5
           ],
           [
-            5.5,
-            9.35
+            5.95,
+            3.05
           ],
           [
-            5.05,
-            7.8
-          ],
-          [
-            5.5,
-            5.1
-          ],
-          [
-            5.5,
-            3.8
-          ],
-          [
-            3.5,
-            3.8
+            4.8,
+            3.05
           ]
         ],
         [
           [
-            3.5,
-            3.8
+            5.95,
+            10.5
           ],
           [
-            2.5,
-            4.25
+            5.95,
+            5.175
           ],
           [
-            2.5,
-            5.35
+            2.7,
+            5.175
+          ]
+        ],
+        [
+          [
+            5.95,
+            10.5
           ],
           [
-            1.8,
-            6.15
+            5.95,
+            7.75
+          ],
+          [
+            2.0,
+            7.75
           ]
         ]
       ],
@@ -2793,20 +2864,12 @@
       "ensuite": [
         [
           [
-            2.5,
-            4.3
+            5.95,
+            7.75
           ],
           [
-            2.4,
-            5.9
-          ],
-          [
-            1.8,
-            6.6
-          ],
-          [
-            1.8,
-            7.8
+            2.0,
+            7.75
           ],
           [
             1.85,
@@ -2815,16 +2878,22 @@
         ],
         [
           [
-            1.8,
-            6.6
+            2.0,
+            7.75
           ],
           [
-            0.85,
-            6.6
+            0.775,
+            7.95
+          ]
+        ],
+        [
+          [
+            4.5,
+            7.75
           ],
           [
-            0.85,
-            6.15
+            4.5,
+            8.65
           ]
         ]
       ],
@@ -3275,17 +3344,17 @@
           ],
           [
             6.55,
-            4.6499999999999995
+            3.65
           ],
           [
             0.35,
-            4.6499999999999995
+            3.65
           ]
         ],
-        "dimensions": "6.20 \u00d7 4.30",
+        "dimensions": "6.20 \u00d7 3.30",
         "label": [
-          3.45,
-          3.95
+          2.9,
+          3.05
         ]
       },
       {
@@ -3294,26 +3363,26 @@
         "name": "Dressing room",
         "p": [
           [
-            3.5,
-            4.8
+            0.35,
+            3.8
           ],
           [
-            6.55,
-            4.8
+            5.3,
+            3.8
           ],
           [
-            6.55,
-            9.899999999999999
+            5.3,
+            6.55
           ],
           [
-            3.5,
-            9.899999999999999
+            0.35,
+            6.55
           ]
         ],
-        "dimensions": "3.05 \u00d7 5.10",
+        "dimensions": "4.95 \u00d7 2.75",
         "label": [
-          5.05,
-          7.75
+          3.4,
+          5.65
         ]
       },
       {
@@ -3323,25 +3392,53 @@
         "p": [
           [
             0.35,
-            4.8
+            6.7
           ],
           [
-            3.35,
-            4.8
+            5.3,
+            6.7
           ],
           [
-            3.35,
-            9.899999999999999
+            5.3,
+            9.9
           ],
           [
             0.35,
-            9.899999999999999
+            9.9
           ]
         ],
-        "dimensions": "3.00 \u00d7 5.10",
+        "dimensions": "4.95 \u00d7 3.20",
         "label": [
-          2.05,
-          5.9
+          4.1,
+          7.45
+        ]
+      },
+      {
+        "id": "UG",
+        "floor": "u",
+        "name": "Private suite gallery",
+        "p": [
+          [
+            5.45,
+            3.8
+          ],
+          [
+            6.55,
+            3.8
+          ],
+          [
+            6.55,
+            9.9
+          ],
+          [
+            5.45,
+            9.9
+          ]
+        ],
+        "dimensions": "1.10 \u00d7 6.10",
+        "label": [
+          5.75,
+          6.9
         ]
       },
       {
@@ -4359,7 +4456,7 @@
         "name": "Super king frame",
         "r": [
           2.45,
-          1,
+          0.5,
           1.95,
           2.15
         ],
@@ -4371,9 +4468,9 @@
         "name": "Bedside",
         "r": [
           1.9,
-          1.05,
-          0.45,
-          0.45
+          0.5,
+          0.4,
+          0.4
         ],
         "kind": "block",
         "roomId": "U1"
@@ -4382,34 +4479,46 @@
         "floor": "u",
         "name": "Bedside",
         "r": [
-          4.5,
-          1.05,
-          0.45,
-          0.45
+          4.55,
+          0.5,
+          0.4,
+          0.4
         ],
         "kind": "block",
         "roomId": "U1"
       },
       {
         "floor": "u",
-        "name": "Wardrobe",
+        "name": "Wardrobe back",
         "r": [
-          3.5,
-          5.65,
+          0.35,
+          3.8,
           0.66,
-          3.2
+          2.75
         ],
         "kind": "block",
         "roomId": "U2"
       },
       {
         "floor": "u",
-        "name": "Wardrobe",
+        "name": "Wardrobe garden side",
         "r": [
+          1.01,
+          3.8,
+          4.19,
+          0.66
+        ],
+        "kind": "block",
+        "roomId": "U2"
+      },
+      {
+        "floor": "u",
+        "name": "Wardrobe bathroom side",
+        "r": [
+          1.01,
           5.89,
-          5.65,
-          0.66,
-          3.2
+          4.19,
+          0.66
         ],
         "kind": "block",
         "roomId": "U2"
@@ -4430,10 +4539,10 @@
         "floor": "u",
         "name": "Double vanity",
         "r": [
-          2.8,
-          4.95,
-          0.55,
-          1.5
+          1.95,
+          6.7,
+          1.5,
+          0.55
         ],
         "kind": "basin",
         "roomId": "U3"
@@ -4442,8 +4551,8 @@
         "floor": "u",
         "name": "Ensuite WC",
         "r": [
-          0.5,
-          5,
+          4.1,
+          9,
           0.7,
           0.75
         ],
@@ -4455,7 +4564,7 @@
         "name": "Soaking tub allowance",
         "r": [
           0.35,
-          7,
+          6.7,
           0.85,
           1.1
         ],
@@ -4484,6 +4593,42 @@
           0.02
         ],
         "kind": "glass",
+        "roomId": "U3"
+      },
+      {
+        "floor": "u",
+        "name": "WC privacy return side",
+        "r": [
+          3.5,
+          8.4,
+          0.15,
+          1.5
+        ],
+        "kind": "block",
+        "roomId": "U3"
+      },
+      {
+        "floor": "u",
+        "name": "WC privacy return left",
+        "r": [
+          3.5,
+          8.25,
+          0.6,
+          0.15
+        ],
+        "kind": "block",
+        "roomId": "U3"
+      },
+      {
+        "floor": "u",
+        "name": "WC privacy return right",
+        "r": [
+          4.9,
+          8.25,
+          0.4,
+          0.15
+        ],
+        "kind": "block",
         "roomId": "U3"
       },
       {
@@ -4905,18 +5050,6 @@
         ],
         "kind": "block",
         "roomId": "O4"
-      },
-      {
-        "floor": "u",
-        "name": "WC privacy return",
-        "r": [
-          1.35,
-          4.8,
-          0.1,
-          1.35
-        ],
-        "kind": "block",
-        "roomId": "U3"
       }
     ],
     "doors": [
@@ -5052,8 +5185,8 @@
       },
       {
         "floor": "u",
-        "id": "Landing to dressing",
-        "x": 5.05,
+        "id": "Landing to gallery",
+        "x": 5.5,
         "y": 9.975,
         "axis": "h",
         "w": 0.9,
@@ -5062,9 +5195,9 @@
       },
       {
         "floor": "u",
-        "id": "Dressing to bedroom",
-        "x": 5.05,
-        "y": 4.725,
+        "id": "Gallery to bedroom",
+        "x": 5.5,
+        "y": 3.725,
         "axis": "h",
         "w": 0.9,
         "side": -1,
@@ -5073,14 +5206,23 @@
       },
       {
         "floor": "u",
-        "id": "Bedroom to ensuite",
-        "x": 2.05,
-        "y": 4.725,
-        "axis": "h",
+        "id": "Gallery to ensuite",
+        "x": 5.375,
+        "y": 7.3,
+        "axis": "v",
         "w": 0.9,
-        "side": 1,
-        "style": "pocket",
-        "pocketLength": 1
+        "side": -1,
+        "style": "door"
+      },
+      {
+        "floor": "u",
+        "id": "Gallery to dressing",
+        "x": 5.375,
+        "y": 4.725,
+        "axis": "v",
+        "w": 0.9,
+        "side": -1,
+        "style": "door"
       },
       {
         "floor": "u",
@@ -5357,15 +5499,15 @@
     "checks": [
       "All dimensions are new study proposals in metres. The accepted rough sketch was not scaled.",
       "House: 16.20 \u00d7 14.80 m bounding size; L-shaped footprint 193.26 m\u00b2. Two full house floors: 386.52 m\u00b2 external area.",
-      "House first-floor rooms and office layout are retained as approved. The ensuite changes are fittings within the existing 3.00 \u00d7 5.10 m room.",
+      "Approved suite revision, 8 October 2026: rectangular 6.20 \u00d7 3.30 m bedroom, 4.95 \u00d7 2.75 m dressing room, 4.95 \u00d7 3.20 m bathroom, and separate 1.10 m clear gallery within the existing suite envelope. Other room boundaries remain unchanged.",
       "Long-side garage study: 7.20 \u00d7 13.90 m ground floor. The extra 400 mm at the front adds 2.88 m\u00b2 and gives a 3.85 m-wide parking bay. The office floor above stays unchanged; the new strip needs a low roof or floor-edge detail.",
       "External floor envelopes: 568.70 m\u00b2 with the earlier end-door garage; 571.58 m\u00b2 with the long-side proposal. These include garage, stairs, plant and link, and are not certified floor-area measurements.",
       "The building width stays 25.90 m. The house-facing garage door uses a provisional 6.00 m approach in the arrival forecourt, forward of the house and clear of the link. Site fit and vehicle turning are untested.",
-      "Suite pocket doors: dressing to bedroom and bedroom to ensuite. Each has a 1.00 m wall pocket beside the existing 900 mm opening. Landing to dressing stays hinged. Pocket construction, sound seals and wet-side finishes need design; keep plumbing and fixings out of the cavities.",
+      "Suite doors: 900 mm gallery openings to bedroom, dressing and ensuite. Bedroom uses a 1.00 m pocket to the left of the opening; dressing and ensuite doors open into their rooms. Door construction and seals remain to design.",
       "External walls: 350 mm; ordinary partitions: 150 mm; link side walls: 300 mm. These are layout allowances, not specified wall constructions.",
       "Three child rooms: 18.5 m\u00b2 each, to rounding. Each has the same 1.30 \u00d7 2.05 m bed frame, 1.40 m desk and 1.80 m wardrobe allowance. Room shapes differ.",
-      "Parents: landing \u2192 dressing \u2192 bedroom \u2192 private ensuite. The closed wardrobe fronts have 1.73 m between them; 0.50 m open drawers leave 1.23 m.",
-      "Ensuite: compact soaking tub allowance 1.10 \u00d7 0.85 m on the left, or a 1.80 \u00d7 0.85 m full-length bath on the right. Two basins move to the right wall; a short return wall screens the WC. Both options retain the 3.00 \u00d7 1.50 m shower with a 1.00 m central entrance. Product comfort, access, filled load and drainage remain open.",
+      "Parents: landing \u2192 private gallery \u2192 separate bedroom, dressing and ensuite doors. U-shaped wardrobes are 660 mm deep; 1.43 m between closed fronts, or 0.93 m with one 0.50 m drawer open. Bedroom foot clearance is 1.00 m.",
+      "Ensuite: compact soaking tub allowance 0.85 \u00d7 1.10 m, two basins in a 1.50 \u00d7 0.55 m vanity, screened WC, and retained 3.00 \u00d7 1.50 m shower with two fixed screens and 1.00 m central entrance. Full-length bath alternative is not carried into this revision.",
       "Kitchen proposal: 2.40 m clear opening to dining. Two telescoping panels retract north into a 1.30 \u00d7 0.30 m pocket reservation. This is a space allowance, not a selected system. The divider closes only the kitchen\u2013dining opening; other room doors remain separate.",
       "Opening the kitchen wall needs structural review beneath the retained first floor. The pocket requires a suitable lintel, panel system and wall construction. Closed side clearances beside the island are about 0.83 m; the main cabinet-to-island aisle remains 1.20 m.",
       "Pantry / utility: a full-height partition projects 1.05 m from the rear wall and leaves a 1.05 m open passage. It divides the dry pantry and laundry zones. The pantry counter is shortened by 450 mm to fit the 150 mm partition. The 900 mm concealed kitchen door opens into the kitchen; shopping also travels boot room \u2192 utility \u2192 pantry.",
@@ -5380,8 +5522,8 @@
       "The first-floor office has a full-height storey assumption. Roof form and support over the car opening remain to be designed.",
       "Long-side proposal: workshop moves beside the stair, with its own lobby entrance and a door to parking. Gym, plant and office stair remain usable with the car parked. The new vehicle opening needs structural design beneath the office.",
       "Ground-floor visitor and boot arrivals have shoe benches and marked footwear boundaries. No level change is assumed.",
-      "Sixteen layout combinations passed the sampled furniture-fit, door-swing and 700 mm walking-envelope checks on a 50 mm grid. Washer and dryer front-opening reservations are included. Approved upper-floor room boundaries and door opening positions are retained; two suite doors now slide into pockets. These checks do not establish vehicle swept paths, building compliance or product fit.",
-      "Windows, landscape views, sunlight and structure are not fixed. The previous single-storey vault and glazed garden-room roof need a separate decision for this two-storey alternative.",
+      "The earlier sixteen layout checks apply to the original study only. This revised suite has separate sampled 700 mm route checks; product use, occupied door swings and construction compliance remain unverified.",
+      "Approved daylight direction: 2.00 m-wide bedroom garden window, 0.90 m-wide gallery garden window, and four rooflight zones (dressing, bathroom and two gallery zones). Sills, roof openings, wells, beams and drainage remain provisional.",
       "The published courtyard model is unchanged. This study is for plan review before model replacement."
     ],
     "paths": {
@@ -5468,46 +5610,44 @@
       "suite": [
         [
           [
-            5.5,
-            10.45
+            5.95,
+            10.5
           ],
           [
-            5.5,
-            9.35
+            5.95,
+            3.05
           ],
           [
-            5.05,
-            7.8
-          ],
-          [
-            5.5,
-            5.1
-          ],
-          [
-            5.5,
-            3.8
-          ],
-          [
-            3.5,
-            3.8
+            4.8,
+            3.05
           ]
         ],
         [
           [
-            3.5,
-            3.8
+            5.95,
+            10.5
           ],
           [
-            2.5,
-            4.25
+            5.95,
+            5.175
           ],
           [
-            2.5,
-            5.35
+            2.7,
+            5.175
+          ]
+        ],
+        [
+          [
+            5.95,
+            10.5
           ],
           [
-            1.8,
-            6.15
+            5.95,
+            7.75
+          ],
+          [
+            2.0,
+            7.75
           ]
         ]
       ],
@@ -5672,20 +5812,12 @@
       "ensuite": [
         [
           [
-            2.5,
-            4.3
+            5.95,
+            7.75
           ],
           [
-            2.4,
-            5.9
-          ],
-          [
-            1.8,
-            6.6
-          ],
-          [
-            1.8,
-            7.8
+            2.0,
+            7.75
           ],
           [
             1.85,
@@ -5694,16 +5826,22 @@
         ],
         [
           [
-            1.8,
-            6.6
+            2.0,
+            7.75
           ],
           [
-            0.85,
-            6.6
+            0.775,
+            7.95
+          ]
+        ],
+        [
+          [
+            4.5,
+            7.75
           ],
           [
-            0.85,
-            6.15
+            4.5,
+            8.65
           ]
         ]
       ],
@@ -5741,6 +5879,128 @@
     "date": "2026-10-06",
     "status": "Accepted plan direction, dimensioned study; not construction design",
     "pantry_default": "Short divider and open passage",
-    "pantry_alternative": "Earlier enclosed pantry"
+    "pantry_alternative": "Earlier enclosed pantry",
+    "suite_revision": {
+      "source": "/Users/sam/.codex/visualizations/2026/10/08/01a11ad7-50b8-76c0-854e-1dc19df34ecb/family-wing-suite.html",
+      "sha256": "3a3613f8262e76619637e61653f51441087b13e487c98035a56c71068e3bc318",
+      "date": "2026-10-08",
+      "status": "User approved rectangular bedroom and separate gallery arrangement",
+      "revision": "L01.1"
+    }
+  },
+  "suiteDaylight": {
+    "status": "Approved daylight direction; opening sizes and roof coordination are provisional",
+    "windows": [
+      {
+        "floor": "u",
+        "axis": "v",
+        "x": 0.175,
+        "y": 1.05,
+        "w": 2.4,
+        "sill": 0.85,
+        "head": 2.4,
+        "private": false
+      },
+      {
+        "floor": "u",
+        "axis": "h",
+        "x": 0.9,
+        "y": 0.175,
+        "w": 0.9,
+        "sill": 0.85,
+        "head": 2.4,
+        "private": false
+      },
+      {
+        "floor": "u",
+        "axis": "h",
+        "x": 5.15,
+        "y": 0.175,
+        "w": 0.9,
+        "sill": 0.85,
+        "head": 2.4,
+        "private": false
+      },
+      {
+        "floor": "u",
+        "axis": "v",
+        "x": 0.175,
+        "y": 8.65,
+        "w": 0.8,
+        "sill": 1.45,
+        "head": 2.4,
+        "private": true
+      },
+      {
+        "floor": "u",
+        "axis": "v",
+        "x": 6.725,
+        "y": 1.2,
+        "w": 2.0,
+        "sill": 0.6,
+        "head": 2.4,
+        "private": false
+      },
+      {
+        "floor": "u",
+        "axis": "v",
+        "x": 6.725,
+        "y": 3.9,
+        "w": 0.9,
+        "sill": 0.85,
+        "head": 2.4,
+        "private": false
+      }
+    ],
+    "rooflights": [
+      {
+        "id": "R1",
+        "floor": "u",
+        "roomId": "U2",
+        "r": [
+          1.95,
+          4.67,
+          1,
+          1
+        ],
+        "status": "Plan zone; roof opening and light well require design"
+      },
+      {
+        "id": "R2",
+        "floor": "u",
+        "roomId": "U3",
+        "r": [
+          1.8,
+          7.4,
+          1,
+          0.75
+        ],
+        "status": "Plan zone; roof opening and light well require design"
+      },
+      {
+        "id": "G1",
+        "floor": "u",
+        "roomId": "UG",
+        "r": [
+          5.6,
+          6.05,
+          0.7,
+          0.7
+        ],
+        "status": "Plan zone; roof opening and light well require design"
+      },
+      {
+        "id": "G2",
+        "floor": "u",
+        "roomId": "UG",
+        "r": [
+          5.6,
+          8.75,
+          0.7,
+          0.7
+        ],
+        "status": "Plan zone; roof opening and light well require design"
+      }
+    ]
   }
 }

@@ -36,6 +36,13 @@ The enclosed option keeps its direct kitchen door and separate utility access.
 The kitchen door is concealed in timber joinery. The main ensuite includes the
 compact soaking tub and large shower from the plan.
 
+L01.1 updates the suite to a rectangular bedroom and separate private gallery.
+The gallery gives direct access to bedroom, U-shaped dressing room and bathroom.
+The exported model includes the new bedroom and gallery garden windows.
+Four rooflight zones are recorded in `model.json`; the current renderer does
+not cut the roof or ceiling for them. The next Blender model must coordinate
+roof openings and light wells. See `studies/l-house-booklet/ASTRA-HANDOFF.md`.
+
 ## Rebuild and verify
 
 ```sh
