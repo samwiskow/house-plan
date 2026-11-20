@@ -846,9 +846,14 @@ for name,(pos,target,lens,mode) in views.items():
 scene.camera=cameras['garden'];scene.unit_settings.system='METRIC';scene.unit_settings.length_unit='METERS';scene.unit_settings.scale_length=1
 scene.render.engine='CYCLES';scene.cycles.samples=a.samples;scene.cycles.use_denoising=True;scene.cycles.max_bounces=10;scene.cycles.transmission_bounces=8
 prefs=bpy.context.preferences.addons['cycles'].preferences
-prefs.compute_device_type='METAL';prefs.get_devices()
-for d in prefs.devices:d.use=d.type=='METAL'
-scene.cycles.device='GPU' if any(d.type=='METAL' for d in prefs.devices) else 'CPU'
+scene.cycles.device = 'CPU'
+if any(device[0] == 'METAL' for device in prefs.get_device_types(bpy.context)):
+    prefs.compute_device_type = 'METAL'
+    devices = prefs.get_devices_for_type('METAL')
+    for device in devices:
+        device.use = device.type == 'METAL'
+    if any(device.use for device in devices):
+        scene.cycles.device = 'GPU'
 scene.render.resolution_x=a.width;scene.render.resolution_y=round(a.width*2/3);scene.render.resolution_percentage=100;scene.render.image_settings.file_format='PNG'
 scene.view_settings.view_transform='AgX';scene.view_settings.look='AgX - Medium Low Contrast';scene.view_settings.exposure=.4
 scene['revision']='L01.1 coastal coordinated study';scene['source_hashes']=json.dumps(data['source_hashes']);scene['interior_source_sha256']=source_hash
