@@ -1,0 +1,85 @@
+{
+  "scene_sha256": "b5511c72532f97a437a7e3858016b11589b3f8d967cdbe3f5e629f13bc20a818",
+  "room_ceiling_rays": 2363,
+  "furniture_meshes_checked": 1371,
+  "furniture_fit_failures": [],
+  "source_hashes": {
+    "studies/l-house-booklet/plans.json": "5b37e21d78329e21091b100ef5fc32c3cde7aefddc258dc9c6d3c711aae55010",
+    "studies/l-house-booklet/site.json": "f098a249162ec9a72ab3ed31d60349801ceb906380d06299d0c51cc534207300",
+    "output/design/kitchen-selections/boot-room-option.json": "ee27ebba714a9ffa54fb8ee9e929d3ce3f7263f8d59b8dd71c305fa7e90045e7",
+    "viewer-l-house/model.json": "39a11d55ea27c27a99c8bf4859fb16d19fef20f6264f3bf927b2c2bd113aa7d8"
+  },
+  "preserved_rooms": 31,
+  "rooflight_clear_rays": 20,
+  "stair_headroom_samples": 30,
+  "minimum_stair_headroom_m": 2.847,
+  "suite_route_samples": 533,
+  "suite_route_failures": [],
+  "packed_textures": true,
+  "interior_revision_checks": {
+    "rooflights_on_one_plane_with_100mm_margin": [
+      "R1",
+      "R2",
+      "G1",
+      "G2"
+    ],
+    "bed_headboards_clear_of_windows": [
+      "G5",
+      "U1",
+      "U4",
+      "U5",
+      "U6"
+    ],
+    "inset_shutter_windows": [
+      "G5 0.9 14.625",
+      "G7 5 14.625",
+      "O4 18.875 18",
+      "O4 21.8 20.625",
+      "O4 25.725 15.1"
+    ],
+    "inset_shutter_parts": 588,
+    "ofuro_internal_depth_m": 0.61,
+    "bath_window_size_m": [
+      1.3,
+      1.35
+    ],
+    "paired_overhead_hand_shower_stations": 2,
+    "independent_central_wall_control_sets": 2,
+    "stair_window_clear_rays": 6,
+    "integrated_lower_stair_storage_modules": 5,
+    "concealed_pantry_leaf": true,
+    "kitchen_cabinet_gap_blocked_rays": 9,
+    "pantry_area_m2": 6.655,
+    "pocket_doors_inside_wall": [
+      "Guest shower",
+      "Gallery to bedroom",
+      "Gallery to ensuite",
+      "Gallery to dressing",
+      "Office shower room",
+      "Utility \u2192 pantry"
+    ],
+    "stone_service_rooms": [
+      "G4",
+      "G10"
+    ],
+    "continuous_parquet": [
+      "G2 continuous herringbone",
+      "G3 continuous herringbone",
+      "Kitchen pantry continuous threshold"
+    ],
+    "roof_pitch_seams": 389,
+    "swapped_stair_flights": true,
+    "under_stair_storage_clear": true,
+    "service_route_samples": 401,
+    "service_route_failures": [],
+    "shower_door_sweep_component_checks": 637,
+    "golden_hour_environment_sha256": "7aaae9d4174438a196d7b573c1b01919c01bf98d1185f1b09e03ba50ad4b564b",
+    "sun_pixel_1024x512": [
+      190,
+      275
+    ],
+    "single_physical_sky_sun_elevation_degrees": 7
+  },
+  "units": "metres",
+  "scope": "Source equality, structural ceiling rays, furniture bounds within room outlines (31 mm tolerance), opaque opening rays, stair headroom, pocket fit, roof seam direction, shower door swing and 700 mm nominal suite and service routes with modelled doors open. No construction or occupied-use certification."
+}

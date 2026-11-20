@@ -21,3 +21,7 @@ output/blender/room-tour/benchmark-*.png
 output/blender/room-tour/kitchen-preview.*
 output/blender/room-tour/preview-report.json
 output/blender/room-tour/render-report.json
+
+output/blender/coastal-house/*.blend
+output/blender/coastal-house/*.glb
+output/blender/coastal-house/*.hdr
